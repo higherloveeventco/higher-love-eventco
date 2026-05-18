@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | Higher Love Event Co.</title>
+<meta name="description" content="Honest wedding planning advice, Portland vendor guides, budgeting tips, and everything the wedding industry doesn't always tell you.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -295,6 +296,37 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
   .cred-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr}
 }
+
+  /* ── BLOG INDEX ── */
+  .blog-hero { background: var(--cream); padding: 5rem 2.5rem 3rem; }
+  .blog-hero h1 { font-family: var(--serif); font-size: 3rem; font-weight: 300; margin-top: 0.5rem; }
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; padding: 0 2.5rem 6rem; background: var(--linen); }
+  .blog-card { background: var(--cream); }
+  .blog-card a { text-decoration: none; color: inherit; display: block; height: 100%; }
+  .blog-card-inner { padding: 2.5rem; height: 100%; display: flex; flex-direction: column; gap: 0.8rem; }
+  .blog-cat { font-family: var(--sans); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+  .blog-card h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; line-height: 1.2; color: var(--black); }
+  .blog-card p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; flex: 1; }
+  .blog-meta { display: flex; gap: 1rem; font-size: 0.72rem; color: var(--muted); font-family: var(--sans); }
+  .blog-read-more { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-family: var(--sans); }
+  .blog-card:hover .blog-read-more { text-decoration: underline; }
+  @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+
+  /* ── BLOG POST ── */
+  .post-hero { background: var(--cream); padding: 5rem 2.5rem 3rem; border-bottom: 0.5px solid var(--border); }
+  .post-hero h1 { font-family: var(--serif); font-size: 2.6rem; font-weight: 300; line-height: 1.15; max-width: 720px; margin-top: 0.5rem; }
+  .post-body { padding: 4rem 2.5rem 6rem; max-width: 720px; margin: 0 auto; }
+  .post-body h2 { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; margin: 2.5rem 0 1rem; }
+  .post-body h3 { font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin: 2rem 0 0.8rem; }
+  .post-body p { font-size: 0.92rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.2rem; }
+  .post-body ul { padding-left: 1.2rem; margin-bottom: 1.2rem; }
+  .post-body ul li { font-size: 0.92rem; color: var(--muted); line-height: 1.85; margin-bottom: 0.4rem; }
+  .post-body strong { color: var(--black); font-weight: 600; }
+  .post-cta { background: var(--black); padding: 3.5rem 2.5rem; text-align: center; }
+  .post-cta h3 { font-family: var(--serif); font-size: 1.8rem; color: white; font-weight: 300; margin-bottom: 0.8rem; }
+  .post-cta p { font-size: 0.86rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+  .back-to-blog { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); text-decoration: none; font-family: var(--sans); margin-bottom: 2rem; }
+  .back-to-blog:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -310,37 +342,83 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
 <a href="/blog">Blog</a>
 <a href="/contact">Inquire</a>
 </div>
-id="page-blog" class="page">
+<div class="page">
   <section class="blog-hero">
     <div class="wrap-narrow">
       <span class="eyebrow">Blog</span>
-      <h2>Notes on planning, design &amp; love</h2>
+      <h1>Notes on planning,<br>design &amp; love</h1>
     </div>
   </section>
-  <div class="blog-coming">
-    <div class="blog-coming-inner">
-      <h3>Coming soon</h3>
-      <p>The Higher Love Event Co. blog is on its way &mdash; honest advice on wedding planning, budgeting, vendor tips, and all the things the industry doesn&rsquo;t always tell you.</p>
-      <span class="btn" href="/contact" style="cursor:pointer">Get notified when it launches &rarr;</span>
-    </div>
+  <div class="blog-grid">
+    
+        <article class="blog-card">
+          <a href="/blog/what-does-a-wedding-coordinator-actually-do">
+            <div class="blog-card-inner">
+              <span class="blog-cat">Wedding Planning 101</span>
+              <h3>What Does a Wedding Coordinator Actually Do?</h3>
+              <p>There's a lot of confusion about what a wedding coordinator actually does — and doesn't do. Here's a clear, honest breakdown from someone who does this work every day.</p>
+              <div class="blog-meta">
+                <span>May 17, 2025</span>
+                <span>5 min read</span>
+              </div>
+              <span class="blog-read-more">Read more &rarr;</span>
+            </div>
+          </a>
+        </article>
+        <article class="blog-card">
+          <a href="/blog/do-i-need-a-coordinator-if-my-venue-has-one">
+            <div class="blog-card-inner">
+              <span class="blog-cat">Wedding Planning 101</span>
+              <h3>Do I Need a Wedding Coordinator If My Venue Has One?</h3>
+              <p>Short answer: yes. Here's the difference between a venue coordinator and your coordinator — and why it matters more than most couples realize.</p>
+              <div class="blog-meta">
+                <span>May 17, 2025</span>
+                <span>4 min read</span>
+              </div>
+              <span class="blog-read-more">Read more &rarr;</span>
+            </div>
+          </a>
+        </article>
+        <article class="blog-card">
+          <a href="/blog/how-much-does-a-wedding-coordinator-cost-in-portland">
+            <div class="blog-card-inner">
+              <span class="blog-cat">Budget & Pricing</span>
+              <h3>How Much Does a Wedding Coordinator Cost in Portland, Oregon?</h3>
+              <p>Pricing in the wedding industry is notoriously vague. Here's a real, transparent breakdown of what wedding coordination costs in Portland — and what you're actually paying for.</p>
+              <div class="blog-meta">
+                <span>May 17, 2025</span>
+                <span>6 min read</span>
+              </div>
+              <span class="blog-read-more">Read more &rarr;</span>
+            </div>
+          </a>
+        </article>
   </div>
 </div>
-
-<!-- ═══ C
 <footer>
   <div class="footer-grid">
     <div class="footer-brand"><h3>Higher Love Event Co.</h3><p>Boutique wedding coordination &amp; planning rooted in St. Johns, Portland. Serving Oregon &amp; the PNW.</p></div>
     <div class="footer-col"><h4>Navigate</h4><ul>
-      <li><a href="/">Home</a></li><li><a href="/about">About Kylie</a></li>
-      <li><a href="/services">Services &amp; Pricing</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/blog">Blog</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Kylie</a></li>
+      <li><a href="/services">Services &amp; Pricing</a></li>
+      <li><a href="/reviews">Reviews</a></li>
+      <li><a href="/blog">Blog</a></li>
     </ul></div>
     <div class="footer-col"><h4>Services</h4><ul>
-      <li><a href="/services">Essential Coordination</a></li><li><a href="/services">Planning Add-Ons</a></li>
-      <li><a href="/services">Design &amp; Style</a></li><li><a href="/services">On-Site Support</a></li>
+      <li><a href="/services">Essential Coordination</a></li>
+      <li><a href="/services">Planning Add-Ons</a></li>
+      <li><a href="/services">Design &amp; Style</a></li>
+      <li><a href="/services">On-Site Support</a></li>
     </ul></div>
-    <div class="footer-col"><h4>Contact</h4><address>hello@higherloveeventco.com<br>503-217-8500<br>St. Johns, Portland, OR<br><br>@higherloveeventco</address></div>
+    <div class="footer-col"><h4>Contact</h4><address>
+      hello@higherloveeventco.com<br>503-217-8500<br>St. Johns, Portland, OR<br><br>@higherloveeventco
+    </address></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2025 Higher Love Event Co.</span><span>Portland, OR &middot; Serving Oregon &amp; the PNW</span></div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Higher Love Event Co. &middot; All rights reserved</span>
+    <span>Portland, OR &middot; Serving Oregon &amp; the PNW</span>
+  </div>
 </footer>
 <script>
 function toggleMenu(){document.getElementById("mobile-menu").classList.toggle("open");document.getElementById("hamburger").classList.toggle("open");}
