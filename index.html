@@ -64,7 +64,7 @@ section{padding:6rem 0}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
-#mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--cream);border-bottom:0.5px solid var(--border);padding:2rem 2.5rem 2.5rem;z-index:199;flex-direction:column;gap:1.6rem}
+#mobile-menu{display:none;pointer-events:auto;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--cream);border-bottom:0.5px solid var(--border);padding:2rem 2.5rem 2.5rem;z-index:199;flex-direction:column;gap:1.6rem}
 #mobile-menu.open{display:flex}
 #mobile-menu a{font-size:0.73rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal);cursor:pointer}
 
@@ -295,7 +295,7 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
   .cred-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr}
 }
-</style>
+@media(max-width:960px){#mobile-menu.open{display:flex!important}}</style>
 </head>
 <body>
 <nav id="nav">
