@@ -447,32 +447,34 @@ id="page-home" class="page active">
   <div class="footer-bottom"><span>&copy; 2025 Higher Love Event Co.</span><span>Portland, OR &middot; Serving Oregon &amp; the PNW</span></div>
 </footer>
 <script>
-window.addEventListener('DOMContentLoaded', function() {
-  var hamburger = document.getElementById('hamburger');
-  var menu = document.getElementById('mobile-menu');
-  
-  if (hamburger && menu) {
-    hamburger.addEventListener('click', function(e) {
+function showPage(id){
+  document.querySelectorAll('.page').forEach(function(p){p.style.display='none'});
+  var el=document.getElementById('page-'+id);
+  if(el)el.style.display='block';
+  window.scrollTo(0,0);
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var hamburger=document.getElementById('hamburger');
+  var menu=document.getElementById('mobile-menu');
+  if(hamburger){
+    hamburger.addEventListener('click',function(e){
       e.preventDefault();
       e.stopPropagation();
       menu.classList.toggle('open');
       hamburger.classList.toggle('open');
     });
   }
-
-  document.addEventListener('click', function(e) {
-    if (menu && menu.classList.contains('open')) {
-      if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-        menu.classList.remove('open');
-        hamburger.classList.remove('open');
-      }
+  document.addEventListener('click',function(e){
+    if(menu&&menu.classList.contains('open')&&!menu.contains(e.target)&&!hamburger.contains(e.target)){
+      menu.classList.remove('open');
+      hamburger.classList.remove('open');
     }
   });
-
-  window.addEventListener('scroll', function() {
-    var nav = document.getElementById('nav');
-    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll',function(){
+    var nav=document.getElementById('nav');
+    if(nav)nav.classList.toggle('scrolled',window.scrollY>20);
   });
+  showPage('home');
 });
 </script>
 </body>
