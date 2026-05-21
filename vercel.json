@@ -12,6 +12,18 @@
       ],
       "destination": "https://www.higherloveeventco.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{"type": "query", "key": "cat"}],
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{"type": "query", "key": "p"}],
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
