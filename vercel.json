@@ -1,4 +1,17 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "higherloveeventco.com"
+        }
+      ],
+      "destination": "https://www.higherloveeventco.com/:path*",
+      "permanent": true
+    }
+  ]
 }
