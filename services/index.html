@@ -303,7 +303,7 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
 <nav id="nav">
   <a class="nav-logo" href="/">Higher <span>Love</span> Event Co.</a>
   <ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/about">About</a></li><li><a href="/services"style="color:var(--gold)">Services</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact" class="nav-cta">Inquire</a></li></ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu" ontouchstart="this.click()" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
 </nav>
 <div id="mobile-menu"><a href="/">Home</a>
 <a href="/about">About</a>
@@ -422,9 +422,15 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
   <div class="footer-bottom"><span>&copy; 2025 Higher Love Event Co.</span><span>Portland, OR &middot; Serving Oregon &amp; the PNW</span></div>
 </footer>
 <script>
-function toggleMenu(){document.getElementById("mobile-menu").classList.toggle("open");document.getElementById("hamburger").classList.toggle("open");}
-window.addEventListener("scroll",()=>{document.getElementById("nav").classList.toggle("scrolled",window.scrollY>20);});
-document.addEventListener("click",(e)=>{const m=document.getElementById("mobile-menu");const h=document.getElementById("hamburger");if(m&&m.classList.contains("open")&&!m.contains(e.target)&&!h.contains(e.target)){m.classList.remove("open");h.classList.remove("open");}});
+window.addEventListener("scroll",function(){document.getElementById("nav").classList.toggle("scrolled",window.scrollY>20);});
+document.addEventListener("click",function(e){
+  var m=document.getElementById("mobile-menu");
+  var h=document.getElementById("hamburger");
+  if(m&&m.classList.contains("open")&&!m.contains(e.target)&&!h.contains(e.target)){
+    m.classList.remove("open");
+    h.classList.remove("open");
+  }
+});
 </script>
 </body>
 </html>
