@@ -427,7 +427,7 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
 </footer>
 <script>
 function toggleMenu(){document.getElementById("mobile-menu").classList.toggle("open");document.getElementById("hamburger").classList.toggle("open");}
-document.addEventListener("DOMContentLoaded",function(){var btn=document.getElementById("hamburger");if(btn){btn.addEventListener("click",function(e){e.stopPropagation();toggleMenu();});}});{document.getElementById("mobile-menu").classList.toggle("open");document.getElementById("hamburger").classList.toggle("open");}
+document.addEventListener("DOMContentLoaded",function(){var btn=document.getElementById("hamburger");if(btn){btn.addEventListener("click",function(e){e.stopPropagation();toggleMenu();});}});
 window.addEventListener("scroll",()=>{document.getElementById("nav").classList.toggle("scrolled",window.scrollY>20);});
 document.addEventListener("click",(e)=>{const m=document.getElementById("mobile-menu");const h=document.getElementById("hamburger");if(m&&m.classList.contains("open")&&!m.contains(e.target)&&!h.contains(e.target)){m.classList.remove("open");h.classList.remove("open");}});
 </script>
