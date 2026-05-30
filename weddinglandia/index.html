@@ -266,6 +266,53 @@
   footer .contact a{color:#d8d2c5;text-decoration:none;border-bottom:1px solid transparent;}
   footer .contact a:hover{border-color:#cd9530;}
   footer .partner{margin-top:38px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#8c8474;}
+
+  /* ===================== MOBILE POLISH ===================== */
+  @media (max-width: 600px){
+    .wrap{padding:0 20px;}
+
+    /* tighter vertical rhythm so the page doesn't feel sparse */
+    .hero{padding:54px 0 44px;}
+    .hero .eyebrow{margin-bottom:18px;}
+    .hero h1{font-size:clamp(2.1rem,8.5vw,2.7rem);}
+    .hero p.lead{margin-top:20px;font-size:1.02rem;}
+    .tagline{margin-top:30px;font-size:1.05rem;}
+    section{padding:52px 0;}
+    .sec-head{margin-bottom:30px;}
+    .sec-head p{font-size:1rem;}
+    footer{padding:54px 0 38px;}
+
+    /* full-width, thumb-friendly CTAs */
+    .cta-row{margin-top:28px;gap:11px;flex-direction:column;align-items:stretch;}
+    .cta-row .btn{width:100%;text-align:center;}
+
+    /* photo band: shorter so it doesn't dominate a small screen */
+    .photo-band{padding:40px 20px 4px;}
+    .photo-band img{max-height:330px;border-radius:16px;}
+    .photo-cap{font-size:1rem;}
+
+    /* toggle: split the pill into two even, full-width halves */
+    .toggle{display:flex;width:100%;margin-bottom:30px;}
+    .toggle button{flex:1;padding:13px 8px;font-size:.7rem;text-align:center;}
+
+    /* roomier interior padding on cards */
+    .tier{padding:28px 22px;}
+    .compare .col{padding:26px 22px;}
+    .quote{padding:24px 22px;}
+    .panel{padding:32px 24px;}
+    .door{padding:32px 26px;}
+  }
+
+  @media (max-width: 460px){
+    .step{padding:22px 0;}            /* single-column steps: use full width */
+    .hero h1{font-size:clamp(2rem,9vw,2.5rem);}
+  }
+
+  @media (max-width: 380px){
+    .toggle button{font-size:.64rem;}
+    .private-badge{font-size:.56rem;padding:6px 10px;letter-spacing:.12em;}
+    .rule .big{font-size:2.4rem;}
+  }
 </style>
 </head>
 <body>
@@ -301,7 +348,7 @@
 <!-- ===================== MEET KYLIE ===================== -->
 <section class="meet">
   <div class="wrap inner">
-    <img class="meet-photo rise" src="/images/KylieHigherLoveEventCoWeddingPlanner" alt="Kylie, founder and wedding concierge at Higher Love Event Co.">
+    <img class="meet-photo rise" src="/images/KylieHigherLoveEventCoWeddingPlanner.jpeg" alt="Kylie, founder and wedding concierge at Higher Love Event Co.">
     <div class="rise">
       <span class="eyebrow">Meet your concierge</span>
       <h2>Hi, I'm Kylie.</h2>
