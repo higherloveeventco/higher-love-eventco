@@ -65,10 +65,18 @@
   .rise.in{opacity:1;transform:none;}
 
   /* ===================== PHOTOS ===================== */
-  .hero-portrait{
-    display:block;width:128px;height:160px;object-fit:cover;object-position:top center;
-    border-radius:14px;margin:0 auto 30px;filter:grayscale(100%);
-    box-shadow:0 18px 40px -26px rgba(28,28,26,.5);
+  .meet .inner{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center;}
+  .meet-photo{
+    width:100%;max-width:300px;aspect-ratio:4/5;object-fit:cover;object-position:top center;
+    border-radius:18px;filter:grayscale(100%);box-shadow:0 22px 50px -30px rgba(28,28,26,.55);
+  }
+  .meet .eyebrow{display:block;margin-bottom:14px;}
+  .meet h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.05;}
+  .meet p{color:var(--ink-soft);font-size:1.04rem;margin-top:16px;}
+  .meet .sig{font-family:var(--serif);font-style:italic;color:var(--gold-deep);font-size:1.2rem;margin-top:22px;}
+  @media(max-width:720px){
+    .meet .inner{grid-template-columns:1fr;gap:26px;}
+    .meet-photo{max-width:230px;margin:0 auto;}
   }
   .photo-band{padding:70px 28px 10px;text-align:center;}
   .photo-band img{
@@ -272,7 +280,6 @@
 
 <!-- ===================== HERO ===================== -->
 <header class="hero wrap">
-  <img class="hero-portrait rise" src="/images/KylieHigherLoveEventCoWeddingPlanner" alt="Kylie, founder and wedding concierge at Higher Love Event Co.">
   <span class="eyebrow rise">You said "I do" in St. Johns</span>
   <h1 class="rise">Now let's plan the <em>celebration</em>, right here in the neighborhood.</h1>
   <p class="lead rise">You found the place. Higher Love Event Co. handles the rest: venue, vendors, and décor, already narrowed down and ranked for you. No endless options. No decision fatigue. Just a clear path and someone who holds every detail.</p>
@@ -288,6 +295,22 @@
   <img class="rise" src="/images/NewlywedsStJohnsBridgeWeddingStJohnsInnPortlandOregon.jpg" alt="Newlyweds on the St. Johns Bridge in Portland, Oregon" loading="lazy">
   <p class="photo-cap rise">Celebrated in the place you fell in love.</p>
 </div>
+
+<div class="divider"></div>
+
+<!-- ===================== MEET KYLIE ===================== -->
+<section class="meet">
+  <div class="wrap inner">
+    <img class="meet-photo rise" src="/images/KylieHigherLoveEventCoWeddingPlanner" alt="Kylie, founder and wedding concierge at Higher Love Event Co.">
+    <div class="rise">
+      <span class="eyebrow">Meet your concierge</span>
+      <h2>Hi, I'm Kylie.</h2>
+      <p>I founded Higher Love Event Co. to make wedding planning feel calm instead of overwhelming. With six years of planning and full-scale event experience, I bring a steady, creative presence to every celebration.</p>
+      <p>When you book, you're not handed off to a team or a template. I personally find your venue, curate your vendors, handle the logistics, and solve the problems before they ever reach you, from your first call through your last dance.</p>
+      <p class="sig">Hire love. Higher love.</p>
+    </div>
+  </div>
+</section>
 
 <div class="divider"></div>
 
