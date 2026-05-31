@@ -207,9 +207,11 @@
   .safety-net a{color:var(--gold-deep);font-weight:600;}
 
   /* ===================== ST JOHNS EXPERIENCE ===================== */
-  .stjohns{background:var(--linen);}
+  /* cream background so it doesn't sit linen-on-linen against Testimonials above */
+  .stjohns{background:var(--cream);}
   .twocol{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px;}
-  .panel{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:40px 34px;}
+  /* linen panels so the cards still pop on the cream section */
+  .panel{background:var(--linen);border:1px solid var(--line);border-radius:18px;padding:40px 34px;}
   .panel .eyebrow{display:block;margin-bottom:10px;}
   .panel h3{font-size:1.65rem;margin-bottom:8px;}
   .panel .sub{color:var(--muted);font-size:.92rem;margin-bottom:24px;font-style:italic;font-family:var(--serif);}
@@ -333,14 +335,6 @@
   .closing .btn{width:100%;text-align:center;}
 }
 
-     /* --- section background scheme --- */
-.meet      { background:#F6F1E7; }  /* cream  */
-.calm      { background:#ECE3D5; }  /* linen  */
-.proof     { background:#ECE3D5; }  /* linen  */
-.stjohns   { background:#F6F1E7; }  /* cream  */
-.rules     { background:#ECE3D5; }  /* linen  */
-.closing   { background:#F6F1E7; }  /* cream  */
-footer     { background:#1C1C1A; }  /* ink    */
      
 </style>
 </head>
@@ -381,7 +375,7 @@ footer     { background:#1C1C1A; }  /* ink    */
     <div class="rise">
       <span class="eyebrow">Meet your concierge</span>
       <h2>Hi, I'm Kylie.</h2>
-      <p>I started Higher Love because I know wedding planning is overwhelming by design. You don't know what you don't know, and every decision unlocks ten more. Somewhere along the line, we all accepted that's just how it is.</p>
+      <p>I started Higher Love because I know wedding planning is overwhelming by design. You don't know what you don't know, and every decision unlocks ten more. Somewhere along the line, we all accepted that that's just how it is.</p>
       <p>But what if it didn't have to be? What if you had someone in your corner who finds all of it (wait for it) fun?</p>
       <p>That's me. I'm at my best solving problems and turning a hundred scattered details into a few easy yeses. But mostly, I love making people happy on the day meant to be their happiest. You deserve to show up and enjoy your wedding, and your family deserves to celebrate you, not work.</p>
       <p class="sig">Hire love. Higher love.</p>
