@@ -60,6 +60,17 @@ p{color:var(--charcoal);line-height:1.8;font-size:0.92rem}
 </head>
 <body>
 
+<nav style="position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5px solid var(--border);padding:0 2.5rem;">
+  <div style="max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px;">
+    <a href="/" style="font-family:var(--serif);font-size:1rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--black);text-decoration:none;">Higher <span style="color:var(--gold);">Love</span> Event Co.</a>
+    <div style="display:flex;gap:2.5rem;align-items:center;">
+      <a href="/about" style="font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;">About</a>
+      <a href="/contact" style="font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;">Contact</a>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773" style="font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold);color:var(--white);padding:0.6rem 1.4rem;text-decoration:none;">Book a call</a>
+    </div>
+  </div>
+</nav>
+
 <section class="contact-page">
   <div class="wrap">
     <a href="/" style="display:inline-block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem;">&larr; Back to Home</a>
@@ -98,6 +109,7 @@ p{color:var(--charcoal);line-height:1.8;font-size:0.92rem}
         <span style="font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.6rem;">Send a message</span>
         <p style="font-size:0.88rem;color:var(--muted);line-height:1.9;margin-bottom:2rem;padding-bottom:1.8rem;border-bottom:0.5px solid var(--border);">Wherever you are in the planning process, fill out the form below and I&rsquo;ll be in touch within 48 hours.</p>
         <form action="https://formspree.io/f/mrejgylv" method="POST">
+          <input type="hidden" name="_next" value="https://www.higherloveeventco.com/thank-you">
           <div class="form-row">
             <div class="form-group"><label class="form-label">Your name</label><input type="text" name="your_name" class="form-input" placeholder="First &amp; last name" required></div>
             <div class="form-group"><label class="form-label">Partner&rsquo;s name</label><input type="text" name="partner_name" class="form-input" placeholder="First &amp; last name"></div>
