@@ -24,6 +24,17 @@
       "has": [{"type": "query", "key": "p"}],
       "destination": "/",
       "permanent": true
-    }
+    },
+    { "source": "/book", "destination": "/", "permanent": false },
+    { "source": "/book/:path*", "destination": "/", "permanent": false },
+    { "source": "/about", "destination": "/", "permanent": false },
+    { "source": "/st-johns-weddings", "destination": "/", "permanent": false },
+    { "source": "/st-johns-inn", "destination": "/", "permanent": false },
+    { "source": "/weddinglandia", "destination": "/", "permanent": false },
+    { "source": "/decor-packages", "destination": "/", "permanent": false },
+    { "source": "/reviews", "destination": "/", "permanent": false },
+    { "source": "/blog", "destination": "/", "permanent": false },
+    { "source": "/blog/:path*", "destination": "/", "permanent": false },
+    { "source": "/contact", "destination": "/", "permanent": false }
   ]
 }
