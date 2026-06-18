@@ -22,7 +22,6 @@ body{font-family:var(--sans);background:var(--cream);color:var(--black);line-hei
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer}
-
 .eyebrow{display:block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem}
 h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.12;color:var(--black)}
 h1{font-size:clamp(3rem,6vw,5.5rem)}
@@ -30,17 +29,14 @@ h2{font-size:clamp(2rem,4vw,3.2rem)}
 h3{font-size:clamp(1.4rem,2.5vw,2rem)}
 h4{font-size:1.2rem}
 p{color:var(--charcoal);line-height:1.8;font-size:0.92rem}
-
 .btn{display:inline-block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;padding:0.95rem 2rem;border:1px solid var(--black);color:var(--black);background:transparent;transition:all 0.22s;cursor:pointer}
 .btn:hover{background:var(--black);color:var(--white)}
 .btn-gold{background:var(--gold);border-color:var(--gold);color:var(--white)}
 .btn-gold:hover{background:var(--black);border-color:var(--black);color:var(--white)}
 .btn-white{border-color:rgba(255,255,255,0.6);color:var(--white)}
 .btn-white:hover{background:var(--white);color:var(--black);border-color:var(--white)}
-
 .wrap{max-width:1120px;margin:0 auto;padding:0 2.5rem}
 section{padding:6rem 0}
-
 .about-hero{padding:6rem 2.5rem 4rem}
 .about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:6rem;align-items:start;margin-top:3rem}
 .about-img-wrap{position:relative;flex-shrink:0}
@@ -50,53 +46,35 @@ section{padding:6rem 0}
 .about-subtitle{font-family:var(--sans);font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.8rem;display:block}
 .about-text p{margin-bottom:1.1rem;font-size:0.91rem}
 .about-text .signature{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold);margin-top:1.8rem}
-
 .venues-section{background:var(--linen);padding:5rem 2.5rem}
 .venues-grid{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:2rem}
 .venue-tag{font-size:0.7rem;font-weight:500;letter-spacing:0.08em;padding:0.45rem 1rem;background:var(--cream);color:var(--charcoal);border:0.5px solid var(--border)}
-
 .values-section{padding:6rem 2.5rem;background:var(--cream)}
 .values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:3rem}
 .value-item{background:var(--linen);padding:2.5rem}
 .value-num{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:block}
 .value-item h4{font-family:var(--serif);font-size:1.35rem;margin-bottom:0.5rem}
 .value-item p{font-size:0.84rem;color:var(--muted)}
-
 .cred-strip{background:var(--black);padding:4rem 2.5rem}
 .cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;max-width:1120px;margin:0 auto;text-align:center}
 .cred-item{background:var(--charcoal);padding:2.5rem 1.5rem}
 .cred-num{font-family:var(--serif);font-size:3rem;color:var(--gold);display:block;margin-bottom:0.3rem}
 .cred-label{font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
-
 .cta-band{background:var(--black);padding:7rem 2.5rem;text-align:center}
 .cta-band h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3.2rem);color:var(--white);font-weight:300;max-width:680px;margin:0 auto 0.9rem;line-height:1.25}
 .cta-band p{color:rgba(255,255,255,0.45);font-size:0.85rem;margin-bottom:2.5rem}
-
-footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;max-width:1120px;margin:0 auto;padding-bottom:3rem;border-bottom:0.5px solid rgba(255,255,255,0.07)}
-.footer-brand h3{font-family:var(--serif);font-size:1.3rem;color:var(--white);font-weight:400;margin-bottom:0.9rem}
-.footer-brand p{font-size:0.78rem;color:rgba(255,255,255,0.38);line-height:1.85;max-width:230px}
-.footer-col h4{font-size:0.6rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:0.6rem}
-.footer-col ul li a{font-size:0.78rem;color:rgba(255,255,255,0.42);transition:color 0.2s}
-.footer-col ul li a:hover{color:var(--gold-light)}
-.footer-col address{font-style:normal;font-size:0.78rem;color:rgba(255,255,255,0.42);line-height:1.9}
-.footer-bottom{max-width:1120px;margin:2rem auto 0;display:flex;justify-content:space-between;font-size:0.68rem;color:rgba(255,255,255,0.2)}
-
+.cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;}
 @media(max-width:960px){
   section{padding:4rem 0}
   .about-grid{grid-template-columns:1fr;gap:3rem}
   .about-caption{position:static;margin-top:1rem;max-width:100%}
   .values-grid{grid-template-columns:1fr}
   .cred-grid{grid-template-columns:1fr 1fr}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
-  .footer-bottom{flex-direction:column;gap:0.4rem}
   .about-hero,.venues-section,.values-section,.cta-band{padding-left:1.5rem;padding-right:1.5rem}
 }
 @media(max-width:600px){
-  .footer-grid{grid-template-columns:1fr}
   .cred-grid{grid-template-columns:1fr 1fr}
+  .cta-buttons{flex-direction:column;align-items:center;}
 }
 </style>
 </head>
@@ -108,7 +86,6 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
     <h2>Hi, I&rsquo;m Kylie.</h2>
     <div class="about-grid">
       <div class="about-img-wrap">
-        <!-- Replace src below with your photo path or base64 image -->
         <img src="KylieHigherLoveEventCoWeddingPlanner.jpeg" alt="Kylie Forslund, Founder of Higher Love Event Co.">
         <div class="about-caption">Planning support, reimagined.</div>
       </div>
@@ -129,7 +106,7 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
         <p>Wherever your wedding takes place, my goal is always the same. A planning process without overwhelm. A wedding day you get to enjoy. Free of worry, free of loose ends, and nothing pulling you out of the moment. That doesn&rsquo;t happen by accident. It happens because the right work was done long before the day arrived.</p>
 
         <p class="signature">Hire love. Higher love. &mdash; Kylie</p>
-        <a class="btn btn-gold" href="/book" style="margin-top:2rem;display:inline-block;">Work with me</a>
+        <a class="btn btn-gold" href="/contact" style="margin-top:2rem;display:inline-block;">Work with me</a>
       </div>
     </div>
   </div>
@@ -184,15 +161,17 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
       <div class="value-item"><span class="value-num">01 &mdash; Transparency</span><h4>No hidden fees. No fine print.</h4><p>Pricing is published before you reach out. The process is clear from day one. You always know exactly what you&rsquo;re getting, what it costs, and what happens next.</p></div>
       <div class="value-item"><span class="value-num">02 &mdash; Simplicity</span><h4>Less to decide. More to enjoy.</h4><p>Wedding planning doesn&rsquo;t have to mean hundreds of tabs and an inbox full of vendor quotes. The formula exists to narrow the field, surface the best options, and make every choice feel manageable.</p></div>
       <div class="value-item"><span class="value-num">03 &mdash; Expertise</span><h4>You&rsquo;re in experienced hands.</h4><p>Half a decade in the industry. 20 venues across the Pacific Northwest and experience in every role from vendor, to production, to coordinator. That breadth of experience is what makes the difference between a planner who reacts and one who anticipates.</p></div>
-      <div class="value-item"><span class="value-num">04 &mdash; Presence</span><h4>A wedding day you get to enjoy.</h4><p>Not a day spent fielding questions or watching the clock. A day where you get to eat, laugh, cry, dance, and take it all in — and where your family gets to celebrate right alongside you, instead of coordinating every detail of the day. A third party (that&rsquo;s me!) has the details handled from start to finish.</p></div>
+      <div class="value-item"><span class="value-num">04 &mdash; Presence</span><h4>A wedding day you get to enjoy.</h4><p>Not a day spent fielding questions or watching the clock. A day where you get to eat, laugh, cry, dance, and take it all in &mdash; and where your family gets to celebrate right alongside you, instead of coordinating every detail of the day. A third party (that&rsquo;s me!) has the details handled from start to finish.</p></div>
     </div>
   </div>
 </section>
 
 <div class="cta-band">
   <h2>Let&rsquo;s see if we&rsquo;re a good fit</h2>
-  <a class="btn btn-white" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Book a Discovery Call</a>
-  <a class="btn btn-white" href="/contact">Inquire</a>
+  <div class="cta-buttons">
+    <a class="btn btn-gold" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Book a Discovery Call</a>
+    <a class="btn btn-gold" href="/contact">Contact Us</a>
+  </div>
 </div>
 
 <footer style="background:var(--charcoal);padding:2.5rem;text-align:center;">
