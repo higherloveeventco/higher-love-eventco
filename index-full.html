@@ -366,6 +366,7 @@
         <h2>Wedding Decor Suite</h2>
       </div>
       <p style="max-width:720px;font-size:0.88rem;color:var(--charcoal);line-height:1.85;margin-bottom:1.5rem;">Most couples budget per head for food and drink, but decor scales with your guest count just the same. More guests means more tables, and more tables means more decor. A deposit reserves your suite at booking, with the balance determined by your final guest count and chosen collection. The table below shows your exact cost up front.</p>
+      <p style="max-width:720px;font-size:0.78rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;">Current decor suites cover reception decor only. Ceremony decor packages coming soon.</p>
       <a href="/decor-packages" style="font-family:var(--sans);font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px;">Explore the decor collections &rarr;</a>
     </div>
 
@@ -438,7 +439,7 @@
         </tbody>
       </table>
     </div>
-    <p style="font-size:.75rem;color:var(--muted);margin-top:1rem;line-height:1.6;">Prices shown are for the decor suite only. Final cost confirmed at booking based on your guest count and chosen collection. <a href="/decor-packages" style="color:var(--gold-deep);font-weight:600;text-decoration:none;">Explore the collections &rarr;</a></p>
+    <p style="font-size:.75rem;color:var(--muted);margin-top:1rem;line-height:1.6;">Prices shown are for the decor suite only. Final cost of the selected suite is based on your guest count and will be invoiced separately. <a href="/decor-packages" style="color:var(--gold-deep);font-weight:600;text-decoration:none;">Explore the collections &rarr;</a></p>
   </div>
 </section>
 
@@ -613,7 +614,7 @@
     const cfg = PRICING.types[activeType];
     document.getElementById("tiers").innerHTML = PRICING.tiers.map((name,i)=>`
       <div class="tier${i===PRICING.popular?" popular":""} rise in">
-        ${i===PRICING.popular?'<span class="flag">Most booked</span>':""}
+        ${i===PRICING.popular?'<span class="flag">Most booked</span>':'<span style="display:block;height:21px;margin-bottom:14px;"></span>'}
         <h3>${name}</h3>
         <div class="count">${PRICING.guestBands[i]}</div>
         <div class="price"><span class="from">From</span> <span>${money(cfg.prices[i])}</span></div>
