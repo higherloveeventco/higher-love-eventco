@@ -33,7 +33,6 @@
     { "source": "/decor-packages", "destination": "/", "permanent": false },
     { "source": "/reviews", "destination": "/", "permanent": false },
     { "source": "/blog", "destination": "/", "permanent": false },
-    { "source": "/blog/:path*", "destination": "/", "permanent": false },
-    { "source": "/contact", "destination": "/", "permanent": false }
+    { "source": "/blog/:path*", "destination": "/", "permanent": false }
   ]
 }
