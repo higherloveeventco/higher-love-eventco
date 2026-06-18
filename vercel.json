@@ -27,7 +27,6 @@
     },
     { "source": "/book", "destination": "/", "permanent": false },
     { "source": "/book/:path*", "destination": "/", "permanent": false },
-    { "source": "/about", "destination": "/", "permanent": false },
     { "source": "/st-johns-weddings", "destination": "/", "permanent": false },
     { "source": "/st-johns-inn", "destination": "/", "permanent": false },
     { "source": "/weddinglandia", "destination": "/", "permanent": false },
