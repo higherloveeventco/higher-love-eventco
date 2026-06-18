@@ -2,381 +2,194 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <link rel="canonical" href="https://www.higherloveeventco.com/reviews">
-  <meta name="description" content="See what couples and vendors are saying about Higher Love Event Co. — a highly rated wedding coordinator located in St. Johns, Portland, Oregon. Read verified reviews from real clients.">
+<link rel="canonical" href="https://www.higherloveeventco.com/reviews">
+<meta name="description" content="Reviews for Higher Love Event Co. — what couples and venues are saying about working with Kylie Forslund, Portland wedding planner and coordinator.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reviews | Higher Love Event Co.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --gold:#B8892A;--gold-light:#D4A845;--gold-pale:#F0E4C4;
+:root{
+  --gold:#B8892A;--gold-light:#D4A845;--gold-deep:#9A7020;
   --cream:#F5F0E8;--linen:#EDE9E1;--black:#1A1A18;--charcoal:#2C2C29;
   --muted:#79776F;--white:#FFFFFF;--border:rgba(26,26,24,0.1);
   --serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
-  --nav-h:68px;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--black);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer}
-
-/* TYPOGRAPHY */
+.wrap{max-width:1120px;margin:0 auto;padding:0 2.5rem}
 .eyebrow{display:block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem}
 h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.12;color:var(--black)}
-h1{font-size:clamp(3rem,6vw,5.5rem)}
 h2{font-size:clamp(2rem,4vw,3.2rem)}
-h3{font-size:clamp(1.4rem,2.5vw,2rem)}
-h4{font-size:1.2rem}
 p{color:var(--charcoal);line-height:1.8;font-size:0.92rem}
-
-/* BUTTONS */
-.btn{display:inline-block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;padding:0.95rem 2rem;border:1px solid var(--black);color:var(--black);background:transparent;transition:all 0.22s;cursor:pointer}
+.btn{display:inline-block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;padding:0.95rem 2rem;border:1px solid var(--black);color:var(--black);background:transparent;transition:all 0.22s;}
 .btn:hover{background:var(--black);color:var(--white)}
 .btn-gold{background:var(--gold);border-color:var(--gold);color:var(--white)}
-.btn-gold:hover{background:var(--black);border-color:var(--black);color:var(--white)}
-.btn-white{border-color:rgba(255,255,255,0.6);color:var(--white)}
-.btn-white:hover{background:var(--white);color:var(--black);border-color:var(--white)}
-.btn-outline{border-color:var(--gold);color:var(--gold)}
-.btn-outline:hover{background:var(--gold);color:var(--white)}
-
-/* LAYOUT */
-.wrap{max-width:1120px;margin:0 auto;padding:0 2.5rem}
-.wrap-narrow{max-width:780px;margin:0 auto;padding:0 2.5rem}
-section{padding:6rem 0}
+.btn-gold:hover{background:var(--black);border-color:var(--black)}
 
 /* NAV */
-#nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,240,232,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;transition:box-shadow 0.3s}
-#nav.scrolled{box-shadow:0 2px 24px rgba(26,26,24,0.08)}
-.nav-logo{font-family:var(--serif);font-size:1rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);transition:color 0.2s;cursor:pointer;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.2s}
-.nav-links a:hover{color:var(--gold)}
-.nav-links a:hover::after{width:100%}
-.nav-cta{background:var(--black);color:var(--white)!important;padding:0.55rem 1.3rem;font-size:0.6rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;transition:background 0.2s}
-.nav-cta:hover{background:var(--gold)!important}
-.nav-cta::after{display:none!important}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;cursor:pointer}
-.hamburger span{display:block;width:22px;height:1.5px;background:var(--black);transition:all 0.3s}
-.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
-.hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
-#mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--cream);border-bottom:0.5px solid var(--border);padding:2rem 2.5rem 2.5rem;z-index:199;flex-direction:column;gap:1.6rem}
-#mobile-menu.open{display:flex}
-#mobile-menu a{font-size:0.73rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal);cursor:pointer}
+nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5px solid var(--border);padding:0 2.5rem;}
+.nav-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px;}
+.nav-logo{font-family:var(--serif);font-size:1rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--black);}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:2.5rem;align-items:center;}
+.nav-links a{font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);}
+.nav-book{background:var(--gold);color:var(--white)!important;padding:0.6rem 1.4rem;}
 
-/* PAGES */
-.page{display:block;padding-top:var(--nav-h)}
+/* HERO */
+.reviews-hero{padding:6rem 0 4rem;}
+.reviews-hero .sec-head{max-width:680px;}
+.sec-head{max-width:680px;margin-bottom:48px;}
+.sec-head::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:0.7rem;}
+.sec-head h2{font-size:clamp(2rem,4.2vw,3rem);line-height:1.1;margin:14px 0 0;}
+.sec-head p{margin-top:18px;color:var(--charcoal);font-size:1rem;}
 
+/* QUOTES */
+.quotes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);margin-bottom:3rem;}
+.quote{background:var(--cream);padding:2.5rem;display:flex;flex-direction:column;border-top:2px solid var(--gold);}
+.quote.linen{background:var(--linen);}
+.stars{color:var(--gold);letter-spacing:3px;font-size:.85rem;margin-bottom:14px;}
+.quote-text{font-family:var(--serif);font-size:1.08rem;line-height:1.6;color:var(--charcoal);font-style:italic;flex:1;}
+.who{margin-top:1.5rem;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--black);}
+.who span{display:block;font-weight:400;letter-spacing:.04em;text-transform:none;color:var(--muted);font-size:.75rem;margin-top:3px;}
 
-/* ── HOME ── */
-.hero{min-height:calc(100vh - var(--nav-h));display:grid;grid-template-columns:1fr 1fr;padding:0}
-.hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 2.5rem;position:relative}
-.hero-left::after{content:'';position:absolute;right:0;top:8%;bottom:8%;width:0.5px;background:rgba(26,26,24,0.12)}
-.hero-tagline{font-family:var(--serif);font-size:clamp(3.2rem,5.5vw,5.8rem);line-height:1.02;font-weight:300;margin-bottom:1.6rem}
-.hero-tagline em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:0.88rem;color:var(--muted);max-width:400px;margin-bottom:2.4rem;line-height:1.85}
-.hero-btns{display:flex;gap:0.9rem;flex-wrap:wrap}
-.hero-right{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px;background:var(--black)}
-.hero-photo{overflow:hidden;position:relative}
-.hero-photo img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;min-height:220px}
-.hero-photo:hover img{transform:scale(1.04)}
-
-/* MANIFESTO */
-.manifesto{background:var(--black);padding:6rem 2.5rem;text-align:center}
-.manifesto-inner{max-width:860px;margin:0 auto}
-.gold-rule{width:40px;height:1px;background:var(--gold);margin:0 auto 2.5rem}
-.manifesto h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,3.2vw,3rem);color:var(--white);line-height:1.3;margin-bottom:1.4rem}
-.manifesto h2 em{font-style:italic;color:var(--gold-light)}
-.manifesto p{color:rgba(255,255,255,0.5);font-size:0.88rem;max-width:520px;margin:0 auto}
-
-/* PILLARS */
-.pillars{background:var(--linen);padding:6rem 2.5rem}
-.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:3.5rem}
-.pillar{background:var(--cream);padding:3rem 2.5rem;border-top:2px solid var(--gold)}
-.pillar-num{font-family:var(--serif);font-size:4rem;font-weight:300;color:var(--gold-pale);line-height:1;margin-bottom:1.2rem}
-.pillar h3{font-size:1.35rem;margin-bottom:0.8rem}
-.pillar p{font-size:0.84rem;color:var(--muted)}
-
-/* SERVICES SNAP */
-.services-snap{padding:6rem 2.5rem}
-.svc-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:3.5rem}
-.svc-header p{font-size:0.88rem;color:var(--muted)}
-.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
-.svc-card{background:var(--linen);padding:2.8rem}
-.svc-card.featured{background:var(--black);grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
-.svc-card.featured h3{color:var(--white)}
-.svc-card.featured p{color:rgba(255,255,255,0.55)}
-.chip{display:inline-block;font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:0.28rem 0.8rem;margin-bottom:1.1rem;background:var(--gold-pale);color:var(--gold)}
-.svc-card.featured .chip{background:rgba(184,137,42,0.18);color:var(--gold-light)}
-.svc-price{display:block;font-family:var(--serif);font-size:2.4rem;color:var(--gold);margin-top:0.9rem}
-.svc-card.featured .svc-price{color:var(--gold-light);font-size:3.2rem}
-.svc-note{font-size:0.72rem;color:var(--muted);margin-top:0.2rem}
-.svc-card.featured .svc-note{color:rgba(255,255,255,0.3)}
-
-/* TESTIMONIALS */
-.testimonials{background:var(--gold-pale);padding:6rem 2.5rem}
-.testi-header{text-align:center;margin-bottom:3.5rem}
-.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
-.testi-card{background:var(--white);padding:2.8rem 2.5rem;position:relative}
-.testi-card::before{content:'\201C';font-family:var(--serif);font-size:5.5rem;color:var(--gold-pale);position:absolute;top:0.2rem;left:1.4rem;line-height:1}
-.stars{color:var(--gold);font-size:0.78rem;letter-spacing:2px;margin-bottom:1rem}
-.testi-text{font-family:var(--serif);font-style:italic;font-size:1.02rem;line-height:1.65;color:var(--charcoal);margin-bottom:1.4rem;position:relative}
-.testi-author{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)}
-.testi-role{font-size:0.62rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.2rem}
+/* GOOGLE CTA */
+.google-cta{background:var(--linen);padding:4rem 0;text-align:center;}
+.google-cta h3{font-family:var(--serif);font-size:1.8rem;margin-bottom:0.8rem;}
+.google-cta p{font-size:0.88rem;color:var(--muted);margin-bottom:2rem;}
 
 /* CTA BAND */
-.cta-band{background:var(--black);padding:7rem 2.5rem;text-align:center}
-.cta-band h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3.2rem);color:var(--white);font-weight:300;max-width:680px;margin:0 auto 0.9rem;line-height:1.25}
-.cta-band p{color:rgba(255,255,255,0.45);font-size:0.85rem;margin-bottom:2.5rem}
+.cta-band{background:var(--black);padding:6rem 2.5rem;text-align:center;}
+.cta-band h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);color:var(--white);font-weight:300;max-width:680px;margin:0 auto 2rem;line-height:1.25;}
+.cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;}
+.btn-light{border-color:rgba(255,255,255,0.4);color:var(--white);}
+.btn-light:hover{background:var(--white);color:var(--black);border-color:var(--white);}
 
-/* ── ABOUT ── */
-.about-hero{padding:6rem 2.5rem 4rem}
-.about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:6rem;align-items:start;margin-top:3rem}
-.about-img-wrap{position:relative;flex-shrink:0}
-.about-img-wrap img{width:100%;display:block;filter:grayscale(8%)}
-.about-caption{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--gold);color:var(--white);padding:1.2rem 1.8rem;font-family:var(--serif);font-style:italic;font-size:1rem;max-width:210px;line-height:1.4}
-.about-text h2{font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:0.4rem}
-.about-subtitle{font-family:var(--sans);font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.8rem;display:block}
-.about-text p{margin-bottom:1.1rem;font-size:0.91rem}
-.about-text .signature{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold);margin-top:1.8rem}
-.venues-section{background:var(--linen);padding:5rem 2.5rem}
-.venues-grid{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:2rem}
-.venue-tag{font-size:0.7rem;font-weight:500;letter-spacing:0.08em;padding:0.45rem 1rem;background:var(--cream);color:var(--charcoal);border:0.5px solid var(--border)}
-.values-section{padding:6rem 2.5rem;background:var(--cream)}
-.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:3rem}
-.value-item{background:var(--linen);padding:2.5rem}
-.value-num{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:block}
-.value-item h4{font-family:var(--serif);font-size:1.35rem;margin-bottom:0.5rem}
-.value-item p{font-size:0.84rem;color:var(--muted)}
-.cred-strip{background:var(--black);padding:4rem 2.5rem}
-.cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;max-width:1120px;margin:0 auto;text-align:center}
-.cred-item{background:var(--charcoal);padding:2.5rem 1.5rem}
-.cred-num{font-family:var(--serif);font-size:3rem;color:var(--gold);display:block;margin-bottom:0.3rem}
-.cred-label{font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+footer{background:var(--charcoal);padding:2.5rem;text-align:center;}
+footer p{font-size:0.75rem;color:rgba(255,255,255,0.42);line-height:2;}
+footer a{color:rgba(255,255,255,0.42);}
 
-/* ── SERVICES ── */
-.svc-page-hero{padding:6rem 2.5rem 4rem}
-.how-it-works{background:var(--linen);padding:6rem 2.5rem}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:3rem}
-.step{background:var(--cream);padding:2.5rem 2rem}
-.step-num{font-family:var(--serif);font-size:3rem;color:var(--gold-pale);line-height:1;margin-bottom:1rem}
-.step h4{font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem}
-.step p{font-size:0.82rem;color:var(--muted)}
-.main-package{padding:6rem 2.5rem;background:var(--cream)}
-.pkg-block{display:grid;grid-template-columns:1fr 1fr;border:0.5px solid var(--border);margin-top:3rem}
-.pkg-info{padding:3.5rem;background:var(--black)}
-.pkg-info h3{color:var(--white);font-size:2.2rem;margin-bottom:1rem}
-.pkg-info p{color:rgba(255,255,255,0.6);font-size:0.88rem;margin-bottom:1.5rem}
-.pkg-price{font-family:var(--serif);font-size:4rem;color:var(--gold-light);display:block;margin:1.5rem 0 0.2rem;line-height:1}
-.pkg-price-note{font-size:0.68rem;color:rgba(255,255,255,0.35);letter-spacing:0.1em;text-transform:uppercase}
-.pkg-includes{padding:3.5rem;background:var(--linen)}
-.pkg-includes h4{font-family:var(--sans);font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.6rem}
-.inc-item{display:flex;gap:0.9rem;margin-bottom:1.1rem;align-items:flex-start}
-.inc-check{width:17px;height:17px;background:var(--gold);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px}
-.inc-check::after{content:'';width:5px;height:3px;border-left:1.5px solid white;border-bottom:1.5px solid white;transform:rotate(-45deg) translateY(-1px);display:block}
-.inc-text strong{font-weight:600;font-size:0.82rem;display:block;color:var(--black)}
-.inc-text span{font-size:0.79rem;color:var(--muted)}
-.addons{padding:6rem 2.5rem;background:var(--linen)}
-.addon-cat-title{font-family:var(--sans);font-size:0.65rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:0.7rem;margin-top:3rem}
-.addon-row{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:1.1rem 0;border-bottom:0.5px solid var(--border)}
-.addon-name{font-family:var(--serif);font-size:1rem;color:var(--black)}
-.addon-detail{font-size:0.77rem;color:var(--muted);margin-top:0.1rem}
-.addon-hrs{font-size:0.68rem;color:var(--muted);white-space:nowrap;text-align:right}
-.addon-price{font-family:var(--serif);font-size:1.15rem;color:var(--gold);text-align:right;white-space:nowrap}
-.pricing-note{background:var(--cream);padding:2rem 2.5rem;margin-top:2.5rem;border-left:3px solid var(--gold);font-size:0.85rem;color:var(--charcoal)}
-
-/* ── PORTFOLIO ── */
-.portfolio-hero{padding:6rem 2.5rem 4rem}
-.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:0 2.5rem 6rem}
-.port-item{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--linen)}
-.port-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
-.port-item:hover img{transform:scale(1.04)}
-.port-overlay{position:absolute;inset:0;background:rgba(26,26,24,0);transition:background 0.3s;display:flex;align-items:flex-end;padding:1.8rem}
-.port-item:hover .port-overlay{background:rgba(26,26,24,0.5)}
-.port-label{font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--white);opacity:0;transform:translateY(8px);transition:all 0.3s}
-.port-item:hover .port-label{opacity:1;transform:translateY(0)}
-.port-placeholder{width:100%;height:100%;background:var(--linen);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;font-family:var(--serif);font-style:italic;font-size:0.85rem;color:var(--muted);text-align:center;padding:1rem}
-
-/* ── REVIEWS ── */
-.reviews-hero{padding:6rem 2.5rem 4rem;text-align:center}
-.review-avg{font-family:var(--serif);font-size:5rem;color:var(--gold);display:block;line-height:1;margin-top:1rem}
-.review-avg-label{font-size:0.65rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:0.4rem;display:block}
-.reviews-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 2.5rem 6rem}
-.review-card{background:var(--linen);padding:3rem;position:relative}
-.review-card::before{content:'\201C';font-family:var(--serif);font-size:6rem;color:var(--gold-pale);position:absolute;top:0.4rem;left:1.8rem;line-height:1}
-.review-text{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--charcoal);line-height:1.65;margin-bottom:1.8rem;position:relative}
-.review-meta{display:flex;justify-content:space-between;align-items:flex-end}
-.review-author{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--black)}
-.review-role{font-size:0.65rem;color:var(--gold);margin-top:0.15rem;letter-spacing:0.05em}
-.review-stars{color:var(--gold);font-size:0.75rem;letter-spacing:2px}
-
-/* ── CONTACT ── */
-.contact-page{padding:6rem 2.5rem}
-.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:6rem;margin-top:3rem}
-.contact-info h3{font-size:1.9rem;margin-bottom:1rem}
-.contact-info>p{font-size:0.88rem;color:var(--muted);margin-bottom:2.5rem}
-.c-detail{margin-bottom:1.4rem}
-.c-label{font-size:0.62rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.25rem;display:block}
-.c-value{font-family:var(--serif);font-size:1.05rem;color:var(--black)}
-.c-value a{color:var(--black);transition:color 0.2s}
-.c-value a:hover{color:var(--gold)}
-.contact-form{background:var(--linen);padding:3rem}
-.form-group{margin-bottom:1.4rem}
-.form-label{display:block;font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);margin-bottom:0.45rem}
-.form-input,.form-select,.form-textarea{width:100%;padding:0.85rem 1rem;border:0.5px solid rgba(26,26,24,0.2);background:var(--white);font-family:var(--sans);font-size:0.85rem;color:var(--black);outline:none;transition:border-color 0.2s;appearance:none}
-.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold)}
-.form-textarea{min-height:110px;resize:vertical}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.form-submit{width:100%;background:var(--gold);border:none;color:var(--white);font-family:var(--sans);font-size:0.65rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;padding:1rem;cursor:pointer;transition:background 0.22s}
-.form-submit:hover{background:var(--black)}
-
-/* ── BLOG ── */
-.blog-hero{padding:6rem 2.5rem 4rem}
-.blog-coming{padding:2rem 2.5rem 8rem;text-align:center}
-.blog-coming-inner{max-width:500px;margin:0 auto;padding:4rem;border:0.5px solid var(--border)}
-.blog-coming-inner h3{font-size:1.8rem;margin-bottom:1rem}
-.blog-coming-inner p{font-size:0.87rem;color:var(--muted);margin-bottom:2rem}
-
-/* FOOTER */
-footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;max-width:1120px;margin:0 auto;padding-bottom:3rem;border-bottom:0.5px solid rgba(255,255,255,0.07)}
-.footer-brand h3{font-family:var(--serif);font-size:1.3rem;color:var(--white);font-weight:400;margin-bottom:0.9rem}
-.footer-brand p{font-size:0.78rem;color:rgba(255,255,255,0.38);line-height:1.85;max-width:230px}
-.footer-col h4{font-size:0.6rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:0.6rem}
-.footer-col ul li a{font-size:0.78rem;color:rgba(255,255,255,0.42);transition:color 0.2s;cursor:pointer}
-.footer-col ul li a:hover{color:var(--gold-light)}
-.footer-col address{font-style:normal;font-size:0.78rem;color:rgba(255,255,255,0.42);line-height:1.9}
-.footer-bottom{max-width:1120px;margin:2rem auto 0;display:flex;justify-content:space-between;font-size:0.68rem;color:rgba(255,255,255,0.2)}
-
-/* PHOTO CREDIT */
-.photo-credit{position:absolute;bottom:0.5rem;right:0.7rem;font-size:0.55rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.55);z-index:10;pointer-events:none}
-
-/* RESPONSIVE */
-@media(max-width:960px){
-  #nav{padding:0 1.5rem}
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  section{padding:4rem 0}
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-left{padding:4rem 1.5rem;}
-  .hero-left::after{display:none}
-  .hero-right{min-height:360px}
-  .pillars-grid{grid-template-columns:1fr}
-  .svc-header{grid-template-columns:1fr;gap:1rem}
-  .svc-grid{grid-template-columns:1fr}
-  .svc-card.featured{grid-template-columns:1fr}
-  .testi-grid{grid-template-columns:1fr}
-  .about-grid{grid-template-columns:1fr;gap:3rem}
-  .about-caption{position:static;margin-top:1rem;max-width:100%}
-  .values-grid{grid-template-columns:1fr}
-  .cred-grid{grid-template-columns:1fr 1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .pkg-block{grid-template-columns:1fr}
-  .portfolio-grid{grid-template-columns:1fr 1fr;padding:0 1.5rem 4rem}
-  .reviews-grid{grid-template-columns:1fr;padding:0 1.5rem 4rem}
-  .contact-grid{grid-template-columns:1fr;gap:3rem}
-  .form-row{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
-  .footer-bottom{flex-direction:column;gap:0.4rem}
-  .pillars,.services-snap,.testimonials,.cta-band,.addons,.main-package,.about-hero,.venues-section,.values-section,.svc-page-hero,.how-it-works,.portfolio-hero,.reviews-hero,.contact-page,.blog-hero,.blog-coming{padding-left:1.5rem;padding-right:1.5rem}
-  .addon-hrs{display:none}
-  .addon-row{grid-template-columns:1fr auto}
-}
-@media(max-width:600px){
-  .hero-right{min-height:260px}
-  .portfolio-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .cred-grid{grid-template-columns:1fr 1fr}
-  .steps{grid-template-columns:1fr}
+@media(max-width:720px){
+  .quotes-grid{grid-template-columns:1fr;}
+  .nav-links a:not(.nav-book){display:none;}
 }
 </style>
 </head>
 <body>
-<nav id="nav">
-  <a class="nav-logo" href="/">Higher <span>Love</span> Event Co.</a>
-  <ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/about">About</a></li><li><a href="/services">Services</a></li><li><a href="/reviews"style="color:var(--gold)">Reviews</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact" class="nav-cta">Inquire</a></li></ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
-  
-</nav>
-<div id="mobile-menu"><a href="/">Home</a>
-<a href="/about">About</a>
-<a href="/services">Services</a>
-<a href="/reviews">Reviews</a>
-<a href="/blog">Blog</a>
-<a href="/contact">Inquire</a>
-</div>
-<div id="page-reviews" class="page">
-  <section class="reviews-hero">
-    <div class="wrap-narrow">
-      <span class="eyebrow">Reviews</span>
-      <h2>What people are saying</h2>
-      <span class="review-avg">5.0</span>
-      <span class="review-avg-label">&#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Reviews</span>
-    </div>
-  </section>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">We had less than 3 months to pull together a formal wedding. Kylie was able to make that happen. She was with us through the whole process, including the day of. It was such a relief to be able to tell vendors and guests that Kylie would coordinate. She put together schedules, planned layouts, and updated us regularly on progress. She had the energy and organization to maintain a timeline for our planning and ceremony. She helped to set up and break down at the venue. She was the first one on site, and we didn&rsquo;t have to worry about anything after we left. If you are even considering a planner, give her a call.</p>
-      <div class="review-meta"><div><div class="review-author">Amanda Riley</div><div class="review-role">2025 Bride</div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">As a wedding planner, I couldn&rsquo;t speak more highly of Kylie and her work! She&rsquo;s warm, professional, with an excellent eye for detail. She helped me out a couple of years ago and stepped in to coordinate a wedding I&rsquo;d planned but couldn&rsquo;t work due to Covid and, even on short notice and at a difficult venue, she really crushed it! The clients were so relieved and happy and I couldn&rsquo;t be more grateful. I&rsquo;d love to work with her again and highly recommend her to any nearlyweds planning their weddings.</p>
-      <div class="review-meta"><div><div class="review-author">Andy Anthony</div><div class="review-role">Double A Weddings &amp; Events</div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">Kylie is always a pleasure to work with! She&rsquo;s organized, professional, and makes every event run smoothly. Our team loves when she&rsquo;s at the venue &mdash; everything goes off without a hitch. Highly recommend!</p>
-      <div class="review-meta"><div><div class="review-author">The Crag Rat Hut</div><div class="review-role">Venue Partner, Hood River</div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">I&rsquo;ve had the pleasure of photographing numerous events coordinated and styled by Kylie at Higher Love, and am consistently impressed by her organization and communication. She never leaves a single detail unrefined, and is a joy to work with!</p>
-      <div class="review-meta"><div><div class="review-author">Rebecca Rizzo</div><div class="review-role">Rebecca Rizzo Photographics</div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Higher <span>Love</span> Event Co.</a>
+    <div class="nav-links">
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773" class="nav-book">Schedule a discovery call</a>
     </div>
   </div>
-  <div class="cta-band">
-    <h2>Your wedding could be next</h2>
-    <p>Book a free discovery call &mdash; let&rsquo;s see if we&rsquo;re the right fit.</p>
-    <a class="btn btn-white" href="/contact" style="cursor:pointer">Book your free call</a>
+</nav>
+
+<section class="reviews-hero">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Reviews</span>
+      <h2>From the couples and venues who have worked with me.</h2>
+      <p>Every review below is from Google. Unedited, unprompted, and entirely theirs.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0 0 6rem;">
+  <div class="wrap">
+    <div class="quotes-grid">
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text">"Neither of us were contacted by anyone once for clarification during the wedding. Kylie was running logistics and making sure everything was taken care of without us having to lift a thumb. We walked away thinking the gale force winds were a special treat — which never would have been the case had she not jumped into action in advance to think through how to make everything run smoothly regardless of the weather. She acts with professionalism, is great at her job, and is so much fun to work with. A triple threat."</p>
+        <div class="who">Sage T. <span>Wedding client &middot; Google Review</span></div>
+      </div>
+
+      <div class="quote linen">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text">"We had less than 3 months to pull together a formal wedding. Kylie was able to make that happen. She put together schedules, planned layouts, and updated us regularly on progress. She had the energy and organization to maintain a timeline for our planning and ceremony. She was the first one on site, and we didn't have to worry about anything after we left. If you are even considering a planner, give her a call."</p>
+        <div class="who">Amanda R. <span>Wedding client &middot; Google Review</span></div>
+      </div>
+
+      <div class="quote linen">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text">"She's warm, professional, with an excellent eye for detail. She stepped in to coordinate a wedding I'd planned but couldn't work due to Covid — even on short notice and at a difficult venue, she really crushed it. The clients were so relieved and happy and I couldn't be more grateful. I'd love to work with her again and highly recommend her to any nearlyweds planning their weddings."</p>
+        <div class="who">Andy A. <span>Fellow wedding planner &middot; Google Review</span></div>
+      </div>
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text">"Kylie is always a pleasure to work with. She's organized, professional, and makes every event run smoothly. Our team loves when she's at the venue — everything goes off without a hitch. Highly recommend!"</p>
+        <div class="who">Crag Rat Hut <span>Venue partner &middot; Google Review</span></div>
+      </div>
+
+      <div class="quote linen">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text">"Working with Kylie was a very positive experience. She is organized, personable, and creative. She helped make the 100+ person wedding reception at our venue an absolutely perfect event for both her guests and our team. Her and her team were on-time, organized, hospitable, and simply a joy to work with. We would jump at the opportunity to work with Kylie again, and we highly recommend Higher Love for anybody in need of event/wedding coordination!"</p>
+        <div class="who">Brooklyn Carreta <span>Venue partner &middot; Google Review</span></div>
+      </div>
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text">"I recently worked alongside Kylie as a vendor in a wedding she coordinated. She was organized, detailed, and she went above and beyond when it came to ensuring I had everything I needed as a vendor. She made me feel like we were all a part of a team, rather than just pieces of a couple's puzzle. If you want your coordinator to get the job done with a smile on their face, while making everyone's jobs easier in the process, Kylie and Higher Love Event Co. is the way to go."</p>
+        <div class="who">Avery D. <span>Vendor &middot; Google Review</span></div>
+      </div>
+
+      <div class="quote linen">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text">"Kylie was an absolute pleasure to work with. As a photographer, I especially appreciated how responsive and organized she was throughout the process. The couple we worked with had a unique timeline, and Kylie seamlessly coordinated multiple events and locations, ensuring everything ran smoothly. Her professionalism and attention to detail made the entire experience enjoyable, and I would gladly work with her again."</p>
+        <div class="who">Bailey O. <span>Photographer &middot; Google Review</span></div>
+      </div>
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text">"Kylie has an incredible eye for detail. She's organized, thoughtful, and truly goes above and beyond to make things feel seamless and special. If you're looking for someone who will bring your vision to life and make the process feel easy, I can't recommend her enough."</p>
+        <div class="who">Mel J. <span>Google Review</span></div>
+      </div>
+
+      <div class="quote linen">
+        <div class="stars">★★★★★</div>
+        <p class="quote-text">"I've had the pleasure of photographing numerous events coordinated and styled by Kylie at Higher Love — every single one has been a seamless, well-organized experience."</p>
+        <div class="who">Rebecca R. <span>Photographer &middot; Google Review</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="google-cta">
+  <div class="wrap">
+    <h3>Worked with Higher Love?</h3>
+    <p>Reviews help other couples find the right fit. If we've worked together, I'd love to hear from you.</p>
+    <a class="btn" href="https://g.page/r/higherloveeventco/review" target="_blank">Leave a Google review &rarr;</a>
   </div>
 </div>
 
+<div class="cta-band">
+  <h2>Let&rsquo;s plan your wedding.</h2>
+  <div class="cta-buttons">
+    <a class="btn btn-gold" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=category:Higher%20Love%20Event%20Co.%20Wedding%20Planning%20Packages">Reserve Your Package</a>
+    <a class="btn btn-light" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Schedule a discovery call</a>
+  </div>
+</div>
 
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand"><h3>Higher Love Event Co.</h3><p>Boutique wedding coordination &amp; planning rooted in St. Johns, Portland. Serving Oregon &amp; the PNW.</p></div>
-    <div class="footer-col"><h4>Navigate</h4><ul>
-      <li><a href="/">Home</a></li><li><a href="/about">About Kylie</a></li>
-      <li><a href="/services">Services &amp; Pricing</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/blog">Blog</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Services</h4><ul>
-      <li><a href="/services">Essential Coordination</a></li><li><a href="/services">Planning Add-Ons</a></li>
-      <li><a href="/services">Design &amp; Style</a></li><li><a href="/services">On-Site Support</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Contact</h4><address>hello@higherloveeventco.com<br>503-217-8500<br>St. Johns, Portland, OR<br><br>@higherloveeventco</address></div>
-  </div>
-  <div class="footer-bottom"><span>&copy; 2025 Higher Love Event Co.</span><span>Portland, OR &middot; Serving Oregon &amp; the PNW</span></div>
+  <p>
+    <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a>
+    &nbsp;&middot;&nbsp;
+    <a href="tel:5032178500">503-217-8500</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://instagram.com/higherloveeventco">@higherloveeventco</a>
+  </p>
+  <p style="margin-top:0.8rem;font-size:0.62rem;color:rgba(255,255,255,0.15);">&copy; 2025 Higher Love Event Co. &middot; St. Johns, Portland, OR</p>
 </footer>
-<script>
-window.addEventListener("scroll",function(){document.getElementById("nav").classList.toggle("scrolled",window.scrollY>20);});
-document.addEventListener("click",function(e){
-  var m=document.getElementById("mobile-menu");
-  var h=document.getElementById("hamburger");
-  if(m&&m.classList.contains("open")&&!m.contains(e.target)&&!h.contains(e.target)){
-    m.classList.remove("open");
-    h.classList.remove("open");
-  }
-});
-</script>
+
 </body>
 </html>
