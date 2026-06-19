@@ -149,11 +149,14 @@ const ACUITY = {
   base: "https://YOURNAME.as.me/",
   collectionFieldId: "COLLECTION_ID",// shared intake field ID for the Collection question
   guestFieldId: "GUEST_ID",          // shared intake field ID for the guest count question
-  // OPTIONAL referral tag. On the Weddinglandia copy of this page, set source to "Weddinglandia"
-  // and paste the field ID for a hidden "Source" question. Leave both blank on the public site.
-  sourceFieldId: "",
-  source: ""
+  sourceFieldId: "",                 // shared intake field ID for a hidden "Source" question
+  source: ""                         // set automatically from the page URL, see SOURCES below
 };
+// Referral tagging from the URL. Embed this same file with ?src=weddinglandia on the
+// Weddinglandia page and bookings get stamped Weddinglandia. The public embed needs no
+// parameter and stays untagged. One file, no second copy to keep in sync.
+const SOURCES = { weddinglandia: "Weddinglandia" };
+ACUITY.source = SOURCES[new URLSearchParams(location.search).get("src")] || "";
 const INQUIRY_EMAIL = "hello@higherloveeventco.com"; // for 120+ custom quotes
 
 /* 2) YOUR NUMBERS (match your spreadsheet) */
