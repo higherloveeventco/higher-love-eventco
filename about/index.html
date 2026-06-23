@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="canonical" href="https://www.higherloveeventco.com/about">
-<meta name="description" content="Meet Kylie, founder of Higher Love Event Co. — a boutique wedding coordinator located in St. Johns, Portland with six years of experience in wedding planning, design, and coordination across Oregon and the PNW.">
+<meta name="description" content="Meet Kylie, founder of Higher Love Event Co., a boutique wedding coordinator located in St. Johns, Portland with six years of experience in wedding planning, design, and coordination across Oregon and the PNW.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | Higher Love Event Co.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,18 +76,28 @@ section{padding:6rem 0}
   .cred-grid{grid-template-columns:1fr 1fr}
   .cta-buttons{flex-direction:column;align-items:center;}
 }
+nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5px solid var(--border);padding:0 2.5rem;}
+.nav-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px;}
+.nav-logo{font-family:var(--serif);font-size:1rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--black);}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
+.nav-book{background:var(--gold);color:var(--white)!important;padding:0.6rem 1.4rem;}
 </style>
 </head>
 <body>
 
-<nav style="position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5px solid var(--border);padding:0 2.5rem;">
-  <div style="max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px;">
-    <a href="/" style="font-family:var(--serif);font-size:1rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--black);text-decoration:none;">Higher <span style="color:var(--gold);">Love</span> Event Co.</a>
-    <div style="display:flex;gap:2.5rem;align-items:center;">
-      <a href="/about" style="font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;">About</a>
-      <a href="/reviews" style="font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;">Reviews</a>
-      <a href="/contact" style="font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;">Contact</a>
-      <a href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773" style="font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold);color:var(--white);padding:0.6rem 1.4rem;text-decoration:none;">Schedule a discovery call</a>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Higher <span>Love</span> Event Co.</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/reviews">Reviews</a>
+      <a href="/decor">Decor</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+      <a href="/book" class="nav-book">Reserve</a>
     </div>
   </div>
 </nav>
@@ -115,11 +125,11 @@ section{padding:6rem 0}
 
         <p>I&rsquo;m based in Portland, but I&rsquo;ve had the privilege of coordinating weddings everywhere from the jungles of Tulum to the Utah desert. My favorite weddings are the ones I plan here in the beautiful Pacific Northwest. I&rsquo;ve coordinated at nearly 20 different venues across wine country, the Portland metro, and the Columbia River Gorge.</p>
 
-        <p>I&rsquo;m proud to call the St. Johns neighborhood home, and I believe it&rsquo;s one of Portland&rsquo;s best kept secrets for beautiful, soulful weddings. The neighborhood has everything: Cathedral Park, the Willamette River, the iconic St. Johns Bridge, and a robust vendor scene made up of incredibly talented and passionate people. With the Bridge&rsquo;s upcoming reopening and the forthcoming opportunity to reserve the Cathedral Park deck and staircase (slated for 2027), St. Johns is primed to become the place to get married in the Portland metro, and I can&rsquo;t wait to play a role in making that happen.</p>
+        <p>I&rsquo;m proud to call the St. Johns neighborhood home, and I believe it&rsquo;s one of Portland&rsquo;s best kept secrets for beautiful, soulful weddings. The neighborhood has everything: Cathedral Park, the Willamette River, the iconic St. Johns Bridge, and a robust vendor scene made up of incredibly talented and passionate people. With the Bridge&rsquo;s upcoming reopening and the forthcoming opportunity to reserve the Cathedral Park deck and staircase (opening date TBD), St. Johns is primed to become the place to get married in the Portland metro, and I can&rsquo;t wait to play a role in making that happen.</p>
 
         <p>Wherever your wedding takes place, the goal is the same: a planning process without overwhelm, and a wedding day you get to fully enjoy. That doesn&rsquo;t happen by accident. It happens because the right work was done long before the day arrived.</p>
 
-        <p class="signature">Hire love. Higher love. &mdash; Kylie</p>
+        <p class="signature">Hire love. Higher love. Kylie</p>
         <a class="btn btn-gold" href="/contact" style="margin-top:2rem;display:inline-block;">Get in touch</a>
       </div>
     </div>
@@ -172,10 +182,10 @@ section{padding:6rem 0}
     <span class="eyebrow">What I believe</span>
     <h2>The values behind every event</h2>
     <div class="values-grid">
-      <div class="value-item"><span class="value-num">01 &mdash; Transparency</span><h4>No hidden fees. No fine print.</h4><p>Pricing is published before you reach out. The process is clear from day one. You always know exactly what you&rsquo;re getting, what it costs, and what happens next.</p></div>
-      <div class="value-item"><span class="value-num">02 &mdash; Simplicity</span><h4>Less to decide. More to enjoy.</h4><p>Wedding planning doesn&rsquo;t have to mean hundreds of tabs and an inbox full of vendor quotes. The formula exists to narrow the field, surface the best options, and make every choice feel manageable.</p></div>
-      <div class="value-item"><span class="value-num">03 &mdash; Expertise</span><h4>You&rsquo;re in experienced hands.</h4><p>Half a decade in the industry. 20 venues across the Pacific Northwest and experience in every role from vendor, to production, to coordinator. That breadth of experience is what makes the difference between a planner who reacts and one who anticipates.</p></div>
-      <div class="value-item"><span class="value-num">04 &mdash; Presence</span><h4>A wedding day you get to enjoy.</h4><p>Not a day spent fielding questions or watching the clock. A day where you get to eat, laugh, cry, dance, and take it all in &mdash; and where your family gets to celebrate right alongside you, instead of coordinating every detail of the day. A third party (that&rsquo;s me!) has the details handled from start to finish.</p></div>
+      <div class="value-item"><span class="value-num">01 / Transparency</span><h4>No hidden fees. No fine print.</h4><p>Pricing is published before you reach out. The process is clear from day one. You always know exactly what you&rsquo;re getting, what it costs, and what happens next.</p></div>
+      <div class="value-item"><span class="value-num">02 / Simplicity</span><h4>Less to decide. More to enjoy.</h4><p>Wedding planning doesn&rsquo;t have to mean hundreds of tabs and an inbox full of vendor quotes. The formula exists to narrow the field, surface the best options, and make every choice feel manageable.</p></div>
+      <div class="value-item"><span class="value-num">03 / Expertise</span><h4>You&rsquo;re in experienced hands.</h4><p>Half a decade in the industry. 20 venues across the Pacific Northwest and experience in every role from vendor, to production, to coordinator. That breadth of experience is what makes the difference between a planner who reacts and one who anticipates.</p></div>
+      <div class="value-item"><span class="value-num">04 / Presence</span><h4>A wedding day you get to enjoy.</h4><p>Not a day spent fielding questions or watching the clock. A day where you get to eat, laugh, cry, dance, and take it all in, and where your family gets to celebrate right alongside you, instead of coordinating every detail of the day. A third party (that&rsquo;s me!) has the details handled from start to finish.</p></div>
     </div>
   </div>
 </section>
