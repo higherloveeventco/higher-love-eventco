@@ -7,9 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  /* ──────────────────────────────────────────────────────────
-     EDIT YOUR NUMBERS in the <script> block at the bottom.
-     ────────────────────────────────────────────────────────── */
   :root{
     --cream:#F4EEE2; --cream2:#FBF7EF; --ink:#1C1C1C;
     --gold:#C1903A; --linen:#E7E0D2; --muted:#8a7f6c;
@@ -218,55 +215,47 @@
 </div>
 
 <script>
-/* ──────────────────────────────────────────────────────────
-   1) ACUITY DETAILS
-   ────────────────────────────────────────────────────────── */
 const ACUITY = {
   base: "https://app.acuityscheduling.com/schedule.php?owner=39373577",
-  collectionFieldId: "18715524",     // shared intake field ID: Collection
-  guestFieldId: "18733420",          // shared intake field ID: Guest count
-  sourceFieldId: "18733429",         // shared intake field ID: Referral Source
-  source: ""                         // set automatically from the page URL (see SOURCES)
+  collectionFieldId: "18715524",
+  guestFieldId: "18733420",
+  sourceFieldId: "18733429",
+  source: ""
 };
-// Embed with ?src=weddinglandia on the Weddinglandia page to tag those bookings.
 const SOURCES = { weddinglandia: "Weddinglandia" };
 ACUITY.source = SOURCES[new URLSearchParams(location.search).get("src")] || "";
-const INQUIRY_EMAIL = "hello@higherloveeventco.com"; // for 120+ custom quotes
+const INQUIRY_EMAIL = "hello@higherloveeventco.com";
 
-/* 2) PLANNING PACKAGES — price + Acuity appointment-type ID per scope and tier */
 const PLANNING = {
   full:  { label:"Ceremony + Reception",
-    Petite:{price:3800, appt:"93492508"}, Signature:{price:5200, appt:"93492538"}, Grand:{price:6800, appt:"93492586"} },
+    Petite:{price:4500, appt:"93492508"}, Signature:{price:5800, appt:"93492538"}, Grand:{price:7500, appt:"93492586"} },
   recep: { label:"Reception Only",
-    Petite:{price:3300, appt:"93492310"}, Signature:{price:4700, appt:"93492410"}, Grand:{price:6300, appt:"93492442"} }
+    Petite:{price:4000, appt:"93492310"}, Signature:{price:5300, appt:"93492410"}, Grand:{price:7000, appt:"93492442"} }
 };
 
-/* 3) TABLESCAPE COLLECTIONS. price = client price per table. cost = your cost (margin reference). */
 const GUESTS_PER_TABLE = 8, RESERVE_FEE = 500, DELIVERY_EST = 500;
 const PACKAGES = [
-  {id:"midnight",name:"Midnight Romance",cost:370.45,price:410,canva:"https://canva.link/w0ocoveub7fbfn7",tagline:"Black linen, aubergine, and gold. Candlelit and dramatic.",
+  {id:"midnight",name:"Midnight Romance",cost:370.45,price:407.50,canva:"https://canva.link/w0ocoveub7fbfn7",tagline:"Black linen, aubergine, and gold. Candlelit and dramatic.",
    palette:["#1C1C1C","#4A2C3A","#C1903A"],highlights:["Black linen, black chiffon runner","Aubergine napkins, gold flatware","Gold lacquer chargers, noir plates","Gold-rim water goblets","Gold tapers, votives, and bud vase florals"]},
-  {id:"garden",name:"Garden Party",cost:349.65,price:385,canva:"https://canva.link/bfl6m7gst7yhkqr",tagline:"White linen, celadon, and rattan. Fresh and sunlit.",
+  {id:"garden",name:"Garden Party",cost:349.65,price:384.62,canva:"https://canva.link/bfl6m7gst7yhkqr",tagline:"White linen, celadon, and rattan. Fresh and sunlit.",
    palette:["#F7F4EC","#AEBFA9","#A9C2D8","#C9A878","#D8A7A0"],highlights:["White linen, soft blue gauze runner","Celadon napkins, silver flatware","Natural rattan placemats, pearl plates","Soft blue goblets","Rose tapers, votives, and bud vase florals"]},
-  {id:"boho",name:"Warm Bohemian",cost:351.25,price:390,canva:"https://canva.link/prhsbn2dxn4iv4j",tagline:"Olive, copper, and amber. Earthy and warm.",
+  {id:"boho",name:"Warm Bohemian",cost:351.25,price:386.38,canva:"https://canva.link/prhsbn2dxn4iv4j",tagline:"Olive, copper, and amber. Earthy and warm.",
    palette:["#6B6F4A","#B07A4F","#C8893F"],highlights:["Olive linen, ivory gauze runner","Copper napkins, gold flatware","Dark rattan placemats, snow plates","Amber goblets","Pillar candles, votives, and bud vase florals"]},
-  {id:"refined",name:"Refined Rustic",cost:357.35,price:395,canva:"https://canva.link/p418a4qvjkrxi5j",tagline:"White linen, moss, and warm wood. Organic and grounded.",
+  {id:"refined",name:"Refined Rustic",cost:357.35,price:393.09,canva:"https://canva.link/p418a4qvjkrxi5j",tagline:"White linen, moss, and warm wood. Organic and grounded.",
    palette:["#F7F4EC","#6B6F4A","#8A5A3B","#7D7B78"],highlights:["White linen, ivory gauze runner","Moss napkins, silver flatware","Wood grain chargers, lace-edge plates","Smoke goblets","Pillar candles, votives, and bud vase florals"]},
-  {id:"soft",name:"Soft & Simple",cost:294.15,price:325,canva:"https://canva.link/uz7decdgr9irde3",tagline:"Ivory and white, pared back. Understated and serene.",
+  {id:"soft",name:"Soft & Simple",cost:294.15,price:323.57,canva:"https://canva.link/uz7decdgr9irde3",tagline:"Ivory and white, pared back. Understated and serene.",
    palette:["#EFE7D8","#F7F4EC","#E7E0D2"],highlights:["Ivory linen, white chiffon runner","White hemstitch napkins, silver flatware","Snow stoneware dinner and salad plates","Prism water goblets","Floating candles, votives, and bud vase florals"]},
-  {id:"blush",name:"First Blush",cost:350.45,price:390,canva:"https://canva.link/wb7jib75omfuo01",tagline:"Ivory and blush with whitewashed wood. Soft and romantic.",
+  {id:"blush",name:"First Blush",cost:350.45,price:385.50,canva:"https://canva.link/wb7jib75omfuo01",tagline:"Ivory and blush with whitewashed wood. Soft and romantic.",
    palette:["#EFE7D8","#E3B9B3","#CDBFA8"],highlights:["Ivory linen, white chiffon runner","Blush satin napkins","Whitewash wood chargers, Monet china plates","Clear goblets","Pillar candles, votives, and bud vase florals"]},
-  {id:"vineyard",name:"Modern Vineyard",cost:392.85,price:435,canva:"https://canva.link/63o9v3eytfsurpf",tagline:"Leaf velvet, dark rattan, and magenta tapers. Lush and vivid.",
+  {id:"vineyard",name:"Modern Vineyard",cost:392.85,price:432.14,canva:"https://canva.link/63o9v3eytfsurpf",tagline:"Leaf velvet, dark rattan, and magenta tapers. Lush and vivid.",
    palette:["#5E6B4A","#9C6B43","#A63D6A","#F7F4EC"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","Dark rattan placemats, pearl plates","Prism water goblets","Magenta tapers, votives, and bud vase florals"]},
-  {id:"fresh",name:"Fresh & Minimal",cost:329.85,price:365,canva:"https://canva.link/8ek7ct6n8bbciu8",tagline:"White, silver, and a touch of green. Crisp and clean.",
+  {id:"fresh",name:"Fresh & Minimal",cost:329.85,price:362.84,canva:"https://canva.link/8ek7ct6n8bbciu8",tagline:"White, silver, and a touch of green. Crisp and clean.",
    palette:["#F7F4EC","#CFCABE","#6E7A57"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","White and silver chargers and plates","Prism water goblets","Floating candles, votives, and bud vase florals"]}
 ];
 const BANDS = [{name:"Petite",max:50},{name:"Signature",max:90},{name:"Grand",max:120}];
 
-/* ── logic ── */
 const state = {step:1, scope:"full", pkgId:null, guests:80};
 const $ = s => document.querySelector(s);
-const priceOf = p => p.price;
 const money = n => n.toLocaleString("en-US",{style:"currency",currency:"USD",minimumFractionDigits:2});
 const tablesFor = g => Math.ceil(g/GUESTS_PER_TABLE);
 const tierFor = g => { for(const b of BANDS) if(g<=b.max) return b.name; return "Custom"; };
@@ -281,7 +270,6 @@ function showStep(n){
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
-/* STEP 1 — package */
 function updatePackage(){
   const tier=tierFor(state.guests), custom=tier==="Custom", tables=tablesFor(state.guests);
   $("#gnum").textContent=state.guests;
@@ -308,7 +296,6 @@ function quoteMailto(){
   return "mailto:"+INQUIRY_EMAIL+"?subject="+encodeURIComponent("Wedding planning quote request")+"&body="+encodeURIComponent(body);
 }
 
-/* STEP 2 — collection */
 function renderCards(){
   $("#cards").innerHTML = PACKAGES.map(p=>`
     <div class="card${state.pkgId===p.id?' sel':''}" data-id="${p.id}">
@@ -316,7 +303,7 @@ function renderCards(){
       <div class="pn">${p.name}</div>
       <div class="tg">${p.tagline}</div>
       <ul>${p.highlights.map(h=>`<li>${h}</li>`).join("")}</ul>
-      <div class="from">From <b>${money(priceOf(p))}</b> / table</div>
+      <div class="from">From <b>${money(p.price)}</b> / table</div>
       <a class="look" href="${p.canva}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View the full look &#8599;</a>
     </div>`).join("");
   document.querySelectorAll(".card").forEach(c=>c.addEventListener("click",()=>{
@@ -324,10 +311,9 @@ function renderCards(){
   }));
 }
 
-/* STEP 3 — estimated total */
 function enterEstimate(){
   const p=pkg(), tier=tierFor(state.guests), tables=tablesFor(state.guests);
-  const tablescape=priceOf(p)*tables;
+  const tablescape=p.price*tables;
   const planPrice=PLANNING[state.scope][tier].price;
   const grand=tablescape+planPrice+DELIVERY_EST;
   $("#estSw").innerHTML=swHTML(p.palette);
@@ -339,7 +325,6 @@ function enterEstimate(){
   showStep(3);
 }
 
-/* STEP 4 — reserve */
 function buildBookingUrl(){
   const p=pkg(), tier=tierFor(state.guests);
   const appt=PLANNING[state.scope][tier].appt;
@@ -361,7 +346,6 @@ function enterReserve(){
   showStep(4);
 }
 
-/* events */
 renderCards();
 setScope("full");
 $("#scopeFull").addEventListener("click",()=>setScope("full"));
