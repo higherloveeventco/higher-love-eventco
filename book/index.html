@@ -235,23 +235,26 @@ const PLANNING = {
 
 const GUESTS_PER_TABLE = 8, RESERVE_FEE = 500, DELIVERY_EST = 500;
 const PACKAGES = [
-  {id:"midnight",name:"Midnight Romance",cost:370.45,price:407.50,canva:"https://canva.link/w0ocoveub7fbfn7",tagline:"Black linen, aubergine, and gold. Candlelit and dramatic.",
+  {id:"midnight",name:"Midnight Romance",cost:370.45,price:410,canva:"https://canva.link/w0ocoveub7fbfn7",tagline:"Black linen, aubergine, and gold. Candlelit and dramatic.",
    palette:["#1C1C1C","#4A2C3A","#C1903A"],highlights:["Black linen, black chiffon runner","Aubergine napkins, gold flatware","Gold lacquer chargers, noir plates","Gold-rim water goblets","Gold tapers, votives, and bud vase florals"]},
-  {id:"garden",name:"Garden Party",cost:349.65,price:384.62,canva:"https://canva.link/bfl6m7gst7yhkqr",tagline:"White linen, celadon, and rattan. Fresh and sunlit.",
+  {id:"garden",name:"Garden Party",cost:349.65,price:385,canva:"https://canva.link/bfl6m7gst7yhkqr",tagline:"White linen, celadon, and rattan. Fresh and sunlit.",
    palette:["#F7F4EC","#AEBFA9","#A9C2D8","#C9A878","#D8A7A0"],highlights:["White linen, soft blue gauze runner","Celadon napkins, silver flatware","Natural rattan placemats, pearl plates","Soft blue goblets","Rose tapers, votives, and bud vase florals"]},
-  {id:"boho",name:"Warm Bohemian",cost:351.25,price:386.38,canva:"https://canva.link/prhsbn2dxn4iv4j",tagline:"Olive, copper, and amber. Earthy and warm.",
+  {id:"boho",name:"Warm Bohemian",cost:351.25,price:390,canva:"https://canva.link/prhsbn2dxn4iv4j",tagline:"Olive, copper, and amber. Earthy and warm.",
    palette:["#6B6F4A","#B07A4F","#C8893F"],highlights:["Olive linen, ivory gauze runner","Copper napkins, gold flatware","Dark rattan placemats, snow plates","Amber goblets","Pillar candles, votives, and bud vase florals"]},
-  {id:"refined",name:"Refined Rustic",cost:357.35,price:393.09,canva:"https://canva.link/p418a4qvjkrxi5j",tagline:"White linen, moss, and warm wood. Organic and grounded.",
+  {id:"refined",name:"Refined Rustic",cost:357.35,price:395,canva:"https://canva.link/p418a4qvjkrxi5j",tagline:"White linen, moss, and warm wood. Organic and grounded.",
    palette:["#F7F4EC","#6B6F4A","#8A5A3B","#7D7B78"],highlights:["White linen, ivory gauze runner","Moss napkins, silver flatware","Wood grain chargers, lace-edge plates","Smoke goblets","Pillar candles, votives, and bud vase florals"]},
-  {id:"soft",name:"Soft & Simple",cost:294.15,price:323.57,canva:"https://canva.link/uz7decdgr9irde3",tagline:"Ivory and white, pared back. Understated and serene.",
+  {id:"soft",name:"Soft & Simple",cost:294.15,price:325,canva:"https://canva.link/uz7decdgr9irde3",tagline:"Ivory and white, pared back. Understated and serene.",
    palette:["#EFE7D8","#F7F4EC","#E7E0D2"],highlights:["Ivory linen, white chiffon runner","White hemstitch napkins, silver flatware","Snow stoneware dinner and salad plates","Prism water goblets","Floating candles, votives, and bud vase florals"]},
-  {id:"blush",name:"First Blush",cost:350.45,price:385.50,canva:"https://canva.link/wb7jib75omfuo01",tagline:"Ivory and blush with whitewashed wood. Soft and romantic.",
+  {id:"blush",name:"First Blush",cost:350.45,price:390,canva:"https://canva.link/wb7jib75omfuo01",tagline:"Ivory and blush with whitewashed wood. Soft and romantic.",
    palette:["#EFE7D8","#E3B9B3","#CDBFA8"],highlights:["Ivory linen, white chiffon runner","Blush satin napkins","Whitewash wood chargers, Monet china plates","Clear goblets","Pillar candles, votives, and bud vase florals"]},
-  {id:"vineyard",name:"Modern Vineyard",cost:392.85,price:432.14,canva:"https://canva.link/63o9v3eytfsurpf",tagline:"Leaf velvet, dark rattan, and magenta tapers. Lush and vivid.",
+  {id:"vineyard",name:"Modern Vineyard",cost:392.85,price:435,canva:"https://canva.link/63o9v3eytfsurpf",tagline:"Leaf velvet, dark rattan, and magenta tapers. Lush and vivid.",
    palette:["#5E6B4A","#9C6B43","#A63D6A","#F7F4EC"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","Dark rattan placemats, pearl plates","Prism water goblets","Magenta tapers, votives, and bud vase florals"]},
-  {id:"fresh",name:"Fresh & Minimal",cost:329.85,price:362.84,canva:"https://canva.link/8ek7ct6n8bbciu8",tagline:"White, silver, and a touch of green. Crisp and clean.",
-   palette:["#F7F4EC","#CFCABE","#6E7A57"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","White and silver chargers and plates","Prism water goblets","Floating candles, votives, and bud vase florals"]}
+  {id:"fresh",name:"Fresh & Minimal",cost:329.85,price:365,canva:"https://canva.link/8ek7ct6n8bbciu8",tagline:"White, silver, and a touch of green. Crisp and clean.",
+   palette:["#F7F4EC","#CFCABE","#6E7A57"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","White and silver chargers and plates","Prism water goblets","Floating candles, votives, and bud vase florals"]},
+  {id:"custom",name:"Custom Tablescape",cost:0,price:0,custom:true,canva:"",tagline:"A bespoke design built around your vision, aesthetic, and budget.",
+   palette:["#C1903A","#E7E0D2","#F4EEE2"],highlights:["Fully custom concept designed for your wedding","Sourced to match your aesthetic and budget","Includes design consultation and styling","Pricing quoted after initial consultation"]}
 ];
+const CUSTOM_ID = "custom";
 const BANDS = [{name:"Petite",max:50},{name:"Signature",max:90},{name:"Grand",max:120}];
 
 const state = {step:1, scope:"full", pkgId:null, guests:80};
@@ -298,13 +301,12 @@ function quoteMailto(){
 
 function renderCards(){
   $("#cards").innerHTML = PACKAGES.map(p=>`
-    <div class="card${state.pkgId===p.id?' sel':''}" data-id="${p.id}">
-      <div class="swatches">${swHTML(p.palette)}</div>
+    <div class="card${state.pkgId===p.id?' sel':''}${p.custom?' custom-card':''}" data-id="${p.id}" style="${p.custom?'border-style:dashed;':''}">
+      <div class="swatches">${p.custom ? '<span style="display:block;height:22px;"></span>' : swHTML(p.palette)}</div>
       <div class="pn">${p.name}</div>
       <div class="tg">${p.tagline}</div>
       <ul>${p.highlights.map(h=>`<li>${h}</li>`).join("")}</ul>
-      <div class="from">From <b>${money(p.price)}</b> / table</div>
-      <a class="look" href="${p.canva}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View the full look &#8599;</a>
+      ${p.custom ? `<div class="from" style="color:var(--gold);font-style:italic;">Pricing by quote</div>` : `<div class="from">From <b>${money(p.price)}</b> / table</div><a class="look" href="${p.canva}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View the full look &#8599;</a>`}
     </div>`).join("");
   document.querySelectorAll(".card").forEach(c=>c.addEventListener("click",()=>{
     state.pkgId=c.dataset.id; renderCards(); $("#toEstimate").disabled=false;
@@ -313,15 +315,16 @@ function renderCards(){
 
 function enterEstimate(){
   const p=pkg(), tier=tierFor(state.guests), tables=tablesFor(state.guests);
-  const tablescape=p.price*tables;
+  const isCustom=p.custom===true;
+  const tablescape=isCustom?0:p.price*tables;
   const planPrice=PLANNING[state.scope][tier].price;
-  const grand=tablescape+planPrice+DELIVERY_EST;
+  const grand=isCustom?planPrice+DELIVERY_EST:tablescape+planPrice+DELIVERY_EST;
   $("#estSw").innerHTML=swHTML(p.palette);
   $("#estName").textContent=p.name;
   $("#estMeta").textContent=`${PLANNING[state.scope].label} — ${tier} · ${state.guests} guests · ${tables} tables`;
-  $("#estTablescape").textContent=money(tablescape);
+  $("#estTablescape").textContent=isCustom?"Custom — to be quoted":money(tablescape);
   $("#estPlanning").textContent=money(planPrice);
-  $("#estGrand").textContent=money(grand);
+  $("#estGrand").textContent=isCustom?money(grand)+" + custom decor":money(grand);
   showStep(3);
 }
 
@@ -342,7 +345,12 @@ function enterReserve(){
   $("#r4name").textContent=p.name;
   $("#r4meta").textContent=`${PLANNING[state.scope].label} — ${tier} · ${state.guests} guests · ${tables} tables`;
   $("#p4sub").textContent=`You will now be forwarded to book your ${PLANNING[state.scope].label} — ${tier} planning package and pay your $500 deposits. Your final balances are invoiced before delivery.`;
-  $("#reserveBtn").href=buildBookingUrl();
+  if(p.custom){
+    $("#reserveBtn").href=buildBookingUrl();
+    document.querySelector("#p4sub").textContent += " A member of the team will follow up separately to discuss your custom decor design.";
+  } else {
+    $("#reserveBtn").href=buildBookingUrl();
+  }
   showStep(4);
 }
 
