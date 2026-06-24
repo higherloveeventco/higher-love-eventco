@@ -42,13 +42,15 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 
 /* HERO */
 .hero{padding:7rem 0 5rem;position:relative;overflow:hidden;}
-.hero::after{content:"";position:absolute;right:-120px;top:50%;transform:translateY(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(184,137,42,0.08),transparent 70%);pointer-events:none;}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
 .hero-eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
 .hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);}
-.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,7vw,6rem);line-height:1.02;color:var(--black);max-width:800px;margin-bottom:2rem;}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.4rem,5vw,5rem);line-height:1.02;color:var(--black);margin-bottom:2rem;}
 .hero h1 em{font-style:italic;color:var(--gold);}
 .hero-body{max-width:560px;}
 .hero-body p{font-size:1rem;line-height:1.85;color:var(--charcoal);margin-bottom:2rem;}
+.hero-photo{width:100%;height:580px;object-fit:cover;object-position:center 50%;display:block;}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr;}.hero-photo{height:380px;}}
 
 /* PALETTE STRIP */
 .palette-strip{display:flex;height:6px;margin-top:3rem;border-radius:3px;overflow:hidden;}
@@ -189,29 +191,23 @@ footer a{color:rgba(255,255,255,0.42);}
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero-eyebrow">
-      <span class="eyebrow" style="margin:0;">Wedding Decor</span>
-    </div>
-    <h1>Portland Wedding Tablescapes.<br><em>No design fee.</em></h1>
-    <div class="hero-body">
-      <p>Decor is one of the most time-consuming and overwhelming parts of wedding planning, and one of the easiest places to fall into a rabbit hole. At Higher Love, we&rsquo;ve taken it off your plate entirely. All eight collections are pre-designed and priced per table, so you know exactly what you&rsquo;re getting and what it costs before you book.</p>
-      <div style="background:var(--linen);border-left:2px solid var(--gold);padding:1rem 1.4rem;margin-bottom:1.6rem;">
-        <p style="font-size:.82rem;color:var(--charcoal);line-height:1.7;margin:0;">Tablescape collections are exclusively available as part of a Higher Love planning package. Not yet booked? <a href="/reserve" style="color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);">Reserve your package &rarr;</a></p>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">
+          <span class="eyebrow" style="margin:0;">Wedding Decor</span>
+        </div>
+        <h1>Portland Wedding Tablescapes.<br><em>No design fee.</em></h1>
+        <div class="hero-body">
+          <p>Decor is one of the most time-consuming and overwhelming parts of wedding planning, and one of the easiest places to fall into a rabbit hole. At Higher Love, we&rsquo;ve taken it off your plate entirely. All eight collections are pre-designed and priced per table, so you know exactly what you&rsquo;re getting and what it costs before you book.</p>
+          <div style="background:var(--linen);border-left:2px solid var(--gold);padding:1rem 1.4rem;margin-bottom:1.6rem;">
+            <p style="font-size:.82rem;color:var(--charcoal);line-height:1.7;margin:0;">Tablescape collections are exclusively available as part of a Higher Love planning package. Not yet booked? <a href="/reserve" style="color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);">Reserve your package &rarr;</a></p>
+          </div>
+          <a href="https://canva.link/wf89umbvmpa8yaa" target="_blank" rel="noopener" class="btn">Browse the collections ↗</a>
+        </div>
       </div>
-      <a href="https://canva.link/wf89umbvmpa8yaa" target="_blank" rel="noopener" class="btn">Browse the collections ↗</a>
-    </div>
-    <div class="palette-strip">
-      <span style="background:#1C1C1C"></span>
-      <span style="background:#4A2C3A"></span>
-      <span style="background:#AEBFA9"></span>
-      <span style="background:#6B6F4A"></span>
-      <span style="background:#8A5A3B"></span>
-      <span style="background:#EFE7D8"></span>
-      <span style="background:#E3B9B3"></span>
-      <span style="background:#5E6B4A"></span>
-      <span style="background:#A63D6A"></span>
-      <span style="background:#6E7A57"></span>
-      <span style="background:#C1903A"></span>
+      <div>
+        <img src="/images/hoodriverwedding-212_optimized_300.jpg" alt="Wedding tablescape styled by Higher Love Event Co., Portland, OR" class="hero-photo" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -242,6 +238,11 @@ footer a{color:rgba(255,255,255,0.42);}
     </div>
   </div>
 </section>
+
+<!-- EDITORIAL PHOTO -->
+<div style="overflow:hidden;line-height:0;">
+  <img src="images/StJohnsInnWeddingHeadTableReceptionPortlandOregon" alt="Wedding reception head table at St. Johns Inn, Portland Oregon" style="width:100%;display:block;max-height:480px;object-fit:cover;object-position:center 40%;">
+</div>
 
 <!-- COLLECTIONS -->
 <section class="collections" id="collections">
@@ -421,11 +422,6 @@ footer a{color:rgba(255,255,255,0.42);}
     <p class="incl-note">Larger floral arrangements for the head table and welcome table are available as an add-on.</p>
   </div>
 </section>
-
-<!-- EDITORIAL PHOTO -->
-<div style="overflow:hidden;line-height:0;">
-  <img src="images/StJohnsInnWeddingHeadTableReceptionPortlandOregon" alt="Wedding reception head table at St. Johns Inn, Portland Oregon" style="width:100%;display:block;max-height:480px;object-fit:cover;object-position:center 40%;">
-</div>
 
 <!-- CUSTOM -->
 <section class="custom">
