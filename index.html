@@ -68,19 +68,19 @@
   .sec-head p{margin-top:18px;color:var(--charcoal);font-size:.97rem;line-height:1.8;}
   .divider{height:0.5px;background:var(--border);max-width:var(--maxw);margin:0 auto;}
 
-  /* ===== HERO — full bleed dark ===== */
-  .hero{background:var(--black);padding:0;padding-top:var(--nav-h);min-height:92vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
-  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 60% 50%,rgba(184,137,42,0.08) 0%,transparent 70%);pointer-events:none;}
+  /* ===== HERO — light cream ===== */
+  .hero{background:var(--cream);padding:0;padding-top:var(--nav-h);min-height:92vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 60% 50%,rgba(184,137,42,0.06) 0%,transparent 70%);pointer-events:none;}
   .hero-inner{max-width:var(--maxw);margin:0 auto;padding:5rem 2.5rem 4rem;position:relative;z-index:1;}
-  .hero-location{font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:rgba(245,240,232,.35);display:block;margin-bottom:2.2rem;}
-  .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,6.5vw,5.8rem);line-height:1.0;color:var(--cream);max-width:900px;}
+  .hero-location{font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2.2rem;}
+  .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,6.5vw,5.8rem);line-height:1.0;color:var(--black);max-width:900px;}
   .hero h1 em{font-style:italic;color:var(--gold);}
   .hero-rule{width:48px;height:1px;background:var(--gold);margin:2.8rem 0;}
-  .hero p.lead{max-width:540px;color:rgba(245,240,232,.6);font-size:clamp(1rem,1.4vw,1.12rem);line-height:1.9;}
+  .hero p.lead{max-width:540px;color:var(--charcoal);font-size:clamp(1rem,1.4vw,1.12rem);line-height:1.9;}
   .hero .cta-row{justify-content:flex-start;margin-top:3rem;}
   .hero-scroll{position:absolute;bottom:2.5rem;left:2.5rem;display:flex;flex-direction:column;align-items:flex-start;gap:6px;opacity:.3;}
-  .hero-scroll span{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cream);}
-  .hero-scroll-line{width:1px;height:40px;background:var(--cream);animation:scrollpulse 2s ease-in-out infinite;}
+  .hero-scroll span{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--black);}
+  .hero-scroll-line{width:1px;height:40px;background:var(--black);animation:scrollpulse 2s ease-in-out infinite;}
   @keyframes scrollpulse{0%,100%{opacity:.3;transform:scaleY(1);}50%{opacity:.8;transform:scaleY(1.15);}}
 
   /* ===== HOW IT WORKS ===== */
@@ -123,6 +123,8 @@
   .meet-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.15rem;margin-top:1.8rem;display:block;}
   @media(max-width:860px){.meet-inner{grid-template-columns:1fr;gap:2.5rem;}.meet-img-wrap img{aspect-ratio:5/4;max-height:400px;object-position:center top;}.meet-img-tag{position:static;display:inline-block;margin-top:.5rem;}}
 
+  .pkg-section{background:var(--linen);}
+
   /* ===== PACKAGES ===== */
   .toggle{display:inline-flex;border:0.5px solid var(--border);overflow:hidden;margin-bottom:44px;}
   .toggle button{font-family:var(--sans);font-weight:600;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:12px 28px;border:none;background:var(--linen);color:var(--muted);cursor:pointer;transition:.2s;}
@@ -161,7 +163,7 @@
   @media(max-width:400px){.incl-grid{grid-template-columns:1fr;}}
 
   /* ===== TIMELINE ===== */
-  .timeline{background:var(--cream);padding:72px 0;}
+  .timeline{background:var(--linen);padding:72px 0;}
   .timeline-track{position:relative;margin-top:40px;}
   .timeline-line{position:absolute;top:28px;left:0;right:0;height:1px;background:var(--border);}
   .timeline-steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;}
@@ -221,9 +223,9 @@
   @media(max-width:480px){.sustain-inner{grid-template-columns:1fr;}}
 
   /* ===== RULES ===== */
-  .rules{background:var(--linen);text-align:center;padding:72px 0;}
+  .rules{background:var(--cream);text-align:center;padding:72px 0;}
   .rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:40px;}
-  .rule{background:var(--cream);padding:3rem 2rem;}
+  .rule{background:var(--linen);padding:3rem 2rem;}
   .rule .big{font-family:var(--serif);font-size:3.5rem;color:var(--black);line-height:1;display:block;margin-bottom:.6rem;}
   .rule .big em{font-style:italic;color:var(--gold);}
   .rule p{color:var(--muted);font-size:.85rem;line-height:1.7;max-width:200px;margin:0 auto;}
@@ -231,13 +233,13 @@
   @media(max-width:640px){.rules-grid{grid-template-columns:1fr;}}
 
   /* ===== CLOSING CTA ===== */
-  .closing{background:var(--black);text-align:center;padding:88px 24px;position:relative;overflow:hidden;}
-  .closing::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:800px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
-  .closing .eyebrow{display:block;margin-bottom:18px;color:var(--gold);}
-  .closing .eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin:0 auto .75rem;}
-  .closing h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.02;max-width:680px;margin:0 auto;color:var(--cream);}
-  .closing h2 em{font-style:italic;color:var(--gold);}
-  .closing p{max-width:440px;margin:20px auto 0;color:rgba(245,240,232,.4);font-size:.9rem;line-height:1.8;}
+  .closing{background:var(--linen);text-align:center;padding:88px 24px;position:relative;overflow:hidden;}
+  .closing::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:800px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+  .closing .eyebrow{display:block;margin-bottom:18px;color:var(--gold-deep);}
+  .closing .eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin:0 auto .75rem;opacity:.6;}
+  .closing h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.02;max-width:680px;margin:0 auto;color:var(--black);}
+  .closing h2 em{font-style:italic;color:var(--gold-deep);}
+  .closing p{max-width:440px;margin:20px auto 0;color:var(--muted);font-size:.9rem;line-height:1.8;}
   .closing .cta-row{margin-top:44px;}
 
   /* ===== FOOTER ===== */
@@ -308,7 +310,7 @@
     <p class="lead rise">Whether you&rsquo;re short on time, short on interest, or just short on patience for the process &mdash; Higher Love was built for you.</p>
     <div class="cta-row rise">
       <a class="btn btn-gold" href="/reserve">Reserve Your Package</a>
-      <a class="btn btn-light" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Schedule a free discovery call</a>
+      <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Schedule a free discovery call</a>
     </div>
   </div>
 
@@ -333,7 +335,7 @@
         <span class="meet-subtitle">Founder &middot; Portland born &amp; raised &middot; St. Johns local</span>
         <p>I&rsquo;ve spent nearly seven years working in the wedding industry, across venue management, catering sales, luxury coordination, and large-scale event production. I know how venues and caterers think, how vendors work, and what it takes to make a day run without the couple lifting a finger.</p>
         <blockquote class="meet-pull">Hiring a planner should reduce the decisions you&rsquo;re making, not just help you manage them.</blockquote>
-        <p>Most planning models give you three tiers: day-of, partial, full-service. They all manage your decision-making. None of them reduce the number of decisions you have to make. Higher Love goes one step further. A tried and true formula with pre-curated options at every turn, so the choices you face are narrow, clear, and manageable.</p>
+        <p>Most planning models give you three tiers: day-of, partial planning, full-service. They all manage your decision-making — but none of them focus on reducing the number of decisions you have to make. Higher Love goes one step further. A tried and true formula with pre-curated options at every turn, so the choices you face are narrow, clear, and manageable.</p>
         <span class="meet-sig">Hire love. Higher love.</span>
         <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
           <a class="btn btn-ghost" href="/about">Read more about me</a>
@@ -358,7 +360,11 @@
       <div class="step rise"><div class="num">03</div><h3>Pick your venue</h3><p>Once your package and decor are confirmed, we schedule a call to talk through your venue preferences and priorities. I present up to three options available for your desired wedding date, each ranked with honest pros and cons.</p></div>
       <div class="step rise"><div class="num">04</div><h3>Build your team</h3><p>A ranked shortlist of up to three vendors per category, hand-picked to match your vision, budget, and priorities, sourced from a network we know, trust, and work alongside regularly.</p></div>
     </div>
-    <div class="takeover rise">
+  </div>
+</section>
+
+<!-- TAKEOVER -->
+<div class="takeover rise">
       <span class="takeover-eyebrow">And then</span>
       <p class="takeover-headline">I take it from there.</p>
       <div class="takeover-rule"></div>
@@ -373,10 +379,9 @@
           <span class="takeover-card-label">Before you reach out</span>
           <p>The only things you need: a rough guest count, a general budget, and a sense of when you&rsquo;d like to get married.</p>
         </div>
-      </div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- GROUND RULES — linen -->
 <section class="rules">
@@ -394,18 +399,18 @@
 </section>
 
 <!-- EDITORIAL PHOTO -->
-<div style="overflow:hidden;line-height:0;">
-  <img src="images/StJohnsInnWeddingCeremonyPortlandOregon" alt="Wedding reception head table at St. Johns Inn, Portland Oregon" style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 40%;">
+<div>
+  <img src="images/StJohnsInnWeddingCeremonyPortlandOregon" alt="Wedding ceremony at St. Johns Inn, Portland Oregon" style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 40%;">
+  <p style="text-align:center;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--muted);padding:1.2rem 2.5rem;">St. Johns Inn, Portland. One of our favorite venues in the neighborhood.</p>
 </div>
-<p style="text-align:center;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--muted);padding:1.2rem 2.5rem;">St. Johns Inn, Portland. One of our favorite venues in the neighborhood.</p>
 
 <!-- PACKAGES -->
-<section id="packages" style="background:var(--linen);">
+<section id="packages" class="pkg-section">
   <div class="wrap">
     <div class="sec-head rise">
       <span class="eyebrow">Pricing</span>
-      <h2>Our pricing is published.<br>No inquiry required.</h2>
-      <p>We&rsquo;re not for every couple. But for the right couple, there&rsquo;s nothing better than knowing exactly what you&rsquo;re getting and exactly what it costs &mdash; before you ever reach out. Fixed scope, published pricing, and a process designed to eliminate decision fatigue from start to finish.</p>
+      <h2>Our pricing is published. No inquiry required.</h2>
+      <p>Higher Love is not a bespoke planning agency. We use a tried and true formula with published pricing and pre-curated options at every turn &mdash; because the couples who work with us have very little time, or very little interest, for planning their wedding. Decision fatigue is real. Overwhelm is real. Our job is to take as much off your plate as possible, keep you in the loop when it matters, and get you to the altar without the overwhelm. Minimal input. Maximum result.</p>
     </div>
     <div class="rise">
       <div class="toggle" role="tablist">
@@ -445,7 +450,7 @@
           <div class="tstep-dot"></div>
           <span class="tstep-when">At booking</span>
           <h4>Reserve your package</h4>
-          <p>Deposit paid, decor collection reserved, date locked in. Planning begins.</p>
+          <p>Deposit paid, tablescape collection reserved, date locked in. Planning begins.</p>
         </div>
         <div class="tstep rise">
           <div class="tstep-dot"></div>
@@ -489,34 +494,29 @@
       <h2>Curated decor. No design fee. A cohesive aesthetic.</h2>
       <p>Because every collection is pre-designed, there is no design fee and no endless decisions to make. Simply choose the look that fits your wedding and we take it from there. Sourcing, delivery, setup, styling, and teardown all included.</p>
     </div>
-    <p style="font-size:.75rem;color:rgba(245,240,232,.28);margin-bottom:.6rem;">Current collections cover reception decor. Ceremony decor coming soon.</p>
-    <a href="/decor" class="decor-link" style="display:block;margin-bottom:.6rem;">Explore the collections &rarr;</a>
+    <a href="/decor" class="decor-link" style="display:block;margin-bottom:.6rem;">Explore all 8 tablescape collections &rarr;</a>
     <div class="decor-table-wrap rise">
       <table class="decor-table">
         <thead>
           <tr>
             <th style="text-align:left;">Guests</th>
             <th>Soft &amp; Simple</th>
-            <th>First Blush</th>
-            <th>Fresh &amp; Minimal</th>
-            <th>Garden Party</th>
-            <th>Warm Bohemian</th>
-            <th>Refined Rustic</th>
             <th>Midnight Romance</th>
             <th>Modern Vineyard</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>25</td><td>$1,300</td><td>$1,560</td><td>$1,460</td><td>$1,540</td><td>$1,560</td><td>$1,580</td><td>$1,640</td><td>$1,740</td></tr>
-          <tr><td>50</td><td>$2,275</td><td>$2,730</td><td>$2,555</td><td>$2,695</td><td>$2,730</td><td>$2,765</td><td>$2,870</td><td>$3,045</td></tr>
-          <tr><td>75</td><td>$3,250</td><td>$3,900</td><td>$3,650</td><td>$3,850</td><td>$3,900</td><td>$3,950</td><td>$4,100</td><td>$4,350</td></tr>
-          <tr><td>100</td><td>$4,225</td><td>$5,070</td><td>$4,745</td><td>$5,005</td><td>$5,070</td><td>$5,135</td><td>$5,330</td><td>$5,655</td></tr>
-          <tr><td>120</td><td>$4,875</td><td>$5,850</td><td>$5,475</td><td>$5,775</td><td>$5,850</td><td>$5,925</td><td>$6,150</td><td>$6,525</td></tr>
+          <tr><td>25</td><td>$1,300</td><td>$1,640</td><td>$1,740</td></tr>
+          <tr><td>50</td><td>$2,275</td><td>$2,870</td><td>$3,045</td></tr>
+          <tr><td>75</td><td>$3,250</td><td>$4,100</td><td>$4,350</td></tr>
+          <tr><td>100</td><td>$4,225</td><td>$5,330</td><td>$5,655</td></tr>
+          <tr><td>120</td><td>$4,875</td><td>$6,150</td><td>$6,525</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="decor-footnote">Estimated costs for the decor suite only. Final invoice is based on your confirmed guest count.</p>
-    <p style="font-size:.72rem;color:rgba(245,240,232,.35);margin-top:1rem;line-height:1.7;">Custom tablescape options are available for couples whose aesthetic falls outside the eight collections. <a href="/contact" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;">Please inquire &rarr;</a></p>
+    <p class="decor-footnote">Three of eight collections shown. Estimated costs for the tablescape collection only. Final invoice is based on your confirmed guest count.</p>
+    <p style="font-size:.72rem;color:rgba(245,240,232,.35);margin-top:.6rem;line-height:1.7;">Current collections cover reception decor. Ceremony decor coming soon.</p>
+    <p style="font-size:.72rem;color:rgba(245,240,232,.35);margin-top:.6rem;line-height:1.7;">Custom tablescape options are available for couples whose aesthetic falls outside the eight collections. <a href="/contact" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;">Please inquire &rarr;</a></p>
   </div>
 </section>
 
@@ -583,7 +583,6 @@
         <p>We work with caterers who source ingredients locally and florists committed to locally grown flowers. If a bloom can be substituted for a locally grown alternative without compromising the look, we make that call.</p>
       </div>
     </div>
-    </div>
   </div>
 </section>
 
@@ -594,7 +593,7 @@
   <p class="rise">A stress-free process. A day you&rsquo;ll be present for.</p>
   <div class="cta-row rise">
     <a class="btn btn-gold" href="/reserve">Reserve Your Package</a>
-    <a class="btn btn-light" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Schedule a free discovery call</a>
+    <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Schedule a free discovery call</a>
   </div>
 </section>
 
