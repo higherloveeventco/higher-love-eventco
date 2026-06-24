@@ -187,7 +187,7 @@
   <!-- STEP 3 — ESTIMATED TOTAL -->
   <section id="step3" class="fade hide">
     <h1 class="head serif">Estimated Total.</h1>
-    <p class="sub">A $2,000 deposit reserves your planning package and decor collection. Final balances are based on your actual guest count and invoiced one month before your wedding date.</p>
+    <p class="sub">A $1,500 deposit reserves your planning package. Final balances are based on your actual guest count and invoiced one month before your wedding date.</p>
     <div class="panel">
       <div class="swatches" id="estSw" style="justify-content:center"></div>
       <p id="estName" style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:4px"></p>
@@ -259,21 +259,21 @@ const PLANNING = {
 
 const GUESTS_PER_TABLE = 8, RESERVE_FEE = 500, DELIVERY_EST = 500;
 const PACKAGES = [
-  {id:"midnight",name:"Midnight Romance",cost:370.45,price:410,canva:"https://canva.link/w0ocoveub7fbfn7",tagline:"Black linen, aubergine, and gold. Candlelit and dramatic.",
+  {id:"midnight",name:"Midnight Romance",cost:370,price:370,canva:"https://canva.link/w0ocoveub7fbfn7",tagline:"Black linen, aubergine, and gold. Candlelit and dramatic.",
    palette:["#1C1C1C","#4A2C3A","#C1903A"],highlights:["Black linen, black chiffon runner","Aubergine napkins, gold flatware","Gold lacquer chargers, noir plates","Gold-rim water goblets","Gold tapers, votives, and bud vase florals"]},
-  {id:"garden",name:"Garden Party",cost:349.65,price:385,canva:"https://canva.link/bfl6m7gst7yhkqr",tagline:"White linen, celadon, and rattan. Fresh and sunlit.",
+  {id:"garden",name:"Garden Party",cost:349.65,price:350,canva:"https://canva.link/bfl6m7gst7yhkqr",tagline:"White linen, celadon, and rattan. Fresh and sunlit.",
    palette:["#F7F4EC","#AEBFA9","#A9C2D8","#C9A878","#D8A7A0"],highlights:["White linen, soft blue gauze runner","Celadon napkins, silver flatware","Natural rattan placemats, pearl plates","Soft blue goblets","Rose tapers, votives, and bud vase florals"]},
-  {id:"boho",name:"Warm Bohemian",cost:351.25,price:390,canva:"https://canva.link/prhsbn2dxn4iv4j",tagline:"Olive, copper, and amber. Earthy and warm.",
+  {id:"boho",name:"Warm Bohemian",cost:351.25,price:350,canva:"https://canva.link/prhsbn2dxn4iv4j",tagline:"Olive, copper, and amber. Earthy and warm.",
    palette:["#6B6F4A","#B07A4F","#C8893F"],highlights:["Olive linen, ivory gauze runner","Copper napkins, gold flatware","Dark rattan placemats, snow plates","Amber goblets","Pillar candles, votives, and bud vase florals"]},
-  {id:"refined",name:"Refined Rustic",cost:357.35,price:395,canva:"https://canva.link/p418a4qvjkrxi5j",tagline:"White linen, moss, and warm wood. Organic and grounded.",
+  {id:"refined",name:"Refined Rustic",cost:357.35,price:360,canva:"https://canva.link/p418a4qvjkrxi5j",tagline:"White linen, moss, and warm wood. Organic and grounded.",
    palette:["#F7F4EC","#6B6F4A","#8A5A3B","#7D7B78"],highlights:["White linen, ivory gauze runner","Moss napkins, silver flatware","Wood grain chargers, lace-edge plates","Smoke goblets","Pillar candles, votives, and bud vase florals"]},
-  {id:"soft",name:"Soft & Simple",cost:294.15,price:325,canva:"https://canva.link/uz7decdgr9irde3",tagline:"Ivory and white, pared back. Understated and serene.",
+  {id:"soft",name:"Soft & Simple",cost:294.15,price:300,canva:"https://canva.link/uz7decdgr9irde3",tagline:"Ivory and white, pared back. Understated and serene.",
    palette:["#EFE7D8","#F7F4EC","#E7E0D2"],highlights:["Ivory linen, white chiffon runner","White hemstitch napkins, silver flatware","Snow stoneware dinner and salad plates","Prism water goblets","Floating candles, votives, and bud vase florals"]},
-  {id:"blush",name:"First Blush",cost:350.45,price:390,canva:"https://canva.link/wb7jib75omfuo01",tagline:"Ivory and blush with whitewashed wood. Soft and romantic.",
+  {id:"blush",name:"First Blush",cost:350.45,price:350,canva:"https://canva.link/wb7jib75omfuo01",tagline:"Ivory and blush with whitewashed wood. Soft and romantic.",
    palette:["#EFE7D8","#E3B9B3","#CDBFA8"],highlights:["Ivory linen, white chiffon runner","Blush satin napkins","Whitewash wood chargers, Monet china plates","Clear goblets","Pillar candles, votives, and bud vase florals"]},
-  {id:"vineyard",name:"Modern Vineyard",cost:392.85,price:435,canva:"https://canva.link/63o9v3eytfsurpf",tagline:"Leaf velvet, dark rattan, and magenta tapers. Lush and vivid.",
+  {id:"vineyard",name:"Modern Vineyard",cost:392.85,price:395,canva:"https://canva.link/63o9v3eytfsurpf",tagline:"Leaf velvet, dark rattan, and magenta tapers. Lush and vivid.",
    palette:["#5E6B4A","#9C6B43","#A63D6A","#F7F4EC"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","Dark rattan placemats, pearl plates","Prism water goblets","Magenta tapers, votives, and bud vase florals"]},
-  {id:"fresh",name:"Fresh & Minimal",cost:329.85,price:365,canva:"https://canva.link/8ek7ct6n8bbciu8",tagline:"White, silver, and a touch of green. Crisp and clean.",
+  {id:"fresh",name:"Fresh & Minimal",cost:329.85,price:330,canva:"https://canva.link/8ek7ct6n8bbciu8",tagline:"White, silver, and a touch of green. Crisp and clean.",
    palette:["#F7F4EC","#CFCABE","#6E7A57"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","White and silver chargers and plates","Prism water goblets","Floating candles, votives, and bud vase florals"]},
   {id:"custom",name:"Custom Tablescape",cost:0,price:0,custom:true,canva:"",tagline:"A bespoke design built around your vision, aesthetic, and budget.",
    palette:["#C1903A","#E7E0D2","#F4EEE2"],highlights:["Fully custom concept designed for your wedding","Sourced to match your aesthetic and budget","Includes design consultation and styling","Pricing quoted after initial consultation"]}
