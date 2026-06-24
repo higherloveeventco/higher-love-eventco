@@ -353,7 +353,7 @@ function enterReserve(){
   $("#r4sw").innerHTML=swHTML(p.palette);
   $("#r4name").textContent=p.name;
   $("#r4meta").textContent=`${PLANNING[state.scope].label} / ${tier} · ${state.guests} guests · ${tables} tables`;
-  $("#p4sub").textContent=`You will now be forwarded to book your ${PLANNING[state.scope].label} / ${tier} planning package and pay your deposits. Your final balances are invoiced before delivery.`;
+  $("#p4sub").textContent=`You will now be forwarded to complete your booking and pay your deposits. Final balances are invoiced one month before your wedding date.`;
   if(p.custom){
     $("#reserveBtn").href=buildBookingUrl();
     document.querySelector("#p4sub").textContent += " A member of the team will follow up separately to discuss your custom decor design.";
