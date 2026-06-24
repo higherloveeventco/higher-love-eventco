@@ -78,6 +78,14 @@ footer a{color:rgba(255,255,255,0.42);}
   .quotes-grid{grid-template-columns:1fr;}
   .nav-links a:not(.nav-book){display:none;}
 }
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;}
+  .hamburger span{display:block;width:22px;height:1.5px;background:var(--black);transition:all .3s;}
+  .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px);}
+  #mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--cream);border-bottom:0.5px solid var(--border);padding:1.8rem 2.5rem 2.2rem;z-index:99;flex-direction:column;gap:1.4rem;}
+  #mob-menu.open{display:flex;}
+  #mob-menu a{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
 </style>
 </head>
 <body>
@@ -95,7 +103,16 @@ footer a{color:rgba(255,255,255,0.42);}
       <a href="/reserve" class="nav-book">Reserve</a>
     </div>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
 </nav>
+<div id="mob-menu">
+  <a href="/about">About</a>
+  <a href="/reviews">Reviews</a>
+  <a href="/decor">Decor</a>
+  <a href="/blog">Blog</a>
+  <a href="/contact">Contact</a>
+  <a href="/reserve">Reserve</a>
+</div>
 
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--border);">
   <div style="overflow:hidden;height:420px;">
@@ -207,5 +224,14 @@ footer a{color:rgba(255,255,255,0.42);}
   <p style="margin-top:0.8rem;font-size:0.62rem;color:rgba(255,255,255,0.15);">&copy; 2025 Higher Love Event Co. &middot; St. Johns, Portland, OR</p>
 </footer>
 
+<script>
+  document.addEventListener("click", function(e){
+    var m = document.getElementById("mob-menu");
+    var h = document.getElementById("hamburger");
+    if(m && m.classList.contains("open") && !m.contains(e.target) && !h.contains(e.target)){
+      m.classList.remove("open"); h.classList.remove("open");
+    }
+  });
+</script>
 </body>
 </html>
