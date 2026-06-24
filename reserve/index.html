@@ -210,16 +210,31 @@
   <section id="step4" class="fade hide">
     <h1 class="head serif">Reserve your package.</h1>
     <p class="sub" id="p4sub"></p>
-    <div class="panel">
-      <div class="swatches" id="r4sw" style="justify-content:center"></div>
-      <p id="r4name" style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:4px"></p>
-      <p id="r4meta" style="text-align:center;font-size:11px;letter-spacing:.04em;color:var(--muted)"></p>
+
+    <div class="panel" style="padding:0;overflow:hidden;">
+      <!-- Planning package — primary -->
+      <div style="padding:1.6rem 1.8rem;border-bottom:1px solid var(--border);">
+        <span style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem;">Planning Package</span>
+        <p id="r4pkg" style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:.25rem;"></p>
+        <p id="r4pkgmeta" style="font-size:.72rem;letter-spacing:.04em;color:var(--muted);margin-bottom:.6rem;"></p>
+        <p style="font-size:.72rem;color:var(--muted);line-height:1.6;">Full-service planning from venue research to the final song. We source your venue, book and manage every vendor, build your timeline, take care of all logistics and staff two professional coordinators on-site for the full day. You show up. We take care of everything else.</p>
+      </div>
+      <!-- Tablescape collection — secondary -->
+      <div style="padding:1.4rem 1.8rem;">
+        <span style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem;">Tablescape Collection</span>
+        <div style="display:flex;align-items:center;gap:.8rem;">
+          <div class="swatches" id="r4sw" style="justify-content:flex-start;margin:0;"></div>
+          <p id="r4name" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin:0;"></p>
+        </div>
+        <p id="r4meta" style="font-size:.72rem;letter-spacing:.04em;color:var(--muted);margin-top:.3rem;margin-bottom:.6rem;"></p>
+        <p style="font-size:.72rem;color:var(--muted);line-height:1.6;">Professionally designed tablescape collection. Sourced, delivered, styled, and cleared. Priced per table based on your final guest count.</p>
+      </div>
     </div>
+
     <div class="actions">
       <button class="back" id="backToEstimate">&larr; Estimated Total</button>
       <a class="btn" id="reserveBtn" href="#">Continue to booking</a>
     </div>
-
   </section>
 </div>
 
@@ -350,9 +365,14 @@ function buildBookingUrl(){
 }
 function enterReserve(){
   const p=pkg(), tier=tierFor(state.guests), tables=tablesFor(state.guests);
+  const planPrice=PLANNING[state.scope][tier].price;
+  // Planning package
+  $("#r4pkg").textContent=`${PLANNING[state.scope].label} — ${tier}`;
+  $("#r4pkgmeta").textContent=`${state.guests} guests · ${money(planPrice)}`;
+  // Tablescape collection
   $("#r4sw").innerHTML=swHTML(p.palette);
   $("#r4name").textContent=p.name;
-  $("#r4meta").textContent=`${PLANNING[state.scope].label} / ${tier} · ${state.guests} guests · ${tables} tables`;
+  $("#r4meta").textContent=`${tables} tables`;
   $("#p4sub").textContent=`You will now be forwarded to complete your booking and pay your deposits. Final balances are invoiced one month before your wedding date.`;
   if(p.custom){
     $("#reserveBtn").href=buildBookingUrl();
