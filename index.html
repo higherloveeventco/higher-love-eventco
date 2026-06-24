@@ -355,10 +355,10 @@
       <p>No research. No rabbit holes. No decision fatigue. Just a clear sequence of simple choices, and someone ready to guide you through each one.</p>
     </div>
     <div class="steps">
-      <div class="step rise"><div class="num">01</div><h3>Pick your package</h3><p>Choose your celebration type and guest count. When you book, you&rsquo;ll select a planning start date. Your wedding date gets confirmed once we land on a venue.</p></div>
-      <div class="step rise"><div class="num">02</div><h3>Reserve your decor</h3><p>Choose from eight pre-designed collections. The look is already curated, so there&rsquo;s no design fee. Just pick what fits your vibe. Prefer something custom? Select that option and we&rsquo;ll talk it through on your first call.</p></div>
-      <div class="step rise"><div class="num">03</div><h3>Pick your venue</h3><p>Once your package and decor are confirmed, we schedule a call to talk through your venue preferences and priorities. I present up to three options available for your desired wedding date, each ranked with honest pros and cons.</p></div>
-      <div class="step rise"><div class="num">04</div><h3>Build your team</h3><p>A ranked shortlist of up to three vendors per category, hand-picked to match your vision, budget, and priorities, sourced from a network we know, trust, and work alongside regularly.</p></div>
+      <div class="step rise"><div class="num">01</div><h3>Pick your package</h3><p>Choose your celebration type, guest count, and tablescape collection. A $1,500 deposit reserves your planning package at booking.</p></div>
+      <div class="step rise"><div class="num">02</div><h3>Pick your venue</h3><p>Once your package is confirmed, I&rsquo;ll present up to three venue options available for your desired wedding date, each ranked with honest pros and cons.</p></div>
+      <div class="step rise"><div class="num">03</div><h3>Build your team</h3><p>A curated and ranked shortlist of up to three vendors per category — catering, photography, florals, music, and more — matched to your vision and budget.</p></div>
+      <div class="step rise"><div class="num">04</div><h3>The day</h3><p>Two coordinators on-site from setup to the final song. You show up. We take care of everything else.</p></div>
     </div>
   </div>
 </section>
@@ -420,16 +420,22 @@
     </div>
     <div class="tiers" id="tiers"></div>
     <div class="incl-strip">
-      <p style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;">What&rsquo;s included in every package</p>
-      <div class="incl-chips">
-        <span class="incl-chip">Venue research</span>
+      <p style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;">What&rsquo;s included</p>
+      <div class="incl-chips" id="inclChips">
+        <span class="incl-chip">Venue research &amp; sourcing</span>
         <span class="incl-chip">Vendor vetting &amp; booking</span>
-        <span class="incl-chip">Full logistics management</span>
+        <span class="incl-chip">Contract &amp; payment management</span>
+        <span class="incl-chip">Logistics planning</span>
         <span class="incl-chip">Master timeline</span>
+        <span class="incl-chip">Vendor communication</span>
         <span class="incl-chip">Two onsite coordinators</span>
-        <span class="incl-chip">Decor setup &amp; teardown</span>
+        <span class="incl-chip">Decor coordination</span>
+        <span class="incl-chip">Decor styling &amp; clearing</span>
+        <span class="incl-chip" id="rehearsalChip" style="display:none;">Rehearsal direction</span>
+        <span class="incl-chip" id="ceremonyChip1" style="display:none;">Ceremony planning &amp; timeline</span>
+        <span class="incl-chip" id="ceremonyChip2" style="display:none;">Ceremony site coordination</span>
       </div>
-      <p style="font-size:.72rem;color:var(--muted);line-height:1.75;max-width:480px;margin:0 auto;">Ceremony + Reception packages also include rehearsal direction.<br>Planning and decor are priced separately.</p>
+      <p style="font-size:.72rem;color:var(--muted);line-height:1.75;max-width:580px;margin:0 auto;">Planning packages and tablescape collections are priced separately. A tablescape collection or custom tablescape is required.</p>
     </div>
     <p class="safety-net rise">Not sure which package fits? <a href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Schedule a free discovery call.</a></p>
   </div>
@@ -708,6 +714,10 @@
     activeType = type;
     document.getElementById("t-full").classList.toggle("active", type==="full");
     document.getElementById("t-recep").classList.toggle("active", type==="recep");
+    const show = type==="full" ? "inline-block" : "none";
+    document.getElementById("rehearsalChip").style.display = show;
+    document.getElementById("ceremonyChip1").style.display = show;
+    document.getElementById("ceremonyChip2").style.display = show;
     renderTiers();
   }
 
