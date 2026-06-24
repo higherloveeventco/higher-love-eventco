@@ -175,7 +175,7 @@
           </ul>
         </div>
       </div>
-      <p class="incl-note">Larger floral arrangements for the head table and welcome table available as an add-on.</p>
+      <p class="incl-note">Larger floral arrangements for the head table and/or welcome table available as an add-on.</p>
     </details>
     <div class="cards" id="cards"></div>
     <div class="actions">
@@ -187,7 +187,7 @@
   <!-- STEP 3 — ESTIMATED TOTAL -->
   <section id="step3" class="fade hide">
     <h1 class="head serif">Estimated Total.</h1>
-    <p class="sub">Two $500 deposits reserve your date, one for your planning package and one for your tablescape collection. Final balances are based on your actual guest count and invoiced one month before your wedding date.</p>
+    <p class="sub">A $1,500 deposit reserves your planning package and a $500 deposit reserves your decor collection. Final balances are based on your actual guest count and invoiced one month before your wedding date.</p>
     <div class="panel">
       <div class="swatches" id="estSw" style="justify-content:center"></div>
       <p id="estName" style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:4px"></p>
@@ -353,7 +353,7 @@ function enterReserve(){
   $("#r4sw").innerHTML=swHTML(p.palette);
   $("#r4name").textContent=p.name;
   $("#r4meta").textContent=`${PLANNING[state.scope].label} / ${tier} · ${state.guests} guests · ${tables} tables`;
-  $("#p4sub").textContent=`You will now be forwarded to book your ${PLANNING[state.scope].label} / ${tier} planning package and pay your $500 deposits. Your final balances are invoiced before delivery.`;
+  $("#p4sub").textContent=`You will now be forwarded to book your ${PLANNING[state.scope].label} / ${tier} planning package and pay your deposits. Your final balances are invoiced before delivery.`;
   if(p.custom){
     $("#reserveBtn").href=buildBookingUrl();
     document.querySelector("#p4sub").textContent += " A member of the team will follow up separately to discuss your custom decor design.";
