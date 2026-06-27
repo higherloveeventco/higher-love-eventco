@@ -72,6 +72,24 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
   #mob-menu.open{display:flex;}
   #mob-menu a{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
   @media(max-width:860px){.nav-links{display:none;}.hamburger{display:flex;}}
+
+  /* ===== STANDARDIZED FOOTER ===== */
+  footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
+  .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:3.5rem;padding-bottom:3rem;border-bottom:0.5px solid rgba(245,240,232,.06);margin-bottom:2rem;text-align:left;}
+  .foot-brand .nav-logo{font-size:1.15rem;display:block;margin-bottom:14px;color:var(--cream);text-decoration:none;}
+  .foot-brand p{font-size:.82rem;color:rgba(245,240,232,.3);line-height:1.8;max-width:240px;margin-top:10px;}
+  .foot-brand .foot-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.95rem;margin-top:1.2rem;display:block;}
+  .foot-col h4{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .foot-col ul{list-style:none;}
+  .foot-col li{margin-bottom:9px;}
+  .foot-col a{font-size:.82rem;color:rgba(245,240,232,.38);text-decoration:none;transition:color .2s;}
+  .foot-col a:hover{color:var(--gold);}
+  .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.38);line-height:2;}
+  .foot-col address a{color:rgba(245,240,232,.38);}
+  .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+  @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
+
 </style>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.higherloveeventco.com/contact">
@@ -184,16 +202,42 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
   </div>
 </section>
 
-<footer style="background:var(--charcoal);padding:2.5rem;text-align:center;">
-  <p style="font-family:var(--serif);font-size:1rem;color:var(--white);font-weight:400;margin-bottom:1rem;">Higher Love Event Co.</p>
-  <p style="font-size:0.75rem;color:rgba(255,255,255,0.42);line-height:2;">
-    <a href="mailto:hello@higherloveeventco.com" style="color:rgba(255,255,255,0.42);">hello@higherloveeventco.com</a>
-    &nbsp;&middot;&nbsp;
-    <a href="tel:5032178500" style="color:rgba(255,255,255,0.42);">503-217-8500</a>
-    &nbsp;&middot;&nbsp;
-    <a href="https://instagram.com/higherloveeventco" target="_blank" style="color:rgba(255,255,255,0.42);">@higherloveeventco</a>
-  </p>
-  <p style="font-size:0.65rem;color:rgba(255,255,255,0.18);margin-top:1.5rem;">&copy; 2025 Higher Love Event Co. &middot; St. Johns, Portland, OR</p>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="nav-logo" href="/">Higher <span>Love</span> Event Co.</a>
+        <p>A wedding planning formula for couples who are happy to hand off the reins. Transparent pricing, pre-curated decor, everything taken care of.</p>
+        <span class="foot-sig">Hire love. Higher love.</span>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/reserve">Reserve</a></li>
+          <li><a href="/decor">Decor</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <address>
+          <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a><br>
+          <a href="tel:5032178500">503-217-8500</a><br>
+          <a href="https://higherloveeventco.com">higherloveeventco.com</a><br>
+          <span style="display:block;width:24px;height:1px;background:var(--gold);margin:1rem 0;opacity:.5;"></span>
+          <a href="https://instagram.com/higherloveeventco">@higherloveeventco</a>
+        </address>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Higher Love Event Co.</span>
+      <span>St. Johns, Portland, OR &middot; Pacific Northwest</span>
+    </div>
+  </div>
 </footer>
 
 <script>
