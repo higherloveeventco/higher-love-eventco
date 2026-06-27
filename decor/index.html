@@ -77,7 +77,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 .includes-head{text-align:center;margin-bottom:4rem;}
 .includes-head h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--black);line-height:1.1;margin-bottom:1rem;}
 .includes-head p{max-width:520px;margin:0 auto;font-size:0.85rem;color:var(--muted);line-height:1.8;}
-.includes-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);}
+.includes-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
 .incl-col{background:var(--cream);padding:2rem;border-top:2px solid var(--gold);}
 .incl-col h4{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
 .incl-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
@@ -124,7 +124,22 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 .cta-band h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);color:var(--white);font-weight:300;max-width:620px;margin:0 auto 2rem;line-height:1.25;}
 .cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;}
 
-footer{background:var(--charcoal);padding:2.5rem;text-align:center;}
+/* ===== STANDARDIZED FOOTER ===== */
+  footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
+  .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:3.5rem;padding-bottom:3rem;border-bottom:0.5px solid rgba(245,240,232,.06);margin-bottom:2rem;text-align:left;}
+  .foot-brand .nav-logo{font-size:1.15rem;display:block;margin-bottom:14px;color:var(--cream);text-decoration:none;}
+  .foot-brand p{font-size:.82rem;color:rgba(245,240,232,.3);line-height:1.8;max-width:240px;margin-top:10px;}
+  .foot-brand .foot-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.95rem;margin-top:1.2rem;display:block;}
+  .foot-col h4{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .foot-col ul{list-style:none;}
+  .foot-col li{margin-bottom:9px;}
+  .foot-col a{font-size:.82rem;color:rgba(245,240,232,.38);text-decoration:none;transition:color .2s;}
+  .foot-col a:hover{color:var(--gold);}
+  .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.38);line-height:2;}
+  .foot-col address a{color:rgba(245,240,232,.38);}
+  .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+  @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
 footer p{font-size:0.75rem;color:rgba(255,255,255,0.42);line-height:2;}
 footer a{color:rgba(255,255,255,0.42);}
 
@@ -199,6 +214,7 @@ footer a{color:rgba(255,255,255,0.42);}
         <h1>Portland Wedding Tablescapes.<br><em>No design fee.</em></h1>
         <div class="hero-body">
           <p>Decor is one of the most time-consuming and overwhelming parts of wedding planning, and one of the easiest places to fall into a rabbit hole. At Higher Love, I&rsquo;ve taken it off your plate entirely. All eight collections are pre-designed and priced per table, so you know exactly what you&rsquo;re getting and what it costs before you book.</p>
+          <p>A standalone wedding designer in Portland typically runs $1,500 to $5,000 or more. Because every collection here is already designed, there is no design fee. You pay for the decor itself, sourced, delivered, styled, and cleared, and nothing for the design on top.</p>
           <div style="background:var(--linen);border-left:2px solid var(--gold);padding:1rem 1.4rem;margin-bottom:1.6rem;">
             <p style="font-size:.82rem;color:var(--charcoal);line-height:1.7;margin:0;">Tablescape collections are exclusively available as part of a Higher Love planning package. Not yet booked? <a href="/reserve" style="color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);">Reserve your package &rarr;</a></p>
           </div>
@@ -228,7 +244,7 @@ footer a{color:rgba(255,255,255,0.42);}
       <div class="how-step">
         <span class="num">02</span>
         <h4>Reserve with a deposit</h4>
-        <p>A $1,500 deposit reserves your planning package. Decor is invoiced directly by our rental partner. Your planning package balance is invoiced one month before your wedding date. Your decor balance is due before your wedding date. Both are based on your final guest count.</p>
+        <p>A $1,500 deposit reserves your planning package and locks in your collection. Final balances are based on your guest count, with clear due dates so nothing sneaks up on you.</p>
       </div>
       <div class="how-step">
         <span class="num">03</span>
@@ -241,8 +257,7 @@ footer a{color:rgba(255,255,255,0.42);}
 
 <!-- EDITORIAL PHOTO -->
 <div style="overflow:hidden;line-height:0;">
-  <p style="font-family:var(--sans);font-size:.6rem;letter-spacing:.12em;color:var(--muted);text-align:right;padding:.4rem 2.5rem 0;opacity:.6;">Photo: <a href="https://lindsayblairphotography.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(121,119,111,.3);">Lindsay Blair Photography</a></p>
-  <img src="images/StJohnsInnWeddingHeadTableReceptionPortlandOregon" alt="Wedding reception head table at St. Johns Inn, Portland Oregon" style="width:100%;display:block;max-height:480px;object-fit:cover;object-position:center 40%;">
+  <img src="/images/StJohnsInnWeddingHeadTableReceptionPortlandOregon.jpg" alt="Wedding reception head table at St. Johns Inn, Portland Oregon" style="width:100%;display:block;max-height:480px;object-fit:cover;object-position:center 40%;">
   <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photo: <a href="https://lindsayblairphotography.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Lindsay Blair Photography</a></span>
 </div>
 
@@ -251,7 +266,7 @@ footer a{color:rgba(255,255,255,0.42);}
   <div class="wrap">
     <div class="collections-head">
       <h1 style="font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,5vw,3rem);line-height:1.04;text-align:center;margin-bottom:8px;">The Collections</h1>
-      <p style="text-align:center;color:var(--muted);font-size:0.82rem;margin:0 auto 2.5rem;max-width:560px;font-weight:300;line-height:1.6;">Eight complete looks, sourced, delivered, styled, and cleared. Pick the one that fits your vision.</p>
+      <p style="text-align:center;color:var(--muted);font-size:0.82rem;margin:0 auto 2.5rem;max-width:580px;font-weight:300;line-height:1.7;">Eight complete looks, priced per table. Every price covers the full table: linens, place settings, florals, candles, and centerpiece, sourced, delivered, styled, and cleared. No design fee, and nothing to set up or source yourself.</p>
     </div>
     <div class="cards">
 
@@ -355,7 +370,7 @@ footer a{color:rgba(255,255,255,0.42);}
         <div class="swatches"><span style="background:#EDE9E1"></span></div>
         <div class="card-body">
           <div class="card-name">Custom Tablescape</div>
-          <div class="card-tag">A bespoke design built around your vision, aesthetic, and budget.</div>
+          <div class="card-tag">A custom design built around your vision, aesthetic, and budget.</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:1.2rem;">
             <li style="position:relative;padding-left:14px;font-size:0.8rem;color:var(--charcoal);line-height:1.4;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--gold);display:block;"></span>Fully custom concept designed for your wedding</li>
             <li style="position:relative;padding-left:14px;font-size:0.8rem;color:var(--charcoal);line-height:1.4;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--gold);display:block;"></span>Sourced to match your aesthetic and budget</li>
@@ -411,57 +426,61 @@ footer a{color:rgba(255,255,255,0.42);}
           <li>Taper or pillar candles, matched to the collection</li>
         </ul>
       </div>
-      <div class="incl-col">
-        <h4>Matched templates</h4>
-        <ul>
-          <li>Digital save the date and invite templates</li>
-          <li>Wedding website template</li>
-          <li>Signage templates suite: welcome sign, seating chart, table numbers, bar and catering menus</li>
-        </ul>
-
-      </div>
     </div>
     <p class="incl-note">Larger floral arrangements for the head table and welcome table are available as an add-on.</p>
   </div>
 </section>
 
-<!-- PRODUCE ROW PHOTO -->
-<div style="overflow:hidden;line-height:0;">
-  <p style="font-family:var(--sans);font-size:.6rem;letter-spacing:.12em;color:var(--muted);text-align:right;padding:.4rem 2.5rem 0;opacity:.6;">Photo: <a href="https://www.rebeccarizzophotographics.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(121,119,111,.3);">Rebecca Rizzo Photographics</a></p>
-  <img src="/images/ProduceRowWeddingPortland.jpg.JPG" alt="Wedding reception at Produce Row Portland Oregon — Higher Love Event Co." style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 50%;" loading="lazy">
-  <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photo: <a href="https://www.rebeccarizzophotographics.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Rebecca Rizzo Photographics</a></span>
-</div>
-
-<!-- CUSTOM -->
-<section class="custom">
+<!-- DIGITAL TEMPLATES -->
+<section class="includes" style="background:var(--linen);">
   <div class="wrap">
-    <div class="custom-inner">
-      <div class="custom-left">
-        <span class="eyebrow">Custom decor</span>
-        <h2>Have something specific in mind?</h2>
-        <p>If none of the eight collections match your vision, a custom tablescape is available. Custom means starting from scratch: a design built around your specific aesthetic, venue, and budget, sourced and styled by me.</p>
-        <p>Custom decor is designed collaboratively. We'll talk through your vision together, then I'll source the elements and build a look that's entirely your own. Custom decor is quoted separately after an initial consultation.</p>
-        <p style="color:var(--muted);font-size:0.85rem;margin-top:1.2rem;">To get started, reach out through the contact page and mention that you're interested in custom decor.</p>
-        <a href="/contact" class="btn" style="margin-top:1.8rem;">Get in touch</a>
-      </div>
-      <div class="custom-right">
-        <h4>What custom decor includes</h4>
+    <div class="includes-head">
+      <span class="eyebrow">Included with every collection</span>
+      <h2>A cohesive look, from the very beginning.</h2>
+      <p>Your collection does not stop at the table. Every one comes with a matching suite of digital templates, so your save the dates, website, and signage all share the same look as your decor. Digital means no printing, no proofs, and no waiting on the mail. It is the lower-waste, lower-effort way to keep everything cohesive, with nothing left for you to source or coordinate.</p>
+    </div>
+    <div class="includes-cols" style="grid-template-columns:repeat(3,1fr);">
+      <div class="incl-col">
+        <h4>Save the dates and invites</h4>
         <ul>
-          <li>A design consultation to discuss your vision, aesthetic, and budget</li>
-          <li>A full tablescape design built around your wedding</li>
-<li>Custom sourcing of all decor elements</li>
-          <li>Delivery, setup, styling, and teardown</li>
-          <li>Coordination with your venue on logistics</li>
+          <li>Digital save the date template</li>
+          <li>Digital invitation template</li>
+          <li>Matched to your collection</li>
         </ul>
-        <p style="font-size:0.78rem;color:var(--muted);font-style:italic;">Pricing quoted after initial consultation.</p>
+      </div>
+      <div class="incl-col">
+        <h4>Wedding website</h4>
+        <ul>
+          <li>Ready-to-use website template</li>
+          <li>Designed to match your collection</li>
+          <li>Everything your guests need in one place</li>
+        </ul>
+      </div>
+      <div class="incl-col">
+        <h4>Signage suite</h4>
+        <ul>
+          <li>Welcome sign</li>
+          <li>Seating chart</li>
+          <li>Table numbers</li>
+          <li>Bar and catering menus</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PRODUCE ROW PHOTO -->
+<div style="overflow:hidden;line-height:0;">
+  <img src="/images/ProduceRowWeddingPortland.jpg.JPG" alt="Wedding reception at Produce Row Portland Oregon — Higher Love Event Co." style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 50%;" loading="lazy">
+  <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photo: <a href="https://www.rebeccarizzophotographics.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Rebecca Rizzo Photographics</a></span>
+</div>
+
+<!-- CUSTOM -->
+<!-- (Custom decor is presented as the dashed card in the collections grid above) -->
+
 <!-- CTA -->
 <div class="cta-band">
-  <h2>Ready to see your total?</h2>
+  <h2>Let's set your table.</h2>
   <div class="cta-buttons">
     <a href="/reserve" class="btn btn-gold">Reserve Your Package</a>
     <a href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773" class="btn btn-light">Schedule a discovery call</a>
@@ -469,14 +488,41 @@ footer a{color:rgba(255,255,255,0.42);}
 </div>
 
 <footer>
-  <p>
-    <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a>
-    &nbsp;&middot;&nbsp;
-    <a href="tel:5032178500">503-217-8500</a>
-    &nbsp;&middot;&nbsp;
-    <a href="https://instagram.com/higherloveeventco">@higherloveeventco</a>
-  </p>
-  <p style="margin-top:0.8rem;font-size:0.62rem;color:rgba(255,255,255,0.15);">&copy; 2025 Higher Love Event Co. &middot; St. Johns, Portland, OR</p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="nav-logo" href="/">Higher <span>Love</span> Event Co.</a>
+        <p>A wedding planning formula for couples who are happy to hand off the reins. Transparent pricing, pre-curated decor, everything taken care of.</p>
+        <span class="foot-sig">Hire love. Higher love.</span>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/reserve">Reserve</a></li>
+          <li><a href="/decor">Decor</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <address>
+          <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a><br>
+          <a href="tel:5032178500">503-217-8500</a><br>
+          <a href="https://higherloveeventco.com">higherloveeventco.com</a><br>
+          <span style="display:block;width:24px;height:1px;background:var(--gold);margin:1rem 0;opacity:.5;"></span>
+          <a href="https://instagram.com/higherloveeventco">@higherloveeventco</a>
+        </address>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Higher Love Event Co.</span>
+      <span>St. Johns, Portland, OR &middot; Pacific Northwest</span>
+    </div>
+  </div>
 </footer>
 
 <script>
