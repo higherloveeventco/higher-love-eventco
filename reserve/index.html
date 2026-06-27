@@ -401,7 +401,7 @@ $("#scopeRecep").addEventListener("click",()=>setScope("recep"));
 $("#minus").addEventListener("click",()=>{state.guests=Math.max(8,state.guests-8);updatePackage();});
 $("#plus").addEventListener("click",()=>{state.guests=Math.min(300,state.guests+8);updatePackage();});
 $("#range").addEventListener("input",e=>{state.guests=Number(e.target.value);updatePackage();});
-$("#toCollection").addEventListener("click",()=>{ if(tierFor(state.guests)==="Custom"){ location.href=quoteMailto(); } else { showStep(2); } });
+$("#toCollection").addEventListener("click",()=>{ if(tierFor(state.guests)==="Custom"){ location.href="/contact"; } else { showStep(2); } });
 $("#backToPackage").addEventListener("click",()=>showStep(1));
 $("#toEstimate").addEventListener("click",enterEstimate);
 $("#backToCollection").addEventListener("click",()=>showStep(2));
