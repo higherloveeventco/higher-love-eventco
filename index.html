@@ -121,7 +121,7 @@
   .meet-text p{font-size:.92rem;color:var(--charcoal);line-height:1.85;margin-bottom:1rem;}
   .meet-pull{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2vw,1.55rem);color:var(--gold-deep);line-height:1.5;border-left:2px solid var(--gold);padding-left:1.4rem;margin:2rem 0;max-width:480px;}
   .meet-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.15rem;margin-top:1.8rem;display:block;}
-  @media(max-width:860px){.meet-inner{grid-template-columns:1fr;gap:2.5rem;}.meet-img-wrap img{aspect-ratio:5/4;max-height:400px;object-position:center top;}.meet-img-tag{position:static;display:inline-block;margin-top:.5rem;}}
+  @media(max-width:860px){.meet-inner{grid-template-columns:1fr;gap:2.5rem;}.meet-inner>*{min-width:0;}.meet-img-wrap img{aspect-ratio:5/4;max-height:400px;object-position:center top;}.meet-img-tag{position:static;display:inline-block;margin-top:.5rem;}}
 
   .pkg-section{background:var(--linen);}
 
@@ -207,6 +207,8 @@
   .quotes-cta a{color:var(--gold-deep);font-weight:600;text-decoration:none;letter-spacing:.04em;}
   .quotes-cta a:hover{text-decoration:underline;}
   @media(max-width:640px){.quotes{grid-template-columns:1fr;}}
+  .editorial-caption{grid-template-columns:1fr auto 1fr;}
+  @media(max-width:640px){.editorial-caption{grid-template-columns:1fr;gap:.5rem;padding:1.2rem 1.4rem;}.editorial-caption .ec-credit{text-align:center;}}
 
   /* ===== SUSTAINABILITY ===== */
   .sustain{background:var(--black);padding:72px 0;}
@@ -357,6 +359,7 @@
   <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
 </nav>
 <div id="mob-menu">
+  <a href="/">Home</a>
   <a href="/about">About</a>
   <a href="/reviews">Reviews</a>
   <a href="/decor">Decor</a>
@@ -454,10 +457,10 @@
 <!-- EDITORIAL PHOTO -->
 <div style="background:var(--cream);line-height:0;">
   <img src="images/StJohnsInnWeddingCeremonyPortlandOregon" alt="Wedding ceremony at St. Johns Inn, Portland, OR, Higher Love Event Co." style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 40%;">
-  <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:baseline;padding:1.2rem 2.5rem;">
+  <div class="editorial-caption" style="display:grid;align-items:baseline;padding:1.2rem 2.5rem;">
     <span></span>
     <p style="font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--muted);text-align:center;">St. Johns Inn, Portland. One of our favorite venues in the neighborhood.</p>
-    <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);opacity:.7;text-align:right;">Photo: <a href="https://lindsayblairphotography.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Lindsay Blair Photography</a></span>
+    <span class="ec-credit" style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);opacity:.7;text-align:right;">Photo: <a href="https://lindsayblairphotography.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Lindsay Blair Photography</a></span>
   </div>
 </div>
 
