@@ -44,9 +44,9 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 /* HERO */
 .hero{padding:7rem 0 5rem;position:relative;overflow:hidden;}
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.hero-eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
-.hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);}
-.hero-eyebrow .eyebrow::before{display:none;}
+.hero-eyebrow{margin-bottom:2rem;}
+.hero-eyebrow::before{display:none;}
+.hero-eyebrow .eyebrow::before{display:block;content:"";width:28px;height:1px;background:var(--gold);margin-bottom:.75rem;}
 .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.4rem,5vw,5rem);line-height:1.02;color:var(--black);margin-bottom:2rem;}
 .hero h1 em{font-style:italic;color:var(--gold);}
 .hero-body{max-width:560px;}
