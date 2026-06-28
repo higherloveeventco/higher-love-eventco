@@ -46,6 +46,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 .reviews-hero .sec-head{max-width:680px;}
 .sec-head{max-width:680px;margin-bottom:48px;}
 .sec-head::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:0.7rem;}
+.sec-head:has(.eyebrow)::before{display:none;}
 .sec-head h2{font-size:clamp(2rem,4.2vw,3rem);line-height:1.1;margin:14px 0 0;}
 .sec-head p{margin-top:18px;color:var(--charcoal);font-size:1rem;}
 
@@ -93,7 +94,6 @@ footer a{color:rgba(255,255,255,0.42);}
   .reviews-split{grid-template-columns:1fr;}
   .quotes-grid{grid-template-columns:1fr;}
 }
-@media(max-width:860px){.nav-links{display:none;}.hamburger{display:flex;}}
   .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;}
   .hamburger span{display:block;width:22px;height:1.5px;background:var(--black);transition:all .3s;}
   .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px);}
@@ -102,6 +102,7 @@ footer a{color:rgba(255,255,255,0.42);}
   #mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--cream);border-bottom:0.5px solid var(--border);padding:1.8rem 2.5rem 2.2rem;z-index:99;flex-direction:column;gap:1.4rem;}
   #mob-menu.open{display:flex;}
   #mob-menu a{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
+  @media(max-width:860px){.nav-links{display:none;}.hamburger{display:flex;}}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.higherloveeventco.com/reviews">
@@ -129,8 +130,8 @@ footer a{color:rgba(255,255,255,0.42);}
       <a href="/contact">Contact</a>
       <a href="/reserve" class="nav-book">Reserve</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
 </nav>
 <div id="mob-menu">
   <a href="/">Home</a>
