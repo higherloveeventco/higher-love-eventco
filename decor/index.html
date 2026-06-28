@@ -46,6 +46,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
 .hero-eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
 .hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);}
+.hero-eyebrow .eyebrow::before{display:none;}
 .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.4rem,5vw,5rem);line-height:1.02;color:var(--black);margin-bottom:2rem;}
 .hero h1 em{font-style:italic;color:var(--gold);}
 .hero-body{max-width:560px;}
@@ -152,7 +153,6 @@ footer a{color:rgba(255,255,255,0.42);}
   .how-head p{max-width:100%;}
   .collections-head p{text-align:left;}
 }
-@media(max-width:860px){.nav-links{display:none;}.hamburger{display:flex;}}
 @media(max-width:640px){
   .includes-cols{grid-template-columns:1fr;}
   .cta-buttons{flex-direction:column;align-items:center;}
@@ -165,6 +165,7 @@ footer a{color:rgba(255,255,255,0.42);}
   #mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--cream);border-bottom:0.5px solid var(--border);padding:1.8rem 2.5rem 2.2rem;z-index:99;flex-direction:column;gap:1.4rem;}
   #mob-menu.open{display:flex;}
   #mob-menu a{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
+  @media(max-width:860px){.nav-links{display:none;}.hamburger{display:flex;}}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.higherloveeventco.com/decor">
@@ -192,8 +193,8 @@ footer a{color:rgba(255,255,255,0.42);}
       <a href="/contact">Contact</a>
       <a href="/reserve" class="nav-book">Reserve</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
 </nav>
 <div id="mob-menu">
   <a href="/">Home</a>
