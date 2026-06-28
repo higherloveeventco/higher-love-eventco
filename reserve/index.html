@@ -286,7 +286,7 @@ const PACKAGES = [
    palette:["#5E6B4A","#9C6B43","#A63D6A","#F7F4EC"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","Dark rattan placemats, pearl plates","Prism water goblets","Magenta tapers, votives, and bud vase florals"]},
   {id:"fresh",name:"Fresh & Minimal",cost:329.85,price:330,canva:"https://canva.link/8ek7ct6n8bbciu8",tagline:"White, silver, and a touch of green. Crisp and clean.",
    palette:["#F7F4EC","#CFCABE","#6E7A57"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","White and silver chargers and plates","Prism water goblets","Floating candles, votives, and bud vase florals"]},
-  {id:"custom",name:"Custom Tablescape",cost:0,price:0,custom:true,canva:"",tagline:"A bespoke design built around your vision, aesthetic, and budget.",
+  {id:"custom",name:"Custom Tablescape",cost:0,price:0,custom:true,canva:"",tagline:"A custom design built around your vision, aesthetic, and budget.",
    palette:["#C1903A","#E7E0D2","#F4EEE2"],highlights:["Fully custom concept designed for your wedding","Sourced to match your aesthetic and budget","Includes design consultation and styling","Pricing quoted after initial consultation"]}
 ];
 const CUSTOM_ID = "custom";
@@ -378,7 +378,7 @@ function enterReserve(){
   const p=pkg(), tier=tierFor(state.guests), tables=tablesFor(state.guests);
   const planPrice=PLANNING[state.scope][tier].price;
   // Planning package
-  $("#r4pkg").textContent=`${PLANNING[state.scope].label} — ${tier}`;
+  $("#r4pkg").textContent=`${PLANNING[state.scope].label} / ${tier}`;
   $("#r4pkgmeta").textContent=`${state.guests} guests · ${money(planPrice)}`;
   // Tablescape collection
   $("#r4sw").innerHTML=swHTML(p.palette);
