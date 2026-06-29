@@ -25,7 +25,7 @@
   .header-rule { width:40px; height:1px; background:var(--gold); margin:.8rem auto 1.6rem; }
   .proposal-label { font-family:var(--sans); font-size:.7rem; font-weight:600; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:.5rem; }
   .proposal-title { font-family:var(--serif); font-weight:300; font-style:italic; font-size:2.8rem; color:var(--cream); line-height:1.1; }
-  .proposal-meta { font-size:.82rem; color:rgba(245,240,232,.4); margin-top:.8rem; letter-spacing:.06em; }
+  .proposal-meta { font-size:.82rem; color:rgba(245,240,232,.6); margin-top:.8rem; letter-spacing:.06em; }
 
   /* INTRO */
   .intro { background:var(--linen); padding:3rem 2.5rem; border-bottom:.5px solid var(--border); }
@@ -35,7 +35,7 @@
   /* RECOMMENDATION CALLOUT */
   .rec-box { background:var(--black); padding:2rem 2.2rem; margin:2.5rem 0; border-left:3px solid var(--gold); }
   .rec-label { font-family:var(--sans); font-size:.58rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:.8rem; }
-  .rec-box p { font-size:.88rem; color:rgba(245,240,232,.65); line-height:1.9; margin-bottom:.8rem; }
+  .rec-box p { font-size:.88rem; color:rgba(245,240,232,.88); line-height:1.9; margin-bottom:.8rem; }
   .rec-box p:last-child { margin-bottom:0; }
 
   /* SECTION */
@@ -56,17 +56,17 @@
   .option-price { font-family:var(--serif); font-size:2rem; color:var(--black); text-align:right; white-space:nowrap; }
   .option.recommended .option-price { color:var(--cream); }
   .option-price-label { font-family:var(--sans); font-size:.55rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; text-align:right; }
-  .option.recommended .option-price-label { color:rgba(245,240,232,.4); }
+  .option.recommended .option-price-label { color:rgba(245,240,232,.6); }
   .rec-flag { display:inline-block; background:var(--gold); color:var(--black); font-family:var(--sans); font-size:.55rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; padding:3px 9px; margin-bottom:.5rem; }
   .incl-label { font-family:var(--sans); font-size:.62rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-bottom:.7rem; display:block; }
-  .option.recommended .incl-label { color:rgba(245,240,232,.35); }
+  .option.recommended .incl-label { color:rgba(245,240,232,.6); }
   .incl-sub { font-family:var(--sans); font-size:.62rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-top:1rem; margin-bottom:.6rem; display:block; padding-top:.8rem; border-top:.5px solid rgba(184,137,42,.2); }
   .incl-list { list-style:none; display:flex; flex-direction:column; gap:9px; }
   .incl-list li { position:relative; padding-left:14px; font-size:.92rem; color:var(--charcoal); line-height:1.6; }
-  .option.recommended .incl-list li { color:rgba(245,240,232,.65); }
+  .option.recommended .incl-list li { color:rgba(245,240,232,.88); }
   .incl-list li::before { content:""; position:absolute; left:0; top:9px; width:4px; height:4px; border-radius:50%; background:var(--gold); }
   .option-note { font-size:.82rem; color:var(--muted); font-style:italic; margin-top:1.2rem; padding-top:1rem; border-top:.5px solid var(--border); line-height:1.75; }
-  .option.recommended .option-note { color:rgba(245,240,232,.3); border-top-color:rgba(245,240,232,.08); }
+  .option.recommended .option-note { color:rgba(245,240,232,.55); border-top-color:rgba(245,240,232,.15); }
 
   /* TRAVEL */
   .travel-row { display:flex; justify-content:space-between; align-items:center; background:var(--linen); padding:1.2rem 1.6rem; border-left:2px solid var(--gold); margin-top:.5rem; }
@@ -92,12 +92,12 @@
   .summary-table td:not(:first-child) { text-align:right; font-family:var(--serif); font-size:1rem; color:rgba(245,240,232,.8); }
   .summary-table .total-row td { border-top:.5px solid rgba(184,137,42,.4); border-bottom:none; color:var(--cream); font-weight:600; padding-top:1rem; }
   .summary-table .total-row td:not(:first-child) { font-family:var(--serif); font-size:1.3rem; color:var(--gold); }
-  .summary-table .sub-row td { color:rgba(245,240,232,.3); font-size:.75rem; padding-top:.3rem; padding-bottom:.3rem; }
-  .summary-table .sub-row td:not(:first-child) { font-family:var(--sans); font-size:.75rem; color:rgba(245,240,232,.3); }
-  .summary-note { font-size:.72rem; color:rgba(245,240,232,.25); margin-top:1.2rem; line-height:1.7; font-style:italic; }
+  .summary-table .sub-row td { color:rgba(245,240,232,.55); font-size:.75rem; padding-top:.3rem; padding-bottom:.3rem; }
+  .summary-table .sub-row td:not(:first-child) { font-family:var(--sans); font-size:.75rem; color:rgba(245,240,232,.55); }
+  .summary-note { font-size:.75rem; color:rgba(245,240,232,.6); margin-top:1.2rem; line-height:1.75; font-style:italic; }
 
   /* PAYMENT TERMS */
-  .terms { padding:2.5rem 2.5rem; background:var(--cream); border-bottom:.5px solid var(--border); }
+  .terms { padding:2.5rem 2.5rem; background:var(--linen); border-bottom:.5px solid var(--border); }
   .terms-title { font-family:var(--serif); font-size:1.5rem; margin-bottom:1rem; }
   .terms p { font-size:.85rem; color:var(--charcoal); line-height:1.85; margin-bottom:.6rem; }
   .deposit-pill { display:inline-block; background:var(--gold); color:var(--black); font-family:var(--sans); font-size:.6rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; padding:.4rem 1rem; margin-bottom:1rem; }
@@ -105,7 +105,7 @@
   /* FOOTER */
   .proposal-footer { background:var(--charcoal); padding:2.5rem 2.5rem; text-align:center; }
   .footer-sig { font-family:var(--serif); font-style:italic; color:var(--gold); font-size:1.1rem; display:block; margin-bottom:1rem; }
-  .footer-contact { font-size:.75rem; color:rgba(245,240,232,.35); line-height:2; }
+  .footer-contact { font-size:.75rem; color:rgba(245,240,232,.6); line-height:2; }
 
   /* NEXT STEPS */
   .next { background:var(--linen); padding:2.5rem 2.5rem; border-bottom:.5px solid var(--border); }
@@ -169,7 +169,7 @@
     .decor-box { background-color: #EDE9E1 !important; }
     .intro { background-color: #EDE9E1 !important; }
     .next { background-color: #EDE9E1 !important; }
-    .terms { background-color: #F5F0E8 !important; }
+    .terms { background-color: #EDE9E1 !important; }
     .proposal-footer { background-color: #2C2C29 !important; }
 
     /* Tighten spacing slightly for print */
@@ -244,7 +244,7 @@
       </div>
       <span class="incl-label">What's included</span>
 
-      <p style="font-size:.92rem;color:rgba(245,240,232,.5);line-height:1.85;margin-bottom:1rem;">Full-service planning means I manage everything from the moment we sign — not just the wedding day itself, but every vendor, decision, and detail leading up to it. For a family planning an American wedding from out of state for the first time, this is the option that takes everything off your plate.</p>
+      <p style="font-size:.92rem;color:rgba(245,240,232,.82);line-height:1.85;margin-bottom:1rem;">From the moment we sign, I manage every vendor, decision, and detail — not just the wedding day, but everything leading up to it.</p>
 
       <span class="incl-label" style="margin-top:.4rem;">Planning and logistics</span>
       <ul class="incl-list">
@@ -253,16 +253,15 @@
         <li>Contract review and payment tracking for every vendor — I read every agreement, flag anything that needs attention, and make sure no deadline is ever missed</li>
         <li>All vendor communication handled by me from booking through the wedding day</li>
         <li>Floor plan creation, seating chart, and escort cards — showing exactly where every table and guest will be, with a clear system for guests to find their seats</li>
-        <li>Menu guidance, RSVP tracking, and dietary preference coordination including high chair requirements</li>
+        <li>Menu guidance, RSVP tracking, and dietary preference coordination</li>
         <li>One-hour ceremony rehearsal directed by me — a full walkthrough with the wedding party, family, and officiant. Can be held at DeepWoods or at St. Johns Inn the evening before, whichever works better for your family</li>
         <li>Guest transportation and accommodation coordination if needed — shuttle sourcing, hotel research, and room block reservations for out-of-town guests</li>
       </ul>
 
       <span class="incl-label" style="margin-top:1rem;">Decor, design, and rentals</span>
       <ul class="incl-list">
-        <li>Guided selection of your tablescape collection from eight pre-designed options — I walk you through each one and help identify the right fit for your vision and budget</li>
-        <li>Sourcing and coordination of all reception rental items: linens, plates, glassware, flatware, florals, and candles (rental costs paid directly by you to the rental company)</li>
-        <li>Additional specialty rental coordination: dance floor, event lighting, and any other items needed</li>
+        <li>Full design direction for your reception: guided selection from eight pre-designed tablescape collections, or a fully custom design built around your vision — both included in full-service planning</li>
+        <li>Sourcing and coordination of all reception rental items: linens, plates, glassware, flatware, florals, candles, dance floor, and event lighting (rental costs paid directly by you to the rental company)</li>
         <li>Digital save-the-date, invitation templates, and wedding website setup — all matched to your tablescape collection, ready to personalize and send</li>
         <li>Full signage suite: welcome sign, seating chart, table numbers, bar menu, and catering menus — all designed to match your collection</li>
         <li>Day-of decor styling so every table is set exactly as planned before the first guest arrives</li>
@@ -271,12 +270,13 @@
       <span class="incl-label" style="margin-top:1rem;">Wedding day</span>
       <ul class="incl-list">
         <li>Two professional coordinators on-site for up to 12 hours, managing all vendors and setup from arrival through teardown</li>
-        <li>Ceremony direction — cueing the processional, managing the flow, making sure every participant knows where to be and when</li>
-        <li>Cocktail hour, dinner service, toasts, first dances, cake cutting, and dancing — all managed from start to finish</li>
-        <li>Sendoff coordination — soap bubbles, as discussed</li>
-        <li>Full teardown oversight — the venue is cleared and your personal items packed before you leave</li>
+        <li>Ceremony direction — cueing the processional and managing the flow so every participant knows exactly where to be and when</li>
+        <li>Receiving line coordination during cocktail hour — working alongside your photographer to ensure every guest has a personal moment with Umair and Sara</li>
+        <li>Guest experience and comfort throughout the day — keeping guests informed and at ease, managing buffet flow to prevent long wait times</li>
+        <li>Dinner service, toasts, first dances, cake cutting, and dancing — all managed from start to finish</li>
+        <li>Sendoff coordination and full teardown oversight — the venue is cleared and your personal items packed before you leave</li>
       </ul>
-      <p class="option-note">My fee covers planning, coordination, and management only. All vendor fees and rental costs — including catering, photography, florals, DJ, dance floor, and any other physical rentals — are paid directly by you to each vendor or rental company. These are entirely separate from my fee and are not included in it.</p>
+      <p class="option-note">Venue fee, catering, and all other vendor and rental costs are paid directly by you to each company and are not included in my fee.</p>
     </div>
 
     <!-- OPTION B: COORDINATION ONLY -->
@@ -293,17 +293,11 @@
       </div>
       <span class="incl-label">What's included</span>
       <ul class="incl-list">
-        <li>Six weeks before the wedding, you provide all signed contracts, vendor contacts, and decisions made to date</li>
-        <li>Full review of all contracts and vendor agreements, flagging anything that needs attention</li>
-        <li>Timeline creation and distribution to all vendors</li>
-        <li>All vendor communication from the six-week mark through the wedding day</li>
-        <li>Floor plan review and finalization</li>
-        <li>Rehearsal direction</li>
-        <li>Two professional coordinators on-site for up to 12 hours on the wedding day</li>
-        <li>Setup oversight and full day-of vendor management</li>
-        <li>Teardown oversight</li>
+        <li>Six weeks before the wedding, you provide all signed contracts and vendor contacts. I take over from there — reviewing every agreement, building the full timeline, and managing all vendor communication through the wedding day</li>
+        <li>Floor plan review, seating chart finalization, and one-hour ceremony rehearsal directed by me</li>
+        <li>Two professional coordinators on-site for up to 12 hours, managing setup, ceremony, dinner, program, and teardown</li>
       </ul>
-      <p class="option-note">My fee covers coordination and management only. All vendor fees and rental costs — including catering, photography, florals, DJ, dance floor, and any other physical rentals — are paid directly by you to each vendor or rental company. Coordination-only also assumes all vendors have been sourced, vetted, and contracted by your family prior to the six-week handoff.</p>
+      <p class="option-note">All vendor and rental costs are paid directly by you. Coordination-only assumes all vendors have been booked prior to the six-week handoff. Design is not included — if you would like a custom decor design rather than selecting from the pre-designed collections, that is available as a separate service and fee.</p>
     </div>
   </div>
 
@@ -328,29 +322,28 @@
       </div>
       <span class="incl-label">What's included</span>
 
-      <p style="font-size:.92rem;color:rgba(245,240,232,.5);line-height:1.85;margin-bottom:1rem;">St. Johns Inn is a beautiful historic property with no in-house catering or event infrastructure. Building this evening properly means sourcing everything from scratch — including the cultural elements of the henna party, which require their own care.</p>
+      <p style="font-size:.92rem;color:rgba(245,240,232,.82);line-height:1.85;margin-bottom:1rem;">St. Johns Inn is a beautiful historic property with very little built-in venue infrastructure, so every vendor and rental needs to be sourced from scratch — including the cultural elements of the henna party, which require their own care.</p>
 
       <span class="incl-label" style="margin-top:.4rem;">Planning and logistics</span>
       <ul class="incl-list">
         <li>Full event planning for both the rehearsal dinner and henna party: timeline, vendor team, floor layout, and run-of-show</li>
         <li>Caterer sourcing for the rehearsal dinner: Pakistani cuisine, halal, for approximately 50 guests</li>
-        <li>Sourcing and coordination of all specialty rentals: event lighting (string lights, cluster lights for the trees, pathway lanterns as discussed), luxury restroom trailer, sound system, and lounge furniture</li>
+        <li>Sourcing and coordination of all specialty rentals: event lighting, luxury restroom trailer, sound system, and lounge furniture (rental costs paid directly by you)</li>
         <li>Contract review, payment tracking, and all vendor communication through event day</li>
       </ul>
 
       <span class="incl-label" style="margin-top:1rem;">Henna party coordination</span>
       <ul class="incl-list">
-        <li>Henna artist sourcing and coordination, using the temporary tissue application method discussed so Sara's hands are clear for the wedding day</li>
-        <li>Atmosphere and flow planning: room arrangement, seating, lighting, nasheed music sourcing and curation, and the full sequencing of the evening so the tone you described is protected</li>
-        <li>Coordination of the transition from the indoor henna gathering to the outdoor dinner</li>
+        <li>Henna artist sourcing and coordination</li>
+        <li>Atmosphere and flow planning: room arrangement, seating, lighting, nasheed music sourcing and curation, and the full sequencing of the evening — from the henna gathering through the transition to the outdoor dinner — so the intimate atmosphere you described is protected throughout</li>
       </ul>
 
       <span class="incl-label" style="margin-top:1rem;">Decor, styling, and event day</span>
       <ul class="incl-list">
-        <li>Decor sourcing and styling for both the indoor henna space and the outdoor dinner, including signage as needed (rental costs paid directly by you)</li>
+        <li>Full decor design and styling for both the indoor henna space and the outdoor dinner, including signage (rental costs paid directly by you)</li>
         <li>Two coordinators on-site for up to 8 hours, managing setup, event flow, and teardown</li>
       </ul>
-      <p class="option-note">My fee covers planning, coordination, and management only. All vendor fees and rental costs — including catering, lighting equipment, luxury restroom trailer, lounge furniture, and any other physical rentals — are paid directly by you to each vendor or rental company. These are entirely separate from my fee and are not included in it.</p>
+      <p class="option-note">All vendor and rental costs are paid directly by you to each company and are not included in my fee.</p>
     </div>
 
     <!-- OPTION B: COORDINATION ONLY -->
@@ -367,13 +360,10 @@
       </div>
       <span class="incl-label">What's included</span>
       <ul class="incl-list">
-        <li>Six weeks before the event, you provide all signed contracts and vendor contacts</li>
-        <li>Full review of all contracts and vendor agreements</li>
-        <li>Timeline creation and distribution</li>
-        <li>All vendor communication from the six-week mark through event day</li>
-        <li>Two coordinators on-site for up to 8 hours</li>
+        <li>Six weeks before the event, you provide all signed contracts and vendor contacts. I take over from there — reviewing every agreement, building the full timeline, and managing all vendor communication through event day</li>
+        <li>Two coordinators on-site for up to 8 hours, managing setup, event flow, and teardown</li>
       </ul>
-      <p class="option-note">My fee covers coordination and management only. All vendor fees and rental costs are paid directly by you to each vendor or rental company. Coordination-only also assumes all vendors have been sourced, vetted, and contracted by your family prior to handoff.</p>
+      <p class="option-note">All vendor and rental costs are paid directly by you. Coordination-only assumes all vendors have been booked prior to the handoff. Design is not included — the henna party in particular will require a custom decor design, which would be quoted and billed separately from coordination.</p>
     </div>
   </div>
 
@@ -399,11 +389,9 @@
   <div class="section">
     <span class="section-eyebrow">Important Note</span>
     <h2 class="section-title">About Rental and Vendor Costs</h2>
-    <div class="rec-box" style="margin:0;">
-      <span class="rec-label">What my fee does and does not include</span>
-      <p>My planning and coordination fee covers my time, expertise, and management of your event. It does not include the cost of any vendors or rentals. Every physical item and every third-party service involved in your wedding weekend is a separate cost paid directly by you to that company.</p>
-      <p>This includes but is not limited to: catering, photography, videography, florals, DJ and sound, officiant, mocktail bartender, dance floor rental, luxury restroom trailer, event lighting, lounge furniture, transportation, decor rentals, and any other vendors or items sourced for your events. None of these costs pass through me and none of them are included in my fee.</p>
-      <p>When I source and book vendors on your behalf (full-service option), I act as your liaison and manager. You sign the contracts and pay the vendors directly. This structure means you always have full visibility into what things cost and you are never paying a markup on vendor services through me.</p>
+    <div style="background:var(--linen);border-left:3px solid var(--gold);padding:1.6rem 2rem;border-top:2px solid var(--gold);">
+      <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:.7rem;">What my fee does and does not include</span>
+      <p style="font-size:.88rem;color:var(--charcoal);line-height:1.9;">My planning and coordination fee covers my time, expertise, and management only. Every vendor and rental item involved in your wedding weekend — catering, photography, florals, DJ, dance floor, lighting, restroom trailer, lounge furniture, decor, and all others — is a separate cost paid directly by you to that company. When I source and book vendors on your behalf, you sign the contracts and pay the vendors directly, so you always have full visibility into what things cost with no markups from me.</p>
     </div>
   </div>
 
@@ -412,13 +400,13 @@
     <span class="section-eyebrow">Decor</span>
     <h2 class="section-title">Tablescape Collections</h2>
     <div class="decor-box">
-      <p>Wedding decor is a separate cost from my planning fee, invoiced directly by our rental partner and paid directly by you. I offer eight pre-designed tablescape collections with no design fee. Each collection is a complete, cohesive look: full-length linens, coordinating runner and napkins, charger plates, dinner plates, water goblets, flatware, bud vase florals, votive candles, and taper or pillar candles.</p>
-      <p>Every collection also includes matching digital invitation templates, a wedding website template, and a full signage suite: welcome sign, seating chart, table numbers, and bar and catering menus.</p>
-      <p>You can browse all eight collections in the full lookbook here: <a href="https://canva.link/wf89umbvmpa8yaa" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;">View the Tablescape Lookbook &rarr;</a></p>
+      <p>Wedding decor is a separate cost from my planning fee, invoiced directly by our rental partner and paid directly by you. What is not separate is the design work itself — design is included in full-service planning. Whether you choose from a pre-designed collection or prefer a fully custom look, the design direction is covered.</p>
+      <p>Each pre-designed collection is a complete, cohesive look for every table: linens, place settings, glassware, centerpiece florals, and candles. Every collection also includes matching digital invitation templates, a wedding website template, and a full signage suite.</p>
+      <p>You can browse all eight collections here: <a href="https://canva.link/wf89umbvmpa8yaa" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;">View the Tablescape Lookbook &rarr;</a></p>
       <p>For 137 guests at 8 per table, you would need approximately 17 to 18 tables.</p>
+      <p>A note on the henna party: the atmosphere and aesthetic you described for that evening would require a fully custom design. This is included under full-service planning. If you choose the coordination-only option for St. Johns Inn, custom design would be quoted and billed as a separate fee.</p>
       <span class="decor-range">$5,100 &ndash; $7,110</span>
       <span class="decor-range-label">Estimated decor cost at $300&ndash;$395 per table, 17&ndash;18 tables. Paid directly to our rental partner. Final invoice based on confirmed guest count.</span>
-      <p style="margin-top:1rem;">Custom decor design is also available for an additional design fee if none of the eight collections fit your vision. I am happy to discuss both options.</p>
     </div>
   </div>
 </div>
@@ -543,7 +531,9 @@
     <h2 class="next-title">Next Steps</h2>
     <p>Please reply with any questions or let me know which option you would like to move forward with. Once confirmed, I will send a contract and deposit invoice. I am also happy to set up another call if you would like to talk through anything before deciding.</p>
     <p style="margin-top:.8rem;">If you would like to learn more about my background before moving forward, you can read more <a href="https://www.higherloveeventco.com/about" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;">about me here</a> and read reviews from past couples and venue partners <a href="https://www.higherloveeventco.com/reviews" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;">here</a>.</p>
-    <p style="margin-top:.8rem;">I am looking forward to being part of this celebration for your family.</p>
+    <p style="margin-top:.8rem;">It would be a genuine honor to be part of this celebration for your family. Umair and Sara's story is a beautiful one, and the way you are both approaching this weekend — with so much care for both cultures and both families — makes it exactly the kind of work I love to do. I hope to hear from you soon.</p>
+    <p style="margin-top:1.6rem;font-size:.95rem;color:var(--charcoal);">Cheers,</p>
+    <span style="font-family:var(--serif);font-style:italic;font-size:3.2rem;color:var(--gold-deep);display:block;line-height:1;margin-top:.8rem;">Kylie</span>
   </div>
 </div>
 
