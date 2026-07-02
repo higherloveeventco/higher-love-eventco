@@ -25,10 +25,10 @@
       "destination": "/",
       "permanent": true
     },
-    { "source": "/book", "destination": "/reserve", "permanent": false },
-    { "source": "/book/:path*", "destination": "/reserve", "permanent": false },
-    { "source": "/st-johns-weddings", "destination": "/", "permanent": false },
-    { "source": "/st-johns-inn", "destination": "/", "permanent": false },
-    { "source": "/decor-packages", "destination": "/decor", "permanent": false }
+    { "source": "/book", "destination": "/reserve", "permanent": true },
+    { "source": "/book/:path*", "destination": "/reserve", "permanent": true },
+    { "source": "/st-johns-weddings", "destination": "/", "permanent": true },
+    { "source": "/st-johns-inn", "destination": "/", "permanent": true },
+    { "source": "/decor-packages", "destination": "/decor", "permanent": true }
   ]
 }
