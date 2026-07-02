@@ -36,7 +36,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
     --gold:#B8892A;--gold-deep:#9A7020;--gold-pale:#F0E4C4;
 
-    --black:#1A1A18;--charcoal:#2C2C29;--muted:#79776F;
+    --black:#1A1A18;--charcoal:#2C2C29;--muted:#504E48;
 
     --border:rgba(26,26,24,0.10);--border-light:rgba(245,240,232,0.10);
 
@@ -192,7 +192,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
 .takeover-rule{width:40px;height:1px;background:var(--gold);margin:2.8rem auto;}
 
-.takeover-sub{font-size:.88rem;color:rgba(245,240,232,.42);line-height:1.9;max-width:400px;margin:0 auto;}
+.takeover-sub{font-size:.88rem;color:rgba(245,240,232,.65);line-height:1.9;max-width:400px;margin:0 auto;}
 
 .takeover-cards{max-width:740px;margin:3rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-light);}
 
@@ -326,7 +326,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
 .tstep-when{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.5rem;}
 
-.tstep h4{font-family:var(--serif);font-size:1.05rem;color:var(--black);margin-bottom:.5rem;line-height:1.2;}
+.tstep h3{font-family:var(--serif);font-size:1.05rem;color:var(--black);margin-bottom:.5rem;line-height:1.2;}
 
 .tstep p{font-size:.75rem;color:var(--muted);line-height:1.7;}
 
@@ -418,9 +418,9 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
 .sustain-card-label{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem;}
 
-.sustain-card h4{font-family:var(--serif);font-size:1.35rem;color:var(--cream);margin-bottom:.9rem;line-height:1.2;font-weight:400;}
+.sustain-card h3{font-family:var(--serif);font-size:1.35rem;color:var(--cream);margin-bottom:.9rem;line-height:1.2;font-weight:400;}
 
-.sustain-card p{font-size:.83rem;color:rgba(245,240,232,.45);line-height:1.9;}
+.sustain-card p{font-size:.83rem;color:rgba(245,240,232,.70);line-height:1.9;}
 
   @media(max-width:860px){.sustain-inner{grid-template-columns:1fr 1fr;}}
 
@@ -472,7 +472,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
 .foot-brand .nav-logo{font-size:1.15rem;display:block;margin-bottom:14px;color:var(--cream);text-decoration:none;}
 
-.foot-brand p{font-size:.82rem;color:rgba(245,240,232,.3);line-height:1.8;max-width:240px;margin-top:10px;}
+.foot-brand p{font-size:.82rem;color:rgba(245,240,232,.55);line-height:1.8;max-width:240px;margin-top:10px;}
 
 .foot-brand .foot-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.95rem;margin-top:1.2rem;display:block;}
 
@@ -482,13 +482,13 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
 .foot-col li{margin-bottom:9px;}
 
-.foot-col a{font-size:.82rem;color:rgba(245,240,232,.38);text-decoration:none;transition:color .2s;}
+.foot-col a{font-size:.82rem;color:rgba(245,240,232,.55);text-decoration:none;transition:color .2s;}
 
 .foot-col a:hover{color:var(--gold);}
 
-.foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.38);line-height:2;}
+.foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.55);line-height:2;}
 
-.foot-col address a{color:rgba(245,240,232,.38);}
+.foot-col address a{color:rgba(245,240,232,.55);}
 
 .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
 
@@ -706,6 +706,9 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
 </div>
 
+<!-- MAIN CONTENT -->
+<main id="main-content">
+
 <!-- HERO — full bleed dark -->
 
 <header class="hero">
@@ -722,9 +725,9 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
     <div class="cta-row rise">
 
-      <a class="btn btn-gold" href="/reserve">Reserve Your Package</a>
+      <a class="btn btn-gold" href="/reserve" aria-label="Reserve your wedding package">Reserve Your Package</a>
 
-      <a class="btn btn-ghost" href="/contact">Schedule a discovery call</a>
+      <a class="btn btn-ghost" href="/contact" aria-label="Schedule a discovery call to learn more">Schedule a discovery call</a>
 
     </div>
 
@@ -866,10 +869,9 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 </section>
 
 <!-- EDITORIAL PHOTO -->
-<!-- FIX 5: Added .jpg extension to broken image src, added explicit width/height and loading="lazy" -->
 <div style="background:var(--cream);line-height:0;">
 
-  <img src="images/StJohnsInnWeddingCeremonyPortlandOregon (2)" alt="Wedding ceremony at St. Johns Inn, Portland, OR, Higher Love Event Co." width="1080" height="520" loading="lazy" style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 40%;">
+  <img src="images/StJohnsInnCeremonyWeddingPortlandOregonBridge.jpg" alt="Wedding ceremony at St. Johns Inn, Portland, OR, Higher Love Event Co." width="1080" height="520" loading="lazy" style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 40%;">
 
   <div class="editorial-caption" style="display:grid;padding:1.2rem 2.5rem;">
 
@@ -901,11 +903,11 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
     <div class="rise">
 
-      <div class="toggle" role="tablist">
+      <div class="toggle" role="tablist" aria-label="Package type">
 
-        <button id="t-full" class="active" onclick="setType('full')">Ceremony + Reception</button>
+        <button id="t-full" class="active" role="tab" aria-selected="true" aria-controls="tiers" onclick="setType('full')">Ceremony + Reception</button>
 
-        <button id="t-recep" onclick="setType('recep')">Reception Only</button>
+        <button id="t-recep" role="tab" aria-selected="false" aria-controls="tiers" onclick="setType('recep')">Reception Only</button>
 
       </div>
 
@@ -983,7 +985,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
           <span class="tstep-when">At booking</span>
 
-          <h4>Reserve your package</h4>
+          <h3>Reserve your package</h3>
 
           <p>Deposit paid, tablescape collection selected. Planning begins.</p>
 
@@ -995,7 +997,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
           <span class="tstep-when">Weeks 1&ndash;2</span>
 
-          <h4>Venue options</h4>
+          <h3>Venue options</h3>
 
           <p>Up to three venues researched, ranked, and presented with honest pros and cons for your desired wedding date timeframe.</p>
 
@@ -1007,7 +1009,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
           <span class="tstep-when">Weeks 2&ndash;3</span>
 
-          <h4>Save the dates &amp; wedding website</h4>
+          <h3>Save the dates &amp; wedding website</h3>
 
           <p>Your date is set, this is really happening! Time to put your provided e-vite and wedding website templates to work and notify your guests of your upcoming nuptials.</p>
 
@@ -1019,7 +1021,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
           <span class="tstep-when">Weeks 3&ndash;6</span>
 
-          <h4>Vendor team</h4>
+          <h3>Vendor team</h3>
 
           <p>Ranked vendor shortlists delivered per category. You choose. I streamline the contracts, negotiations, and deposits, and track every due date so you are never caught off guard.</p>
 
@@ -1031,7 +1033,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
           <span class="tstep-when">Ongoing</span>
 
-          <h4>Logistics &amp; communication</h4>
+          <h3>Logistics &amp; communication</h3>
 
           <p>All vendor communication, timeline building, and production planning managed by me.</p>
 
@@ -1043,7 +1045,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
           <span class="tstep-when">Wedding week</span>
 
-          <h4>Final details</h4>
+          <h3>Final details</h3>
 
           <p>Confirmations sent, timeline distributed to every vendor, rehearsal directed.</p>
 
@@ -1055,7 +1057,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
           <span class="tstep-when">Wedding day</span>
 
-          <h4>Full day command</h4>
+          <h3>Full day command</h3>
 
           <p>Two coordinators onsite, up to 8 hours for Reception Only, up to 12 hours for Ceremony + Reception. You enjoy it. We run it.</p>
 
@@ -1227,7 +1229,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
         <span class="sustain-card-label">Rentals over disposables</span>
 
-        <h4>Nothing single-use if I can help it.</h4>
+        <h3>Nothing single-use if I can help it.</h3>
 
         <p>Every tablescape collection is sourced through a rental partner. Linens, flatware, glassware, and centerpieces are returned, cleaned, and used again. No landfill contribution from your table settings.</p>
 
@@ -1237,7 +1239,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
         <span class="sustain-card-label">Food waste</span>
 
-        <h4>Leftovers go to people who need them.</h4>
+        <h3>Leftovers go to people who need them.</h3>
 
         <p>Any food remaining at the end of the night is donated to St. Johns Village Transitional Housing Complex, right here in the neighborhood.</p>
 
@@ -1247,7 +1249,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
         <span class="sustain-card-label">Florals</span>
 
-        <h4>Your flowers have a life after the reception.</h4>
+        <h3>Your flowers have a life after the reception.</h3>
 
         <p>Floral arrangements are donated to Assumption Village Assisted Living in St. Johns after the wedding. A centerpiece that spent 6 hours on a reception table can spend another week brightening a room for someone who needs it.</p>
 
@@ -1257,7 +1259,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
         <span class="sustain-card-label">Sourcing locally</span>
 
-        <h4>Food and flowers, grown close to home.</h4>
+        <h3>Food and flowers, grown close to home.</h3>
 
         <p>I work with caterers who source ingredients locally and florists committed to locally grown flowers. If a bloom can be substituted for a locally grown alternative without compromising the look, I'll do it.</p>
 
@@ -1281,15 +1283,17 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 
   <div class="cta-row rise">
 
-    <a class="btn btn-gold" href="/reserve">Reserve Your Package</a>
+    <a class="btn btn-gold" href="/reserve" aria-label="Reserve your wedding package now">Reserve Your Package</a>
 
-    <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Schedule a discovery call</a>
+    <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773" aria-label="Book a free discovery call with Kylie">Schedule a discovery call</a>
 
   </div>
 
   <p class="rise" style="margin-top:2.2rem;font-size:.82rem;color:var(--muted);max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;">Before you reach out, the only things you need: a rough guest count, a general budget, and a sense of when you&rsquo;d like to get married.</p>
 
 </section>
+
+</main><!-- end #main-content -->
 
 <!-- FOOTER -->
 
@@ -1506,8 +1510,10 @@ Nothing below here needs editing.
     activeType = type;
 
     document.getElementById("t-full").classList.toggle("active", type==="full");
+    document.getElementById("t-full").setAttribute("aria-selected", type==="full");
 
     document.getElementById("t-recep").classList.toggle("active", type==="recep");
+    document.getElementById("t-recep").setAttribute("aria-selected", type==="recep");
 
     const show = type==="full" ? "inline-block" : "none";
 
