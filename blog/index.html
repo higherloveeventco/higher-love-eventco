@@ -8,12 +8,13 @@
 <meta name="description" content="Honest wedding planning advice, Portland venue guides, St. Johns wedding inspiration, budgeting tips, and everything the wedding industry does not always tell you.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
 <style>
 :root{
-  --gold:#B8892A;--gold-light:#D4A845;--gold-pale:#F0E4C4;
+  --gold:#B8892A;--gold-light:#D4A845;--gold-pale:#F0E4C4;--gold-text:#52512A;
   --cream:#F5F0E8;--linen:#EDE9E1;--black:#1A1A18;--charcoal:#2C2C29;
-  --muted:#79776F;--white:#FFFFFF;--border:rgba(26,26,24,0.1);
+  --muted:#504E48;--white:#FFFFFF;--border:rgba(26,26,24,0.1);
   --serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
   --nav-h:64px;
 }
@@ -23,18 +24,16 @@ body{font-family:var(--sans);background:var(--cream);color:var(--black);line-hei
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer}
-/* TYPOGRAPHY */
-.eyebrow{display:block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem}
-  .eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:.75rem;}
+.eyebrow{display:block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-text);margin-bottom:0.9rem}
+.eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:.75rem;}
 h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.12;color:var(--black)}
 p{color:var(--charcoal);line-height:1.8;font-size:0.92rem}
-/* LAYOUT */
 .wrap{max-width:1120px;margin:0 auto;padding:0 2.5rem}
 .wrap-narrow{max-width:780px;margin:0 auto;padding:0 2.5rem}
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,240,232,0.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;z-index:100;}
 .nav-logo{font-family:var(--serif);font-size:1rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--black);}
-.nav-logo span{color:var(--gold);}
+.nav-logo span{color:var(--gold-text);}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
 .nav-links a{font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
 .nav-links a.active{color:var(--gold);}
@@ -57,26 +56,25 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,
 .blog-card{background:var(--cream);border:0.5px solid var(--border);}
 .blog-card a{text-decoration:none;color:inherit;display:block;height:100%;}
 .blog-card-inner{padding:2.5rem;height:100%;display:flex;flex-direction:column;gap:0.8rem;}
-.blog-cat{font-family:var(--sans);font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+.blog-cat{font-family:var(--sans);font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-text);}
 .blog-card h3{font-family:var(--serif);font-size:1.4rem;font-weight:400;line-height:1.2;color:var(--black);}
 .blog-card p{font-size:0.84rem;color:var(--muted);line-height:1.7;flex:1;}
 .blog-meta{display:flex;gap:1rem;font-size:0.72rem;color:var(--muted);font-family:var(--sans);}
-.blog-read-more{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-family:var(--sans);}
+.blog-read-more{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-text);font-family:var(--sans);}
 .blog-card:hover .blog-read-more{text-decoration:underline;}
-
 /* FOOTER */
 footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem;}
 .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:3.5rem;padding-bottom:3rem;border-bottom:0.5px solid rgba(245,240,232,.06);margin-bottom:2rem;}
 .foot-brand .nav-logo{font-size:1.15rem;display:block;margin-bottom:14px;color:var(--cream);text-decoration:none;}
-.foot-brand p{font-size:.82rem;color:rgba(245,240,232,.3);line-height:1.8;max-width:240px;margin-top:10px;}
+.foot-brand p{font-size:.82rem;color:rgba(245,240,232,.55);line-height:1.8;max-width:240px;margin-top:10px;}
 .foot-brand .foot-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.95rem;margin-top:1.2rem;display:block;}
-.foot-col h4{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.foot-col h2{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
 .foot-col ul{list-style:none;}
 .foot-col li{margin-bottom:9px;}
-.foot-col a{font-size:.82rem;color:rgba(245,240,232,.38);text-decoration:none;transition:color .2s;}
+.foot-col a{font-size:.82rem;color:rgba(245,240,232,.55);text-decoration:none;transition:color .2s;}
 .foot-col a:hover{color:var(--gold);}
-.foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.38);line-height:2;}
-.foot-col address a{color:rgba(245,240,232,.38);}
+.foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.55);line-height:2;}
+.foot-col address a{color:rgba(245,240,232,.55);}
 .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
 @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
 @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
@@ -99,7 +97,7 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem;}
     <li><a href="/about">About</a></li>
     <li><a href="/reviews">Reviews</a></li>
     <li><a href="/decor">Decor</a></li>
-    <li><a href="/blog" class="active">Blog</a></li>
+    <li><a href="/blog" class="active" aria-current="page">Blog</a></li>
     <li><a href="/faq">FAQ</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a href="/reserve" class="nav-cta">Reserve</a></li>
@@ -116,64 +114,86 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem;}
   <a href="/contact">Contact</a>
   <a href="/reserve">Reserve</a>
 </div>
+
+<main id="main-content">
+
 <section class="blog-hero">
   <div class="wrap">
     <span class="eyebrow">Blog</span>
     <h1>Portland Wedding Planning Blog</h1>
-      <p style="font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--muted);margin-top:.8rem;">Notes on weddings, community, and celebrating well.</p>
+    <p style="font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--muted);margin-top:.8rem;">Notes on weddings, community, and celebrating well.</p>
   </div>
 </section>
-<!-- HERO IMAGE -->
+
 <div style="overflow:hidden;line-height:0;background:var(--cream);">
-  <img src="/images/Malia-Alex-Produce-Row-Portland-Oregon-Indoor-Wedding-Microwedding-Urban-Venue-2023-0197 (1).JPG" alt="Wedding reception at Produce Row, Portland Oregon, Higher Love Event Co." style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 25%;" loading="lazy">
+  <img src="/images/Malia-Alex-Produce-Row-Portland-Oregon-Indoor-Wedding-Microwedding-Urban-Venue-2023-0197 (1).JPG" alt="Wedding reception at Produce Row, Portland Oregon, Higher Love Event Co." width="1120" height="520" style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 25%;" loading="lazy">
   <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photo: <a href="https://www.rebeccarizzophotographics.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Rebecca Rizzo Photographics</a></span>
 </div>
+
 <div class="blog-grid">
+
   <article class="blog-card">
-    <a href="/blog/cathedral-park-wedding">
+    <a href="/blog/what-does-a-wedding-coordinator-do">
       <div class="blog-card-inner">
-        <span class="blog-cat">Venue Guides</span>
-        <h3>Getting Married at Cathedral Park: Everything You Need to Know</h3>
-        <p>The permit process, what's bookable now, and what to expect when the staircase reopens for weddings in 2027. From a planner who lives in St. Johns.</p>
-        <div class="blog-meta"><span>June 2026</span><span>8 min read</span></div>
+        <span class="blog-cat">Wedding Planning</span>
+        <h3>What Does a Wedding Coordinator Actually Do?</h3>
+        <p>Everything that happens before, during, and after your wedding day that you never see. Plus: what to look for when hiring one, why day-of coordination is not what you think, and why your best friend cannot be your planner.</p>
+        <div class="blog-meta"><span>July 2026</span><span>10 min read</span></div>
         <span class="blog-read-more">Read more &rarr;</span>
       </div>
     </a>
   </article>
+
+  <article class="blog-card">
+    <a href="/blog/getting-married-at-cathedral-park-portland">
+      <div class="blog-card-inner">
+        <span class="blog-cat">Venue Guides</span>
+        <h3>Getting Married at Cathedral Park: Everything You Need to Know</h3>
+        <p>The permit process, what is bookable now, and what to expect when the staircase reopens for weddings in 2027. From a planner who lives in St. Johns.</p>
+        <div class="blog-meta"><span>July 2026</span><span>8 min read</span></div>
+        <span class="blog-read-more">Read more &rarr;</span>
+      </div>
+    </a>
+  </article>
+
   <article class="blog-card">
     <a href="/blog/food-cart-pod-wedding-portland">
       <div class="blog-card-inner">
         <span class="blog-cat">Real Weddings</span>
         <h3>Food Cart Pod Wedding in Portland: How to Pull It Off</h3>
-        <p>Behind the scenes of a 110-guest Portland wedding where 15 food carts replaced traditional catering. What it cost, what it took, and whether it's right for you.</p>
+        <p>Behind the scenes of a 110-guest Portland wedding where 15 food carts replaced traditional catering. What it cost, what it took, and whether it is right for you.</p>
         <div class="blog-meta"><span>May 2026</span><span>10 min read</span></div>
         <span class="blog-read-more">Read more &rarr;</span>
       </div>
     </a>
   </article>
+
 </div>
+
+</main>
+
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="nav-logo" href="/">Higher <span>Love</span> Event Co.</a>
+        <a class="nav-logo" href="/">Higher <span style="color:var(--gold);">Love</span> Event Co.</a>
         <p>A wedding planning formula for couples who are happy to hand off the reins. Transparent pricing, pre-curated decor, everything taken care of.</p>
         <span class="foot-sig">Hire love. Higher love.</span>
       </div>
       <div class="foot-col">
-        <h4>Navigate</h4>
+        <h2>Navigate</h2>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/reserve">Reserve</a></li>
-          <li><a href="/decor">Decor</a></li>
-          <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/" aria-label="Home, Higher Love Event Co.">Home</a></li>
+          <li><a href="/about" aria-label="About Kylie and Higher Love">About</a></li>
+          <li><a href="/reserve" aria-label="Reserve a wedding planning package">Reserve</a></li>
+          <li><a href="/decor" aria-label="View tablescape decor collections">Decor</a></li>
+          <li><a href="/reviews" aria-label="Read client reviews">Reviews</a></li>
+          <li><a href="/blog" aria-label="Read the Higher Love blog">Blog</a></li>
+          <li><a href="/contact" aria-label="Contact Higher Love Event Co.">Contact</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <address>
           <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a><br>
           <a href="tel:5032178500">503-217-8500</a><br>
@@ -189,6 +209,7 @@ footer{background:var(--charcoal);padding:4rem 2.5rem 2.5rem;}
     </div>
   </div>
 </footer>
+
 <script>
   document.addEventListener("click", function(e){
     var m = document.getElementById("mob-menu");
