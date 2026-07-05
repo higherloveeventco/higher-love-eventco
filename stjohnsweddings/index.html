@@ -124,10 +124,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,240,232,
 .hero-credit a{color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.4);}
 
 /* INTRO */
-.intro{padding:6rem 0 4rem;}
+.intro{padding:3.5rem 0 0;}
 .intro-inner{max-width:760px;margin:0 auto;text-align:center;}
 .intro-inner h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.15;color:var(--black);margin-bottom:1.6rem;}
-.intro-inner p{font-size:1rem;line-height:1.9;color:var(--charcoal);margin-bottom:1.2rem;}
+.intro-inner p{font-size:1rem;line-height:1.9;color:var(--charcoal);margin-bottom:1.2rem;text-align:left;}
 
 /* SECTION HEAD */
 .sec-head{max-width:720px;margin-bottom:3rem;}
@@ -225,6 +225,12 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
   .landia-inner{grid-template-columns:1fr;gap:2.6rem;}
 }
 @media(max-width:860px){.nav-links{display:none!important;}.hamburger{display:flex;}}
+.no-eyebrow-line .eyebrow::before{display:none;margin:0;}
+.no-eyebrow-line .eyebrow{margin-bottom:.5rem;}
+
+@media(max-width:960px){
+  .why-grid{grid-template-columns:1fr!important;gap:2rem!important;}
+}
 @media(max-width:640px){
   .network-grid{grid-template-columns:1fr;}
   .venue{grid-template-columns:1fr;gap:0.5rem;}
@@ -232,8 +238,6 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
   .cta-buttons{flex-direction:column;align-items:center;}
   .hero-credit{display:none;}
   .wrap{padding:0 1.4rem;}
-  .no-eyebrow-line .eyebrow::before{display:none;margin:0;}
-.no-eyebrow-line .eyebrow{margin-bottom:.5rem;}
   .logistics-grid{grid-template-columns:1fr!important;}
   .testimonial-grid{grid-template-columns:1fr!important;}
 }
@@ -297,7 +301,6 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
       <h2>A neighborhood that already feels like a celebration.</h2>
       <p>More than a hundred years ago, St. Johns was its own independent town at the confluence of the Willamette and Columbia rivers, named after an early settler named James John, who donated land and money to build a public school and gave generously to those around him. It eventually merged with Portland, but it never lost the small-town feeling. A walkable main street, independent bars and restaurants, a historic inn, two century-old movie theaters, and a riverfront park that looks like it was built for photographs.</p>
       <p>I plan weddings across Portland and the greater Pacific Northwest, but St. Johns is where I am based and where I have the deepest relationships. When couples choose to marry here, I can lean on a whole neighborhood of people I know and trust to make the day feel local, cohesive, and genuinely theirs.</p>
-      <p style="font-size:.88rem;background:rgba(184,137,42,0.07);border-left:2px solid var(--gold);padding:1rem 1.2rem;margin-top:1.4rem;color:var(--charcoal);font-family:var(--serif);font-style:italic;">Planning a spring wedding? The St. Johns Bizarre happens every second Saturday in May: a neighborhood-wide festival with a parade, live music, over 100 vendors, and a beer garden taking up six city blocks. Worth knowing before you set your date.</p>
     </div>
   </div>
 </section>
@@ -351,33 +354,9 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
   </div>
 </section>
 
-<!-- GETTING HERE -->
-<section style="padding:2rem 0 2.5rem;background:var(--cream);">
-  <div class="wrap no-eyebrow-line">
-    <div style="max-width:720px;margin-bottom:1.2rem;">
-      <span class="eyebrow">Getting here</span>
-      <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.1;color:var(--black);margin-top:0.4rem;">Logistics for out-of-town guests.</h2>
-      <p style="margin-top:.8rem;font-size:0.98rem;color:var(--charcoal);">St. Johns is in North Portland, about 6 miles from downtown. It is most easily reached by car. Here is what your guests need to know.</p>
-    </div>
-    <div class="logistics-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);">
-      <div style="background:var(--linen);padding:1.6rem 1.8rem;">
-        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.8rem;">Getting here</span>
-        <p style="font-size:.9rem;line-height:1.8;color:var(--charcoal);">St. Johns is most easily reached by car. From downtown Portland, take US-30 W (St. Helens Road) north along the river. Rideshare is widely available. TriMet bus lines 16 and 75 serve the neighborhood from downtown.</p>
-      </div>
-      <div style="background:var(--linen);padding:1.6rem 1.8rem;">
-        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.8rem;">Where to stay</span>
-        <p style="font-size:.9rem;line-height:1.8;color:var(--charcoal);">St. Johns Inn has guest rooms on site, ideal for the couple and close family. Most guests will stay in downtown Portland or NW Portland, both 15 to 20 minutes away. The Holiday Inn Columbia Riverfront in North Portland is the closest full-service hotel to the neighborhood.</p>
-      </div>
-      <div style="background:var(--linen);padding:1.6rem 1.8rem;">
-        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.8rem;">Getting around</span>
-        <p style="font-size:.9rem;line-height:1.8;color:var(--charcoal);">Everything in St. Johns is walkable once you are here. The main street, Cathedral Park, Weddinglandia, and most of the venues on this page are within a few blocks of each other. For guests coming from hotels, a rideshare or shuttle is the easiest option. Northwest Navigator runs guest shuttles and I can coordinate that as part of your planning.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- VENUES -->
-<section class="venues" style="padding:2.5rem 0 4rem;">
+<section class="venues" style="padding:2.5rem 0 4rem;background:var(--linen);">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">St. Johns wedding venues</span>
@@ -488,7 +467,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
 <section class="landia" style="padding:3rem 0;">
   <div class="wrap">
     <div class="landia-banner">
-      <span class="eyebrow">Featured partnership</span>
+      <span class="eyebrow">A St. Johns partnership</span>
       <h2>Married at Weddinglandia? The celebration starts here.</h2>
     </div>
     <div class="landia-inner">
@@ -525,9 +504,9 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
     <div class="network-grid">
 
       <div class="cat">
-        <h3>Catering</h3>
+        <h3>Food &amp; Catering</h3>
         <ul>
-          <li>Tienda Santa Cruz<span>Authentic tacos, burritos, and tamales from a Mexican mini-mart taqueria, a neighborhood institution and a great rehearsal dinner option</span></li>
+          <li>Tienda Santa Cruz<span>Authentic tacos, burritos, and tamales from a Mexican mini-mart taqueria and neighborhood institution</span></li>
           <li>Ch&eacute;m Gi&oacute;<span>Vietnamese restaurant and caterer, house of Mosaic Taphouse</span></li>
           <li>Willamette Pizza Co.<span>St. Johns pizza, available for events</span></li>
           <li>Bahn Mi Up<span>Vietnamese sandwiches and catering</span></li>
@@ -535,16 +514,16 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
           <li>Pig Patas<span>Filipino BBQ and catering</span></li>
           <li>Beto's Taqueria<span>Mexican food and catering</span></li>
           <li>Urban German<span>German cuisine with full buyout and catering options</span></li>
+          <li>Cathedral Park Food Carts<span>Food cart pod with multiple cuisines, great for rehearsal dinners</span></li>
         </ul>
       </div>
 
       <div class="cat">
-        <h3>Rehearsal Dinner</h3>
+        <h3>Welcome Night &amp; Rehearsal Bars</h3>
         <ul>
-          <li>Cathedral Park Food Carts<span>Food cart pod with multiple cuisines, perfect for a casual rehearsal dinner</span></li>
-          <li>Awesome Beer Bar<span>Bring your own caterer or food truck to this flexible space</span></li>
-          <li>Sticky Wicket<span>Full buyouts for rehearsal dinners and after-parties</span></li>
-          <li>Signal Station<span>Hand-slung pizza inside a repurposed vintage gas station, with a spacious patio. A St. Johns institution</span></li>
+          <li>Awesome Beer Bar<span>A relaxed bar space for a welcome night or rehearsal gathering. BYOC: bring your own caterer or food truck.</span></li>
+          <li>Sticky Wicket<span>Full buyouts for rehearsal dinners and welcome nights</span></li>
+          <li>Signal Station<span>Pizza and patio, a great casual option for the night before</span></li>
         </ul>
       </div>
 
@@ -640,15 +619,9 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
       </div>
 
       <div class="cat">
-        <h3>Bar Service</h3>
+        <h3>Drinks &amp; Bar</h3>
         <ul>
           <li>Havalina<span>Full-service bar and cocktail catering for events</span></li>
-        </ul>
-      </div>
-
-      <div class="cat">
-        <h3>Wine</h3>
-        <ul>
           <li>45th Parallel<span>Oregon wine available for events and gifting</span></li>
           <li>No Doubts Wine Bar<span>Neighborhood wine bar and bottle shop</span></li>
         </ul>
@@ -720,7 +693,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
 <!-- BAND IMAGE -->
 <div style="background:var(--cream);line-height:0;">
   <img class="band-img" src="/images/StJohnsWeddingPortlandViewBridgeForestPark.jpg" alt="Wedding ceremony at St. Johns Inn with the Willamette River and Forest Park in the background, Portland Oregon" width="1440" height="560" loading="lazy">
-  <span class="photo-credit">Photo: <a href="https://www.lindsayblairphotography.com/" target="_blank" rel="noopener">Lindsay Blair Photography</a></span>
+  <span class="photo-credit" style="text-align:left;padding-left:2.5rem;">Photo: <a href="https://www.lindsayblairphotography.com/" target="_blank" rel="noopener">Lindsay Blair Photography</a></span>
 </div>
 
 <!-- TESTIMONIALS -->
@@ -728,7 +701,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:1.5rem;">
       <span class="eyebrow">From couples who got married here</span>
-      <h2>What it actually feels like to get married in St. Johns.</h2>
+      <h2>What couples say about working with Higher Love.</h2>
     </div>
     <div class="testimonial-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);">
       <div style="background:var(--linen);padding:2.8rem;border-top:2px solid var(--gold);">
@@ -746,79 +719,45 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
   </div>
 </section>
 
-<!-- MISSION -->
-<section class="mission" style="padding:3.5rem 0;">
+<!-- GETTING HERE -->
+<section style="padding:2rem 0 2.5rem;background:var(--cream);">
+  <div class="wrap no-eyebrow-line">
+    <div style="max-width:720px;margin-bottom:1.2rem;">
+      <span class="eyebrow">Getting here</span>
+      <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.1;color:var(--black);margin-top:0.4rem;">Logistics for out-of-town guests.</h2>
+      <p style="margin-top:.8rem;font-size:0.98rem;color:var(--charcoal);">St. Johns is in North Portland, about 6 miles from downtown. It is most easily reached by car. Here is what your guests need to know.</p>
+    </div>
+    <div class="logistics-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);">
+      <div style="background:var(--linen);padding:1.6rem 1.8rem;">
+        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.8rem;">Getting here</span>
+        <p style="font-size:.9rem;line-height:1.8;color:var(--charcoal);">St. Johns is most easily reached by car. From downtown Portland, take US-30 W (St. Helens Road) north along the river. Rideshare is widely available. TriMet bus lines 16 and 75 serve the neighborhood from downtown.</p>
+      </div>
+      <div style="background:var(--linen);padding:1.6rem 1.8rem;">
+        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.8rem;">Where to stay</span>
+        <p style="font-size:.9rem;line-height:1.8;color:var(--charcoal);">St. Johns Inn has guest rooms on site, ideal for the couple and close family. Most guests will stay in downtown Portland or NW Portland, both 15 to 20 minutes away. The Holiday Inn Columbia Riverfront in North Portland is the closest full-service hotel to the neighborhood.</p>
+      </div>
+      <div style="background:var(--linen);padding:1.6rem 1.8rem;">
+        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.8rem;">Getting around</span>
+        <p style="font-size:.9rem;line-height:1.8;color:var(--charcoal);">Everything in St. Johns is walkable once you are here. The main street, Cathedral Park, Weddinglandia, and most of the venues on this page are within a few blocks of each other. For guests coming from hotels, a rideshare or shuttle is the easiest option. Northwest Navigator runs guest shuttles and I can coordinate that as part of your planning.</p>
+      </div>
+    </div>
+    <p style="font-size:.85rem;background:rgba(184,137,42,0.07);border-left:2px solid var(--gold);padding:1rem 1.2rem;margin-top:1.4rem;color:var(--charcoal);font-family:var(--serif);font-style:italic;max-width:680px;">Planning a spring wedding? The St. Johns Bizarre happens every second Saturday in May: a neighborhood-wide festival with a parade, live music, over 100 vendors, and a beer garden taking up six city blocks. Worth knowing before you set your date.</p>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section style="background:var(--charcoal);padding:4rem 0;text-align:center;">
   <div class="wrap">
     <div class="mission-inner">
       <span class="eyebrow" style="color:var(--gold);">Local first</span>
-      <h2>When you marry in St. Johns, I hire St. Johns.</h2>
-      <p>I believe the best weddings are rooted in their place. When a couple chooses to celebrate in St. Johns, my goal is to put as much of that day into the hands of St. Johns and North Portland businesses as I possibly can. The caterer, the florist, the photographer, the bar, the band: a neighborhood, showing up for a neighborhood.</p>
-      <p>It makes the day feel cohesive and personal, it keeps your investment in the community you are celebrating in, and it means everyone working your wedding genuinely cares about getting it right.</p>
-      <a class="btn btn-gold" href="/reserve">Start planning your St. Johns wedding</a>
+      <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(2rem,3.6vw,2.7rem);line-height:1.14;color:var(--white);margin-bottom:1.4rem;">When you marry in St. Johns, I hire St. Johns.</h2>
+      <p style="font-size:1.02rem;line-height:1.9;color:rgba(255,255,255,0.78);margin-bottom:1.2rem;max-width:680px;margin-left:auto;margin-right:auto;">I believe the best weddings are rooted in their place. When a couple chooses to celebrate in St. Johns, my goal is to put as much of that day into the hands of St. Johns and North Portland businesses as I possibly can. The caterer, the florist, the photographer, the bar, the band: a neighborhood, showing up for a neighborhood.</p>
+      <p style="font-size:1.02rem;line-height:1.9;color:rgba(255,255,255,0.78);margin-bottom:2.4rem;max-width:680px;margin-left:auto;margin-right:auto;">That is what it means to plan a wedding here rather than just in Portland. If you are already in love with St. Johns, or just starting to fall for it, reach out. I would love to help you make it yours.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a class="btn btn-gold" href="/reserve">Reserve your package</a>
+        <a class="btn btn-light" href="/contact">Schedule a discovery call</a>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="wrap">
-    <h2>Let's plan it here.</h2>
-    <p>Whether you already have a St. Johns venue in mind or you are just falling for the neighborhood, I would love to help you make it yours.</p>
-    <div class="cta-buttons">
-      <a class="btn btn-gold" href="/reserve">Reserve your package</a>
-      <a class="btn" href="/contact">Schedule a discovery call</a>
-    </div>
-  </div>
-</section>
-
 </main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a class="nav-logo" href="/">Higher <span style="color:var(--gold);">Love</span> Event Co.</a>
-        <p>A wedding planning formula for couples who are happy to hand off the reins. Transparent pricing, pre-curated decor, everything taken care of.</p>
-        <span class="foot-sig">Hire love. Higher love.</span>
-      </div>
-      <div class="foot-col">
-        <h2>Navigate</h2>
-        <ul>
-          <li><a href="/" aria-label="Home, Higher Love Event Co.">Home</a></li>
-          <li><a href="/about" aria-label="About Kylie and Higher Love">About</a></li>
-          <li><a href="/reserve" aria-label="Reserve a wedding planning package">Reserve</a></li>
-          <li><a href="/decor" aria-label="View tablescape decor collections">Decor</a></li>
-          <li><a href="/reviews" aria-label="Read client reviews">Reviews</a></li>
-          <li><a href="/blog" aria-label="Read the Higher Love blog">Blog</a></li>
-          <li><a href="/contact" aria-label="Contact Higher Love Event Co.">Contact</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h2>Contact</h2>
-        <address>
-          <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a><br>
-          <a href="tel:5032178500">503-217-8500</a><br>
-          <a href="https://higherloveeventco.com">higherloveeventco.com</a><br>
-          <span style="display:block;width:24px;height:1px;background:var(--gold);margin:1rem 0;opacity:.5;"></span>
-          <a href="https://instagram.com/higherloveeventco">@higherloveeventco</a>
-        </address>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>&copy; 2026 Higher Love Event Co.</span>
-      <span>St. Johns, Portland, OR &middot; Pacific Northwest</span>
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.addEventListener("click", function(e){
-    var m = document.getElementById("mob-menu");
-    var h = document.getElementById("hamburger");
-    if(m && m.classList.contains("open") && !m.contains(e.target) && !h.contains(e.target)){
-      m.classList.remove("open"); h.classList.remove("open");
-    }
-  });
-</script>
-</body>
-</html>
