@@ -232,7 +232,8 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
   .cta-buttons{flex-direction:column;align-items:center;}
   .hero-credit{display:none;}
   .wrap{padding:0 1.4rem;}
-  .why-grid{grid-template-columns:1fr!important;}
+  .no-eyebrow-line .eyebrow::before{display:none;margin:0;}
+.no-eyebrow-line .eyebrow{margin-bottom:.5rem;}
   .logistics-grid{grid-template-columns:1fr!important;}
   .testimonial-grid{grid-template-columns:1fr!important;}
 }
@@ -308,9 +309,9 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
 </div>
 
 <!-- WHY ST JOHNS -->
-<section style="padding:5rem 0;background:var(--linen);">
+<section style="padding:3rem 0;background:var(--linen);">
   <div class="wrap">
-    <div class="why-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+    <div class="why-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
       <div>
         <span class="eyebrow">Why St. Johns over other Portland neighborhoods</span>
         <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.15;color:var(--black);margin-bottom:1.6rem;">The authenticity that curated venues cannot replicate.</h2>
@@ -351,8 +352,8 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
 </section>
 
 <!-- GETTING HERE -->
-<section style="padding:2.5rem 0;background:var(--cream);">
-  <div class="wrap">
+<section style="padding:2rem 0 2.5rem;background:var(--cream);">
+  <div class="wrap no-eyebrow-line">
     <div style="max-width:720px;margin-bottom:1.2rem;">
       <span class="eyebrow">Getting here</span>
       <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.1;color:var(--black);margin-top:0.4rem;">Logistics for out-of-town guests.</h2>
@@ -376,7 +377,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
 </section>
 
 <!-- VENUES -->
-<section class="venues">
+<section class="venues" style="padding:2.5rem 0 4rem;">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">St. Johns wedding venues</span>
@@ -484,7 +485,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
 </div>
 
 <!-- WEDDINGLANDIA -->
-<section class="landia">
+<section class="landia" style="padding:3rem 0;">
   <div class="wrap">
     <div class="landia-banner">
       <span class="eyebrow">Featured partnership</span>
@@ -513,7 +514,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
 </div>
 
 <!-- NETWORK -->
-<section class="network">
+<section class="network" style="padding:3rem 0;">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">The St. Johns vendor network</span>
@@ -723,9 +724,9 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
 </div>
 
 <!-- TESTIMONIALS -->
-<section style="padding:5rem 0;background:var(--cream);">
+<section style="padding:2.5rem 0 3rem;background:var(--cream);">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" style="margin-bottom:1.5rem;">
       <span class="eyebrow">From couples who got married here</span>
       <h2>What it actually feels like to get married in St. Johns.</h2>
     </div>
@@ -746,7 +747,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
 </section>
 
 <!-- MISSION -->
-<section class="mission">
+<section class="mission" style="padding:3.5rem 0;">
   <div class="wrap">
     <div class="mission-inner">
       <span class="eyebrow" style="color:var(--gold);">Local first</span>
