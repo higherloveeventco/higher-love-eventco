@@ -30,16 +30,16 @@
   .proposal-meta { font-size:.82rem; color:rgba(245,240,232,.6); margin-top:.8rem; letter-spacing:.06em; }
 
   /* AT A GLANCE */
-  .glance { background:var(--linen); border-top:2px solid var(--gold); padding:2rem 2.2rem; margin:2.5rem 0; }
+  .glance { background:var(--linen); border-top:2px solid var(--gold); padding:2rem 2.2rem; margin:2rem 0 1rem; }
   .glance-grid { display:grid; grid-template-columns:1fr 1fr; gap:.5rem 3rem; }
   .glance-item { display:flex; justify-content:space-between; align-items:baseline; padding:.45rem 0; border-bottom:.5px solid var(--border); }
   .glance-label { font-family:var(--sans); font-size:.75rem; color:var(--muted); }
   .glance-value { font-family:var(--serif); font-size:1.05rem; color:var(--black); text-align:right; }
 
   /* SECTION */
-  .section { padding:2.8rem 0; border-bottom:.5px solid var(--border); }
+  .section { padding:2rem 0; border-bottom:.5px solid var(--border); }
   .section:last-of-type { border-bottom:none; }
-  .section-eyebrow { font-family:var(--sans); font-size:.58rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:.4rem; }
+  .section-eyebrow { font-family:var(--sans); font-size:.58rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:.4rem; margin-top:0; }
   .section-eyebrow::before { content:""; display:block; width:28px; height:1px; background:var(--gold); margin-bottom:.6rem; }
   .section-title { font-family:var(--serif); font-size:2rem; font-weight:400; line-height:1.1; margin-bottom:1.6rem; }
 
@@ -72,16 +72,16 @@
   .field-note { font-size:.78rem; color:var(--muted); font-style:italic; margin-top:1rem; line-height:1.75; }
 
   /* BUDGET TABLE */
-  .budget-wrap { background:var(--black); padding:2.8rem 2.5rem; }
-  .budget-title { font-family:var(--serif); font-size:1.6rem; color:var(--cream); margin-bottom:.6rem; font-weight:300; font-style:italic; }
-  .budget-sub { font-size:.85rem; color:rgba(245,240,232,.6); line-height:1.85; margin-bottom:1.6rem; }
+  .budget-wrap { background:var(--linen); padding:2.8rem 2.5rem; border-top:2px solid var(--gold); }
+  .budget-title { font-family:var(--serif); font-size:1.6rem; color:var(--black); margin-bottom:.6rem; font-weight:300; font-style:italic; }
+  .budget-sub { font-size:.85rem; color:var(--charcoal); line-height:1.85; margin-bottom:1.6rem; }
   .budget-table { width:100%; border-collapse:collapse; table-layout:fixed; } .budget-table td:first-child { width:65%; } .budget-table td:last-child { width:35%; }
-  .budget-table td { padding:.7rem .8rem; font-size:.85rem; color:rgba(245,240,232,.7); border-bottom:.5px solid rgba(245,240,232,.07); line-height:1.5; vertical-align:middle; }
-  .budget-table td:last-child { text-align:right; font-family:var(--serif); font-size:1rem; color:rgba(245,240,232,.85); white-space:normal; min-width:120px; }
-  .budget-table tr.shade td { background:rgba(255,255,255,.03); }
-  .budget-table tr.total td { background:rgba(184,137,42,.12); color:var(--cream); font-weight:500; border-top:.5px solid rgba(184,137,42,.4); border-bottom:none; padding:.9rem .8rem; }
+  .budget-table td { padding:.7rem .8rem; font-size:.85rem; color:var(--charcoal); border-bottom:.5px solid var(--border); line-height:1.5; vertical-align:middle; }
+  .budget-table td:last-child { text-align:right; font-family:var(--serif); font-size:1rem; color:var(--black); white-space:normal; min-width:120px; }
+  .budget-table tr.shade td { background:rgba(26,26,24,.04); }
+  .budget-table tr.total td { background:var(--black); color:var(--cream); font-weight:500; border-top:.5px solid rgba(184,137,42,.4); border-bottom:none; padding:.9rem .8rem; }
   .budget-table tr.total td:last-child { color:var(--gold); font-size:1.15rem; }
-  .budget-note { font-size:.75rem; color:rgba(245,240,232,.45); margin-top:1.2rem; line-height:1.8; font-style:italic; }
+  .budget-note { font-size:.75rem; color:var(--muted); margin-top:1.2rem; line-height:1.8; font-style:italic; }
   .budget-section-label { font-family:var(--sans); font-size:.58rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); display:block; margin:2rem 0 .8rem; padding-top:1.6rem; border-top:.5px solid rgba(184,137,42,.2); }
 
   /* DEPOSIT BLOCK */
@@ -135,8 +135,8 @@
 
   /* NEXT STEPS / FOOTER */
   .next { background:var(--linen); padding:2.5rem 2.5rem; border-bottom:.5px solid var(--border); }
-  .next-title { font-family:var(--serif); font-size:1.5rem; margin-bottom:1rem; }
-  .next p { font-size:.85rem; color:var(--charcoal); line-height:1.85; margin-bottom:.8rem; }
+  .next-title { font-family:var(--serif); font-size:1.5rem; margin-bottom:1rem; color:var(--cream); }
+  .next p { font-size:.85rem; color:rgba(245,240,232,.75); line-height:1.85; margin-bottom:.8rem; }
   .proposal-footer { background:var(--charcoal); padding:2.5rem; text-align:center; }
   .footer-sig { font-family:var(--serif); font-style:italic; color:var(--gold); font-size:1.1rem; display:block; margin-bottom:1rem; }
   .footer-contact { font-size:.75rem; color:rgba(245,240,232,.6); line-height:2; }
@@ -151,7 +151,7 @@
     .contract-divider { page-break-before:always; }
     .sig-block { page-break-before:always; }
     .proposal-header { background-color:#1A1A18 !important; padding:2rem 2.5rem; }
-    .budget-wrap { background-color:#1A1A18 !important; padding:2rem 2.5rem; }
+    .budget-wrap { background-color:#EDE9E1 !important; padding:2rem 2.5rem; }
     .contract-divider { background-color:#1A1A18 !important; }
     .proposal-footer { background-color:#2C2C29 !important; }
     .glance, .deposit-block, .release-option, .sig-block, .next { background-color:#EDE9E1 !important; }
@@ -172,9 +172,18 @@
     .sig-block { padding:2rem 1.2rem; }
   }
 
-  /* RESERVE BUTTON */
-  .reserve-btn { display:inline-block; background:var(--gold); color:var(--black); font-family:var(--sans); font-size:.7rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; padding:.85rem 2rem; text-decoration:none; margin-top:1.2rem; transition:background .2s; }
-  .reserve-btn:hover { background:var(--gold-deep); color:var(--black); }
+  /* BUTTONS */
+  .btn-row { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.2rem; }
+  .btn { display:inline-block; font-family:var(--sans); font-size:.62rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; padding:0; line-height:1; box-sizing:border-box; }
+  .btn-filled { background:var(--gold); color:var(--black); height:44px; line-height:44px; padding:0 2rem; }
+  .btn-filled:hover { background:var(--gold-deep); color:var(--black); }
+  .btn-outline { background:transparent; color:var(--gold); border:1.5px solid var(--gold); height:44px; line-height:41px; padding:0 2rem; }
+  .btn-outline:hover { background:var(--gold); color:var(--black); }
+  .btn-outline-dark { background:transparent; color:var(--gold); border:1px solid var(--gold); height:44px; line-height:42px; padding:0 2rem; }
+  .btn-outline-dark:hover { background:var(--gold); color:var(--black); }
+  /* legacy */
+  .reserve-btn { display:inline-block; background:var(--gold); color:var(--black); font-family:var(--sans); font-size:.62rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; padding:.85rem 2rem; text-decoration:none; margin-top:1.2rem; }
+  .reserve-btn:hover { background:var(--gold-deep); }
   .reserve-btn-dark { background:transparent; color:var(--gold); border:1px solid var(--gold); }
   .reserve-btn-dark:hover { background:var(--gold); color:var(--black); }
 </style>
@@ -220,14 +229,17 @@
   <!-- HOW THIS WORKS -->
   <div class="section">
     <span class="section-eyebrow">How This Works</span>
-    <h2 class="section-title">A handful of decisions from you.<br>Everything else is on me.</h2>
+    <h2 class="section-title">A handful of decisions from you.<br>I've got the rest.</h2>
     <div class="steps">
       <div class="step">
         <span class="step-num">1</span>
         <div class="step-body">
           <div class="step-title">Book.</div>
           <div class="step-detail">Click the button below to sign your service agreement and pay your $1,500 deposit via Square.</div>
-          <a href="ACUITY_LINK_HERE" class="reserve-btn" target="_blank" rel="noopener" style="margin-top:.8rem;font-size:.62rem;">Sign &amp; Pay Deposit via Square &rarr;</a>
+          <div class="btn-row">
+            <a href="https://app.squareup.com/contracts/d802bd6e-1fcb-45aa-a771-843d523efc79" class="btn btn-filled" target="_blank" rel="noopener">Sign Contract &rarr;</a>
+            <a href="https://app.squareup.com/pay-invoice/invtmp:9fe178c8-4100-49f4-bf6f-de1cf52e7ea4" class="btn btn-outline" target="_blank" rel="noopener">Pay Deposit &rarr;</a>
+          </div>
         </div>
       </div>
       <div class="step">
@@ -262,15 +274,14 @@
         <span class="step-num">6</span>
         <div class="step-body">
           <div class="step-title">Check-ins throughout planning.</div>
-          <div class="step-detail">We'll connect at most once a month by email, phone, or video &mdash; but only when there's something meaningful to review. Long-lead planning has natural stretches of waiting, and I won't manufacture meetings for the sake of it. Once we hit the six-week mark before your wedding, we shift to weekly check-ins in whatever format works best for you.</div>
-          <div class="step-detail" style="margin-top:.6rem;">When I need information from you &mdash; menu preferences, bar offerings, DJ song choices, or any decision I can't make on your behalf &mdash; I'll batch it and send everything in one message rather than trickling separate emails your way. Every request will come with enough context to make the decision feel straightforward, not overwhelming.</div>
+          <div class="step-detail">At most once a month &mdash; and only when there's something meaningful to review. Long-lead planning has natural waiting periods, and I won't manufacture meetings. Once we hit the six-week mark, we shift to weekly check-ins in whatever format works best for you.</div>
         </div>
       </div>
       <div class="step">
         <span class="step-num">7</span>
         <div class="step-body">
           <div class="step-title">Final stretch.</div>
-          <div class="step-detail">Once RSVPs are in, I build your seating chart, finalize your floor plan, and confirm final counts with all vendors. From there we move into the final meetings: a timeline session to walk through the full day minute by minute, a ceremony planning session, and a final venue walkthrough. We wrap up with a final details meeting to confirm everything is locked — then I coordinate and run your rehearsal.</div>
+          <div class="step-detail">Once RSVPs are in, I build your seating chart, finalize your floor plan, and confirm final counts with every vendor. Then we move into the final meetings: a timeline session, a ceremony planning session, and a venue walkthrough. We wrap up with a final details meeting — then I run your rehearsal.</div>
         </div>
       </div>
       <div class="step">
@@ -280,6 +291,10 @@
           <div class="step-detail">I'm on-site with two coordinators from setup through the last song &mdash; and we stay until teardown is complete and the last vendor has left.</div>
         </div>
       </div>
+    </div>
+    <div style="background:var(--linen);border-left:3px solid var(--gold);padding:1rem 1.4rem;margin-top:1.6rem;">
+      <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.4rem;">A note on how I communicate</span>
+      <p style="font-size:.82rem;color:var(--charcoal);line-height:1.85;margin:0;">When I need information from you &mdash; menu preferences, bar offerings, DJ song choices, or any other decision I can't make on your behalf &mdash; I'll batch it into one message rather than sending a stream of separate emails. Every request comes with enough context to make the decision feel easy.</p>
     </div>
   </div>
 
@@ -291,23 +306,32 @@
       <div>
         <div class="split-header gold">Kylie takes care of</div>
         <ul class="split-list gold">
+        </ul>
+        <p style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);opacity:.8;margin:.4rem 0 .4rem;padding-top:.4rem;">Planning</p>
+        <ul class="split-list gold">
           <li>Venue research + recommendations</li>
           <li>Vendor research + recommendations</li>
           <li>Contract review + negotiation</li>
           <li>Vendor hiring</li>
           <li>Payment due date tracking</li>
-          <li>Room block coordination <span style="font-size:.75em;color:var(--muted);font-style:italic;">(reserving hotel room blocks for out-of-town guests)</span></li>
+          <li>Room block coordination</li>
           <li>Hotel + Airbnb listings for your website</li>
-          <li>Decor + rental sourcing &amp; coordination <span style="font-size:.75em;color:var(--muted);font-style:italic;">— choose from a pre-designed collection or go fully custom from $575</span></li>
+          <li>Decor + rental sourcing &amp; coordination</li>
           <li>Cultural element planning</li>
+        </ul>
+        <p style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);opacity:.8;margin:.8rem 0 .4rem;padding-top:.4rem;border-top:.5px solid rgba(184,137,42,.2);">Logistics</p>
+        <ul class="split-list gold">
           <li>Floor plan design</li>
           <li>Full logistics planning, timeline creation, and day-of problem solving</li>
           <li>Guest shuttle coordination</li>
           <li>Seating chart (once RSVPs are in)</li>
           <li>Rehearsal coordination</li>
-          <li>Gratuity distribution on the day <span style="font-size:.75em;color:var(--muted);font-style:italic;">(vendor tips, envelopes prepared by you)</span></li>
-          <li>Setup oversight + personal styling of your decor and personal items on the day</li>
-          <li>On-site coordinator kit (fully stocked for day-of needs)</li>
+        </ul>
+        <p style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);opacity:.8;margin:.8rem 0 .4rem;padding-top:.4rem;border-top:.5px solid rgba(184,137,42,.2);">Day of</p>
+        <ul class="split-list gold">
+          <li>Gratuity distribution</li>
+          <li>Setup oversight + personal styling of your decor</li>
+          <li>On-site coordinator kit (fully stocked)</li>
           <li>Day-of command with 2 coordinators</li>
         </ul>
       </div>
@@ -316,14 +340,15 @@
         <ul class="split-list charcoal">
           <li>Responding to communications promptly</li>
           <li>Guest list + collecting addresses</li>
-          <li>Sharing the finalized guest list with Kylie</li>
           <li>Attending venue walkthroughs (as needed)</li>
           <li>Signing vendor contracts</li>
           <li>Making vendor payments</li>
           <li>Purchasing alcohol (if providing your own)</li>
           <li>Writing personal copy for your website</li>
           <li>Uploading photos to your website</li>
-          <li>Sending save the dates + invitations <span style="font-size:.75em;color:var(--muted);font-style:italic;">— Kylie sets you up with everything you need; the actual sending, RSVP tracking, and meal selection collection are yours to coordinate</span></li>
+          <li>Sending save the dates + invitations</li>
+          <li>Tracking RSVPs and dietary restrictions</li>
+          <li>Sharing the finalized guest list with Kylie</li>
           <li>Attending the rehearsal with your wedding party</li>
           <li>Attending the final detail meeting</li>
         </ul>
@@ -335,37 +360,57 @@
   <div class="section">
     <span class="section-eyebrow">Tablescape &amp; Design</span>
     <h2 class="section-title">Every table, already styled.</h2>
-    <p style="font-size:.88rem;color:var(--charcoal);line-height:1.85;margin-bottom:1.2rem;">Your planning package includes access to Higher Love's pre-designed tablescape collections, which cover reception tabletop decor. Every collection includes:</p>
-    <ul class="incl-list">
-      <li>Full linen, runner, and napkins</li>
-      <li>Table number frame</li>
-      <li>Charger plate, dinner plate, water goblet, and flatware</li>
-      <li>Six bud vases with florals (all other florals are quoted separately)</li>
-      <li>Six votive candles plus taper or pillar candles</li>
-    </ul>
-    <p style="font-size:.88rem;color:var(--charcoal);line-height:1.85;margin-top:1.2rem;">Sourcing, delivery, setup, styling, and teardown are all included. No design fee. Your collection also includes a matching digital design suite &mdash; save the date, invitation, website template, and signage.</p>
-    <p style="font-size:.88rem;color:var(--charcoal);line-height:1.85;margin-top:.8rem;">Browse all eight collections: <a href="https://canva.link/wf89umbvmpa8yaa" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;">View the Tablescape Lookbook &rarr;</a></p>
-    <p class="field-note">This covers reception dinner table decor only. Ceremony decor packages are in the works and will be available soon. Collections are priced per table and invoiced directly by the rental company; Higher Love is not a party to that rental agreement. If you'd prefer a fully custom look instead of a pre-designed collection, that's available as an add-on from $575. Additional florals beyond the tabletop buds can also be added: head table, welcome table, bar, cocktail tables, and dessert table.</p>
+    <p style="font-size:.88rem;color:var(--charcoal);line-height:1.85;margin-bottom:1.4rem;">Your planning package includes access to Higher Love's pre-designed tablescape collections, which cover reception tabletop decor. Sourcing, delivery, setup, styling, and teardown are all included. No design fee.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2rem;margin-bottom:1.4rem;">
+      <div style="display:flex;align-items:baseline;gap:.6rem;padding:.4rem 0;border-bottom:.5px solid var(--border);"><span style="color:var(--gold);font-size:.7rem;">✓</span><span style="font-size:.85rem;color:var(--charcoal);">Full linen, runner &amp; napkins</span></div>
+      <div style="display:flex;align-items:baseline;gap:.6rem;padding:.4rem 0;border-bottom:.5px solid var(--border);"><span style="color:var(--gold);font-size:.7rem;">✓</span><span style="font-size:.85rem;color:var(--charcoal);">Table number frame</span></div>
+      <div style="display:flex;align-items:baseline;gap:.6rem;padding:.4rem 0;border-bottom:.5px solid var(--border);"><span style="color:var(--gold);font-size:.7rem;">✓</span><span style="font-size:.85rem;color:var(--charcoal);">Charger, dinner plate, goblet &amp; flatware</span></div>
+      <div style="display:flex;align-items:baseline;gap:.6rem;padding:.4rem 0;border-bottom:.5px solid var(--border);"><span style="color:var(--gold);font-size:.7rem;">✓</span><span style="font-size:.85rem;color:var(--charcoal);">Six bud vases with florals</span></div>
+      <div style="display:flex;align-items:baseline;gap:.6rem;padding:.4rem 0;border-bottom:.5px solid var(--border);"><span style="color:var(--gold);font-size:.7rem;">✓</span><span style="font-size:.85rem;color:var(--charcoal);">Votive candles + tapers or pillars</span></div>
+      <div style="display:flex;align-items:baseline;gap:.6rem;padding:.4rem 0;border-bottom:.5px solid var(--border);"><span style="color:var(--gold);font-size:.7rem;">✓</span><span style="font-size:.85rem;color:var(--charcoal);">Matching digital design suite</span></div>
+    </div>
+
+    <p style="font-size:.88rem;color:var(--charcoal);line-height:1.85;margin-bottom:1rem;">Browse all eight collections: <a href="https://canva.link/wf89umbvmpa8yaa" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;">View the Tablescape Lookbook &rarr;</a></p>
+
+    <div style="border-top:1.5px solid var(--border);margin-top:.8rem;padding-top:.8rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem;">
+      <div>
+        <span style="font-family:var(--sans);font-size:.55rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.25rem;">Scope</span>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7;">Reception dinner table decor only &mdash; matching ceremony decor coming soon.</p>
+      </div>
+      <div>
+        <span style="font-family:var(--sans);font-size:.55rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.25rem;">Billing</span>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7;">Rentals (linens, place settings, tabletop decor) are invoiced directly by the rental company. Florals (bud vases) are invoiced by the florist. Smaller items such as frames and candles are purchased by Higher Love Event Co. and added to your final invoice.</p>
+      </div>
+      <div>
+        <span style="font-family:var(--sans);font-size:.55rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.25rem;">Custom design</span>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7;">Prefer a fully custom look? Available as an add-on from $575.</p>
+      </div>
+      <div>
+        <span style="font-family:var(--sans);font-size:.55rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.25rem;">Add-on florals</span>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7;">Head table, welcome table, bar, cocktail tables, and dessert table florals can be added.</p>
+      </div>
+    </div>
   </div>
 
   <!-- STATIONERY -->
   <div class="section">
     <span class="section-eyebrow">Stationery</span>
     <h2 class="section-title">Digital templates included.</h2>
-    <p style="font-size:.88rem;color:var(--charcoal);line-height:1.85;margin-bottom:1.2rem;">Your package includes professionally designed digital templates for your save the date, invitation, wedding website, and signage suite &mdash; all matched to your tablescape collection. If you use the signage templates, I'll finalize the design and you'll order prints directly through Canva.</p>
+    <p style="font-size:.88rem;color:var(--charcoal);line-height:1.85;margin-bottom:1.2rem;">Your package includes professionally designed digital templates for your save the date, invitation, and signage suite &mdash; all matched to your tablescape collection. If you use the signage templates, I'll finalize the design and you'll order prints directly through Canva.</p>
     <ul class="incl-list">
       <li>These are templates. Personalizing the copy and sending them is yours to coordinate.</li>
       <li>RSVP tracking is on your end &mdash; including collecting meal selections and dietary restrictions from your guests.</li>
-      <li>The wedding website template is covered in the section below.</li>
+
     </ul>
-    <p class="field-note">Prefer paper invitations? I'll coordinate with a stationer on your behalf. Budget separately for printing and postage &mdash; postage is easy to underestimate at this guest count and adds up quickly.</p>
+    <p style="font-size:.85rem;color:var(--charcoal);line-height:1.85;margin-top:1rem;">Prefer paper invitations? I'll coordinate with a stationer on your behalf. Budget separately for printing and postage &mdash; postage is easy to underestimate at this guest count and adds up quickly.</p>
   </div>
 
   <!-- WEDDING WEBSITE -->
   <div class="section">
     <span class="section-eyebrow">Wedding Website</span>
     <h2 class="section-title">Your wedding website &mdash; here's how we split it.</h2>
-    <p style="font-size:.88rem;color:var(--charcoal);line-height:1.85;margin-bottom:1.4rem;">Your package includes a website template matched to your collection. Here's how we split the work:</p>
+    <p style="font-size:.88rem;color:var(--charcoal);line-height:1.85;margin-bottom:1.4rem;">Your package includes a website template matched to your tablescape collection.</p>
     <div class="split">
       <div>
         <div class="split-header gold">Kylie fills in</div>
@@ -392,96 +437,88 @@
 <!-- INVESTMENT (dark) -->
 <div class="budget-wrap">
   <div class="wrap">
-    <h2 class="budget-title">Your Investment</h2>
-    <p class="budget-sub">My standard Grand package covers up to 120 guests. At 150, this is a custom proposal reflecting the additional vendor coordination, larger floor plan, more complex out-of-town logistics, and expanded day-of staffing your wedding requires.</p>
-
-    <div style="background:rgba(184,137,42,.08);border-left:3px solid var(--gold);padding:1rem 1.4rem;margin-bottom:.8rem;display:flex;justify-content:space-between;align-items:center;">
-      <span style="font-size:.85rem;color:rgba(245,240,232,.7);">Full-Service Planning &mdash; Custom, 150&ndash;175 guests</span>
-      <span style="font-family:var(--serif);font-size:1.6rem;color:var(--gold);">$8,500</span>
+    <div style="border-bottom:1px solid rgba(184,137,42,.3);padding-bottom:1.4rem;margin-bottom:1.8rem;">
+      <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.5rem;">Your Investment</span>
+      <h2 class="budget-title" style="margin-bottom:.5rem;">What it costs.<br>What to plan for.</h2>
+      <p class="budget-sub" style="margin:0;">Custom proposal for 150 guests. Every category below will be researched and presented as my top recommendations within these ranges.</p>
     </div>
-
-    <span class="budget-section-label">Full Wedding Budget &mdash; What to Plan For</span>
-    <p class="budget-sub" style="margin-bottom:1.4rem;">I'll research every category and present my top recommendations within these ranges.</p>
 
     <table class="budget-table">
       <tbody>
         <tr><td>Higher Love planning fee</td><td>$8,500</td></tr>
-        <tr class="shade"><td>Tablescape + rentals <span style="font-size:.75rem;opacity:.5;">collection items sourced through rental company &mdash; tabletop florals included &mdash; see note below</span></td><td>$4,500 &ndash; $6,500</td></tr>
-        <tr><td>Venue</td><td>$5,500 &ndash; $8,000</td></tr>
-        <tr><td colspan="2" style="padding:.8rem 0 1.2rem;background:transparent;border-bottom:.5px solid rgba(255,255,255,.04);">
-          <div style="background:rgba(184,137,42,.1);border-left:3px solid var(--gold);padding:1rem 1.2rem;">
-            <span style="font-family:var(--sans);font-size:.52rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.5rem;">About venue + rentals</span>
-            <p style="font-size:.8rem;color:rgba(245,240,232,.75);line-height:1.8;margin:0;">Venue and rental costs are closely linked. Some venues include tables, chairs, dishware, and other basics &mdash; others require sourcing everything separately. A venue with less infrastructure will typically have a lower base cost, but you'll spend more on rentals to fill the gaps. A venue that includes the basics will cost more upfront, but you may not need to rent much at all. Once your venue is confirmed, we'll reassess the rental budget together.</p>
+        <tr class="shade"><td>Rentals <span style="font-size:.75rem;opacity:.5;">linens, place settings, tabletop decor &mdash; invoiced by rental partner</span></td><td>$2,500 &ndash; $4,000</td></tr>
+        <tr><td>Venue</td><td>$6,000 &ndash; $9,000</td></tr>
+
+        <tr class="shade"><td>Catering <span style="font-size:.75rem;opacity:.5;">$100&ndash;$125/guest &times; final count &mdash; confirmed after RSVPs</span></td><td>$12,500 &ndash; $21,875</td></tr>
+        <tr><td>Bar service + alcohol</td><td>$2,500 &ndash; $5,000</td></tr>
+        <tr class="shade"><td>Photography</td><td>$2,500 &ndash; $5,000</td></tr>
+        <tr><td>DJ / MC</td><td>$1,500 &ndash; $3,500</td></tr>
+        <tr class="shade"><td>Florals
+          <div style="padding-left:.6rem;margin-top:.3rem;display:flex;flex-direction:column;gap:.15rem;">
+            <span style="font-size:.72rem;opacity:.55;display:block;">· Tabletop bud vases</span>
+            <span style="font-size:.72rem;opacity:.55;display:block;">· Ceremony + personals</span>
+            <span style="font-size:.72rem;opacity:.55;display:block;">· Cocktail, bar, cake &amp; welcome table</span>
           </div>
-        </td></tr>
-        <tr class="shade"><td>Catering <span style="font-size:.75rem;opacity:.5;">$75 per guest &times; final guest count</span></td><td>TBD at RSVP</td></tr>
-        <tr><td>Bar service + alcohol</td><td>$3,000 &ndash; $4,500</td></tr>
-        <tr class="shade"><td>Photography</td><td>$2,500 &ndash; $3,500</td></tr>
-        <tr><td>DJ / MC</td><td>$1,500 &ndash; $2,500</td></tr>
-        <tr class="shade"><td>Florals <span style="font-size:.75rem;opacity:.5;">ceremony + personals</span></td><td>$2,000 &ndash; $3,000</td></tr>
-        <tr><td>Florals <span style="font-size:.75rem;opacity:.5;">cocktail, bar, cake, welcome table</span></td><td>$800 &ndash; $1,500</td></tr>
-        <tr class="shade"><td>Hair &amp; makeup</td><td>$700 &ndash; $1,200</td></tr>
-        <tr class="shade"><td>Officiant <span style="font-size:.75rem;opacity:.5;">the person who legally marries you</span></td><td>$350 &ndash; $500</td></tr>
-        <tr><td>Cake / dessert</td><td>$700 &ndash; $900</td></tr>
-        <tr class="shade"><td>Gratuity + incidentals</td><td>$1,200 &ndash; $1,600</td></tr>
+        </td><td style="vertical-align:top;padding-top:.7rem;">$3,600 &ndash; $6,000</td></tr>
+        <tr><td>Hair &amp; makeup</td><td>$700 &ndash; $2,500</td></tr>
+        <tr class="shade"><td>Officiant <span style="font-size:.75rem;opacity:.5;">the person who legally marries you</span></td><td>$300 &ndash; $600</td></tr>
+        <tr><td>Guest shuttle <span style="font-size:.75rem;opacity:.5;">if needed &mdash; budget TBD by venue location</span></td><td style="font-family:var(--sans);font-size:.78rem;opacity:.6;">TBD</td></tr>
+        <tr class="shade"><td>Cake / dessert</td><td>$500 &ndash; $1,500</td></tr>
+        <tr><td>Gratuity + incidentals</td><td>$1,200 &ndash; $1,600</td></tr>
         <tr class="total">
           <td>Estimated Total</td>
-          <td>$42,300 &ndash; $56,200</td>
+          <td>$42,300 &ndash; $69,075</td>
         </tr>
       </tbody>
     </table>
-    <p class="budget-note">Your realistic range for this wedding is $42,000&ndash;$56,000 depending on the choices you make in each category. Staying under $50,000 is achievable &mdash; the biggest levers are photography tier, bar package (beer and wine only vs. full bar), and catering per-head cost. I'll help you prioritize what matters most and find the best value in every category. Venue is confirmed first, which unlocks the rental picture and often the catering options too.</p>
-  </div>
-</div>
-
-<!-- DEPOSIT -->
-<div class="wrap">
-  <div style="padding:2.8rem 0; border-bottom:.5px solid var(--border);">
-    <span class="section-eyebrow" style="margin-bottom:.4rem;">Deposit &amp; Payment</span>
-    <div class="deposit-block">
-      <span class="deposit-pill">$8,500 total &mdash; 3 payments via Square</span>
-      <p>Payments are split into three milestones processed through Square. Payments 2 and 3 ($3,500 each) will follow a schedule confirmed once your date is set.</p>
-      <p>All vendor and rental costs are separate from my planning fee and paid directly by you to each company — no markups from me.</p>
-      <p style="font-size:.75rem;color:var(--muted);font-style:italic;margin-top:.8rem;line-height:1.75;">This proposal is based on a guest count of 150. If your final count exceeds 150, pricing will be adjusted to reflect the additional scope. A revised invoice will be issued before the next payment milestone.</p>
-
+    <div style="background:rgba(184,137,42,.08);border-left:3px solid var(--gold);padding:1.4rem 1.8rem;margin-top:1.4rem;">
+      <span style="font-family:var(--sans);font-size:.55rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:.7rem;">A note on your budget</span>
+      <p style="font-size:.85rem;color:var(--charcoal);line-height:1.85;margin-bottom:.8rem;">Venue and rental costs are closely linked &mdash; some venues include tables, chairs, and dishware while others require sourcing everything separately. Once your venue is confirmed, we'll reassess the rental budget together.</p>
+      <p style="font-size:.85rem;color:var(--charcoal);line-height:1.85;margin:0;">The single biggest driver of your budget is guest count. The fewer guests you invite, the more you can spend per person &mdash; better food, a better bar, a nicer venue. As your guest count grows, you'll need to find value in every category to compensate, and in this industry, you get what you pay for. Every guest added means more catering, more seating, more florals, more rentals, and higher bar minimums. It's worth having that conversation early &mdash; and I'm here to help you think it through.</p>
     </div>
   </div>
 </div>
+
+
 
 
 
 
 
 <!-- NEXT STEPS -->
-<div class="next">
+<div class="next" style="background:var(--black);">
   <div class="wrap">
     <h2 class="next-title">What Happens Next</h2>
     <p>You'll sign your service agreement and pay your deposit directly in Square &mdash; everything in one place.</p>
 
-    <div style="background:var(--cream);border-top:2px solid var(--gold);padding:1.6rem 2rem;margin:1.4rem 0;">
+    <div style="background:rgba(255,255,255,.05);border-top:2px solid var(--gold);padding:1.6rem 2rem;margin:1.4rem 0;">
       <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem;">Your payment schedule</span>
       <div style="display:flex;flex-direction:column;gap:.5rem;">
         <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.5rem 0;border-bottom:.5px solid var(--border);">
-          <span style="font-size:.85rem;color:var(--charcoal);">Payment 1 &mdash; Due at signing</span>
+          <span style="font-size:.85rem;color:rgba(245,240,232,.7);">Payment 1 &mdash; Due at signing</span>
           <span style="font-family:var(--serif);font-size:1.1rem;color:var(--black);">$1,500</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.5rem 0;border-bottom:.5px solid var(--border);">
-          <span style="font-size:.85rem;color:var(--charcoal);">Payment 2 &mdash; Midway through planning</span>
+          <span style="font-size:.85rem;color:rgba(245,240,232,.7);">Payment 2 &mdash; Midway through planning</span>
           <span style="font-family:var(--serif);font-size:1.1rem;color:var(--black);">$3,500</span>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.5rem 0;">
-          <span style="font-size:.85rem;color:var(--charcoal);">Payment 3 &mdash; One week before the wedding</span>
+          <span style="font-size:.85rem;color:rgba(245,240,232,.7);">Payment 3 &mdash; One week before the wedding</span>
           <span style="font-family:var(--serif);font-size:1.1rem;color:var(--black);">$3,500</span>
         </div>
       </div>
-      <p style="font-size:.75rem;color:var(--muted);font-style:italic;margin-top:1rem;line-height:1.75;">Payment 1 secures your date and is non-refundable. Exact due dates for payments 2 and 3 will be confirmed once your wedding date is set.</p>
+      <p style="font-size:.83rem;color:rgba(245,240,232,.75);line-height:1.8;margin-top:1rem;">Payment 1 secures your date and is non-refundable. Exact due dates for payments 2 and 3 will be confirmed once your wedding date is set.</p>
+      <p style="font-size:.83rem;color:rgba(245,240,232,.75);line-height:1.8;margin-top:.6rem;">This proposal is based on a guest count of 150. If your final count exceeds 150, pricing will be adjusted and a revised invoice will be issued before the next payment milestone.</p>
     </div>
 
     <p>Once the invoice is signed and payment 1 is received, I'll send your planning questionnaire and we'll start finding your perfect date and location.</p>
     <p>Questions before then? Reach me at <a href="mailto:hello@higherloveeventco.com" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);">hello@higherloveeventco.com</a> or <a href="tel:5032178500" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);">503-217-8500</a>.</p>
     <p>It was genuinely wonderful meeting you both. I can&#39;t wait to be part of this.</p>
-    <a href="ACUITY_LINK_HERE" class="reserve-btn" target="_blank" rel="noopener">Let&#39;s Start Planning Your Wedding &rarr;</a>
-    <p style="margin-top:1.8rem;font-size:.95rem;color:var(--charcoal);">Cheers,</p>
+    <div class="btn-row">
+      <a href="https://app.squareup.com/contracts/d802bd6e-1fcb-45aa-a771-843d523efc79" class="btn btn-filled" target="_blank" rel="noopener">Sign Contract &rarr;</a>
+      <a href="https://app.squareup.com/pay-invoice/invtmp:9fe178c8-4100-49f4-bf6f-de1cf52e7ea4" class="btn btn-outline" target="_blank" rel="noopener">Pay Deposit &rarr;</a>
+    </div>
+    <p style="margin-top:1.8rem;font-size:.95rem;color:rgba(245,240,232,.75);">Cheers,</p>
     <span style="font-family:var(--serif);font-style:italic;font-size:3.2rem;color:var(--gold-deep);display:block;line-height:1;margin-top:.8rem;">Kylie</span>
   </div>
 </div>
@@ -489,7 +526,7 @@
 <!-- FOOTER -->
 <div class="proposal-footer">
   <span class="footer-sig">Hire love. Higher love.</span>
-  <a href="ACUITY_LINK_HERE" class="reserve-btn reserve-btn-dark" target="_blank" rel="noopener" style="margin-bottom:1.4rem;">Let&#39;s Start Planning Your Wedding &rarr;</a>
+
   <div class="footer-contact">
     Kylie Forslund &nbsp;&middot;&nbsp; Founder &amp; Lead Planner<br>
     hello@higherloveeventco.com &nbsp;&middot;&nbsp; 503-217-8500<br>
