@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Planning Questionnaire | Higher Love Event Co.</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:#F5F0E8; --linen:#EDE9E1;
+    --gold:#B8892A; --gold-deep:#9A7020; --gold-pale:rgba(184,137,42,.08);
+    --black:#1A1A18; --charcoal:#2C2C29; --muted:#79776F;
+    --border:rgba(26,26,24,0.10);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Montserrat',sans-serif;
+    --radius:2px;
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--cream); color:var(--black); font-family:var(--sans); font-size:15px; line-height:1.75; -webkit-font-smoothing:antialiased; }
+
+  /* HEADER */
+  .site-header { background:var(--black); padding:3rem 2rem; text-align:center; }
+  .wordmark { font-family:var(--serif); font-size:.95rem; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--cream); display:block; margin-bottom:.5rem; }
+  .wordmark span { color:var(--gold); }
+  .header-rule { width:36px; height:1px; background:var(--gold); margin:.8rem auto 1.4rem; }
+  .header-label { font-family:var(--sans); font-size:.62rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:.4rem; }
+  .header-title { font-family:var(--serif); font-weight:300; font-style:italic; font-size:2.4rem; color:var(--cream); line-height:1.1; }
+  .header-meta { font-size:.75rem; color:rgba(245,240,232,.5); margin-top:.6rem; letter-spacing:.05em; }
+
+  /* INTRO */
+  .intro { max-width:640px; margin:3rem auto 0; padding:0 1.5rem 2.5rem; }
+  .intro-text { font-size:.9rem; color:var(--charcoal); line-height:1.9; }
+  .intro-sig { font-family:var(--serif); font-style:italic; font-size:1.8rem; color:var(--gold-deep); display:block; margin-top:.6rem; }
+
+  /* FORM */
+  form { max-width:640px; margin:0 auto; padding:0 1.5rem 4rem; }
+
+  /* SECTION HEADERS */
+  .form-section { margin-top:3rem; }
+  .form-section:first-child { margin-top:0; }
+  .section-eyebrow { font-family:var(--sans); font-size:.55rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:.4rem; }
+  .section-eyebrow::before { content:""; display:block; width:24px; height:1px; background:var(--gold); margin-bottom:.5rem; }
+  .section-title { font-family:var(--serif); font-size:1.6rem; font-weight:400; color:var(--black); margin-bottom:1.6rem; line-height:1.15; }
+
+  /* FIELD */
+  .field { margin-bottom:1.6rem; }
+  .field label { display:block; font-family:var(--sans); font-size:.78rem; font-weight:500; color:var(--black); margin-bottom:.35rem; line-height:1.5; }
+  .field-note { display:block; font-size:.72rem; color:var(--muted); margin-bottom:.4rem; line-height:1.6; font-style:italic; }
+  .field input[type="text"],
+  .field input[type="email"],
+  .field input[type="tel"],
+  .field select,
+  .field textarea {
+    width:100%;
+    background:#fff;
+    border:.5px solid rgba(26,26,24,.2);
+    border-radius:var(--radius);
+    padding:.75rem 1rem;
+    font-family:var(--sans);
+    font-size:.85rem;
+    color:var(--black);
+    appearance:none;
+    transition:border-color .15s;
+    line-height:1.5;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline:none;
+    border-color:var(--gold);
+    box-shadow:0 0 0 2px rgba(184,137,42,.12);
+  }
+  .field textarea { resize:vertical; min-height:100px; }
+  .field textarea.tall { min-height:140px; }
+  .field select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8892A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 1rem center; padding-right:2.5rem; }
+
+  /* SCALE */
+  .scale-wrap { display:flex; gap:.5rem; align-items:stretch; }
+  .scale-wrap input[type="radio"] { display:none; }
+  .scale-wrap label { flex:1; text-align:center; padding:.6rem .2rem; border:.5px solid rgba(26,26,24,.2); border-radius:var(--radius); font-size:.78rem; color:var(--muted); cursor:pointer; transition:all .15s; background:#fff; font-family:var(--sans); }
+  .scale-wrap input[type="radio"]:checked + label { background:var(--gold); color:var(--black); border-color:var(--gold); font-weight:600; }
+  .scale-wrap label:hover { border-color:var(--gold); color:var(--gold); }
+  .scale-labels { display:flex; justify-content:space-between; margin-top:.35rem; }
+  .scale-labels span { font-size:.65rem; color:var(--muted); font-style:italic; }
+
+  /* DIVIDER */
+  .section-divider { border:none; border-top:.5px solid var(--border); margin:2.5rem 0 0; }
+
+  /* SUBMIT */
+  .submit-wrap { margin-top:2.5rem; padding-top:2rem; border-top:.5px solid var(--border); }
+  .submit-note { font-size:.78rem; color:var(--muted); margin-bottom:1.2rem; line-height:1.7; }
+  button[type="submit"] {
+    background:var(--gold);
+    color:var(--black);
+    font-family:var(--sans);
+    font-size:.65rem;
+    font-weight:600;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    border:none;
+    padding:.9rem 2.4rem;
+    cursor:pointer;
+    transition:background .2s;
+    border-radius:var(--radius);
+  }
+  button[type="submit"]:hover { background:var(--gold-deep); }
+
+  /* SUCCESS */
+  .success-msg { display:none; background:var(--linen); border-top:2px solid var(--gold); padding:2rem; text-align:center; margin-top:1.5rem; }
+  .success-msg.visible { display:block; }
+  .success-title { font-family:var(--serif); font-size:1.6rem; font-style:italic; margin-bottom:.6rem; }
+  .success-body { font-size:.85rem; color:var(--charcoal); line-height:1.85; }
+
+  /* FOOTER */
+  .site-footer { background:var(--charcoal); padding:2rem; text-align:center; }
+  .footer-contact { font-size:.72rem; color:rgba(245,240,232,.5); line-height:2; }
+
+  @media(max-width:600px) {
+    .site-header { padding:2.5rem 1.2rem; }
+    .header-title { font-size:1.8rem; }
+    form, .intro { padding-left:1.2rem; padding-right:1.2rem; }
+    .scale-wrap label { font-size:.7rem; padding:.5rem .1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <span class="wordmark">Higher <span>Love</span> Event Co.</span>
+  <div class="header-rule"></div>
+  <span class="header-label">Planning Questionnaire</span>
+  <h1 class="header-title">Michelle &amp; Daniel</h1>
+  <p class="header-meta">Summer 2027 &nbsp;&middot;&nbsp; Portland, Oregon</p>
+</div>
+
+<div class="intro">
+  <p class="intro-text">Hi Michelle and Daniel! Now that you're officially booked, this questionnaire helps me hit the ground running on your planning. Some questions may cover things we've already discussed &mdash; that's intentional. I want everything in one place so nothing gets lost.<br><br>Take your time, answer as thoroughly as you can, and know that there are no wrong answers here.</p>
+  <span class="intro-sig">Kylie</span>
+</div>
+
+<form action="https://formspree.io/f/mrejgylv" method="POST">
+  <input type="hidden" name="_subject" value="Planning Questionnaire — Michelle & Daniel">
+  <input type="hidden" name="_next" value="">
+
+  <!-- SECTION 1: CONTACT -->
+  <div class="form-section">
+    <span class="section-eyebrow">Section 1</span>
+    <h2 class="section-title">Contact &amp; Key Details</h2>
+
+    <div class="field">
+      <label for="email_michelle">Michelle's best email for wedding planning correspondence</label>
+      <input type="email" id="email_michelle" name="email_michelle" required placeholder="michelle@email.com">
+    </div>
+
+    <div class="field">
+      <label for="email_daniel">Daniel's best email <span style="font-weight:400;color:var(--muted);">(optional)</span></label>
+      <span class="field-note">In case you'd like Daniel looped in directly on any communications.</span>
+      <input type="email" id="email_daniel" name="email_daniel" placeholder="daniel@email.com">
+    </div>
+
+    <div class="field">
+      <label for="phone">Best phone number</label>
+      <input type="tel" id="phone" name="phone" placeholder="503-555-0000">
+    </div>
+
+    <div class="field">
+      <label for="dates">Do you have any specific dates in mind, or are you open to venue availability helping guide the date?</label>
+      <span class="field-note">We know you're drawn to dates with meaningful numbers. Share any dates you've been considering and we'll cross-reference with venue availability.</span>
+      <textarea id="dates" name="dates" class="tall"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="dates_off">Are there any dates that are completely off the table?</label>
+      <span class="field-note">Holidays, family conflicts, travel blackouts, etc.</span>
+      <textarea id="dates_off" name="dates_off"></textarea>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SECTION 2: VISION -->
+  <div class="form-section">
+    <span class="section-eyebrow">Section 2</span>
+    <h2 class="section-title">Vision &amp; Priorities</h2>
+
+    <div class="field">
+      <label for="three_words">In three words, describe the feeling you want your wedding to have.</label>
+      <input type="text" id="three_words" name="three_words" placeholder="e.g. warm, electric, intimate">
+    </div>
+
+    <div class="field">
+      <label for="ceremony_vision">Describe your ideal ceremony. What matters most about that moment?</label>
+      <textarea id="ceremony_vision" name="ceremony_vision" class="tall"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="reception_vision">Describe your ideal reception. What does the energy feel like at 9pm?</label>
+      <textarea id="reception_vision" name="reception_vision" class="tall"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="one_success">What is the ONE thing that, if it goes perfectly, will make this wedding feel like a complete success?</label>
+      <textarea id="one_success" name="one_success" class="tall" required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="one_worry">What is the ONE thing you're most worried about?</label>
+      <textarea id="one_worry" name="one_worry" class="tall" required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="inspiration_weddings">Have you attended a wedding that felt like "yes, that's it"? What stood out?</label>
+      <textarea id="inspiration_weddings" name="inspiration_weddings"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="inspiration_links">Drop any inspiration links, Pinterest boards, Instagram saves, or describe the aesthetic you're drawn to.</label>
+      <span class="field-note">Even vague is great &mdash; "moody and romantic" or "bright and garden party" tells me a lot.</span>
+      <textarea id="inspiration_links" name="inspiration_links" class="tall"></textarea>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SECTION 3: CULTURAL -->
+  <div class="form-section">
+    <span class="section-eyebrow">Section 3</span>
+    <h2 class="section-title">Cultural &amp; Family</h2>
+
+    <div class="field">
+      <label for="filipino_traditions">You mentioned Filipino cultural traditions are important to you. Which specific elements would you like included?</label>
+      <span class="field-note">Examples: cord and veil ceremony, arrhae coins, traditional music, specific food, attire moments, money dance (pandanggo), family procession. List everything &mdash; we'll work out what's feasible at your venue.</span>
+      <textarea id="filipino_traditions" name="filipino_traditions" class="tall"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="family_dynamics">Are there any family dynamics or sensitivities we should be aware of as we plan?</label>
+      <span class="field-note">Divorced parents, complicated seating situations, family members who need extra care on the day &mdash; anything that helps me support you.</span>
+      <textarea id="family_dynamics" name="family_dynamics"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="vips">Who are your VIPs &mdash; the people who need a little extra attention or coordination on the wedding day?</label>
+      <span class="field-note">Grandparents, parents walking the aisle, guests coming from far away, anyone with mobility or accessibility needs.</span>
+      <textarea id="vips" name="vips"></textarea>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SECTION 4: LOGISTICS -->
+  <div class="form-section">
+    <span class="section-eyebrow">Section 4</span>
+    <h2 class="section-title">Logistics</h2>
+
+    <div class="field">
+      <label for="shuttle">Do you anticipate needing guest shuttle service?</label>
+      <select id="shuttle" name="shuttle">
+        <option value="">Select one</option>
+        <option>Yes, definitely</option>
+        <option>Possibly</option>
+        <option>No</option>
+        <option>Not sure yet</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="bar_style">For your bar, which approach are you leaning toward?</label>
+      <select id="bar_style" name="bar_style">
+        <option value="">Select one</option>
+        <option>We'll purchase the alcohol ourselves — bartending company provides staff and equipment</option>
+        <option>Full-service bar — they bring everything, bar minimum applies</option>
+        <option>Not sure yet — walk me through the options</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="venue_wishlist">Is there anything about your venue wishlist we haven't covered? Any specific venues you've been eyeing?</label>
+      <textarea id="venue_wishlist" name="venue_wishlist"></textarea>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SECTION 5: STYLE -->
+  <div class="form-section">
+    <span class="section-eyebrow">Section 5</span>
+    <h2 class="section-title">Style &amp; Decor</h2>
+
+    <div class="field">
+      <label for="tablescape">Have you looked at the tablescape lookbook? Do any collections stand out, or are you leaning toward a custom look?</label>
+      <span class="field-note">Lookbook: <a href="https://canva.link/wf89umbvmpa8yaa" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);">View the Tablescape Lookbook &rarr;</a></span>
+      <textarea id="tablescape" name="tablescape"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="aesthetic">Describe your color palette or aesthetic direction. Vague is totally fine.</label>
+      <span class="field-note">e.g. warm and moody / soft and romantic / clean and modern / earthy and textured</span>
+      <textarea id="aesthetic" name="aesthetic"></textarea>
+    </div>
+
+    <div class="field">
+      <label>How important is floral design to you?</label>
+      <span class="field-note">1 = Simple and minimal &nbsp;&middot;&nbsp; 5 = Lush and everywhere</span>
+      <div class="scale-wrap">
+        <input type="radio" id="floral1" name="floral_importance" value="1"><label for="floral1">1</label>
+        <input type="radio" id="floral2" name="floral_importance" value="2"><label for="floral2">2</label>
+        <input type="radio" id="floral3" name="floral_importance" value="3"><label for="floral3">3</label>
+        <input type="radio" id="floral4" name="floral_importance" value="4"><label for="floral4">4</label>
+        <input type="radio" id="floral5" name="floral_importance" value="5"><label for="floral5">5</label>
+      </div>
+      <div class="scale-labels"><span>Simple &amp; minimal</span><span>Lush &amp; everywhere</span></div>
+    </div>
+
+    <div class="field">
+      <label for="decor_love">Any decor elements you've already fallen in love with and want to incorporate?</label>
+      <textarea id="decor_love" name="decor_love"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="decor_avoid">Any decor elements you actively want to avoid?</label>
+      <textarea id="decor_avoid" name="decor_avoid"></textarea>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SECTION 6: FOOD -->
+  <div class="form-section">
+    <span class="section-eyebrow">Section 6</span>
+    <h2 class="section-title">Food &amp; Beverage</h2>
+
+    <div class="field">
+      <label for="dining_style">What style of dining are you envisioning?</label>
+      <select id="dining_style" name="dining_style">
+        <option value="">Select one</option>
+        <option>Seated plated dinner</option>
+        <option>Buffet</option>
+        <option>Family style</option>
+        <option>Food stations</option>
+        <option>Not sure yet</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="dietary">Any dietary restrictions or allergies in your immediate family or wedding party we should flag early?</label>
+      <textarea id="dietary" name="dietary"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="filipino_food">Are there any Filipino food elements you'd love to incorporate &mdash; into the menu, cocktail hour, or dessert table?</label>
+      <textarea id="filipino_food" name="filipino_food"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="signature_cocktail">Signature cocktail?</label>
+      <select id="signature_cocktail" name="signature_cocktail">
+        <option value="">Select one</option>
+        <option>Yes — I have ideas</option>
+        <option>Yes — help me come up with something</option>
+        <option>No</option>
+        <option>Maybe</option>
+      </select>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SECTION 7: MUSIC -->
+  <div class="form-section">
+    <span class="section-eyebrow">Section 7</span>
+    <h2 class="section-title">Music &amp; Entertainment</h2>
+
+    <div class="field">
+      <label for="cocktail_music">What's the vibe for cocktail hour? Any preferences for music style?</label>
+      <textarea id="cocktail_music" name="cocktail_music"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="reception_music">What genres do you want at the reception? What's completely off the table?</label>
+      <textarea id="reception_music" name="reception_music"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="must_play">Any must-play songs? Any do-not-play songs?</label>
+      <textarea id="must_play" name="must_play"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="first_dance">First dance song &mdash; do you have one in mind?</label>
+      <input type="text" id="first_dance" name="first_dance" placeholder="Song title and artist">
+    </div>
+
+    <div class="field">
+      <label for="parent_dances">Parent dances &mdash; yes or no? If yes, any songs in mind?</label>
+      <textarea id="parent_dances" name="parent_dances"></textarea>
+    </div>
+
+    <div class="field">
+      <label>How important is a packed dance floor to you?</label>
+      <span class="field-note">1 = Not a priority &nbsp;&middot;&nbsp; 5 = It's the whole point of the night</span>
+      <div class="scale-wrap">
+        <input type="radio" id="dance1" name="dance_floor" value="1"><label for="dance1">1</label>
+        <input type="radio" id="dance2" name="dance_floor" value="2"><label for="dance2">2</label>
+        <input type="radio" id="dance3" name="dance_floor" value="3"><label for="dance3">3</label>
+        <input type="radio" id="dance4" name="dance_floor" value="4"><label for="dance4">4</label>
+        <input type="radio" id="dance5" name="dance_floor" value="5"><label for="dance5">5</label>
+      </div>
+      <div class="scale-labels"><span>Not a priority</span><span>The whole point</span></div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SECTION 8: WORKING TOGETHER -->
+  <div class="form-section">
+    <span class="section-eyebrow">Section 8</span>
+    <h2 class="section-title">Working Together</h2>
+
+    <div class="field">
+      <label for="working_style">Is there anything about how you work best that I should know?</label>
+      <span class="field-note">Communication style, how you like to receive information, decision-making process, stress responses &mdash; anything that helps me support you the way you actually need.</span>
+      <textarea id="working_style" name="working_style" class="tall"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="anything_else">Is there anything about your relationship, your story, or your vision for this day that you want me to know that we haven't covered?</label>
+      <textarea id="anything_else" name="anything_else" class="tall"></textarea>
+    </div>
+  </div>
+
+  <!-- SUBMIT -->
+  <div class="submit-wrap">
+    <p class="submit-note">Once you submit, I'll review everything and be in touch within a few days with next steps. So excited to get started.</p>
+    <button type="submit">Submit Questionnaire &rarr;</button>
+  </div>
+
+  <div class="success-msg" id="success">
+    <div class="success-title">Got it &mdash; thank you!</div>
+    <p class="success-body">I'll review everything and be in touch within a few days with next steps.<br>In the meantime, reach me anytime at <a href="mailto:hello@higherloveeventco.com" style="color:var(--gold);text-decoration:none;">hello@higherloveeventco.com</a>.<br><br>So excited to be part of this.</p>
+  </div>
+
+</form>
+
+<div class="site-footer">
+  <div class="footer-contact">
+    Higher Love Event Co. &nbsp;&middot;&nbsp; hello@higherloveeventco.com &nbsp;&middot;&nbsp; 503-217-8500<br>
+    higherloveeventco.com &nbsp;&middot;&nbsp; @higherloveeventco
+  </div>
+</div>
+
+<script>
+  const form = document.querySelector('form');
+  const success = document.getElementById('success');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method:'POST',
+      body:data,
+      headers:{'Accept':'application/json'}
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      success.classList.add('visible');
+      window.scrollTo({top: success.offsetTop - 40, behavior:'smooth'});
+    } else {
+      alert('Something went wrong. Please email hello@higherloveeventco.com directly.');
+    }
+  });
+</script>
+
+</body>
+</html>
