@@ -9,8 +9,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 
 <style>
 :root{
@@ -22,7 +22,7 @@
   --maxw:1120px;--nav-h:64px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{background:var(--cream);color:var(--black);font-family:var(--sans);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 img{display:block;max-width:100%;}
 a{color:inherit;text-decoration:none;}
@@ -222,24 +222,46 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 @media(max-width:680px){.dates-grid{grid-template-columns:1fr 1fr!important;}}
 @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
 
-@media(max-width:600px){
-  .wrap{padding:0 1.4rem;}
-  .nav-inner{padding:0 1.4rem;}
-  .cta-row{flex-direction:column;align-items:stretch;}
-  .cta-row .btn{text-align:center;}
-  .closing{padding:5rem 1.4rem;}
-  .photo-credit{padding:.5rem 1.4rem;}
-  .dates-grid{grid-template-columns:1fr!important;}
-  .flow-step{grid-template-columns:1fr;gap:.8rem;}
-  .flow-num{font-size:1.4rem;}
-  .hero h1{font-size:clamp(2.4rem,10vw,4rem);}
-  .tier-price{font-size:2rem;}
-  .hero-eyebrow span{font-size:.55rem;letter-spacing:.16em;}
-  .hero-inner{padding:3rem 1.4rem 3rem;}
-  .hero-sub{font-size:.9rem;}
+/* MOBILE CATCH-ALL */
+@media(max-width:480px){
+  .wrap{padding:0 1.2rem;}
+  .nav-inner{padding:0 1.2rem;}
+  .hero-inner{padding:3rem 1.2rem 3rem;}
+  .hero h1{font-size:2.4rem;}
+  .hero-sub{font-size:.85rem;}
+  .hero-eyebrow span{font-size:.52rem;letter-spacing:.12em;}
+  .hero .cta-row{flex-direction:column;align-items:stretch;}
+  .hero .cta-row .btn{text-align:center;}
+  .band{height:220px;}
+  .experience-inner{grid-template-columns:1fr;gap:2.5rem;}
   .experience-pull{font-size:1rem;}
-  .sec-head h2{font-size:clamp(1.6rem,5vw,2.9rem);}
+  .flow-step{grid-template-columns:1fr;gap:.6rem;}
+  .tier-cards{grid-template-columns:1fr;}
+  .tier-card{border-right:none;border-bottom:0.5px solid var(--border);}
+  .tier-price{font-size:1.8rem;}
+  .addon-grid{grid-template-columns:1fr;}
+  .setup-grid{grid-template-columns:1fr;}
+  .dates-grid{grid-template-columns:1fr!important;}
+  .weather-inner{grid-template-columns:1fr;gap:2rem;}
+  .collab-cards{grid-template-columns:1fr;}
+  .vendor-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+  .closing{padding:4rem 1.2rem;}
+  .sec-head h2{font-size:1.6rem;}
+  .collab h2{font-size:1.8rem;}
+  .cta-row{flex-direction:column;align-items:stretch;}
+  .cta-row .btn{text-align:center;width:100%;}
+  section{padding:3.5rem 0;}
+  .experience{padding:3.5rem 0;}
+  .tiers-section{padding:3.5rem 0;}
+  .addons{padding:3.5rem 0;}
+  .setup{padding:3.5rem 0;}
+  .weather{padding:3.5rem 0;}
+  .vendors{padding:3.5rem 0;}
+  .collab{padding:4rem 1.2rem;}
 }
+
+/* mobile rules consolidated below */
 </style>
 
 <meta property="og:type" content="website">
@@ -317,7 +339,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
 <!-- HERO -->
 <header class="hero">
-  <img class="hero-img" src="/images/StJohnsBridgeGoldenHourPortlandOregon_300KB.jpg" alt="The St. Johns Bridge at golden hour, Cathedral Park, Portland, Oregon" width="1440" height="960" fetchpriority="high">
+  <img class="hero-img" src="/images/StJohnsBridgeGoldenHourPortlandOregon_300KB.jpg" alt="The St. Johns Bridge at golden hour, Cathedral Park, Portland, Oregon" width="1440" height="960" fetchpriority="high" decoding="async">
   <div class="wrap hero-content">
     <div class="hero-eyebrow"><span>A collaboration &middot; Higher Love Event Co. &amp; Weddinglandia &middot; St. Johns, Portland</span></div>
     <h1>Get Married <br><em>Under the Bridge.</em></h1>
@@ -346,7 +368,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 <div style="line-height:0;">
 <!-- PHOTO BAND 1 -->
 <div style="line-height:0;">
-  <img class="band" src="/images/PicnicReceptionWeddingPortland.jpg" alt="Styled outdoor picnic reception table with dahlias, candles, and peaches for a Portland elopement" width="1440" height="520" loading="lazy" style="object-position:center center;">
+  <img class="band" sizes="100vw" src="/images/PicnicReceptionWeddingPortland.jpg" alt="Styled outdoor picnic reception table with dahlias, candles, and peaches for a Portland elopement" width="1440" height="520" loading="lazy" style="object-position:center center;">
 </div>
 
 <!-- EXPERIENCE FLOW -->
@@ -388,7 +410,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
 <!-- PHOTO BAND 2 -->
 <div style="line-height:0;">
-  <img class="band" src="/images/BlanketPicnicElopementWeddingPortland.jpg" alt="Intimate blanket picnic with candles, fruit, and bread for a Cathedral Park elopement in Portland" width="1440" height="520" loading="lazy" style="object-position:center center;">
+  <img class="band" sizes="100vw" src="/images/BlanketPicnicElopementWeddingPortland.jpg" alt="Intimate blanket picnic with candles, fruit, and bread for a Cathedral Park elopement in Portland" width="1440" height="520" loading="lazy" style="object-position:center center;">
 </div>
 
 <!-- PACKAGES -->
@@ -615,7 +637,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
 <!-- PHOTO BAND 3 -->
 <div style="line-height:0;">
-  <img class="band" src="/images/PicnicPortlandCathedralParkWedding.jpg" alt="Aerial view of a styled picnic spread with wine, cheese, baguette and florals for a Portland elopement" width="1440" height="520" loading="lazy" style="object-position:center top;">
+  <img class="band" sizes="100vw" src="/images/PicnicPortlandCathedralParkWedding.jpg" alt="Aerial view of a styled picnic spread with wine, cheese, baguette and florals for a Portland elopement" width="1440" height="520" loading="lazy" style="object-position:center top;">
 </div>
 
 <!-- PICNIC SETUP -->
@@ -651,7 +673,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
   </div>
 </section>
 <div style="line-height:0;">
-  <img class="band" src="/images/PortlandPicnicElopementStJohns.jpg" alt="Close up of outdoor picnic table with lilacs, pears, wine and cheese for a St. Johns Portland elopement" width="1440" height="520" loading="lazy" style="object-position:center center;">
+  <img class="band" sizes="100vw" src="/images/PortlandPicnicElopementStJohns.jpg" alt="Close up of outdoor picnic table with lilacs, pears, wine and cheese for a St. Johns Portland elopement" width="1440" height="520" loading="lazy" style="object-position:center center;">
 </div>
 
 <!-- WEATHER -->
@@ -684,7 +706,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
 <!-- WEDDINGLANDIA BAND -->
 <div style="line-height:0;">
-  <img class="band" src="/images/WeddinglandiaStJohnsWeddingPortlandOregonElopement.jpg" alt="Weddinglandia elopement, St. Johns, Portland, Oregon" width="1440" height="520" loading="lazy">
+  <img class="band" sizes="100vw" src="/images/WeddinglandiaStJohnsWeddingPortlandOregonElopement.jpg" alt="Weddinglandia elopement, St. Johns, Portland, Oregon" width="1440" height="520" loading="lazy">
   <span class="photo-credit">Photo: <a href="https://weddinglandia.com/" target="_blank" rel="noopener">Weddinglandia</a></span>
 </div>
 
