@@ -102,11 +102,16 @@
   @media (max-width:600px){.incl-grid{grid-template-columns:1fr;gap:18px}}
   .hide{display:none}
   .fade{animation:fade .4s ease both}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  /* ===== PACKAGE SNAPSHOT STRIP ===== */
-  .pkg-snapshot{max-width:680px;margin:28px auto 8px;border:1px solid var(--linen);border-radius:14px;background:var(--cream2);padding:22px 26px 20px;}
-  .pkg-snapshot-label{font-family:'Montserrat',sans-serif;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:14px;}
-  .pkg-snapshot-chips{display:flex;flex-wrap:wrap;gap:8px;}
-  .pkg-snapshot-chip{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:500;letter-spacing:.08em;color:var(--ink);background:var(--cream);border:1px solid var(--linen);border-radius:30px;padding:5px 13px;line-height:1.4;}
+  /* ===== PACKAGE SNAPSHOT GRID ===== */
+  .pkg-snapshot{max-width:560px;margin:20px auto 0;border:1px solid var(--linen);border-radius:14px;background:var(--cream2);overflow:hidden;}
+  .pkg-snapshot-label{font-family:'Montserrat',sans-serif;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;padding:16px 24px 0;}
+  .pkg-snapshot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:14px 24px 18px;}
+  .pkg-snapshot-col h4{font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px;}
+  .pkg-snapshot-col ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+  .pkg-snapshot-col li{position:relative;padding-left:12px;font-size:11.5px;font-weight:300;line-height:1.4;color:var(--ink);}
+  .pkg-snapshot-col li:before{content:"";position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--gold);}
+  .pkg-snapshot-note{padding:0 24px 14px;font-size:10.5px;font-style:italic;font-weight:300;color:var(--muted);}
+  @media(max-width:500px){.pkg-snapshot-grid{grid-template-columns:1fr;gap:16px;}}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.higherloveeventco.com/reserve">
@@ -127,6 +132,7 @@
   <a href="/reviews">Reviews</a>
   <a href="/decor">Decor</a>
   <a href="/blog">Blog</a>
+  <a href="/marriedunderthebridge">Elopements</a>
   <a href="/faq">FAQ</a>
   <a href="/contact">Contact</a>
   <a href="/reserve">Reserve</a>
@@ -136,22 +142,6 @@
   <div class="rule"></div>
   <div class="steps">
     <b id="s1">Package</b><i>/</i><b id="s2">Collection</b><i>/</i><b id="s3">Estimated Total</b><i>/</i><b id="s4">Reserve</b>
-  </div>
-
-  <!-- PACKAGE SNAPSHOT — visible on step 1 only, hidden on other steps -->
-  <div class="pkg-snapshot" id="pkgSnapshot">
-    <span class="pkg-snapshot-label">Every package includes</span>
-    <div class="pkg-snapshot-chips">
-      <span class="pkg-snapshot-chip">Venue research &amp; sourcing</span>
-      <span class="pkg-snapshot-chip">Vendor vetting &amp; booking</span>
-      <span class="pkg-snapshot-chip">Contract &amp; deposit tracking</span>
-      <span class="pkg-snapshot-chip">Logistics planning</span>
-      <span class="pkg-snapshot-chip">Master timeline</span>
-      <span class="pkg-snapshot-chip">Vendor communication</span>
-      <span class="pkg-snapshot-chip">Two onsite coordinators</span>
-      <span class="pkg-snapshot-chip">Decor coordination, styling &amp; clearing</span>
-      <span class="pkg-snapshot-chip">Rehearsal direction (Ceremony + Reception)</span>
-    </div>
   </div>
 
   <!-- STEP 1 — PACKAGE -->
@@ -178,6 +168,40 @@
         <p class="note">Larger celebrations get a custom quote so the planning and styling are right. Let's talk it through.</p>
       </div>
     </div>
+    <!-- PACKAGE INCLUSIONS GRID — visible on step 1 only -->
+    <div id="pkgSnapshot">
+      <div class="pkg-snapshot">
+        <span class="pkg-snapshot-label">Every package includes</span>
+        <div class="pkg-snapshot-grid">
+          <div class="pkg-snapshot-col">
+            <h4>Venue &amp; vendors</h4>
+            <ul>
+              <li>Venue research &amp; sourcing</li>
+              <li>Vendor vetting &amp; booking</li>
+              <li>Contract &amp; deposit tracking</li>
+            </ul>
+          </div>
+          <div class="pkg-snapshot-col">
+            <h4>Planning</h4>
+            <ul>
+              <li>Logistics planning</li>
+              <li>Master timeline</li>
+              <li>Vendor communication</li>
+            </ul>
+          </div>
+          <div class="pkg-snapshot-col">
+            <h4>On the day</h4>
+            <ul>
+              <li>Two onsite coordinators</li>
+              <li>Decor styling &amp; clearing</li>
+              <li>Rehearsal direction*</li>
+            </ul>
+          </div>
+        </div>
+        <p class="pkg-snapshot-note">* Rehearsal direction included with Ceremony + Reception packages.</p>
+      </div>
+    </div>
+
     <div class="actions" style="justify-content:flex-end">
       <button class="btn" id="toCollection">Continue</button>
     </div>
@@ -337,8 +361,8 @@ function showStep(n){
   state.step=n;
   for(let i=1;i<=4;i++) $("#step"+i).classList.toggle("hide",i!==n);
   for(let i=1;i<=4;i++) $("#s"+i).className = (i===n || (i<n)) ? "on" : "";
-  // Show snapshot strip only on step 1
-  $("#pkgSnapshot").classList.toggle("hide", n!==1);
+  // Show inclusions grid only on step 1
+  $("#pkgSnapshot").style.display = n===1 ? "block" : "none";
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
