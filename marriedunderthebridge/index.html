@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F5F0E8">
 <link rel="canonical" href="https://www.marriedunderthebridge.com">
 <meta name="description" content="Married Under the Bridge is a Cathedral Park elopement experience in St. Johns, Portland. A collaboration between Higher Love Event Co. and Weddinglandia. Legal ceremonies beneath the St. Johns Bridge with a styled picnic reception.">
 <title>Married Under the Bridge | Cathedral Park Elopement | St. Johns, Portland</title>
@@ -22,8 +23,16 @@
   --maxw:1120px;--nav-h:64px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;overflow-x:hidden;}
-body{background:var(--cream);color:var(--black);font-family:var(--sans);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:calc(var(--nav-h) + 16px); /* keeps fixed nav from covering anchor targets */
+  -webkit-text-size-adjust:100%;
+}
+body{
+  background:var(--cream);color:var(--black);font-family:var(--sans);font-weight:400;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;overflow-x:clip; /* clip doesn't break sticky/smooth scroll on iOS */
+}
 img{display:block;max-width:100%;}
 a{color:inherit;text-decoration:none;}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 2.5rem;}
@@ -32,6 +41,16 @@ p{color:var(--charcoal);line-height:1.8;font-size:.92rem;}
 .eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:.75rem;}
 .rise{opacity:0;transform:translateY(20px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1);}
 .rise.in{opacity:1;transform:none;}
+
+/* ACCESSIBILITY FLOOR */
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--white);padding:.8rem 1.2rem;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;z-index:200;}
+.skip-link:focus{left:0;}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .rise{opacity:1;transform:none;transition:none;}
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important;}
+}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,240,232,0.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:0.5px solid var(--border);z-index:100;}
@@ -43,14 +62,17 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,
 .nav-links a:hover{color:var(--gold);}
 .nav-cta{background:var(--gold);color:var(--cream)!important;padding:.48rem 1.1rem;}
 .nav-cta:hover{background:var(--black)!important;color:var(--cream)!important;}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;}
-.hamburger span{display:block;width:22px;height:1.5px;background:var(--black);transition:all .3s;}
+.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;
+  min-width:44px;min-height:44px;margin-right:-10px;} /* 44px tap target */
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--black);transition:transform .3s,opacity .3s;}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px);}
-#mob-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--cream);border-bottom:0.5px solid var(--border);padding:1.8rem 2.5rem 2.2rem;z-index:99;flex-direction:column;gap:1.4rem;}
+#mob-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--cream);border-bottom:0.5px solid var(--border);padding:.8rem 2.5rem 1.6rem;z-index:99;flex-direction:column;
+  max-height:calc(100dvh - var(--nav-h));overflow-y:auto;-webkit-overflow-scrolling:touch;}
 #mob-menu.open{display:flex;}
-#mob-menu a{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);}
+#mob-menu a{display:flex;align-items:center;min-height:48px;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal);border-bottom:0.5px solid var(--border);}
+#mob-menu a:last-child{border-bottom:none;color:var(--gold-deep);}
 @media(max-width:860px){.nav-links{display:none;}.hamburger{display:flex;}}
 
 /* BUTTONS */
@@ -65,14 +87,14 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,
 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:2.8rem;}
 
 /* HERO */
-.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;padding-top:var(--nav-h);}
+.hero{position:relative;min-height:88vh;min-height:88svh;display:flex;align-items:flex-end;overflow:hidden;padding-top:var(--nav-h);}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,20,18,0.95) 0%,rgba(20,20,18,0.72) 45%,rgba(20,20,18,0.52) 100%);z-index:1;}
-.hero-content{position:relative;z-index:2;padding:0 0 5rem;}
+.hero-content{position:relative;z-index:2;padding-bottom:5rem;}
 .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.8rem,7vw,6rem);line-height:.95;color:var(--white);margin-bottom:1.8rem;max-width:14ch;text-shadow:0 2px 32px rgba(0,0,0,0.8),0 1px 8px rgba(0,0,0,0.9);}
 .hero-sub{max-width:580px;font-size:1rem;line-height:1.85;color:rgba(255,255,255,.95);margin-bottom:2.4rem;text-shadow:0 1px 16px rgba(0,0,0,0.9),0 1px 4px rgba(0,0,0,1);}
 .hero-eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;}
-.hero-eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);}
+.hero-eyebrow::before{content:"";width:34px;flex:0 0 34px;height:1px;background:var(--gold);}
 .hero-eyebrow span{font-family:var(--sans);font-size:.63rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:#E7D8B5;}
 .hero h1 em{font-style:italic;color:var(--gold);}
 .hero-credit{position:absolute;bottom:.7rem;right:2.5rem;z-index:2;font-family:var(--sans);font-size:.6rem;letter-spacing:.1em;color:rgba(255,255,255,.45);}
@@ -127,6 +149,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,
 .tier-card.featured .tier-section-label{color:rgba(184,137,42,.8);}
 .tier-card.featured .tier-divider{background:rgba(245,240,232,.1);}
 .tier-flag{display:inline-block;background:var(--gold);color:var(--black);font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;margin-bottom:16px;}
+.tier-spacer{display:block;height:21px;margin-bottom:16px;}
 .tier-name{font-family:var(--serif);font-size:1.55rem;margin-bottom:.5rem;line-height:1.2;}
 .tier-price{font-family:var(--serif);font-size:2.6rem;color:var(--black);line-height:1;margin:1rem 0 .6rem;letter-spacing:-.02em;}
 .tier-card.featured .tier-price{color:var(--cream);}
@@ -140,6 +163,9 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,
 .tier-items li::before{content:"";position:absolute;left:0;top:.65em;width:5px;height:1px;background:var(--gold);}
 .tier-cta{margin-top:2rem;}
 .tier-cta .btn{width:100%;text-align:center;display:block;}
+.tier-note{text-align:center;margin-top:2rem;font-size:.82rem;color:var(--muted);font-style:italic;font-family:var(--serif);}
+.tier-note-plain{text-align:center;margin-top:.8rem;font-size:.82rem;color:var(--muted);font-family:var(--sans);}
+.tier-note a,.tier-note-plain a{color:var(--gold-deep);font-weight:600;font-family:var(--sans);font-style:normal;}
 @media(max-width:820px){.tier-cards{grid-template-columns:1fr;}.tier-card{border-right:none;border-bottom:0.5px solid var(--border);}.tier-card:last-child{border-bottom:none;}}
 @media(max-width:1024px) and (min-width:821px){.tier-cards{grid-template-columns:1fr 1fr;}.tier-card:last-child{grid-column:1/-1;}}
 
@@ -149,8 +175,8 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,
 .addon-item{background:var(--linen);padding:2rem 1.8rem;border-right:0.5px solid var(--border);border-bottom:0.5px solid var(--border);}
 .addon-item h3{font-family:var(--serif);font-size:1.1rem;margin-bottom:.6rem;line-height:1.2;}
 .addon-item p{font-size:.82rem;color:var(--muted);line-height:1.7;margin:0;}
+.addon-item a{border-bottom:1px solid var(--gold);}
 @media(max-width:860px){.addon-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.addon-grid{grid-template-columns:1fr;}}
 
 /* SETUP — dark */
 .setup{background:var(--black);padding:5rem 0;}
@@ -162,7 +188,19 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,
 .setup-label{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.1rem;}
 .setup-card h3{font-family:var(--serif);font-size:1.2rem;color:var(--cream);margin-bottom:.9rem;font-weight:400;line-height:1.2;}
 .setup-card p{font-size:.84rem;color:rgba(245,240,232,.55);line-height:1.85;margin:0;}
+.setup-card p + p{margin-top:1rem;}
 @media(max-width:640px){.setup-grid{grid-template-columns:1fr;}}
+
+/* AVAILABLE DATES */
+.dates-section{background:var(--black);padding:5rem 0;}
+.dates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(245,240,232,.08);margin-bottom:2.5rem;}
+.date-card{background:rgba(245,240,232,.04);padding:2rem 2.2rem;border:0.5px solid rgba(245,240,232,.06);}
+.date-month{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem;}
+.date-day{font-family:var(--serif);font-size:1.6rem;color:var(--cream);margin:0;line-height:1.15;}
+.date-time{font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;color:rgba(245,240,232,.45);display:block;margin-top:.7rem;}
+.dates-note{margin-top:1.2rem;font-size:.82rem;color:rgba(245,240,232,.4);font-family:var(--serif);font-style:italic;line-height:1.8;}
+.dates-note a{color:var(--gold);border-bottom:1px solid rgba(184,137,42,.4);}
+@media(max-width:680px){.dates-grid{grid-template-columns:1fr;}}
 
 /* WEATHER */
 .weather{background:var(--linen);padding:5rem 0;}
@@ -182,6 +220,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,
 .collab{background:var(--charcoal);padding:6rem 0;text-align:center;}
 .collab h2{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;color:var(--white);margin-top:.5rem;margin-bottom:1rem;}
 .collab h2 em{font-style:italic;color:var(--gold);}
+.collab .eyebrow::before,.closing .eyebrow::before{margin-left:auto;margin-right:auto;}
 .collab-rule{width:40px;height:1px;background:var(--gold);margin:2rem auto;}
 .collab-sub{font-size:.98rem;color:rgba(255,255,255,.6);line-height:1.9;max-width:500px;margin:0 auto;}
 .collab-cards{max-width:720px;margin:3rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(245,240,232,.08);}
@@ -197,18 +236,20 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(245,
 .vendor-cell{background:var(--linen);padding:1.8rem 2rem;}
 .vendor-cell-label{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem;}
 .vendor-cell p{font-family:var(--serif);font-size:1.1rem;color:var(--black);margin-bottom:.5rem;line-height:1.2;}
-.vendor-cell p a{color:var(--black);text-decoration:none;border-bottom:1px solid var(--gold);transition:color .2s;}
+.vendor-cell p a{color:var(--black);text-decoration:none;border-bottom:1px solid var(--gold);transition:color .2s;
+  display:inline-block;padding:.45rem 0;} /* larger tap target on touch */
 .vendor-cell p a:hover{color:var(--gold-deep);}
 .vendor-cell span{font-size:.8rem;color:var(--muted);line-height:1.7;display:block;}
 @media(max-width:640px){.vendor-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:400px){.vendor-grid{grid-template-columns:1fr;}}
 
 /* CLOSING */
-.closing{background:var(--black);padding:7rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.closing{background:var(--black);padding:7rem 0;text-align:center;position:relative;overflow:hidden;}
 .closing::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:800px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
 .closing h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1.05;color:var(--white);max-width:680px;margin:0 auto 1rem;}
 .closing h2 em{font-style:italic;color:var(--gold);}
 .closing p{max-width:440px;margin:.8rem auto 0;color:rgba(245,240,232,.5);font-size:.92rem;line-height:1.85;}
+.closing-note{margin-top:2rem;font-size:.8rem;color:rgba(245,240,232,.4);max-width:420px;margin-left:auto;margin-right:auto;line-height:1.8;}
+.closing-note a{color:var(--gold);border-bottom:1px solid rgba(184,137,42,.4);}
 
 /* FOOTER */
 footer{background:var(--charcoal);padding:72px 0 48px;}
@@ -216,7 +257,6 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 .foot-brand .nav-logo{font-size:1.1rem;display:block;margin-bottom:14px;color:var(--cream);}
 .foot-brand p{font-size:.82rem;color:rgba(245,240,232,.55);line-height:1.8;max-width:240px;margin-top:10px;}
 .foot-brand .foot-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.95rem;margin-top:1.2rem;display:block;}
-.foot-col h2{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
 .foot-col-label{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
 .foot-col ul{list-style:none;}
 .foot-col li{margin-bottom:9px;}
@@ -224,51 +264,137 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 .foot-col a:hover{color:var(--gold);}
 .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.55);line-height:2;}
 .foot-col address a{color:rgba(245,240,232,.55);}
+.foot-rule{display:block;width:24px;height:1px;background:var(--gold);margin:1rem 0;opacity:.5;}
 .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
 @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
-@media(max-width:680px){.dates-grid{grid-template-columns:1fr 1fr!important;}}
-@media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
 
-/* MOBILE CATCH-ALL */
-@media(max-width:480px){
-  .wrap{padding:0 1.2rem;}
-  .nav-inner{padding:0 1.2rem;}
-  .hero-inner{padding:3rem 1.2rem 3rem;}
-  .hero h1{font-size:2.4rem;}
-  .hero-sub{font-size:.85rem;}
-  .hero-eyebrow span{font-size:.52rem;letter-spacing:.12em;}
-  .hero .cta-row{flex-direction:column;align-items:stretch;}
-  .hero .cta-row .btn{text-align:center;}
-  .band{height:220px;}
-  .experience-inner{grid-template-columns:1fr;gap:2.5rem;}
-  .experience-pull{font-size:1rem;}
-  .flow-step{grid-template-columns:1fr;gap:.6rem;}
-  .tier-cards{grid-template-columns:1fr;}
-  .tier-card{border-right:none;border-bottom:0.5px solid var(--border);}
-  .tier-price{font-size:1.8rem;}
-  .addon-grid{grid-template-columns:1fr;}
-  .setup-grid{grid-template-columns:1fr;}
-  .dates-grid{grid-template-columns:1fr!important;}
-  .weather-inner{grid-template-columns:1fr;gap:2rem;}
-  .collab-cards{grid-template-columns:1fr;}
-  .vendor-grid{grid-template-columns:1fr;}
-  .foot-grid{grid-template-columns:1fr;}
-  .closing{padding:4rem 1.2rem;}
-  .sec-head h2{font-size:1.6rem;}
-  .collab h2{font-size:1.8rem;}
-  .cta-row{flex-direction:column;align-items:stretch;}
-  .cta-row .btn{text-align:center;width:100%;}
-  section{padding:3.5rem 0;}
-  .experience{padding:3.5rem 0;}
-  .tiers-section{padding:3.5rem 0;}
-  .addons{padding:3.5rem 0;}
-  .setup{padding:3.5rem 0;}
-  .weather{padding:3.5rem 0;}
-  .vendors{padding:3.5rem 0;}
-  .collab{padding:4rem 1.2rem;}
+/* ============================================================
+   TABLET / SMALL LAPTOP
+   ============================================================ */
+@media(max-width:860px){
+  .wrap{padding:0 1.75rem;}
+  .nav-inner{padding:0 1.75rem;}
+  .photo-credit{padding:.5rem 1.75rem;}
+  .hero-credit{right:1.75rem;}
 }
 
-/* mobile rules consolidated below */
+/* ============================================================
+   PHONE — every phone in portrait falls here (SE 375 → Pro Max 430)
+   ============================================================ */
+@media(max-width:480px){
+
+  /* --- layout & rhythm --- */
+  .wrap{padding:0 1.25rem;}
+  .nav-inner{padding:0 1.25rem;}
+  .intro{padding:3.5rem 0 2rem;}
+  .experience,.tiers-section,.addons,.setup,.weather,.vendors,.dates-section{padding:3.5rem 0;}
+  .collab{padding:4rem 0;}
+  .closing{padding:4rem 0;}
+  footer{padding:52px 0 36px;}
+
+  /* --- type scale: nothing below ~14px, labels lifted off 9px --- */
+  p{font-size:1rem;line-height:1.75;}
+  .eyebrow{font-size:.68rem;letter-spacing:.18em;margin-bottom:1rem;}
+  .btn{font-size:.72rem;letter-spacing:.16em;padding:1.05rem 1.5rem;}
+  .sec-head h2,.experience-text h2,.weather-text h2{font-size:1.75rem;}
+  .sec-head,.sec-head-center{margin-bottom:2.25rem;}
+  .sec-head p,.sec-head-center p,.intro-inner p{font-size:1rem;line-height:1.8;}
+  .intro-inner h2{font-size:1.85rem;}
+  .setup-label,.weather-card-label,.collab-card-label,.vendor-cell-label,
+  .tier-section-label,.date-month,.foot-col-label{font-size:.66rem;letter-spacing:.16em;}
+
+  /* --- nav --- */
+  .nav-logo{font-size:.88rem;letter-spacing:.09em;}
+
+  /* --- hero: no forced viewport height, so CTAs are never pushed
+         under the iOS toolbar --- */
+  .hero{min-height:auto;padding-top:calc(var(--nav-h) + 2rem);}
+  .hero-content{padding-bottom:3.5rem;}
+  .hero h1{font-size:2.3rem;max-width:none;margin-bottom:1.3rem;}
+  .hero-sub{font-size:.98rem;line-height:1.75;margin-bottom:1.8rem;}
+  .hero-eyebrow{display:block;margin-bottom:1.4rem;}
+  .hero-eyebrow::before{display:block;width:24px;margin-bottom:.6rem;}
+  .hero-eyebrow span{font-size:.68rem;letter-spacing:.14em;line-height:1.7;}
+  .hero .cta-row{flex-direction:column;align-items:stretch;margin-top:2rem;}
+  .hero-credit{left:1.25rem;right:1.25rem;bottom:.5rem;text-align:right;font-size:.68rem;}
+
+  /* --- photo bands --- */
+  .band{height:230px;}
+  .photo-credit{padding:.5rem 1.25rem;font-size:.68rem;}
+
+  /* --- experience flow: keep the number beside the heading --- */
+  .experience-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .experience-pull{font-size:1.05rem;padding-left:1.1rem;margin:1.6rem 0;}
+  .experience-text p{font-size:1rem;line-height:1.8;}
+  .flow-step{grid-template-columns:auto 1fr;gap:1rem;padding:1.4rem 0;}
+  .flow-num{font-size:1.4rem;}
+  .flow-step h3{font-size:1.15rem;}
+  .flow-step p{font-size:.95rem;line-height:1.7;}
+
+  /* --- packages: reclaim horizontal space eaten by card padding --- */
+  .tier-cards{grid-template-columns:1fr;}
+  .tier-card{padding:2.25rem 1.5rem 2rem;border-right:none;border-bottom:0.5px solid var(--border);}
+  .tier-name{font-size:1.5rem;}
+  .tier-price{font-size:2.4rem;}
+  .tier-guests{font-size:.68rem;letter-spacing:.1em;margin-bottom:1.2rem;}
+  .tier-price-note{font-size:.66rem;}
+  .tier-flag{font-size:.68rem;}
+  .tier-spacer{display:none;} /* alignment spacer only matters side-by-side */
+  .tier-items li{font-size:.92rem;line-height:1.65;margin-bottom:.5rem;}
+  .tier-note,.tier-note-plain{font-size:.92rem;}
+
+  /* --- dates --- */
+  .dates-grid{grid-template-columns:1fr;}
+  .date-card{padding:1.5rem 1.4rem;}
+  .dates-note{font-size:.92rem;}
+
+  /* --- add-ons --- */
+  .addon-grid{grid-template-columns:1fr;margin-top:2rem;}
+  .addon-item{padding:1.6rem 1.4rem;}
+  .addon-item h3{font-size:1.1rem;}
+  .addon-item p{font-size:.92rem;line-height:1.65;}
+
+  /* --- setup --- */
+  .setup-grid{grid-template-columns:1fr;margin-top:2rem;}
+  .setup-card{padding:1.9rem 1.5rem;}
+  .setup-card h3{font-size:1.15rem;}
+  .setup-card p{font-size:.94rem;line-height:1.75;}
+
+  /* --- weather --- */
+  .weather-inner{grid-template-columns:1fr;gap:2rem;}
+  .weather-card{padding:1.8rem 1.5rem;}
+  .weather-card p{font-size:.94rem;line-height:1.75;}
+  .weather-pull{font-size:1.05rem;}
+  .weather-note{font-size:.88rem;}
+
+  /* --- collab --- */
+  .collab h2{font-size:1.9rem;}
+  .collab-sub{font-size:1rem;}
+  .collab-cards{grid-template-columns:1fr;margin-top:2.25rem;}
+  .collab-card{padding:1.8rem 1.5rem;}
+  .collab-card p{font-size:.92rem;line-height:1.75;}
+
+  /* --- vendors --- */
+  .vendor-grid{grid-template-columns:1fr;margin-top:2rem;}
+  .vendor-cell{padding:1.4rem 1.5rem;}
+  .vendor-cell p{font-size:1.15rem;}
+  .vendor-cell span{font-size:.9rem;}
+
+  /* --- closing --- */
+  .closing h2{font-size:2.1rem;}
+  .closing p{font-size:1rem;}
+  .closing-note{font-size:.9rem;}
+  .cta-row{flex-direction:column;align-items:stretch;}
+  .cta-row .btn{width:100%;text-align:center;}
+
+  /* --- footer --- */
+  .foot-grid{grid-template-columns:1fr;gap:2.25rem;padding-bottom:2.25rem;}
+  .foot-brand p{font-size:.92rem;max-width:none;}
+  .foot-col a,.foot-col address{font-size:.92rem;}
+  .foot-col li{margin-bottom:.4rem;}
+  .foot-col a{display:inline-block;padding:.35rem 0;} /* taller tap targets */
+  .foot-bottom{flex-direction:column;gap:.4rem;font-size:.7rem;}
+}
 </style>
 
 <meta property="og:type" content="website">
@@ -317,6 +443,8 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
 <body>
 
+<a class="skip-link" href="#main-content">Skip to content</a>
+
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -329,7 +457,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
       <li><a href="https://higherloveeventco.com" target="_blank" rel="noopener">Higher Love</a></li>
       <li><a href="https://app.acuityscheduling.com/schedule/1a462a64/category/Married%2520Under%2520The%2520Bridge" class="nav-cta">Book Now</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mob-menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -338,6 +466,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
   <a href="#setup">The Setup</a>
   <a href="#weather">Weather Policy</a>
   <a href="#collab">The Collaboration</a>
+  <a href="#vendors">Vendor Team</a>
   <a href="https://higherloveeventco.com" target="_blank" rel="noopener">Higher Love</a>
   <a href="https://app.acuityscheduling.com/schedule/1a462a64/category/Married%2520Under%2520The%2520Bridge">Book Now</a>
 </div>
@@ -374,7 +503,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
 <!-- PHOTO BAND 1 -->
 <div style="line-height:0;">
-  <img class="band" sizes="100vw" src="/images/PicnicReceptionWeddingPortland.jpg" alt="Styled outdoor picnic reception table with dahlias, candles, and peaches for a Portland elopement" width="1440" height="520" loading="lazy" style="object-position:center center;">
+  <img class="band" src="/images/PicnicReceptionWeddingPortland.jpg" alt="Styled outdoor picnic reception table with dahlias, candles, and peaches for a Portland elopement" width="1440" height="520" loading="lazy" decoding="async" style="object-position:center center;">
 </div>
 
 <!-- EXPERIENCE FLOW -->
@@ -416,7 +545,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
 <!-- PHOTO BAND 2 -->
 <div style="line-height:0;">
-  <img class="band" sizes="100vw" src="/images/BlanketPicnicElopementWeddingPortland.jpg" alt="Intimate blanket picnic with candles, fruit, and bread for a Cathedral Park elopement in Portland" width="1440" height="520" loading="lazy" style="object-position:center center;">
+  <img class="band" src="/images/BlanketPicnicElopementWeddingPortland.jpg" alt="Intimate blanket picnic with candles, fruit, and bread for a Cathedral Park elopement in Portland" width="1440" height="520" loading="lazy" decoding="async" style="object-position:center center;">
 </div>
 
 <!-- PACKAGES -->
@@ -432,7 +561,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
       <!-- TIER 1 -->
       <div class="tier-card rise">
-        <span style="display:block;height:21px;margin-bottom:16px;"></span>
+        <span class="tier-spacer"></span>
         <div class="tier-name">Just the Two of Us</div>
         <span class="tier-guests">Couple only &middot; 3 hours</span>
         <div class="tier-price">$2,500</div>
@@ -509,7 +638,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
       <!-- TIER 3 -->
       <div class="tier-card rise">
-        <span style="display:block;height:21px;margin-bottom:16px;"></span>
+        <span class="tier-spacer"></span>
         <div class="tier-name">The Soir&eacute;e</div>
         <span class="tier-guests">Couple + up to 18 guests &middot; 4.5 hours</span>
         <div class="tier-price">$5,000</div>
@@ -549,44 +678,44 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
     </div>
 
-    <p style="text-align:center;margin-top:2rem;font-size:.82rem;color:var(--muted);font-style:italic;font-family:var(--serif);">Introductory pricing for our inaugural season. Rates will increase after our first bookings. <a href="https://app.acuityscheduling.com/schedule/1a462a64/category/Married%2520Under%2520The%2520Bridge" style="color:var(--gold-deep);font-weight:600;font-family:var(--sans);font-style:normal;">Book now to lock in this rate.</a></p>
-    <p style="text-align:center;margin-top:.8rem;font-size:.82rem;color:var(--muted);font-family:var(--sans);">Looking for a different date? Email <a href="mailto:hello@higherloveeventco.com" style="color:var(--gold-deep);font-weight:600;">hello@higherloveeventco.com</a> with your preferred date and we will check availability with our team.</p>
+    <p class="tier-note">Introductory pricing for our inaugural season. Rates will increase after our first bookings. <a href="https://app.acuityscheduling.com/schedule/1a462a64/category/Married%2520Under%2520The%2520Bridge">Book now to lock in this rate.</a></p>
+    <p class="tier-note-plain">Looking for a different date? Email <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a> with your preferred date and we will check availability with our team.</p>
   </div>
 </section>
 
 <!-- AVAILABLE DATES -->
-<section style="background:var(--black);padding:5rem 0;">
+<section class="dates-section">
   <div class="wrap">
-    <div class="sec-head rise" style="max-width:680px;margin-bottom:3rem;">
+    <div class="sec-head rise" style="max-width:680px;">
       <span class="eyebrow" style="color:var(--gold);">Book your date</span>
       <h2 style="color:var(--cream);">These dates are available right now.</h2>
       <p style="color:rgba(245,240,232,.55);">We hold approximately one date per month for Married Under the Bridge. Each date is instantly bookable — no back and forth, no waiting. When a date books, it's gone. If you don't see a date that works for you, email us and we'll do our best to find something that does.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(245,240,232,.08);margin-bottom:2.5rem;" class="rise dates-grid">
-      <div style="background:rgba(245,240,232,.04);padding:2rem 2.2rem;border:0.5px solid rgba(245,240,232,.06);">
-        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem;">August 2026</span>
-        <p style="font-family:var(--serif);font-size:1.6rem;color:var(--cream);margin:0;line-height:1.1;">Friday, August 21</p>
-        <span style="font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;color:rgba(245,240,232,.45);display:block;margin-top:.7rem;">3:00 PM</span>
+    <div class="dates-grid rise">
+      <div class="date-card">
+        <span class="date-month">August 2026</span>
+        <p class="date-day">Friday, August 21</p>
+        <span class="date-time">3:00 PM</span>
       </div>
-      <div style="background:rgba(245,240,232,.04);padding:2rem 2.2rem;border:0.5px solid rgba(245,240,232,.06);">
-        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem;">September 2026</span>
-        <p style="font-family:var(--serif);font-size:1.6rem;color:var(--cream);margin:0;line-height:1.1;">Saturday, September 5</p>
-        <span style="font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;color:rgba(245,240,232,.45);display:block;margin-top:.7rem;">3:00 PM</span>
+      <div class="date-card">
+        <span class="date-month">September 2026</span>
+        <p class="date-day">Saturday, September 5</p>
+        <span class="date-time">3:00 PM</span>
       </div>
-      <div style="background:rgba(245,240,232,.04);padding:2rem 2.2rem;border:0.5px solid rgba(245,240,232,.06);">
-        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem;">September 2026</span>
-        <p style="font-family:var(--serif);font-size:1.6rem;color:var(--cream);margin:0;line-height:1.1;">Saturday, September 26</p>
-        <span style="font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;color:rgba(245,240,232,.45);display:block;margin-top:.7rem;">3:00 PM</span>
+      <div class="date-card">
+        <span class="date-month">September 2026</span>
+        <p class="date-day">Saturday, September 26</p>
+        <span class="date-time">3:00 PM</span>
       </div>
-      <div style="background:rgba(245,240,232,.04);padding:2rem 2.2rem;border:0.5px solid rgba(245,240,232,.06);">
-        <span style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem;">October 2026</span>
-        <p style="font-family:var(--serif);font-size:1.6rem;color:var(--cream);margin:0;line-height:1.1;">Friday, October 16</p>
-        <span style="font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;color:rgba(245,240,232,.45);display:block;margin-top:.7rem;">3:00 PM</span>
+      <div class="date-card">
+        <span class="date-month">October 2026</span>
+        <p class="date-day">Friday, October 16</p>
+        <span class="date-time">3:00 PM</span>
       </div>
     </div>
     <div style="text-align:center;" class="rise">
       <a class="btn btn-gold" href="https://app.acuityscheduling.com/schedule/1a462a64/category/Married%2520Under%2520The%2520Bridge">Book your date now</a>
-      <p style="margin-top:1.2rem;font-size:.82rem;color:rgba(245,240,232,.4);font-family:var(--serif);font-style:italic;">Winter dates are coming soon. Beginning in November the ceremony still takes place beneath the bridge and the reception moves indoors to Weddinglandia. Looking for a different date, or planning a winter wedding? <a href="mailto:hello@higherloveeventco.com" style="color:var(--gold);border-bottom:1px solid rgba(184,137,42,.4);">Email us</a> and we will be in touch.</p>
+      <p class="dates-note">Winter dates are coming soon. Beginning in November the ceremony still takes place beneath the bridge and the reception moves indoors to Weddinglandia. Looking for a different date, or planning a winter wedding? <a href="mailto:hello@higherloveeventco.com">Email us</a> and we will be in touch.</p>
     </div>
   </div>
 </section>
@@ -606,7 +735,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
       </div>
       <div class="addon-item">
         <h3>Super 8 Videography</h3>
-        <p>Your day shot on Super 8 film by <a href="https://www.hummingbird-films.com/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--gold);">Hummingbird Films</a>. Grainy, warm, and unmistakably nostalgic, delivered as a short digital transfer you can keep and share.</p>
+        <p>Your day shot on Super 8 film by <a href="https://www.hummingbird-films.com/" target="_blank" rel="noopener">Hummingbird Films</a>. Grainy, warm, and unmistakably nostalgic, delivered as a short digital transfer you can keep and share.</p>
       </div>
       <div class="addon-item">
         <h3>Film Photography</h3>
@@ -646,7 +775,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
 <!-- PHOTO BAND 3 -->
 <div style="line-height:0;">
-  <img class="band" sizes="100vw" src="/images/PicnicPortlandCathedralParkWedding.jpg" alt="Aerial view of a styled picnic spread with wine, cheese, baguette and florals for a Portland elopement" width="1440" height="520" loading="lazy" style="object-position:center top;">
+  <img class="band" src="/images/PicnicPortlandCathedralParkWedding.jpg" alt="Aerial view of a styled picnic spread with wine, cheese, baguette and florals for a Portland elopement" width="1440" height="520" loading="lazy" decoding="async" style="object-position:center top;">
 </div>
 
 <!-- PICNIC SETUP -->
@@ -662,7 +791,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
         <span class="setup-label">The sundries</span>
         <h3>A generous spread from two St. Johns kitchens.</h3>
         <p>Charcuterie, fruits, nuts, and breads, all sourced and arranged by She Serves, with a dessert spread from Flower &amp; Flour. Vegan options available.</p>
-        <p style="margin-top:1rem;">Beverages come from our neighborhood partners: your choice of Oregon wine, local craft beer, or a mix of both, alongside seasonally infused water from a drink dispenser. Everything is laid out and ready before you return from portraits.</p>
+        <p>Beverages come from our neighborhood partners: your choice of Oregon wine, local craft beer, or a mix of both, alongside seasonally infused water from a drink dispenser. Everything is laid out and ready before you return from portraits.</p>
       </div>
       <div class="setup-card">
         <span class="setup-label">The atmosphere</span>
@@ -684,12 +813,13 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
       <span class="setup-label">Permits &amp; park rules</span>
       <h3>Cathedral Park is a public park, and we treat it like one.</h3>
       <p>Your picnic reception is fully permitted through Portland Parks &amp; Recreation. The permit is held in your name as the host of your celebration, and we walk you through every step of it. Beer and wine are yours as the host — we pick them up ahead of the day and deliver them sealed and ready, served in cans rather than glass.</p>
-      <p style="margin-top:1rem;">Cathedral Park stays open to the public throughout, so expect a little life around you &mdash; walkers, dogs, someone else admiring the bridge. When the afternoon is over, we pack out everything we brought in and leave the park exactly as we found it.</p>
+      <p>Cathedral Park stays open to the public throughout, so expect a little life around you &mdash; walkers, dogs, someone else admiring the bridge. When the afternoon is over, we pack out everything we brought in and leave the park exactly as we found it.</p>
     </div>
   </div>
 </section>
+
 <div style="line-height:0;">
-  <img class="band" sizes="100vw" src="/images/PortlandPicnicElopementStJohns.jpg" alt="Close up of outdoor picnic table with lilacs, pears, wine and cheese for a St. Johns Portland elopement" width="1440" height="520" loading="lazy" style="object-position:center center;">
+  <img class="band" src="/images/PortlandPicnicElopementStJohns.jpg" alt="Close up of outdoor picnic table with lilacs, pears, wine and cheese for a St. Johns Portland elopement" width="1440" height="520" loading="lazy" decoding="async" style="object-position:center center;">
 </div>
 
 <!-- WEATHER -->
@@ -722,7 +852,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 
 <!-- WEDDINGLANDIA BAND -->
 <div style="line-height:0;">
-  <img class="band" sizes="100vw" src="/images/WeddinglandiaStJohnsWeddingPortlandOregonElopement.jpg" alt="Weddinglandia elopement, St. Johns, Portland, Oregon" width="1440" height="520" loading="lazy">
+  <img class="band" src="/images/WeddinglandiaStJohnsWeddingPortlandOregonElopement.jpg" alt="Weddinglandia elopement, St. Johns, Portland, Oregon" width="1440" height="520" loading="lazy" decoding="async">
   <span class="photo-credit">Photo: <a href="https://weddinglandia.com/" target="_blank" rel="noopener">Weddinglandia</a></span>
 </div>
 
@@ -816,7 +946,7 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
       <a class="btn btn-gold" href="https://app.acuityscheduling.com/schedule/1a462a64/category/Married%2520Under%2520The%2520Bridge" aria-label="Book your elopement package">Book your date</a>
       <a class="btn btn-light" href="mailto:hello@higherloveeventco.com" aria-label="Send us a message">Send us a message</a>
     </div>
-    <p style="margin-top:2rem;font-size:.8rem;color:rgba(245,240,232,.4);max-width:420px;margin-left:auto;margin-right:auto;line-height:1.8;">Questions? Email <a href="mailto:hello@higherloveeventco.com" style="color:var(--gold);border-bottom:1px solid rgba(184,137,42,.4);">hello@higherloveeventco.com</a> and we will get back to you within one business day.</p>
+    <p class="closing-note">Questions? Email <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a> and we will get back to you within one business day.</p>
   </div>
 </section>
 
@@ -846,8 +976,8 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
         <p class="foot-col-label">Contact</p>
         <address>
           <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a><br>
-          <a href="tel:5032178500">503-217-8500</a><br>
-          <span style="display:block;width:24px;height:1px;background:var(--gold);margin:1rem 0;opacity:.5;"></span>
+          <a href="tel:5032178500">503-217-8500</a>
+          <span class="foot-rule"></span>
           <a href="https://higherloveeventco.com" target="_blank" rel="noopener">higherloveeventco.com</a><br>
           <a href="https://instagram.com/higherloveeventco" target="_blank" rel="noopener">@higherloveeventco</a>
         </address>
@@ -861,20 +991,60 @@ footer{background:var(--charcoal);padding:72px 0 48px;}
 </footer>
 
 <script>
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
-  },{threshold:.12});
-  document.querySelectorAll(".rise").forEach((el,i)=>{
-    el.style.transitionDelay = (Math.min(i,5)*80)+"ms";
-    io.observe(el);
+(function(){
+  var menu = document.getElementById("mob-menu");
+  var btn  = document.getElementById("hamburger");
+
+  function setMenu(open){
+    menu.classList.toggle("open", open);
+    btn.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+
+  btn.addEventListener("click", function(e){
+    e.stopPropagation();
+    setMenu(!menu.classList.contains("open"));
   });
+
+  // Close after tapping any link in the menu — otherwise the panel
+  // stays open on top of the section you just jumped to.
+  menu.addEventListener("click", function(e){
+    if(e.target.closest("a")) setMenu(false);
+  });
+
   document.addEventListener("click", function(e){
-    var m = document.getElementById("mob-menu");
-    var h = document.getElementById("hamburger");
-    if(m && m.classList.contains("open") && !m.contains(e.target) && !h.contains(e.target)){
-      m.classList.remove("open"); h.classList.remove("open");
-    }
+    if(menu.classList.contains("open") && !menu.contains(e.target) && !btn.contains(e.target)) setMenu(false);
   });
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && menu.classList.contains("open")){ setMenu(false); btn.focus(); }
+  });
+
+  window.addEventListener("resize", function(){
+    if(window.innerWidth > 860 && menu.classList.contains("open")) setMenu(false);
+  });
+
+  // Scroll reveal — falls back to fully visible if motion is reduced
+  // or IntersectionObserver is unavailable, so content can never be stranded at opacity 0.
+  var els = document.querySelectorAll(".rise");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if(reduce || !("IntersectionObserver" in window)){
+    Array.prototype.forEach.call(els, function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    },{ threshold:0, rootMargin:"0px 0px -8% 0px" });
+    Array.prototype.forEach.call(els, function(el,i){
+      el.style.transitionDelay = (Math.min(i,5)*80)+"ms";
+      io.observe(el);
+    });
+  }
+})();
 </script>
 
 </body>
