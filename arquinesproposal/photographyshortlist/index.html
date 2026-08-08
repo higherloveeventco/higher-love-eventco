@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photography Shortlist for Michelle &amp; Daniel</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F0E8;
+    --linen:#EDE9E1;
+    --gold:#B8892A;
+    --ink:#1A1A18;
+    --muted:#6E6A62;
+    --rule:#D8D2C6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Montserrat',sans-serif;
+    font-weight:300;
+    font-size:15px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 28px 96px;}
+
+  /* ---------- masthead ---------- */
+  header.mast{padding:72px 0 56px;text-align:center;}
+  .brand{
+    font-family:'Montserrat',sans-serif;
+    font-size:11px;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--gold);font-weight:500;margin-bottom:34px;
+  }
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:300;font-size:56px;line-height:1.08;margin:0 0 18px;
+  }
+  h1 em{font-style:italic;}
+  .sub{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--muted);font-weight:400;
+  }
+  .mast-rule{width:52px;height:1px;background:var(--gold);margin:34px auto 0;}
+
+  .lede{
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;line-height:1.72;color:var(--ink);
+    max-width:600px;margin:0 auto 62px;text-align:center;
+  }
+  .lede p{margin:0 0 30px;}
+  .lede p:last-child{margin-bottom:0;}
+
+  /* ---------- section headings ---------- */
+  .eyebrow{
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:14px;
+  }
+  h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:300;font-size:40px;line-height:1.15;margin:0 0 10px;
+  }
+  h3{
+    font-family:'Montserrat',sans-serif;
+    font-size:10px;letter-spacing:.26em;text-transform:uppercase;
+    font-weight:600;color:var(--muted);margin:0 0 16px;
+  }
+
+  /* ---------- photographer block ---------- */
+  .pick{
+    background:#fff;
+    border:1px solid var(--rule);
+    padding:44px 40px;
+    margin-bottom:34px;
+  }
+  .pick-head{border-bottom:1px solid var(--rule);padding-bottom:26px;margin-bottom:30px;}
+  .positioning{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:19px;color:var(--muted);line-height:1.5;
+  }
+
+
+  /* ---------- work links ---------- */
+  .work{
+    display:flex;flex-wrap:wrap;gap:0 26px;align-items:baseline;
+    margin:-6px 0 30px;padding-bottom:22px;border-bottom:1px solid var(--rule);
+  }
+  .work .lbl{
+    font-size:9px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+  }
+  .work a{
+    font-family:'Cormorant Garamond',serif;font-size:18px;
+    color:var(--gold);text-decoration:none;border-bottom:1px solid var(--rule);
+    padding-bottom:1px;transition:border-color .2s ease;
+  }
+  .work a:hover,.work a:focus{border-bottom-color:var(--gold);}
+  .work a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media (max-width:680px){
+    .work{gap:0 20px;}
+  }
+
+  /* ---------- coverage bar ---------- */
+  .coverage{
+    background:var(--linen);
+    padding:24px 22px;
+    margin:0 0 30px;
+  }
+  .coverage-steps{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;}
+  .step{flex:1 1 0;min-width:120px;padding:4px 10px;}
+  .step .when{
+    font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;display:block;margin-bottom:5px;
+  }
+  .step .where{
+    font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.35;
+  }
+  .arrow{align-self:center;color:var(--gold);font-size:14px;padding:0 2px;flex:0 0 auto;}
+  .coverage-note{
+    margin-top:16px;padding-top:14px;border-top:1px solid var(--rule);
+    font-size:13px;color:var(--muted);line-height:1.7;
+  }
+
+  /* ---------- detail grid ---------- */
+  dl.details{display:grid;grid-template-columns:170px 1fr;gap:0;margin:0 0 30px;}
+  dl.details dt{
+    font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:600;color:var(--muted);
+    padding:11px 0;border-top:1px solid var(--rule);
+  }
+  dl.details dd{
+    margin:0;padding:11px 0;border-top:1px solid var(--rule);font-size:14px;
+  }
+  dl.details dt:first-of-type,dl.details dd:first-of-type{border-top:none;}
+
+  /* ---------- tables ---------- */
+  table{width:100%;border-collapse:collapse;margin:0 0 8px;font-size:14px;}
+  th{
+    text-align:left;font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+    font-weight:600;color:var(--muted);padding:0 0 10px;border-bottom:1px solid var(--ink);
+  }
+  th.num,td.num{text-align:right;}
+  td{padding:10px 0;border-bottom:1px solid var(--rule);vertical-align:top;}
+  tr.total td{
+    border-bottom:none;border-top:1.5px solid var(--ink);
+    font-weight:500;padding-top:13px;
+  }
+  tr.total td:first-child{
+    font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;
+  }
+  .caption{font-size:14px;color:#57534B;line-height:1.8;margin:14px 0 0;}
+
+  /* ---------- take ---------- */
+  .take{
+    background:var(--linen);
+    border-left:2px solid var(--gold);
+    padding:24px 26px;margin-top:30px;
+  }
+  .take .label{
+    font-size:9px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:10px;
+  }
+  .take p{
+    font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.6;margin:0 0 14px;
+  }
+  .take p:last-child{margin-bottom:0;}
+
+  /* ---------- comparison ---------- */
+  .compare{background:#fff;border:1px solid var(--rule);padding:40px 34px;margin-bottom:34px;overflow-x:auto;}
+  table.grid{font-size:13px;}
+  table.grid th:first-child{width:140px;}
+  table.grid td{padding:12px 12px 12px 0;}
+  table.grid th{padding-right:12px;}
+  .yes{color:var(--gold);font-weight:500;}
+
+  /* ---------- explainer / budget ---------- */
+  .panel{background:#fff;border:1px solid var(--rule);padding:40px 34px;margin-bottom:34px;}
+  .panel p.body{font-size:15px;line-height:1.8;margin:0 0 20px;}
+
+  ul.plain{list-style:none;padding:0;margin:0;}
+  ul.plain li{
+    padding:12px 0 12px 22px;border-bottom:1px solid var(--rule);
+    position:relative;font-size:14px;
+  }
+  ul.plain li:last-child{border-bottom:none;}
+  ul.plain li:before{
+    content:'';position:absolute;left:0;top:21px;
+    width:5px;height:5px;background:var(--gold);border-radius:50%;
+  }
+
+  footer{text-align:center;padding-top:56px;}
+  footer .rule{width:52px;height:1px;background:var(--gold);margin:0 auto 26px;}
+  footer .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;margin-bottom:12px;}
+  footer .meta{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);}
+
+  section{margin-bottom:34px;}
+  .section-intro{margin:0 0 26px;}
+
+  @media (max-width:680px){
+    .wrap{padding:0 20px 64px;}
+    h1{font-size:38px;}
+    h2{font-size:30px;}
+    .pick,.compare,.panel{padding:30px 22px;}
+    dl.details{grid-template-columns:1fr;}
+    dl.details dt{padding-bottom:0;border-top:1px solid var(--rule);}
+    dl.details dd{padding-top:4px;border-top:none;}
+    .coverage-steps{flex-direction:column;gap:14px;}
+    .arrow{display:none;}
+    .lede{font-size:19px;margin-bottom:44px;}
+    .lede p{margin-bottom:0;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <div class="brand">Higher Love Event Co.</div>
+  <h1>Michelle &amp; <em>Daniel</em></h1>
+  <div class="sub">Photography Shortlist</div>
+  <div class="mast-rule"></div>
+</header>
+
+<section class="lede">
+  <p>I reached out to more than forty photographers for July 17. These five are the best fit for your budget and needs. All available. All with a second photographer. Now the fun part: pick the one whose work feels like you.</p>
+</section>
+
+<!-- ============ AVERI ============ -->
+<section class="pick">
+  <div class="pick-head">
+    <div class="eyebrow">$3,800</div>
+    <h2>Averi Capaner</h2>
+    <div class="positioning">Two photographers for the entire day, at the lowest price on the list.</div>
+  </div>
+
+  <div class="work">
+    <span class="lbl">See their work</span>
+    <a href="https://averileephoto.mypixieset.com/Weddings/" target="_blank" rel="noopener">Portfolio</a>
+    <a href="https://www.instagram.com/averileephotography" target="_blank" rel="noopener">Instagram</a>
+  </div>
+
+  <h3>What the day looks like</h3>
+  <div class="coverage">
+    <div class="coverage-steps">
+      <div class="step"><span class="when">Photographer one</span><span class="where">8 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Photographer two</span><span class="where">8 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Engagement session</span><span class="where">Included</span></div>
+    </div>
+    <div class="coverage-note">Her second photographer stays the full eight hours rather than leaving partway through. That matters most at two points in your day: both of you getting ready at the same time in different rooms, and the ceremony in the Secret Garden, where a second camera means someone is on your faces while the other is on the aisle.</div>
+  </div>
+
+  <h3>What is included</h3>
+  <dl class="details">
+    <dt>Package</dt><dd>The Signature, $3,800</dd>
+    <dt>Coverage</dt><dd>8 hours</dd>
+    <dt>Second photographer</dt><dd>Included for all 8 hours</dd>
+    <dt>Engagement session</dt><dd><strong>Included.</strong> Complimentary, 1 hour</dd>
+    <dt>Planning</dt><dd>Pre-wedding consultation and planning sessions</dd>
+    <dt>Extra hours</dt><dd>$195 per hour, the lowest rate of anyone here</dd>
+  </dl>
+
+  <h3>What it costs</h3>
+  <table>
+    <tr><th>Item</th><th class="num">Cost</th></tr>
+    <tr><td>The Signature, 8 hours with two photographers</td><td class="num">$3,800</td></tr>
+    <tr><td>Engagement session</td><td class="num">Included</td></tr>
+    <tr class="total"><td>Total</td><td class="num">$3,800</td></tr>
+  </table>
+
+  <div class="take">
+    <div class="label">Kylie's take</div>
+    <p>On paper this is the strongest value of the five. You get the most second-photographer coverage for the least money, and the cheapest path to more hours if you decide you want them.</p>
+  </div>
+</section>
+
+<!-- ============ LITTLE DAISY ============ -->
+<section class="pick">
+  <div class="pick-head">
+    <div class="eyebrow">$3,800</div>
+    <h2>Little Daisy Photography</h2>
+    <div class="positioning">The same coverage and the same price, with a noticeably different eye.</div>
+  </div>
+
+  <div class="work">
+    <span class="lbl">See their work</span>
+    <a href="https://littledaisyphotography.com/gallery-weddings" target="_blank" rel="noopener">Portfolio</a>
+    <a href="https://www.instagram.com/littledaisyphotography/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+
+  <h3>What the day looks like</h3>
+  <div class="coverage">
+    <div class="coverage-steps">
+      <div class="step"><span class="when">Photographer one</span><span class="where">8 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Photographer two</span><span class="where">8 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Engagement session</span><span class="where">Included</span></div>
+    </div>
+    <div class="coverage-note">Structurally identical to Averi. Both give you two photographers for eight hours at $3,800 with an engagement session. The decision between them comes down entirely to which body of work you respond to, which is a good problem to have.</div>
+  </div>
+
+  <h3>What is included</h3>
+  <dl class="details">
+    <dt>Package</dt><dd>Collection One, $3,800</dd>
+    <dt>Coverage</dt><dd>8 hours, described as start to finish</dd>
+    <dt>Second photographer</dt><dd>Included for all 8 hours</dd>
+    <dt>Engagement session</dt><dd><strong>Included</strong> in the collection</dd>
+    <dt>Gallery</dt><dd>Online gallery for download and print</dd>
+    <dt>Planning</dt><dd>Timeline assistance, vendor recommendations, wedding guide, day-of emergency kit</dd>
+    <dt>Fees</dt><dd>She describes every package as all inclusive, with nothing added on later</dd>
+    <dt>Extra hours</dt><dd>Will ask</dd>
+  </dl>
+
+  <h3>What it costs</h3>
+  <table>
+    <tr><th>Item</th><th class="num">Cost</th></tr>
+    <tr><td>Collection One, 8 hours with two photographers</td><td class="num">$3,800</td></tr>
+    <tr><td>Engagement session</td><td class="num">Included</td></tr>
+    <tr class="total"><td>Total</td><td class="num">$3,800</td></tr>
+  </table>
+
+  <div class="take">
+    <div class="label">Kylie's take</div>
+    <p>Her style sits apart from the others on this list, which is why she is here.</p>
+  </div>
+</section>
+
+<!-- ============ ANNIE ZAV ============ -->
+<section class="pick">
+  <div class="pick-head">
+    <div class="eyebrow">$4,500</div>
+    <h2>Annie Zav Photography</h2>
+    <div class="positioning">A husband and wife team who shoot digital, film and drone, and send you ten fine art prints at the end.</div>
+  </div>
+
+  <div class="work">
+    <span class="lbl">See their work</span>
+    <a href="https://anniezavphotography.com/my-work" target="_blank" rel="noopener">Portfolio</a>
+    <a href="https://www.instagram.com/anniezavphoto/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+
+  <h3>What the day looks like</h3>
+  <div class="coverage">
+    <div class="coverage-steps">
+      <div class="step"><span class="when">Photographer one</span><span class="where">8 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Photographer two</span><span class="where">8 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Engagement session</span><span class="where">$450</span></div>
+    </div>
+    <div class="coverage-note">Annie and Leo shoot together, so you get two people who have worked side by side for years rather than a lead photographer plus an assistant they hired for the day. They also fly a drone when weather and the venue allow, which at the Jupiter would mean overhead shots of the Secret Garden and the courtyard.</div>
+  </div>
+
+  <h3>What is included</h3>
+  <dl class="details">
+    <dt>Coverage</dt><dd>8 hours, continuous</dd>
+    <dt>Photographers</dt><dd>Two, for the full day</dd>
+    <dt>Formats</dt><dd>Digital, film and drone footage, weather and venue permitting</dd>
+    <dt>Preview gallery</dt><dd>Within one week</dd>
+    <dt>Gallery</dt><dd>Private online gallery</dd>
+    <dt>Prints</dt><dd>10 fine art prints</dd>
+    <dt>Engagement session</dt><dd><strong>Not included.</strong> $450 to add. 1.5 hours, 150+ edited photos, plus a location guide and a wardrobe guide. Film images can be added for $100</dd>
+    <dt>Planning</dt><dd>Consultation and planning included</dd>
+    <dt>Extra hours</dt><dd>Will ask</dd>
+  </dl>
+
+  <h3>What it costs</h3>
+  <table>
+    <tr><th>Item</th><th class="num">Cost</th></tr>
+    <tr><td>8 hours with two photographers</td><td class="num">$4,500</td></tr>
+    <tr><td>Film, drone and prints</td><td class="num">Included</td></tr>
+    <tr><td>Engagement session, only if you want one</td><td class="num">$450</td></tr>
+    <tr class="total"><td>Total without engagement session</td><td class="num">$4,500</td></tr>
+  </table>
+
+  <div class="take">
+    <div class="label">Kylie's take</div>
+    <p>The only option here that gives you drone footage and prints in hand.</p>
+  </div>
+</section>
+
+<!-- ============ TOGETHER THEORY ============ -->
+<section class="pick">
+  <div class="pick-head">
+    <div class="eyebrow">$4,800</div>
+    <h2>Together Theory</h2>
+    <div class="positioning">Documentary photography on digital and film, and the easiest option to extend if the night runs long.</div>
+  </div>
+
+  <div class="work">
+    <span class="lbl">See their work</span>
+    <a href="https://www.together-theory.com/journal" target="_blank" rel="noopener">Portfolio</a>
+    <a href="https://www.instagram.com/together.theory/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+
+  <h3>What the day looks like</h3>
+  <div class="coverage">
+    <div class="coverage-steps">
+      <div class="step"><span class="when">Photographer one</span><span class="where">8 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Photographer two</span><span class="where">4 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Engagement session</span><span class="where">$640</span></div>
+    </div>
+    <div class="coverage-note">Kayla prices her second photographer by the hour rather than bundling it, which means you decide where that second camera matters most. Four hours would typically cover both of you getting ready and the ceremony. Her lead hours are also the cheapest to add of anyone here, so if you decide you want coverage through the last song rather than stopping at eight hours, this is the least expensive way to get there.</div>
+  </div>
+
+  <h3>What is included</h3>
+  <dl class="details">
+    <dt>Base package</dt><dd>8 hours, $4,400</dd>
+    <dt>Second photographer</dt><dd>$100 per hour, 4 hours shown here</dd>
+    <dt>Formats</dt><dd>Digital and film</dd>
+    <dt>Approach</dt><dd>Documentary, focused on the day as it unfolds</dd>
+    <dt>Extra hours</dt><dd>Her 10 hour package is $4,800, so two more lead hours cost $400</dd>
+    <dt>Engagement session</dt><dd><strong>Not included.</strong> $640 if you add one</dd>
+  </dl>
+
+  <h3>What it costs</h3>
+  <table>
+    <tr><th>Item</th><th class="num">Cost</th></tr>
+    <tr><td>8 hour package</td><td class="num">$4,400</td></tr>
+    <tr><td>Second photographer, 4 hours at $100</td><td class="num">$400</td></tr>
+    <tr><td>Engagement session, only if you want one</td><td class="num">$640</td></tr>
+    <tr class="total"><td>Total without engagement session</td><td class="num">$4,800</td></tr>
+  </table>
+
+  <div class="take">
+    <div class="label">Kylie's take</div>
+    <p>Her documentary approach is the most distinct point of view on this list.</p>
+  </div>
+</section>
+
+<!-- ============ HONEY ROSE ============ -->
+<section class="pick">
+  <div class="pick-head">
+    <div class="eyebrow">$5,000</div>
+    <h2>Honey Rose Photo</h2>
+    <div class="positioning">Digital and film together, with archival film and polaroid keepsakes you can hold at the end.</div>
+  </div>
+
+  <div class="work">
+    <span class="lbl">See their work</span>
+    <a href="https://www.honeyrosephoto.com" target="_blank" rel="noopener">Portfolio</a>
+    <a href="https://www.instagram.com/honeyrosephoto/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+
+  <h3>What the day looks like</h3>
+  <div class="coverage">
+    <div class="coverage-steps">
+      <div class="step"><span class="when">Photographer one</span><span class="where">8 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Photographer two</span><span class="where">8 hours</span></div>
+      <div class="arrow">&plus;</div>
+      <div class="step"><span class="when">Engagement session</span><span class="where">$350</span></div>
+    </div>
+    <div class="coverage-note">Shawna shoots digital and film side by side, so the gallery has both the volume of digital and the texture of film.</div>
+  </div>
+
+  <h3>What is included</h3>
+  <dl class="details">
+    <dt>Package</dt><dd>The Faye Collection, $5,000</dd>
+    <dt>Coverage</dt><dd>8 hours</dd>
+    <dt>Second photographer</dt><dd>Complimentary, included for the full 8 hours</dd>
+    <dt>Formats</dt><dd>Digital and film documentation</dd>
+    <dt>Keepsakes</dt><dd>Archival film and polaroid images</dd>
+    <dt>Planning</dt><dd>Timeline assistance and recommendations</dd>
+    <dt>Gallery delivery</dt><dd>10 weeks</dd>
+    <dt>Extra hours</dt><dd>Will ask</dd>
+    <dt>Engagement session</dt><dd><strong>Not included.</strong> $350 to add alongside the wedding collection, down from $500 on its own. 1.5 hours, digital and film, location scouting, 2 week gallery, plus archival film and polaroid keepsakes</dd>
+  </dl>
+
+  <h3>What it costs</h3>
+  <table>
+    <tr><th>Item</th><th class="num">Cost</th></tr>
+    <tr><td>The Faye Collection, 8 hours with two photographers</td><td class="num">$5,000</td></tr>
+    <tr><td>Film, keepsakes and planning support</td><td class="num">Included</td></tr>
+    <tr><td>Engagement session, only if you want one</td><td class="num">$350</td></tr>
+    <tr class="total"><td>Total without engagement session</td><td class="num">$5,000</td></tr>
+  </table>
+
+  <div class="take">
+    <div class="label">Kylie's take</div>
+    <p>Of everyone I looked at, this is the closest to what I would choose for my own wedding. That is my eye and not yours.</p>
+  </div>
+</section>
+
+<!-- ============ COMPARISON ============ -->
+<section class="compare">
+  <div class="eyebrow">Side by side</div>
+  <h2 style="margin-bottom:28px;">The short version</h2>
+  <table class="grid">
+    <tr>
+      <th></th>
+      <th>Averi</th>
+      <th>Little Daisy</th>
+      <th>Annie Zav</th>
+      <th>Together Theory</th>
+      <th>Honey Rose</th>
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td class="yes">$3,800</td>
+      <td class="yes">$3,800</td>
+      <td>$4,500</td>
+      <td>$4,800</td>
+      <td>$5,000</td>
+    </tr>
+    <tr>
+      <td><strong>Lead coverage</strong></td>
+      <td>8 hrs</td>
+      <td>8 hrs</td>
+      <td>8 hrs</td>
+      <td>8 hrs</td>
+      <td>8 hrs</td>
+    </tr>
+    <tr>
+      <td><strong>Second photographer</strong></td>
+      <td class="yes">All 8 hrs</td>
+      <td class="yes">All 8 hrs</td>
+      <td class="yes">All 8 hrs</td>
+      <td>4 hrs</td>
+      <td class="yes">All 8 hrs</td>
+    </tr>
+    <tr>
+      <td><strong>Engagement session</strong></td>
+      <td class="yes">Included</td>
+      <td class="yes">Included</td>
+      <td>$450 extra</td>
+      <td>$640 extra</td>
+      <td>$350 extra</td>
+    </tr>
+    <tr>
+      <td><strong>Film</strong></td>
+      <td>No</td>
+      <td>No</td>
+      <td class="yes">Yes</td>
+      <td class="yes">Yes</td>
+      <td class="yes">Yes</td>
+    </tr>
+    <tr>
+      <td><strong>Drone</strong></td>
+      <td>No</td>
+      <td>No</td>
+      <td class="yes">Yes</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td><strong>Prints included</strong></td>
+      <td>No</td>
+      <td>No</td>
+      <td class="yes">10 fine art</td>
+      <td>No</td>
+      <td class="yes">Film + polaroids</td>
+    </tr>
+    <tr>
+      <td><strong>Extra hour</strong></td>
+      <td class="yes">$195</td>
+      <td>Will ask</td>
+      <td>Will ask</td>
+      <td class="yes">$200</td>
+      <td>Will ask</td>
+    </tr>
+  </table>
+  <p class="caption">On engagement sessions: Averi and Little Daisy include one in the price. The other three charge for it: $350 with Honey Rose, $450 with Annie Zav, $640 with Together Theory. Read against that, Averi and Little Daisy are effectively $350 to $640 further ahead on price than the totals suggest, if a session is something you want. A session runs one to two hours, gives you photos for save the dates, and is the easiest way to find out how you feel in front of a particular photographer before the wedding day.</p>
+</section>
+
+<!-- ============ SECOND SHOOTER EXPLAINER ============ -->
+<section class="panel">
+  <div class="eyebrow">Worth understanding</div>
+  <h2 style="margin-bottom:10px;">Why two photographers</h2>
+  <p class="body">Every option on this list includes a second photographer, and that was deliberate. The reason is simple: at a wedding, more than one thing is always happening at once. Two photographers can divide and conquer. One photographer has to pick.</p>
+
+  <p class="body">Here is where that shows up in your day.</p>
+
+  <h3 style="margin-top:30px;">Getting ready in two places</h3>
+  <p class="body">You will both be getting ready at the same time, in different rooms. With two photographers, both of you get documented. With one, someone has to choose which of you to be with, and the other morning goes unphotographed.</p>
+
+  <h3>Two angles on the ceremony</h3>
+  <p class="body">One camera shoots the walk down the aisle from the front, so you get your faces. The other shoots from the back or the side, so you get the aisle, the guests, and the person waiting for you at the end. A single photographer can only stand in one of those places, and usually stands at the front, which means you never see the room the way your guests saw it.</p>
+
+  <h3>Reactions during the big moments</h3>
+  <p class="body">During toasts and your first dance, one photographer stays on the two of you. The other turns around and shoots your parents, your wedding party, and the faces in the room. Those reaction photos are the ones couples tell me later they did not know they wanted.</p>
+
+
+  <h3>A safety net</h3>
+  <p class="body" style="margin-bottom:24px;">A second professional on site means one problem does not become a hole in your gallery.</p>
+
+  <p class="body" style="margin-bottom:0;">The only thing that differs across these five is how long the second camera stays. Four of them keep both photographers for the entire day. Together Theory prices the second photographer by the hour, which is why her total is built rather than fixed, and it means you can put that second camera exactly where you want it.</p>
+</section>
+
+<!-- ============ WHERE THIS SITS ============ -->
+<section class="panel">
+  <div class="eyebrow">The money</div>
+  <h2 style="margin-bottom:10px;">Where this sits in the budget</h2>
+  <p class="section-intro" style="font-size:14px;color:var(--muted);">Photography was budgeted at $2,500 to $5,000 in your venue comparison. Here is how these land against that.</p>
+
+  <table>
+    <tr><th>Photographer</th><th class="num">Total</th><th class="num">Against budget</th></tr>
+    <tr><td>Averi Capaner</td><td class="num">$3,800</td><td class="num">Within</td></tr>
+    <tr><td>Little Daisy Photography</td><td class="num">$3,800</td><td class="num">Within</td></tr>
+    <tr><td>Annie Zav Photography</td><td class="num">$4,500</td><td class="num">Within</td></tr>
+    <tr><td>Together Theory</td><td class="num">$4,800</td><td class="num">Within</td></tr>
+    <tr><td>Honey Rose Photo</td><td class="num">$5,000</td><td class="num">Within</td></tr>
+  </table>
+</section>
+
+<!-- ============ NEXT ============ -->
+<section class="panel">
+  <div class="eyebrow">What happens next</div>
+  <h2 style="margin-bottom:22px;">How to choose</h2>
+  <ul class="plain">
+    <li>Look at all five galleries before you read another price. The money is close enough that it should not decide this.</li>
+    <li>Tell me which two or three you keep coming back to. You do not need a reason.</li>
+    <li>I will set up calls with those, and you will get a feel for them quickly.</li>
+    <li>All five are holding your date informally. Once you choose, I will get the contract moving.</li>
+  </ul>
+</section>
+
+<footer>
+  <div class="rule"></div>
+  <div class="sig">Whenever you're ready, let's talk it through.</div>
+  <div class="meta">Higher Love Event Co. &middot; higherloveeventco.com</div>
+</footer>
+
+</div>
+</body>
+</html>
