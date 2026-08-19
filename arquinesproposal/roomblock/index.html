@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Blocks | Michelle &amp; Daniel</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --linen: #EDE9E1;
+    --gold: #B8892A;
+    --black: #1A1A18;
+    --muted: #6B665E;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 660px; margin: 0 auto; padding: 56px 26px 90px; }
+
+  /* ---------- header ---------- */
+  header { text-align: center; margin-bottom: 44px; }
+
+  .eyebrow {
+    font-size: 10px; font-weight: 600; letter-spacing: .28em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: 50px; line-height: 1.05; margin: 0 0 14px;
+  }
+
+  .sub { font-size: 13px; color: var(--muted); margin: 0; letter-spacing: .03em; }
+
+  /* ---------- summary ---------- */
+  .summary {
+    background: var(--black); color: var(--cream);
+    padding: 34px 32px; margin-bottom: 56px;
+  }
+
+  .summary .eyebrow { color: var(--gold); text-align: left; margin-bottom: 20px; }
+
+  .summary ul { margin: 0; padding: 0; list-style: none; }
+
+  .summary li {
+    font-size: 16px; line-height: 1.6; padding-left: 26px;
+    position: relative; margin-bottom: 16px; color: rgba(245,240,232,.92);
+  }
+
+  .summary li:last-child { margin-bottom: 0; }
+
+  .summary li:before {
+    content: ""; position: absolute; left: 0; top: 11px;
+    width: 7px; height: 7px; background: var(--gold); border-radius: 50%;
+  }
+
+  .summary strong { font-weight: 600; color: var(--cream); }
+
+  /* ---------- sections ---------- */
+  section { margin-bottom: 60px; }
+
+  .num {
+    display: block; font-size: 10px; font-weight: 600; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: 32px; line-height: 1.15; margin: 0 0 22px;
+  }
+
+  p { font-size: 16px; margin: 0 0 20px; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+
+  /* ---------- big number ---------- */
+  .big {
+    text-align: center; padding: 34px 24px; background: var(--linen); margin-bottom: 26px;
+  }
+
+  .big .figure {
+    font-family: 'Cormorant Garamond', serif; font-size: 62px;
+    line-height: 1; display: block; margin-bottom: 10px;
+  }
+
+  .big .label {
+    font-size: 11px; font-weight: 500; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--muted);
+  }
+
+  /* ---------- tables ---------- */
+  table { width: 100%; border-collapse: collapse; margin: 0 0 8px; font-size: 15px; }
+
+  caption {
+    text-align: left; font-size: 11px; font-weight: 600; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--gold); padding: 0 0 14px;
+  }
+
+  td { padding: 14px 8px 14px 0; border-bottom: 1px solid rgba(26,26,24,.09); }
+  td:last-child { text-align: right; padding-right: 0; white-space: nowrap; font-weight: 500; }
+  tr:last-child td { border-bottom: none; }
+
+  .rooms { margin-bottom: 34px; }
+
+  .note { font-size: 13px; color: var(--muted); font-style: italic; }
+
+  /* ---------- example box ---------- */
+  .example { background: var(--linen); padding: 28px 30px; margin-bottom: 24px; }
+
+  .example .row { display: flex; gap: 16px; align-items: baseline; margin-bottom: 16px; font-size: 15px; }
+  .example .row:last-child { margin-bottom: 0; }
+
+  .example .tag {
+    flex: 0 0 auto; font-size: 10px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--gold); min-width: 44px;
+  }
+
+  /* ---------- how it works ---------- */
+  .fact { padding: 20px 0; border-bottom: 1px solid rgba(184,137,42,.22); }
+  .fact:first-of-type { border-top: 1px solid rgba(184,137,42,.22); }
+
+  .fact h3 {
+    font-size: 16px; font-weight: 600; margin: 0 0 6px; letter-spacing: 0;
+    text-transform: none; color: var(--black); font-family: 'Montserrat', sans-serif;
+  }
+
+  .fact p { font-size: 15px; margin: 0; color: var(--muted); }
+
+  /* ---------- ask ---------- */
+  .ask { border: 1px solid var(--gold); padding: 36px 32px; }
+
+  .ask h2 { margin-bottom: 14px; }
+
+  .q {
+    font-size: 17px; font-weight: 500; margin: 26px 0 6px;
+  }
+
+  .q:first-of-type { margin-top: 22px; }
+
+  .q + p { font-size: 14px; color: var(--muted); margin-bottom: 0; }
+
+  /* ---------- footer ---------- */
+  footer {
+    text-align: center; margin-top: 70px; padding-top: 40px;
+    border-top: 1px solid rgba(184,137,42,.28);
+    font-size: 12px; letter-spacing: .05em; color: var(--muted);
+  }
+
+  footer .mark {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 19px; color: var(--black); display: block; margin-bottom: 8px;
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 40px 18px 64px; }
+    h1 { font-size: 38px; }
+    h2 { font-size: 26px; }
+    .summary, .example, .ask { padding: 26px 20px; }
+    .big .figure { font-size: 50px; }
+    .example .row { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Higher Love Event Co.</div>
+    <h1>Room Blocks</h1>
+    <p class="sub">Michelle &amp; Daniel &middot; July 17, 2027</p>
+  </header>
+
+  <div class="summary">
+    <div class="eyebrow">The short version</div>
+    <ul>
+      <li>A room block holds hotel rooms for your guests at <strong>a discounted rate</strong>. Guests book and pay on their own.</li>
+      <li>You <strong>pay nothing up front</strong>. But if you hold too many rooms and they don't get reserved, you will be required to pay for the leftover held rooms.</li>
+      <li>So we <strong>start small and add more later</strong>, as rooms fill up.</li>
+    </ul>
+  </div>
+
+  <section>
+    <span class="num">One</span>
+    <h2>What it actually is</h2>
+    <p>The Jupiter sets aside a group of rooms under your names.</p>
+    <p>Your guests book those rooms at a rate lower than the public price, and <strong>they pay for their own stay.</strong> You are not buying the rooms.</p>
+    <p>Jupiter charges you nothing up front. After your guests check out on Sunday, July 18, Jupiter counts how many of your held rooms were actually reserved. <strong>If your guests reserved enough of them, you owe nothing.</strong> If they came up short, Jupiter charges you for the leftover rooms.</p>
+  </section>
+
+  <section>
+    <span class="num">Two</span>
+    <h2>The one risk</h2>
+
+    <div class="big">
+      <span class="figure">80%</span>
+      <span class="label">of rooms you hold must be reserved</span>
+    </div>
+
+    <p>If your guests reserve fewer than that, you pay out of pocket for the unused held rooms. Here is what that looks like.</p>
+
+    <div class="example">
+      <div class="row"><span class="tag">Hold</span><span>20 rooms</span></div>
+      <div class="row"><span class="tag">Need</span><span>16 reserved</span></div>
+      <div class="row"><span class="tag">If only</span><span>10 get reserved, you pay for 4 unused rooms</span></div>
+    </div>
+
+    <p><strong>The starting number is what protects you.</strong> Holding too few rooms costs you nothing. Holding too many is the only way this turns into a bill.</p>
+    <p>Two things keep it manageable. Jupiter lets us release rooms we no longer need, and they send me reports as guests reserve, so <strong>I will see early if the number needs adjusting.</strong></p>
+  </section>
+
+  <section>
+    <span class="num">Three</span>
+    <h2>What I'd suggest</h2>
+    <p><strong>Hold Friday July 16 through Sunday July 18.</strong> That covers the welcome reception and gives people a slow morning after.</p>
+    <p><strong>Lean toward Jupiter Original.</strong> Over two nights it saves a guest about $160. Cheaper rooms mean more guests reserve inside the block, which keeps you clear of the 80%.</p>
+    <p><strong>Start around 20 rooms.</strong> We add more the moment it fills up.</p>
+  </section>
+
+  <section>
+    <span class="num">Four</span>
+    <h2>Your guest rates</h2>
+    <p>As you know, Jupiter has two buildings across the street from each other. Rooms at both can go in your block.</p>
+
+    <div class="rooms">
+      <table>
+        <caption>Jupiter Original</caption>
+        <tbody>
+          <tr><td>Single queen</td><td>$129</td></tr>
+          <tr><td>Double queen</td><td>$139</td></tr>
+          <tr><td>Single king</td><td>$139</td></tr>
+          <tr><td>King with lounge area</td><td>$159</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rooms">
+      <table>
+        <caption>Jupiter NEXT</caption>
+        <tbody>
+          <tr><td>Single king</td><td>$209</td></tr>
+          <tr><td>Double queen</td><td>$219</td></tr>
+          <tr><td>King with premier views</td><td>$239</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">Per night, plus 16.57% tax.</p>
+    <p style="margin-top:20px">Your own two nights are already covered by your package. This is only about your guests.</p>
+  </section>
+
+  <section>
+    <span class="num">Five</span>
+    <h2>How your guests find out</h2>
+    <p>Your save the dates will be digital, and they'll link to your wedding website. <strong>The room block info lives on that website</strong>, with the rates and a booking link.</p>
+
+    <div class="fact">
+      <h3>September</h3>
+      <p>We set up your wedding website and begin uploading information, photos, and everything else guests will need. Once the room block is finalized and the website is ready, we send out your save the dates with a link to your wedding website and room block info.</p>
+    </div>
+
+    <div class="fact">
+      <h3>Three weeks before the wedding</h3>
+      <p>Any unreserved rooms go back to the hotel for general sale. Your wedding invitations will list a booking deadline well before that. Note: even after that release date, Jupiter will still honor your group rate for any rooms that happen to be open.</p>
+    </div>
+  </section>
+
+  <section class="ask">
+    <span class="num">Last thing</span>
+    <h2>Two questions for you</h2>
+    <p>Rough answers are fine. I'll handle the rest.</p>
+
+    <div class="q">1. About how many guests are traveling in?</div>
+    <p>Versus already living in Portland. A ballpark number works.</p>
+
+    <div class="q">2. Should the block start Thursday instead of Friday?</div>
+    <p>Only worth it if a lot of people are making a trip of it.</p>
+  </section>
+
+  <footer>
+    <span class="mark">Higher Love Event Co.</span>
+    hello@higherloveeventco.com &middot; 503-217-8500
+  </footer>
+
+</div>
+</body>
+</html>
