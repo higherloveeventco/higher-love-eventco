@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <link rel="canonical" href="https://www.higherloveeventco.com/decor">
-<meta name="description" content="Eight pre-designed wedding tablescape collections from Higher Love Event Co. in Portland, OR. Published pricing per table, no design fee. Sourced, delivered, styled, and cleared by our team.">
+<meta name="description" content="Eight pre-designed wedding decor collections from Higher Love Event Co. in Portland, OR. Published pricing per table, no design fee. Sourced, delivered, styled, and cleared by our team.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portland Wedding Tablescape Collections | Higher Love Event Co.</title>
+<title>Portland Wedding Decor Collections | Higher Love Event Co.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
+<link rel="preload" as="image" href="/images/hoodriverwedding-212_optimized_300.jpg" fetchpriority="high">
 <style>
 :root{
   --gold:#B8892A;--gold-deep:#9A7020;
   --cream:#F5F0E8;--linen:#EDE9E1;--black:#1A1A18;--charcoal:#2C2C29;
-  --muted:#79776F;--white:#FFFFFF;--border:rgba(26,26,24,0.1);
+  --muted:#504E48;--white:#FFFFFF;--border:rgba(26,26,24,0.1);
   --serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--black);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
 .wrap{max-width:1120px;margin:0 auto;padding:0 2.5rem}
 .eyebrow{display:block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem}
   .eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:.75rem;}
@@ -31,6 +34,8 @@ p{color:var(--charcoal);line-height:1.8;font-size:0.92rem}
 .btn-gold:hover{background:var(--black);border-color:var(--black)}
 .btn-light{border-color:rgba(255,255,255,0.4);color:var(--white);}
 .btn-light:hover{background:var(--white);color:var(--black);border-color:var(--white);}
+.photo-credit{font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;}
+.photo-credit a{color:var(--charcoal);border-bottom:1px solid var(--charcoal);}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5px solid var(--border);padding:0 2.5rem;}
@@ -44,19 +49,16 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 /* HERO */
 .hero{padding:7rem 0 5rem;position:relative;overflow:hidden;}
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.hero-eyebrow{margin-bottom:2rem;}
-.hero-eyebrow::before{display:none;}
-.hero-eyebrow .eyebrow::before{display:block;content:"";width:28px;height:1px;background:var(--gold);margin-bottom:.75rem;}
+.hero .eyebrow{margin-bottom:2rem;}
 .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.4rem,5vw,5rem);line-height:1.02;color:var(--black);margin-bottom:2rem;}
 .hero h1 em{font-style:italic;color:var(--gold);}
 .hero-body{max-width:560px;}
 .hero-body p{font-size:1rem;line-height:1.85;color:var(--charcoal);margin-bottom:2rem;}
+.hero-callout{background:var(--linen);border-left:2px solid var(--gold);padding:1rem 1.4rem;margin-bottom:1.6rem;}
+.hero-callout p{font-size:.82rem;color:var(--charcoal);line-height:1.7;margin:0;}
+.hero-callout a{color:var(--gold-deep);font-weight:600;border-bottom:1px solid rgba(184,137,42,.4);}
 .hero-photo{width:100%;height:720px;object-fit:cover;object-position:center 50%;display:block;}
 @media(max-width:860px){.hero-inner{grid-template-columns:1fr;}.hero-photo{height:420px;}}
-
-/* PALETTE STRIP */
-.palette-strip{display:flex;height:6px;margin-top:3rem;border-radius:3px;overflow:hidden;}
-.palette-strip span{flex:1;}
 
 /* HOW IT WORKS */
 .how{background:var(--linen);padding:5rem 0;}
@@ -66,13 +68,8 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);}
 .how-step{padding:2.5rem 2rem 2.5rem 0;border-top:2px solid var(--gold);}
 .how-step .num{font-family:var(--serif);font-size:2.8rem;color:var(--gold);display:block;line-height:1;margin-bottom:1rem;}
-.how-step h4{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--black);margin-bottom:0.6rem;}
+.how-step h3{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--black);margin-bottom:0.6rem;}
 .how-step p{font-size:0.82rem;color:var(--muted);line-height:1.8;}
-
-/* PULL QUOTE */
-.pull{padding:6rem 0;text-align:center;}
-.pull blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:300;color:var(--black);line-height:1.3;max-width:760px;margin:0 auto 1.5rem;}
-.pull-note{font-family:var(--sans);font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);}
 
 /* INCLUDES */
 .includes{background:var(--linen);padding:6rem 0;}
@@ -82,7 +79,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 .includes-head p{max-width:520px;margin:0 auto;font-size:0.85rem;color:var(--muted);line-height:1.8;}
 .includes-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
 .incl-col{background:var(--cream);padding:2rem;border-top:2px solid var(--gold);}
-.incl-col h4{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.incl-col h3{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
 .incl-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
 .incl-col li{position:relative;padding-left:14px;font-size:0.82rem;color:var(--charcoal);line-height:1.5;}
 .incl-col li::before{content:"";position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--gold);}
@@ -91,6 +88,9 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 /* COLLECTIONS */
 .collections{padding:6rem 0;}
 .collections-head{text-align:center;margin-bottom:2rem;}
+.collections-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,5vw,3rem);line-height:1.04;text-align:center;margin-bottom:8px;}
+.collections-head .lede{text-align:center;color:var(--muted);font-size:0.82rem;margin:0 auto 1.4rem;max-width:580px;font-weight:300;line-height:1.7;}
+.lookbook-link{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:3px;}
 .cards{display:grid;gap:1px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));background:var(--border);}
 .card{background:var(--cream);display:flex;flex-direction:column;transition:background .2s;}
 .card:hover{background:var(--white);}
@@ -104,23 +104,13 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 .card-price b{font-family:var(--serif);font-size:1.15rem;letter-spacing:0;color:var(--black);font-weight:500;display:block;}
 .card-look{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
 .card-look:hover{color:var(--black);border-color:var(--black);}
+.card-custom{border:1.5px dashed var(--border);}
+.card-custom ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:1.2rem;}
+.card-custom li{position:relative;padding-left:14px;font-size:0.8rem;color:var(--charcoal);line-height:1.4;}
+.card-custom li::before{content:"";position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--gold);}
 .soon-row{display:flex;align-items:center;justify-content:space-between;margin-top:2rem;flex-wrap:wrap;gap:1rem;}
 .soon-note{font-size:0.75rem;font-style:italic;color:var(--muted);display:flex;align-items:center;gap:8px;}
 .soon-note::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;flex:none;}
-.price-note{font-size:0.72rem;color:var(--muted);}
-
-/* CUSTOM */
-.custom{background:var(--cream);padding:6rem 0;}
-.custom-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
-.custom-left{}
-.custom-left .eyebrow{margin-bottom:1rem;}
-.custom-left h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.1;margin-bottom:1.5rem;}
-.custom-left p{font-size:0.88rem;color:var(--charcoal);line-height:1.85;margin-bottom:1rem;}
-.custom-right{background:var(--linen);padding:2.5rem;border-top:2px solid var(--gold);}
-.custom-right h4{font-family:var(--serif);font-size:1.3rem;margin-bottom:1rem;}
-.custom-right ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:1.8rem;}
-.custom-right li{position:relative;padding-left:15px;font-size:0.84rem;color:var(--charcoal);line-height:1.5;}
-.custom-right li::before{content:"";position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--gold);}
 
 /* CTA */
 .cta-band{background:var(--black);padding:6rem 2.5rem;text-align:center;}
@@ -131,27 +121,22 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
   footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
   .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:3.5rem;padding-bottom:3rem;border-bottom:0.5px solid rgba(245,240,232,.06);margin-bottom:2rem;text-align:left;}
   .foot-brand .nav-logo{font-size:1.15rem;display:block;margin-bottom:14px;color:var(--cream);text-decoration:none;}
-  .foot-brand p{font-size:.82rem;color:rgba(245,240,232,.3);line-height:1.8;max-width:240px;margin-top:10px;}
+  .foot-brand p{font-size:.82rem;color:rgba(245,240,232,.55);line-height:1.8;max-width:240px;margin-top:10px;}
   .foot-brand .foot-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.95rem;margin-top:1.2rem;display:block;}
-  .foot-col h4{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .foot-col h2{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
   .foot-col ul{list-style:none;}
   .foot-col li{margin-bottom:9px;}
-  .foot-col a{font-size:.82rem;color:rgba(245,240,232,.38);text-decoration:none;transition:color .2s;}
+  .foot-col a{font-size:.82rem;color:rgba(245,240,232,.55);text-decoration:none;transition:color .2s;}
   .foot-col a:hover{color:var(--gold);}
-  .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.38);line-height:2;}
-  .foot-col address a{color:rgba(245,240,232,.38);}
+  .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.55);line-height:2;}
+  .foot-col address a{color:rgba(245,240,232,.55);}
   .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
   @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
   @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
-footer p{font-size:0.75rem;color:rgba(255,255,255,0.42);line-height:2;}
-footer a{color:rgba(255,255,255,0.42);}
 
 @media(max-width:960px){
-  .how-steps,.includes-inner,.custom-inner{grid-template-columns:1fr;}
+  .how-steps{grid-template-columns:1fr;}
   .includes-cols{grid-template-columns:1fr 1fr;}
-  .how-head{flex-direction:column;}
-  .how-head p{max-width:100%;}
-  .collections-head p{text-align:left;}
 }
 @media(max-width:640px){
   .includes-cols{grid-template-columns:1fr;}
@@ -167,17 +152,58 @@ footer a{color:rgba(255,255,255,0.42);}
   #mob-menu a{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
   @media(max-width:860px){.nav-links{display:none;}.hamburger{display:flex;}}
   @media(max-width:1050px) and (min-width:861px){.nav-links{gap:1.2rem;}}
+
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.higherloveeventco.com/decor">
-<meta property="og:title" content="Portland Wedding Tablescape Collections | Higher Love Event Co.">
-<meta property="og:description" content="Eight pre-designed tablescape collections with published pricing. No design fee. Sourced, delivered, styled, and cleared. Based in St. Johns, Portland, OR.">
+<meta property="og:title" content="Portland Wedding Decor Collections | Higher Love Event Co.">
+<meta property="og:description" content="Eight pre-designed decor collections with published pricing. No design fee. Sourced, delivered, styled, and cleared. Based in St. Johns, Portland, OR.">
 <meta property="og:image" content="https://www.higherloveeventco.com/images/NewlywedsStJohnsBridgeWeddingStJohnsInnPortlandOregon.jpg">
 <meta property="og:site_name" content="Higher Love Event Co.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Portland Wedding Tablescape Collections | Higher Love Event Co.">
-<meta name="twitter:description" content="Eight pre-designed tablescape collections with published pricing. No design fee. Sourced, delivered, styled, and cleared. Based in St. Johns, Portland, OR.">
+<meta name="twitter:title" content="Portland Wedding Decor Collections | Higher Love Event Co.">
+<meta name="twitter:description" content="Eight pre-designed decor collections with published pricing. No design fee. Sourced, delivered, styled, and cleared. Based in St. Johns, Portland, OR.">
 <meta name="twitter:image" content="https://www.higherloveeventco.com/images/NewlywedsStJohnsBridgeWeddingStJohnsInnPortlandOregon.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Wedding Decor Collections",
+  "serviceType": "Wedding Decor",
+  "url": "https://www.higherloveeventco.com/decor",
+  "description": "Eight pre-designed wedding decor collections priced per table, with no design fee. Each price covers linens, place settings, florals, candles, and centerpiece, sourced, delivered, styled, and cleared.",
+  "areaServed": ["Portland, OR", "St. Johns, Portland", "Oregon", "Pacific Northwest"],
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Higher Love Event Co.",
+    "url": "https://www.higherloveeventco.com",
+    "telephone": "+15032178500",
+    "email": "hello@higherloveeventco.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Portland",
+      "addressRegion": "OR",
+      "addressCountry": "US",
+      "neighborhood": "St. Johns"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Decor Collections",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Midnight Romance"}, "price": "370", "priceCurrency": "USD", "description": "Per table. Black linen, deep purple, and gold."},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garden Party"}, "price": "350", "priceCurrency": "USD", "description": "Per table. White linen, soft green, and rattan."},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Warm Bohemian"}, "price": "350", "priceCurrency": "USD", "description": "Per table. Olive, copper, and amber."},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Refined Rustic"}, "price": "360", "priceCurrency": "USD", "description": "Per table. White linen, moss, and warm wood."},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Soft & Simple"}, "price": "300", "priceCurrency": "USD", "description": "Per table. Ivory and white, pared back."},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "First Blush"}, "price": "350", "priceCurrency": "USD", "description": "Per table. Ivory and blush with whitewashed wood."},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Modern Vineyard"}, "price": "395", "priceCurrency": "USD", "description": "Per table. Soft green velvet, dark rattan, and magenta tapers."},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fresh & Minimal"}, "price": "330", "priceCurrency": "USD", "description": "Per table. White, silver, and a touch of green."}
+    ]
+  }
+}
+</script>
 </head>
 <body>
 
@@ -185,7 +211,6 @@ footer a{color:rgba(255,255,255,0.42);}
   <div class="nav-inner">
     <a href="/" class="nav-logo">Higher <span>Love</span> Event Co.</a>
     <div class="nav-links">
-      <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/reviews">Reviews</a>
       <a href="/decor">Decor</a>
@@ -195,7 +220,7 @@ footer a{color:rgba(255,255,255,0.42);}
       <a href="/contact">Contact</a>
       <a href="/reserve" class="nav-book">Reserve</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mob-menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'));"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div id="mob-menu">
@@ -210,26 +235,26 @@ footer a{color:rgba(255,255,255,0.42);}
   <a href="/reserve">Reserve</a>
 </div>
 
+<main id="main-content">
+
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-inner">
       <div>
-        <div class="hero-eyebrow">
-          <span class="eyebrow" style="margin:0;">Wedding Decor</span>
-        </div>
-        <h1>Portland Wedding Tablescapes.<br><em>No design fee.</em></h1>
+        <span class="eyebrow">Wedding Decor</span>
+        <h1>Portland Wedding Decor.<br><em>No design fee.</em></h1>
         <div class="hero-body">
           <p>Decor is one of the most time-consuming and overwhelming parts of wedding planning. At Higher Love, I&rsquo;ve taken it off your plate: eight collections, pre-designed and priced per table, so you know exactly what you&rsquo;re getting and what it costs before you book.</p>
-          <div style="background:var(--linen);border-left:2px solid var(--gold);padding:1rem 1.4rem;margin-bottom:1.6rem;">
-            <p style="font-size:.82rem;color:var(--charcoal);line-height:1.7;margin:0;">Tablescape collections are exclusively available as part of a Higher Love planning package. Not yet booked? <a href="/reserve" style="color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);">Reserve your package &rarr;</a></p>
+          <div class="hero-callout">
+            <p>Decor collections are exclusively available as part of a Higher Love planning package. Not yet booked? <a href="/reserve">Reserve your package &rarr;</a></p>
           </div>
-          <a href="#included" class="btn">See what's included ↓</a>
+          <a href="#included" class="btn">See what&rsquo;s included &darr;</a>
         </div>
       </div>
       <div>
-        <img src="/images/hoodriverwedding-212_optimized_300.jpg" alt="Wedding tablescape styled by Higher Love Event Co., Portland, OR" class="hero-photo" loading="lazy">
-        <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photo: <a href="https://kaylasprint.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Kayla Sprint Photography</a></span>
+        <img src="/images/hoodriverwedding-212_optimized_300.jpg" alt="Wedding table styled by Higher Love Event Co., Portland, OR" class="hero-photo" width="560" height="720" fetchpriority="high" decoding="async">
+        <span class="photo-credit">Photo: <a href="https://kaylasprint.com/" target="_blank" rel="noopener">Kayla Sprint Photography</a></span>
       </div>
     </div>
   </div>
@@ -237,7 +262,7 @@ footer a{color:rgba(255,255,255,0.42);}
 
 <!-- DESIGN FEE BAND -->
 <div style="background:var(--linen);padding:3.5rem 2.5rem;text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <p style="max-width:640px;margin:0 auto;font-family:var(--serif);font-size:1.35rem;line-height:1.55;color:var(--charcoal);font-weight:400;">A standalone wedding designer in Portland typically runs <em style="color:var(--gold);font-style:italic;">$1,500 to $5,000 or more.</em> Because every collection here is already designed, there is no design fee. You pay for the decor itself, and nothing for the design on top.</p>
+  <p style="max-width:640px;margin:0 auto;font-family:var(--serif);font-size:1.35rem;line-height:1.55;color:var(--charcoal);font-weight:400;">A standalone wedding designer in Portland typically runs <em style="color:var(--gold-deep);font-style:italic;">$1,500 to $5,000 or more.</em> Because every collection here is already designed, there is no design fee. You pay for the decor itself, and nothing for the design on top.</p>
 </div>
 
 <!-- HOW IT WORKS -->
@@ -249,17 +274,17 @@ footer a{color:rgba(255,255,255,0.42);}
     <div class="how-steps">
       <div class="how-step">
         <span class="num">01</span>
-        <h4>Choose your collection</h4>
-        <p>Browse the eight pre-designed collections and select the one that matches your aesthetic. Each is a complete, curated look, ready to go from the moment you book.</p>
+        <h3>Choose your collection</h3>
+        <p>Browse the eight pre-designed collections and choose the one that fits your wedding. Select it at booking if you already know the look you want, or later in planning once your venue and vendor team are set and the aesthetic comes into focus.</p>
       </div>
       <div class="how-step">
         <span class="num">02</span>
-        <h4>Reserve with a deposit</h4>
-        <p>A $1,500 deposit reserves your planning package and locks in your collection. Final balances are based on your guest count, with clear due dates so nothing sneaks up on you.</p>
+        <h3>Priced by your guest count</h3>
+        <p>Collections are priced per table and invoiced separately by our rental partner, based on your confirmed guest count. Clear due dates, so nothing sneaks up on you.</p>
       </div>
       <div class="how-step">
         <span class="num">03</span>
-        <h4>I take it from there</h4>
+        <h3>I take it from there</h3>
         <p>Your tables are dressed before guests arrive and cleared after they leave. You never lift a box, coordinate a delivery, or think about a single place setting. You just arrive, and everything is ready.</p>
       </div>
     </div>
@@ -268,8 +293,8 @@ footer a{color:rgba(255,255,255,0.42);}
 
 <!-- EDITORIAL PHOTO -->
 <div style="overflow:hidden;line-height:0;">
-  <img src="/images/StJohnsInnHeadTableDesignDecorPortlandOregon.jpg" alt="Wedding reception head table at St. Johns Inn, Portland Oregon" style="width:100%;display:block;max-height:480px;object-fit:cover;object-position:center 40%;">
-  <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photo: <a href="https://lindsayblairphotography.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Lindsay Blair Photography</a></span>
+  <img src="/images/StJohnsInnHeadTableDesignDecorPortlandOregon.jpg" alt="Wedding reception head table at St. Johns Inn, Portland Oregon" width="1120" height="480" loading="lazy" decoding="async" style="width:100%;display:block;max-height:480px;object-fit:cover;object-position:center 40%;">
+  <span class="photo-credit">Photo: <a href="https://lindsayblairphotography.com/" target="_blank" rel="noopener">Lindsay Blair Photography</a></span>
 </div>
 
 <!-- WHAT'S INCLUDED -->
@@ -277,12 +302,12 @@ footer a{color:rgba(255,255,255,0.42);}
   <div class="wrap">
     <div class="includes-head">
       <span class="eyebrow">Every collection includes</span>
-      <h2>What's on every table.</h2>
+      <h2>What&rsquo;s on every table.</h2>
       <p>Every one of the eight collections is built around the same foundation. What changes is the aesthetic: the colors, textures, and finishing details that make each look its own.</p>
     </div>
     <div class="includes-cols">
       <div class="incl-col">
-        <h4>The table</h4>
+        <h3>The table</h3>
         <ul>
           <li>Full-length table linen</li>
           <li>Coordinating runner</li>
@@ -291,7 +316,7 @@ footer a{color:rgba(255,255,255,0.42);}
         </ul>
       </div>
       <div class="incl-col">
-        <h4>Each place setting</h4>
+        <h3>Each place setting</h3>
         <ul>
           <li>Charger plate</li>
           <li>Dinner plate</li>
@@ -300,7 +325,7 @@ footer a{color:rgba(255,255,255,0.42);}
         </ul>
       </div>
       <div class="incl-col">
-        <h4>The centerpiece</h4>
+        <h3>The centerpiece</h3>
         <ul>
           <li>6 bud vases with florals</li>
           <li>6 votive candles</li>
@@ -322,7 +347,7 @@ footer a{color:rgba(255,255,255,0.42);}
     </div>
     <div class="includes-cols">
       <div class="incl-col">
-        <h4>Save the dates and invites</h4>
+        <h3>Save the dates and invites</h3>
         <ul>
           <li>Digital save the date template</li>
           <li>Digital invitation template</li>
@@ -330,7 +355,7 @@ footer a{color:rgba(255,255,255,0.42);}
         </ul>
       </div>
       <div class="incl-col">
-        <h4>Wedding website</h4>
+        <h3>Wedding website</h3>
         <ul>
           <li>Ready-to-use website template</li>
           <li>Designed to match your collection</li>
@@ -338,7 +363,7 @@ footer a{color:rgba(255,255,255,0.42);}
         </ul>
       </div>
       <div class="incl-col">
-        <h4>Signage suite</h4>
+        <h3>Signage suite</h3>
         <ul>
           <li>Welcome sign</li>
           <li>Seating chart</li>
@@ -352,17 +377,17 @@ footer a{color:rgba(255,255,255,0.42);}
 
 <!-- PRODUCE ROW PHOTO -->
 <div style="overflow:hidden;line-height:0;">
-  <img src="/images/ProduceRowWeddingPortland.jpg.JPG" alt="Wedding reception at Produce Row Portland Oregon, Higher Love Event Co." style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 50%;" loading="lazy">
-  <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photo: <a href="https://www.rebeccarizzophotographics.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Rebecca Rizzo Photographics</a></span>
+  <img src="/images/ProduceRowWeddingPortland.jpg.JPG" alt="Wedding reception at Produce Row Portland Oregon, Higher Love Event Co." width="1120" height="520" loading="lazy" decoding="async" style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 50%;">
+  <span class="photo-credit">Photo: <a href="https://www.rebeccarizzophotographics.com/" target="_blank" rel="noopener">Rebecca Rizzo Photographics</a></span>
 </div>
 
 <!-- COLLECTIONS -->
 <section class="collections" id="collections">
   <div class="wrap">
     <div class="collections-head">
-      <h1 style="font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,5vw,3rem);line-height:1.04;text-align:center;margin-bottom:8px;">The Collections</h1>
-      <p style="text-align:center;color:var(--muted);font-size:0.82rem;margin:0 auto 1.4rem;max-width:580px;font-weight:300;line-height:1.7;">Eight complete looks, priced per table. Every price covers the full table: linens, place settings, florals, candles, and centerpiece, sourced, delivered, styled, and cleared. No design fee, and nothing to set up or source yourself.</p>
-      <p style="text-align:center;margin:0 auto 2.5rem;"><a href="https://canva.link/wf89umbvmpa8yaa" target="_blank" rel="noopener" style="font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:3px;">View the full lookbook &#8599;</a></p>
+      <h2>The Collections</h2>
+      <p class="lede">Eight complete looks, priced per table. Every price covers the full table: linens, place settings, florals, candles, and centerpiece, sourced, delivered, styled, and cleared. No design fee, and nothing to set up or source yourself.</p>
+      <p style="text-align:center;margin:0 auto 2.5rem;"><a href="https://canva.link/wf89umbvmpa8yaa" target="_blank" rel="noopener" class="lookbook-link">View the full lookbook &#8599;</a></p>
     </div>
     <div class="cards">
 
@@ -373,7 +398,7 @@ footer a{color:rgba(255,255,255,0.42);}
           <div class="card-tag">Black linen, deep purple, and gold. Candlelit and dramatic.</div>
           <div class="card-footer">
             <div class="card-price">Per table<b>$370</b></div>
-            <a class="card-look" href="https://canva.link/w0ocoveub7fbfn7" target="_blank" rel="noopener">View the full look ↗</a>
+            <a class="card-look" href="https://canva.link/w0ocoveub7fbfn7" target="_blank" rel="noopener">View the full look &#8599;</a>
           </div>
         </div>
       </div>
@@ -385,7 +410,7 @@ footer a{color:rgba(255,255,255,0.42);}
           <div class="card-tag">White linen, soft green, and rattan. Fresh and sunlit.</div>
           <div class="card-footer">
             <div class="card-price">Per table<b>$350</b></div>
-            <a class="card-look" href="https://canva.link/bfl6m7gst7yhkqr" target="_blank" rel="noopener">View the full look ↗</a>
+            <a class="card-look" href="https://canva.link/bfl6m7gst7yhkqr" target="_blank" rel="noopener">View the full look &#8599;</a>
           </div>
         </div>
       </div>
@@ -397,7 +422,7 @@ footer a{color:rgba(255,255,255,0.42);}
           <div class="card-tag">Olive, copper, and amber. Earthy and warm.</div>
           <div class="card-footer">
             <div class="card-price">Per table<b>$350</b></div>
-            <a class="card-look" href="https://canva.link/prhsbn2dxn4iv4j" target="_blank" rel="noopener">View the full look ↗</a>
+            <a class="card-look" href="https://canva.link/prhsbn2dxn4iv4j" target="_blank" rel="noopener">View the full look &#8599;</a>
           </div>
         </div>
       </div>
@@ -409,7 +434,7 @@ footer a{color:rgba(255,255,255,0.42);}
           <div class="card-tag">White linen, moss, and warm wood. Organic and grounded.</div>
           <div class="card-footer">
             <div class="card-price">Per table<b>$360</b></div>
-            <a class="card-look" href="https://canva.link/p418a4qvjkrxi5j" target="_blank" rel="noopener">View the full look ↗</a>
+            <a class="card-look" href="https://canva.link/p418a4qvjkrxi5j" target="_blank" rel="noopener">View the full look &#8599;</a>
           </div>
         </div>
       </div>
@@ -421,7 +446,7 @@ footer a{color:rgba(255,255,255,0.42);}
           <div class="card-tag">Ivory and white, pared back. Understated and serene.</div>
           <div class="card-footer">
             <div class="card-price">Per table<b>$300</b></div>
-            <a class="card-look" href="https://canva.link/uz7decdgr9irde3" target="_blank" rel="noopener">View the full look ↗</a>
+            <a class="card-look" href="https://canva.link/uz7decdgr9irde3" target="_blank" rel="noopener">View the full look &#8599;</a>
           </div>
         </div>
       </div>
@@ -433,7 +458,7 @@ footer a{color:rgba(255,255,255,0.42);}
           <div class="card-tag">Ivory and blush with whitewashed wood. Soft and romantic.</div>
           <div class="card-footer">
             <div class="card-price">Per table<b>$350</b></div>
-            <a class="card-look" href="https://canva.link/wb7jib75omfuo01" target="_blank" rel="noopener">View the full look ↗</a>
+            <a class="card-look" href="https://canva.link/wb7jib75omfuo01" target="_blank" rel="noopener">View the full look &#8599;</a>
           </div>
         </div>
       </div>
@@ -445,7 +470,7 @@ footer a{color:rgba(255,255,255,0.42);}
           <div class="card-tag">Soft green velvet, dark rattan, and magenta tapers. Lush and vivid.</div>
           <div class="card-footer">
             <div class="card-price">Per table<b>$395</b></div>
-            <a class="card-look" href="https://canva.link/63o9v3eytfsurpf" target="_blank" rel="noopener">View the full look ↗</a>
+            <a class="card-look" href="https://canva.link/63o9v3eytfsurpf" target="_blank" rel="noopener">View the full look &#8599;</a>
           </div>
         </div>
       </div>
@@ -457,23 +482,23 @@ footer a{color:rgba(255,255,255,0.42);}
           <div class="card-tag">White, silver, and a touch of green. Crisp and clean.</div>
           <div class="card-footer">
             <div class="card-price">Per table<b>$330</b></div>
-            <a class="card-look" href="https://canva.link/8ek7ct6n8bbciu8" target="_blank" rel="noopener">View the full look ↗</a>
+            <a class="card-look" href="https://canva.link/8ek7ct6n8bbciu8" target="_blank" rel="noopener">View the full look &#8599;</a>
           </div>
         </div>
       </div>
 
-      <div class="card" style="border:1.5px dashed var(--border);">
+      <div class="card card-custom">
         <div class="swatches"><span style="background:#EDE9E1"></span></div>
         <div class="card-body">
-          <div class="card-name">Custom Tablescape</div>
+          <div class="card-name">Custom Decor Design</div>
           <div class="card-tag">A custom design built around your vision, aesthetic, and budget.</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:1.2rem;">
-            <li style="position:relative;padding-left:14px;font-size:0.8rem;color:var(--charcoal);line-height:1.4;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--gold);display:block;"></span>Fully custom concept designed for your wedding</li>
-            <li style="position:relative;padding-left:14px;font-size:0.8rem;color:var(--charcoal);line-height:1.4;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--gold);display:block;"></span>Sourced to match your aesthetic and budget</li>
-            <li style="position:relative;padding-left:14px;font-size:0.8rem;color:var(--charcoal);line-height:1.4;"><span style="position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--gold);display:block;"></span>Includes design consultation and styling</li>
+          <ul>
+            <li>Fully custom concept designed for your wedding</li>
+            <li>Sourced to match your aesthetic and budget</li>
+            <li>Includes design consultation and styling</li>
           </ul>
           <div class="card-footer">
-            <div class="card-price" style="font-style:italic;color:var(--gold);">Pricing by quote</div>
+            <div class="card-price" style="font-style:italic;color:var(--gold-deep);">Pricing by quote</div>
             <a class="card-look" href="/contact">Inquire &rarr;</a>
           </div>
         </div>
@@ -489,12 +514,14 @@ footer a{color:rgba(255,255,255,0.42);}
 
 <!-- CTA -->
 <div class="cta-band">
-  <h2>Let's set your table.</h2>
+  <h2>Let&rsquo;s set your table.</h2>
   <div class="cta-buttons">
     <a href="/reserve" class="btn btn-gold">Reserve Your Package</a>
     <a href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773" class="btn btn-light">Schedule a discovery call</a>
   </div>
 </div>
+
+</main><!-- end #main-content -->
 
 <footer>
   <div class="wrap">
@@ -505,19 +532,20 @@ footer a{color:rgba(255,255,255,0.42);}
         <span class="foot-sig">Hire love. Higher love.</span>
       </div>
       <div class="foot-col">
-        <h4>Navigate</h4>
+        <h2>Navigate</h2>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/reserve">Reserve</a></li>
-          <li><a href="/decor">Decor</a></li>
-          <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/" aria-label="Home — Higher Love Event Co.">Home</a></li>
+          <li><a href="/about" aria-label="About Kylie and Higher Love">About</a></li>
+          <li><a href="/reserve" aria-label="Reserve a wedding planning package">Reserve</a></li>
+          <li><a href="/decor" aria-label="View decor collections">Decor</a></li>
+          <li><a href="/reviews" aria-label="Read client reviews">Reviews</a></li>
+          <li><a href="/faq" aria-label="Frequently asked questions">FAQ</a></li>
+          <li><a href="/blog" aria-label="Read the Higher Love blog">Blog</a></li>
+          <li><a href="/contact" aria-label="Contact Kylie at Higher Love">Contact</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <address>
           <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a><br>
           <a href="tel:5032178500">503-217-8500</a><br>
@@ -540,6 +568,7 @@ footer a{color:rgba(255,255,255,0.42);}
     var h = document.getElementById("hamburger");
     if(m && m.classList.contains("open") && !m.contains(e.target) && !h.contains(e.target)){
       m.classList.remove("open"); h.classList.remove("open");
+      h.setAttribute("aria-expanded","false");
     }
   });
 </script>
