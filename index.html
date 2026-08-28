@@ -161,16 +161,23 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   @media(max-width:400px){.incl-grid{grid-template-columns:1fr;}}
   /* ===== TIMELINE ===== */
 .timeline{background:var(--linen);padding:72px 0;}
+.timeline-prep{margin-top:8px;margin-bottom:3.5rem;}
+.timeline-prep-label{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.2rem;}
+.prep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
+.prep-cell{background:var(--cream);padding:1.6rem 1.8rem;}
+.prep-cell h3{font-family:var(--serif);font-size:1.15rem;line-height:1.2;margin-bottom:.6rem;}
+.prep-cell p{font-size:.8rem;color:var(--charcoal);line-height:1.8;}
+.prep-cell a{color:var(--gold-deep);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);}
+  @media(max-width:760px){.prep-grid{grid-template-columns:1fr;}}
 .timeline-track{position:relative;margin-top:40px;}
-.timeline-line{position:absolute;top:28px;left:0;right:0;height:1px;background:var(--border);}
-.timeline-steps{display:grid;grid-template-columns:repeat(7,1fr);gap:0;position:relative;}
-.tstep{padding:0 1.2rem 0 0;position:relative;}
-.tstep-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);margin-bottom:1.4rem;position:relative;z-index:1;flex-shrink:0;}
+.timeline-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3.2rem 2.6rem;position:relative;}
+.tstep{position:relative;padding-top:1.7rem;border-top:1px solid var(--border);}
+.tstep-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);position:absolute;top:-5px;left:0;}
 .tstep-when{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.5rem;}
-.tstep h3{font-family:var(--serif);font-size:1.05rem;color:var(--black);margin-bottom:.5rem;line-height:1.2;}
-.tstep p{font-size:.75rem;color:var(--muted);line-height:1.7;}
-  @media(max-width:860px){.timeline-steps{grid-template-columns:repeat(3,1fr);gap:2.5rem 0;}.timeline-line{display:none;}}
-  @media(max-width:500px){.timeline-steps{grid-template-columns:1fr 1fr;gap:2rem 0;}}
+.tstep h3{font-family:var(--serif);font-size:1.15rem;color:var(--black);margin-bottom:.55rem;line-height:1.2;}
+.tstep p{font-size:.78rem;color:var(--muted);line-height:1.8;}
+  @media(max-width:860px){.timeline-steps{grid-template-columns:1fr 1fr;gap:2.6rem 2rem;}}
+  @media(max-width:520px){.timeline-steps{grid-template-columns:1fr;gap:2.2rem;}}
   /* ===== DECOR TABLE ===== */
 .decor-section{background:var(--black);padding:72px 0;}
 .decor-section .sec-head .eyebrow::before{background:var(--gold);}
@@ -376,7 +383,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
     <p class="lead rise">For couples who want a beautiful wedding without spending a year buried in spreadsheets and vendor emails. Higher Love was built for you. You make a few simple choices, and I take it from there.</p>
     <div class="cta-row rise">
       <a class="btn btn-gold" href="/reserve" aria-label="Reserve your wedding package">Reserve Your Package</a>
-      <a class="btn btn-ghost" href="/contact" aria-label="Schedule a discovery call to learn more">Schedule a discovery call</a>
+      <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773" aria-label="Schedule a discovery call to learn more">Schedule a discovery call</a>
     </div>
   </div>
 </header>
@@ -421,9 +428,9 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
       <p>No research. No rabbit holes. No decision fatigue. Just a clear sequence of simple choices, and someone ready to guide you through each one.</p>
     </div>
     <div class="steps">
-      <div class="step rise"><div class="num">01</div><h3>Pick your package</h3><p>Choose your celebration type, guest count, and tablescape collection. A $1,500 deposit reserves your planning package at booking.</p></div>
-      <div class="step rise"><div class="num">02</div><h3>Pick your venue</h3><p>Once your package is confirmed, I&rsquo;ll present up to three venue options available for your desired wedding date, each ranked with honest pros and cons.</p></div>
-      <div class="step rise"><div class="num">03</div><h3>Build your team</h3><p>A curated and ranked shortlist of up to three vendors per category, catering, photography, florals, music, and more, matched to your vision and budget.</p></div>
+      <div class="step rise"><div class="num">01</div><h3>Pick your package</h3><p>Choose your celebration type and guest count. A $1,500 deposit reserves your planning package at booking. Add a tablescape collection now if you already know the look you want, or choose one later.</p></div>
+      <div class="step rise"><div class="num">02</div><h3>Pick your venue</h3><p>Once your package is confirmed, I&rsquo;ll present up to five fully vetted venue options for your date range, each ranked with honest pros and cons. We tour your top three together.</p></div>
+      <div class="step rise"><div class="num">03</div><h3>Build your team</h3><p>A curated and ranked shortlist of up to three vendors per category, catering, photography, music, and more, matched to your vision and budget.</p></div>
     </div>
   </div>
 </section>
@@ -465,32 +472,62 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
       <h2>From booking to wedding day.</h2>
       <p>Fixed touchpoints, defined deliverables, and a clear line of communication throughout. Here is what the planning journey looks like when you work with Higher Love.</p>
     </div>
+
+    <div class="timeline-prep rise">
+      <span class="timeline-prep-label">What I need from you to begin</span>
+      <div class="prep-grid">
+        <div class="prep-cell">
+          <h3>A loose budget</h3>
+          <p>Not a final number, just a range you are comfortable with. The <a href="/faq">FAQ page</a> has notes on what a realistic wedding budget looks like in the Pacific Northwest right now.</p>
+        </div>
+        <div class="prep-cell">
+          <h3>An estimated guest count</h3>
+          <p>Draft a rough list. It tells us how much venue you actually need, which shapes nearly every decision after it.</p>
+        </div>
+        <div class="prep-cell">
+          <h3>A date range</h3>
+          <p>A season or a specific window is enough to start. Knowing which dates will not work is just as useful as knowing which ones will.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="timeline-track">
-      <div class="timeline-line"></div>
       <div class="timeline-steps">
         <div class="tstep rise">
           <div class="tstep-dot"></div>
           <span class="tstep-when">At booking</span>
           <h3>Reserve your package</h3>
-          <p>Deposit paid, tablescape collection selected. Planning begins.</p>
+          <p>Deposit paid, agreement signed. Planning begins.</p>
         </div>
         <div class="tstep rise">
           <div class="tstep-dot"></div>
-          <span class="tstep-when">Weeks 1&ndash;2</span>
+          <span class="tstep-when">Phase 1</span>
           <h3>Venue options</h3>
-          <p>Up to three venues researched, ranked, and presented with honest pros and cons for your desired wedding date timeframe.</p>
+          <p>Up to five fully vetted venues researched, ranked, and presented with honest pros and cons, built around the logistical needs, aesthetic vision, guest count, and date range we talk through before I start. We tour your top three together.</p>
         </div>
         <div class="tstep rise">
           <div class="tstep-dot"></div>
-          <span class="tstep-when">Weeks 2&ndash;3</span>
-          <h3>Save the dates &amp; wedding website</h3>
-          <p>Your date is set, this is really happening! Time to put your provided e-vite and wedding website templates to work and notify your guests of your upcoming nuptials.</p>
-        </div>
-        <div class="tstep rise">
-          <div class="tstep-dot"></div>
-          <span class="tstep-when">Weeks 3&ndash;6</span>
+          <span class="tstep-when">Phase 2</span>
           <h3>Vendor team</h3>
-          <p>Ranked vendor shortlists delivered per category. You choose. I streamline the contracts, negotiations, and deposits, and track every due date so you are never caught off guard.</p>
+          <p>Ranked shortlists for your non-design vendors: photographer, caterer, bartenders, DJ, hotel room blocks, transportation, officiant, dessert, and hair and makeup. We interview up to three per category. You choose. I streamline the contracts, negotiations, and deposits, and track every due date so you are never caught off guard.</p>
+        </div>
+        <div class="tstep rise">
+          <div class="tstep-dot"></div>
+          <span class="tstep-when">Phase 3</span>
+          <h3>Your decor direction</h3>
+          <p>Choose one of the eight tablescape collections, or request a custom design if your aesthetic falls outside them. If you selected a collection at booking, this one is already behind you.</p>
+        </div>
+        <div class="tstep rise">
+          <div class="tstep-dot"></div>
+          <span class="tstep-when">Phase 4</span>
+          <h3>Save the dates &amp; wedding website</h3>
+          <p>Your date is set, this is really happening! Time to put your provided e-vite and wedding website templates to work and notify your guests of your upcoming nuptials. You gather guest email addresses, and the digital invite collects RSVPs and meal selections and lets you send updates or reminders to everyone at once.</p>
+        </div>
+        <div class="tstep rise">
+          <div class="tstep-dot"></div>
+          <span class="tstep-when">Phase 5</span>
+          <h3>Design vendors</h3>
+          <p>Florist, specialty rentals, signage, and anything else that shapes the look of the day, booked once your decor direction is locked in.</p>
         </div>
         <div class="tstep rise">
           <div class="tstep-dot"></div>
@@ -502,7 +539,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
           <div class="tstep-dot"></div>
           <span class="tstep-when">Wedding week</span>
           <h3>Final details</h3>
-          <p>Confirmations sent, timeline distributed to every vendor, rehearsal directed.</p>
+          <p>Confirmations sent, timeline distributed to every vendor. Rehearsal directed for Ceremony + Reception packages.</p>
         </div>
         <div class="tstep rise">
           <div class="tstep-dot"></div>
@@ -511,7 +548,8 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
           <p>Two coordinators onsite, up to 8 hours for Reception Only, up to 12 hours for Ceremony + Reception. You enjoy it. We run it.</p>
         </div>
       </div>
-    </div> </div>
+    </div>
+  </div>
 </section>
 <!-- PACKAGES -->
 <section id="packages" class="pkg-section">
@@ -705,7 +743,6 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   /* =====================================================================
 SINGLE SOURCE OF TRUTH — edit only PRICING + COLLECTIONS below.
 ===================================================================== */
-  const CALL = "https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773";
   const PRICING = {
     tiers: ["Petite","Signature","Grand"],
     guestBands: ["Up to 50 guests","51 to 90 guests","91 to 120 guests"],
@@ -717,18 +754,6 @@ SINGLE SOURCE OF TRUTH — edit only PRICING + COLLECTIONS below.
           "/book",
           "/book",
           "/book"
-        ],
-        items: [
-          "Up to 3 venues: researched, ranked, and presented with honest pros and cons",
-          "Additional venue research available at an added fee",
-          "Vendor vetting &amp; shortlisting for every vendor category",
-          "Full booking liaison: contracts, negotiations &amp; deposits",
-          "Payment due date tracking, so you never miss a deadline",
-          "Ongoing vendor communication from booking to wedding day",
-          "Logistics planning &amp; production management",
-          "Full timeline creation &amp; distribution to all vendors",
-          "Rehearsal direction (1 hour)",
-          "Day-of command &amp; problem-solving"
         ]
       },
       recep: {
@@ -737,17 +762,6 @@ SINGLE SOURCE OF TRUTH — edit only PRICING + COLLECTIONS below.
           "/book",
           "/book",
           "/book"
-        ],
-        items: [
-          "Up to 3 venues: researched, ranked, and presented with honest pros and cons",
-          "Additional venue research available at an added fee",
-          "Vendor vetting &amp; shortlisting for every vendor category",
-          "Full booking liaison: contracts, negotiations &amp; deposits",
-          "Payment due date tracking, so you never miss a deadline",
-          "Ongoing vendor communication from booking to wedding day",
-          "Logistics planning &amp; production management",
-          "Full timeline creation &amp; distribution to all vendors",
-          "Day-of command &amp; problem-solving"
         ]
       }
     }
