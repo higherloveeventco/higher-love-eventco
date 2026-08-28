@@ -8,19 +8,21 @@
 <title>Reviews | Portland Wedding Planner | Higher Love Event Co.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
 <style>
 :root{
   --gold:#B8892A;--gold-light:#D4A845;--gold-deep:#9A7020;
   --cream:#F5F0E8;--linen:#EDE9E1;--black:#1A1A18;--charcoal:#2C2C29;
-  --muted:#79776F;--white:#FFFFFF;--border:rgba(26,26,24,0.1);
+  --muted:#504E48;--white:#FFFFFF;--border:rgba(26,26,24,0.1);
   --serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--black);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
 .wrap{max-width:1120px;margin:0 auto;padding:0 2.5rem}
 .eyebrow{display:block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem}
   .eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:.75rem;}
@@ -47,7 +49,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 .sec-head{max-width:680px;margin-bottom:48px;}
 .sec-head::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:0.7rem;}
 .sec-head:has(.eyebrow)::before{display:none;}
-.sec-head h2{font-size:clamp(2rem,4.2vw,3rem);line-height:1.1;margin:14px 0 0;}
+.sec-head h1{font-size:clamp(2rem,4.2vw,3rem);line-height:1.1;margin:14px 0 0;}
 .sec-head p{margin-top:18px;color:var(--charcoal);font-size:1rem;}
 
 /* QUOTES */
@@ -61,7 +63,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 
 /* GOOGLE CTA */
 .google-cta{background:var(--linen);padding:4rem 0;text-align:center;}
-.google-cta h3{font-family:var(--serif);font-size:1.8rem;margin-bottom:0.8rem;}
+.google-cta h2{font-family:var(--serif);font-size:1.8rem;margin-bottom:0.8rem;}
 .google-cta p{font-size:0.88rem;color:var(--muted);margin-bottom:2rem;}
 
 /* CTA BAND */
@@ -71,27 +73,32 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 .btn-light{border-color:rgba(255,255,255,0.4);color:var(--white);}
 .btn-light:hover{background:var(--white);color:var(--black);border-color:var(--white);}
 
+/* PHOTO BAND */
+.photo-band{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;}
+.photo-band div{overflow:hidden;height:420px;}
+.photo-band img{width:100%;height:100%;object-fit:cover;display:block;}
+.photo-credit{font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;}
+.photo-credit a{color:var(--charcoal);border-bottom:1px solid var(--charcoal);}
+@media(max-width:720px){.photo-band{grid-template-columns:1fr;}.photo-band div{height:280px;}}
+
 /* ===== STANDARDIZED FOOTER ===== */
   footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
   .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:3.5rem;padding-bottom:3rem;border-bottom:0.5px solid rgba(245,240,232,.06);margin-bottom:2rem;text-align:left;}
   .foot-brand .nav-logo{font-size:1.15rem;display:block;margin-bottom:14px;color:var(--cream);text-decoration:none;}
-  .foot-brand p{font-size:.82rem;color:rgba(245,240,232,.3);line-height:1.8;max-width:240px;margin-top:10px;}
+  .foot-brand p{font-size:.82rem;color:rgba(245,240,232,.55);line-height:1.8;max-width:240px;margin-top:10px;}
   .foot-brand .foot-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.95rem;margin-top:1.2rem;display:block;}
-  .foot-col h4{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .foot-col h2{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
   .foot-col ul{list-style:none;}
   .foot-col li{margin-bottom:9px;}
-  .foot-col a{font-size:.82rem;color:rgba(245,240,232,.38);text-decoration:none;transition:color .2s;}
+  .foot-col a{font-size:.82rem;color:rgba(245,240,232,.55);text-decoration:none;transition:color .2s;}
   .foot-col a:hover{color:var(--gold);}
-  .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.38);line-height:2;}
-  .foot-col address a{color:rgba(245,240,232,.38);}
+  .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.55);line-height:2;}
+  .foot-col address a{color:rgba(245,240,232,.55);}
   .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
   @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
   @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
-footer p{font-size:0.75rem;color:rgba(255,255,255,0.42);line-height:2;}
-footer a{color:rgba(255,255,255,0.42);}
 
 @media(max-width:720px){
-  .reviews-split{grid-template-columns:1fr;}
   .quotes-grid{grid-template-columns:1fr;}
 }
   .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;}
@@ -104,6 +111,8 @@ footer a{color:rgba(255,255,255,0.42);}
   #mob-menu a{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
   @media(max-width:860px){.nav-links{display:none;}.hamburger{display:flex;}}
   @media(max-width:1050px) and (min-width:861px){.nav-links{gap:1.2rem;}}
+
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.higherloveeventco.com/reviews">
@@ -115,6 +124,52 @@ footer a{color:rgba(255,255,255,0.42);}
 <meta name="twitter:title" content="Reviews | Higher Love Event Co. | Portland Wedding Planner">
 <meta name="twitter:description" content="Real reviews from couples who worked with Higher Love Event Co., a wedding planning studio in St. Johns, Portland, OR.">
 <meta name="twitter:image" content="https://www.higherloveeventco.com/images/NewlywedsStJohnsBridgeWeddingStJohnsInnPortlandOregon.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Higher Love Event Co.",
+  "url": "https://www.higherloveeventco.com",
+  "telephone": "+15032178500",
+  "email": "hello@higherloveeventco.com",
+  "image": "https://www.higherloveeventco.com/images/KylieHigherLoveEventCoWeddingPlanner.jpeg",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Portland",
+    "addressRegion": "OR",
+    "addressCountry": "US",
+    "neighborhood": "St. Johns"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Sage T."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Amanda R."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Andy A."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Organization", "name": "Crag Rat Hut"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Organization", "name": "Brooklyn Carreta"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -122,7 +177,6 @@ footer a{color:rgba(255,255,255,0.42);}
   <div class="nav-inner">
     <a href="/" class="nav-logo">Higher <span>Love</span> Event Co.</a>
     <div class="nav-links">
-      <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/reviews">Reviews</a>
       <a href="/decor">Decor</a>
@@ -132,7 +186,7 @@ footer a{color:rgba(255,255,255,0.42);}
       <a href="/contact">Contact</a>
       <a href="/reserve" class="nav-book">Reserve</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mob-menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'));"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div id="mob-menu">
@@ -147,27 +201,29 @@ footer a{color:rgba(255,255,255,0.42);}
   <a href="/reserve">Reserve</a>
 </div>
 
+<main id="main-content">
+
 <section class="reviews-hero">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Reviews</span>
-      <h2>From the couples and venues who have worked with me.</h2>
+      <h1>From the couples and venues who have worked with me.</h1>
     </div>
   </div>
 </section>
 
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;">
-  <div style="overflow:hidden;height:420px;">
-    <img src="images/Victorian-Belle-Portland-Oregon-Historic-Wedding-Venue-Rebecca-Rizzo.jpg" alt="Victorian Belle wedding venue, Portland Oregon" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+<div class="photo-band">
+  <div>
+    <img src="images/Victorian-Belle-Portland-Oregon-Historic-Wedding-Venue-Rebecca-Rizzo.jpg" alt="Victorian Belle wedding venue, Portland Oregon" fetchpriority="high" decoding="async" style="object-position:center;">
   </div>
-  <div style="overflow:hidden;height:420px;">
-    <img src="images/wedding-couple-victorian-belle-portland-oregon-rebecca-rizzo.jpg" alt="Wedding couple at Victorian Belle, Portland Oregon" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+  <div>
+    <img src="images/wedding-couple-victorian-belle-portland-oregon-rebecca-rizzo.jpg" alt="Wedding couple at Victorian Belle, Portland Oregon" loading="lazy" decoding="async" style="object-position:center top;">
   </div>
-  <div style="overflow:hidden;height:420px;">
-    <img src="images/Produce-Row-Portland-Oregon-Wedding-Microwedding-Urban-Venue-Rebecca-Rizzo.jpg" alt="Produce Row wedding venue, Portland Oregon" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+  <div>
+    <img src="images/Produce-Row-Portland-Oregon-Wedding-Microwedding-Urban-Venue-Rebecca-Rizzo.jpg" alt="Produce Row wedding venue, Portland Oregon" loading="lazy" decoding="async" style="object-position:center;">
   </div>
 </div>
-<span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photos: <a href="https://www.rebeccarizzophotographics.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Rebecca Rizzo Photographics</a></span>
+<span class="photo-credit">Photos: <a href="https://www.rebeccarizzophotographics.com/" target="_blank" rel="noopener">Rebecca Rizzo Photographics</a></span>
 
 <section style="padding:0 0 6rem;">
   <div class="wrap">
@@ -175,55 +231,55 @@ footer a{color:rgba(255,255,255,0.42);}
 
       <div class="quote">
         <div class="stars">★★★★★</div>
-        <p class="quote-text">"Neither of us were contacted by anyone once for clarification during the wedding. Kylie was running logistics and making sure everything was taken care of without us having to lift a thumb. We walked away thinking the gale force winds were a special treat — which never would have been the case had she not jumped into action in advance to think through how to make everything run smoothly regardless of the weather. She acts with professionalism, is great at her job, and is so much fun to work with. A triple threat."</p>
+        <p class="quote-text">&ldquo;Neither of us were contacted by anyone once for clarification during the wedding. Kylie was running logistics and making sure everything was taken care of without us having to lift a thumb. We walked away thinking the gale force winds were a special treat &mdash; which never would have been the case had she not jumped into action in advance to think through how to make everything run smoothly regardless of the weather. She acts with professionalism, is great at her job, and is so much fun to work with. A triple threat.&rdquo;</p>
         <div class="who">Sage T. <span>Wedding client &middot; Google Review</span></div>
       </div>
 
       <div class="quote linen">
         <div class="stars">★★★★★</div>
-        <p class="quote-text">"We had less than 3 months to pull together a formal wedding. Kylie was able to make that happen. She put together schedules, planned layouts, and updated us regularly on progress. She had the energy and organization to maintain a timeline for our planning and ceremony. She was the first one on site, and we didn't have to worry about anything after we left. If you are even considering a planner, give her a call."</p>
+        <p class="quote-text">&ldquo;We had less than 3 months to pull together a formal wedding. Kylie was able to make that happen. She put together schedules, planned layouts, and updated us regularly on progress. She had the energy and organization to maintain a timeline for our planning and ceremony. She was the first one on site, and we didn&rsquo;t have to worry about anything after we left. If you are even considering a planner, give her a call.&rdquo;</p>
         <div class="who">Amanda R. <span>Wedding client &middot; Google Review</span></div>
       </div>
 
       <div class="quote linen">
         <div class="stars">★★★★★</div>
-        <p class="quote-text">"She's warm, professional, with an excellent eye for detail. She stepped in to coordinate a wedding I'd planned but couldn't work due to Covid — even on short notice and at a difficult venue, she really crushed it. The clients were so relieved and happy and I couldn't be more grateful. I'd love to work with her again and highly recommend her to any nearlyweds planning their weddings."</p>
+        <p class="quote-text">&ldquo;She&rsquo;s warm, professional, with an excellent eye for detail. She stepped in to coordinate a wedding I&rsquo;d planned but couldn&rsquo;t work due to Covid &mdash; even on short notice and at a difficult venue, she really crushed it. The clients were so relieved and happy and I couldn&rsquo;t be more grateful. I&rsquo;d love to work with her again and highly recommend her to any nearlyweds planning their weddings.&rdquo;</p>
         <div class="who">Andy A. <span>Fellow wedding planner &middot; Google Review</span></div>
       </div>
 
       <div class="quote">
         <div class="stars">★★★★★</div>
-        <p class="quote-text">"Kylie is always a pleasure to work with. She's organized, professional, and makes every event run smoothly. Our team loves when she's at the venue — everything goes off without a hitch. Highly recommend!"</p>
+        <p class="quote-text">&ldquo;Kylie is always a pleasure to work with. She&rsquo;s organized, professional, and makes every event run smoothly. Our team loves when she&rsquo;s at the venue &mdash; everything goes off without a hitch. Highly recommend!&rdquo;</p>
         <div class="who">Crag Rat Hut <span>Venue partner &middot; Google Review</span></div>
       </div>
 
       <div class="quote linen">
         <div class="stars">★★★★★</div>
-        <p class="quote-text">"Working with Kylie was a very positive experience. She is organized, personable, and creative. She helped make the 100+ person wedding reception at our venue an absolutely perfect event for both her guests and our team. Her and her team were on-time, organized, hospitable, and simply a joy to work with. We would jump at the opportunity to work with Kylie again, and we highly recommend Higher Love for anybody in need of event/wedding coordination!"</p>
+        <p class="quote-text">&ldquo;Working with Kylie was a very positive experience. She is organized, personable, and creative. She helped make the 100+ person wedding reception at our venue an absolutely perfect event for both her guests and our team. Her and her team were on-time, organized, hospitable, and simply a joy to work with. We would jump at the opportunity to work with Kylie again, and we highly recommend Higher Love for anybody in need of event/wedding coordination!&rdquo;</p>
         <div class="who">Brooklyn Carreta <span>Venue partner &middot; Google Review</span></div>
       </div>
 
       <div class="quote">
         <div class="stars">★★★★★</div>
-        <p class="quote-text">"I recently worked alongside Kylie as a vendor in a wedding she coordinated. She was organized, detailed, and she went above and beyond when it came to ensuring I had everything I needed as a vendor. She made me feel like we were all a part of a team, rather than just pieces of a couple's puzzle. If you want your coordinator to get the job done with a smile on their face, while making everyone's jobs easier in the process, Kylie and Higher Love Event Co. is the way to go."</p>
+        <p class="quote-text">&ldquo;I recently worked alongside Kylie as a vendor in a wedding she coordinated. She was organized, detailed, and she went above and beyond when it came to ensuring I had everything I needed as a vendor. She made me feel like we were all a part of a team, rather than just pieces of a couple&rsquo;s puzzle. If you want your coordinator to get the job done with a smile on their face, while making everyone&rsquo;s jobs easier in the process, Kylie and Higher Love Event Co. is the way to go.&rdquo;</p>
         <div class="who">Avery D. <span>Vendor &middot; Google Review</span></div>
       </div>
 
       <div class="quote linen">
         <div class="stars">★★★★★</div>
-        <p class="quote-text">"Kylie was an absolute pleasure to work with. As a photographer, I especially appreciated how responsive and organized she was throughout the process. The couple we worked with had a unique timeline, and Kylie seamlessly coordinated multiple events and locations, ensuring everything ran smoothly. Her professionalism and attention to detail made the entire experience enjoyable, and I would gladly work with her again."</p>
+        <p class="quote-text">&ldquo;Kylie was an absolute pleasure to work with. As a photographer, I especially appreciated how responsive and organized she was throughout the process. The couple we worked with had a unique timeline, and Kylie seamlessly coordinated multiple events and locations, ensuring everything ran smoothly. Her professionalism and attention to detail made the entire experience enjoyable, and I would gladly work with her again.&rdquo;</p>
         <div class="who">Bailey O. <span>Photographer &middot; Google Review</span></div>
       </div>
 
       <div class="quote">
         <div class="stars">★★★★★</div>
-        <p class="quote-text">"Kylie has an incredible eye for detail. She's organized, thoughtful, and truly goes above and beyond to make things feel seamless and special. If you're looking for someone who will bring your vision to life and make the process feel easy, I can't recommend her enough."</p>
+        <p class="quote-text">&ldquo;Kylie has an incredible eye for detail. She&rsquo;s organized, thoughtful, and truly goes above and beyond to make things feel seamless and special. If you&rsquo;re looking for someone who will bring your vision to life and make the process feel easy, I can&rsquo;t recommend her enough.&rdquo;</p>
         <div class="who">Mel J. <span>Google Review</span></div>
       </div>
 
       <div class="quote linen">
         <div class="stars">★★★★★</div>
-        <p class="quote-text">"I've had the pleasure of photographing numerous events coordinated and styled by Kylie at Higher Love — every single one has been a seamless, well-organized experience."</p>
+        <p class="quote-text">&ldquo;I&rsquo;ve had the pleasure of photographing numerous events coordinated and styled by Kylie at Higher Love &mdash; every single one has been a seamless, well-organized experience.&rdquo;</p>
         <div class="who">Rebecca R. <span>Photographer &middot; Google Review</span></div>
       </div>
 
@@ -233,9 +289,9 @@ footer a{color:rgba(255,255,255,0.42);}
 
 <div class="google-cta">
   <div class="wrap">
-    <h3>Worked with Higher Love?</h3>
-    <p>All reviews on this page come from Google. If we've worked together, leaving a Google review helps other couples find the right fit, and means a lot to a small, independent business.</p>
-    <a class="btn" href="https://g.page/r/CZ8Ly2b00DAWEBM/review" target="_blank">Leave a Google review &rarr;</a>
+    <h2>Worked with Higher Love?</h2>
+    <p>All reviews on this page come from Google. If we&rsquo;ve worked together, leaving a Google review helps other couples find the right fit, and means a lot to a small, independent business.</p>
+    <a class="btn" href="https://g.page/r/CZ8Ly2b00DAWEBM/review" target="_blank" rel="noopener">Leave a Google review &rarr;</a>
   </div>
 </div>
 
@@ -247,6 +303,8 @@ footer a{color:rgba(255,255,255,0.42);}
   </div>
 </div>
 
+</main><!-- end #main-content -->
+
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -256,19 +314,19 @@ footer a{color:rgba(255,255,255,0.42);}
         <span class="foot-sig">Hire love. Higher love.</span>
       </div>
       <div class="foot-col">
-        <h4>Navigate</h4>
+        <h2>Navigate</h2>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/reserve">Reserve</a></li>
-          <li><a href="/decor">Decor</a></li>
-          <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/" aria-label="Home — Higher Love Event Co.">Home</a></li>
+          <li><a href="/about" aria-label="About Kylie and Higher Love">About</a></li>
+          <li><a href="/reserve" aria-label="Reserve a wedding planning package">Reserve</a></li>
+          <li><a href="/decor" aria-label="View decor collections">Decor</a></li>
+          <li><a href="/reviews" aria-label="Read client reviews">Reviews</a></li>
+          <li><a href="/blog" aria-label="Read the Higher Love blog">Blog</a></li>
+          <li><a href="/contact" aria-label="Contact Kylie at Higher Love">Contact</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <address>
           <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a><br>
           <a href="tel:5032178500">503-217-8500</a><br>
@@ -291,6 +349,7 @@ footer a{color:rgba(255,255,255,0.42);}
     var h = document.getElementById("hamburger");
     if(m && m.classList.contains("open") && !m.contains(e.target) && !h.contains(e.target)){
       m.classList.remove("open"); h.classList.remove("open");
+      h.setAttribute("aria-expanded","false");
     }
   });
 </script>
