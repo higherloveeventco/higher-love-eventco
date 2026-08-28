@@ -8,18 +8,19 @@
 <title>About Kylie | Portland Wedding Planner | Higher Love Event Co.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
 <style>
 :root {
-  --gold:#B8892A;--gold-light:#D4A845;--gold-pale:#F0E4C4;
+  --gold:#B8892A;--gold-light:#D4A845;--gold-pale:#F0E4C4;--gold-deep:#9A7020;
   --cream:#F5F0E8;--linen:#EDE9E1;--black:#1A1A18;--charcoal:#2C2C29;
-  --muted:#79776F;--white:#FFFFFF;--border:rgba(26,26,24,0.1);
+  --muted:#504E48;--white:#FFFFFF;--border:rgba(26,26,24,0.1);
   --serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--black);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer}
 .eyebrow{display:block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem}
@@ -29,7 +30,10 @@ h1{font-size:clamp(3rem,6vw,5.5rem)}
 h2{font-size:clamp(2rem,4vw,3.2rem)}
 h3{font-size:clamp(1.4rem,2.5vw,2rem)}
 h4{font-size:1.2rem}
+.sec-h{font-size:clamp(1.4rem,2.5vw,2rem)}
 p{color:var(--charcoal);line-height:1.8;font-size:0.92rem}
+.photo-credit{font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 0;display:block;opacity:.7;}
+.photo-credit a{color:var(--charcoal);border-bottom:1px solid var(--charcoal);}
 .btn{display:inline-block;font-family:var(--sans);font-size:0.63rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;padding:0.95rem 2rem;border:1px solid var(--black);color:var(--black);background:transparent;transition:all 0.22s;cursor:pointer}
 .btn:hover{background:var(--black);color:var(--white)}
 .btn-gold{background:var(--gold);border-color:var(--gold);color:var(--white)}
@@ -43,7 +47,6 @@ section{padding:6rem 0}
   .about-img-wrap{position:sticky;top:80px;align-self:start;}
   @media(max-width:860px){.about-img-wrap{position:static;}}
 .about-img-wrap img{width:100%;display:block;filter:grayscale(8%)}
-.about-caption{background:var(--gold);color:var(--white);padding:1rem 1.8rem;font-family:var(--serif);font-style:italic;font-size:1rem;line-height:1.4;display:block;}
 .about-text h2{font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:0.4rem}
 .about-subtitle{font-family:var(--sans);font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.8rem;display:block}
 .about-text p{margin-bottom:1.1rem;font-size:0.91rem}
@@ -61,15 +64,14 @@ section{padding:6rem 0}
 .cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;max-width:1120px;margin:0 auto;text-align:center}
 .cred-item{background:var(--charcoal);padding:2.5rem 1.5rem}
 .cred-num{font-family:var(--serif);font-size:3rem;color:var(--gold);display:block;margin-bottom:0.3rem}
-.cred-label{font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+.cred-label{font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55)}
 .cta-band{background:var(--black);padding:7rem 2.5rem;text-align:center}
 .cta-band h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3.2rem);color:var(--white);font-weight:300;max-width:680px;margin:0 auto 0.9rem;line-height:1.25}
-.cta-band p{color:rgba(255,255,255,0.45);font-size:0.85rem;margin-bottom:2.5rem}
+.cta-band p{color:rgba(255,255,255,0.55);font-size:0.85rem;margin-bottom:2.5rem}
 .cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;}
 @media(max-width:960px){
   section{padding:4rem 0}
   .about-grid{grid-template-columns:1fr;gap:3rem}
-  .about-caption{position:static;margin-top:1rem;max-width:100%}
   .values-grid{grid-template-columns:1fr}
   .cred-grid{grid-template-columns:1fr 1fr}
   .about-hero,.venues-section,.values-section,.cta-band{padding-left:1.5rem;padding-right:1.5rem}
@@ -100,19 +102,20 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
   footer{background:var(--charcoal);padding:72px 0 48px;text-align:left;}
   .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:3.5rem;padding-bottom:3rem;border-bottom:0.5px solid rgba(245,240,232,.06);margin-bottom:2rem;text-align:left;}
   .foot-brand .nav-logo{font-size:1.15rem;display:block;margin-bottom:14px;color:var(--cream);text-decoration:none;}
-  .foot-brand p{font-size:.82rem;color:rgba(245,240,232,.3);line-height:1.8;max-width:240px;margin-top:10px;}
+  .foot-brand p{font-size:.82rem;color:rgba(245,240,232,.55);line-height:1.8;max-width:240px;margin-top:10px;}
   .foot-brand .foot-sig{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.95rem;margin-top:1.2rem;display:block;}
-  .foot-col h4{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .foot-col h2{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
   .foot-col ul{list-style:none;}
   .foot-col li{margin-bottom:9px;}
-  .foot-col a{font-size:.82rem;color:rgba(245,240,232,.38);text-decoration:none;transition:color .2s;}
+  .foot-col a{font-size:.82rem;color:rgba(245,240,232,.55);text-decoration:none;transition:color .2s;}
   .foot-col a:hover{color:var(--gold);}
-  .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.38);line-height:2;}
-  .foot-col address a{color:rgba(245,240,232,.38);}
+  .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.55);line-height:2;}
+  .foot-col address a{color:rgba(245,240,232,.55);}
   .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
   @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
   @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
 
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.higherloveeventco.com/about">
@@ -124,6 +127,34 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 <meta name="twitter:title" content="About Kylie | Portland Wedding Planner">
 <meta name="twitter:description" content="Kylie is a Portland wedding planner based in St. Johns with nearly seven years of experience. Founder of Higher Love Event Co.">
 <meta name="twitter:image" content="https://www.higherloveeventco.com/images/NewlywedsStJohnsBridgeWeddingStJohnsInnPortlandOregon.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kylie",
+  "jobTitle": "Founder & Event Specialist",
+  "description": "Portland wedding planner and founder of Higher Love Event Co., based in the St. Johns neighborhood of Portland, Oregon.",
+  "url": "https://www.higherloveeventco.com/about",
+  "image": "https://www.higherloveeventco.com/images/KylieHigherLoveEventCoWeddingPlanner.jpeg",
+  "worksFor": {
+    "@type": "LocalBusiness",
+    "name": "Higher Love Event Co.",
+    "url": "https://www.higherloveeventco.com",
+    "telephone": "+15032178500",
+    "email": "hello@higherloveeventco.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Portland",
+      "addressRegion": "OR",
+      "addressCountry": "US",
+      "neighborhood": "St. Johns"
+    }
+  },
+  "sameAs": [
+    "https://www.instagram.com/higherloveeventco"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -131,7 +162,6 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
   <div class="nav-inner">
     <a href="/" class="nav-logo">Higher <span>Love</span> Event Co.</a>
     <div class="nav-links">
-      <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/reviews">Reviews</a>
       <a href="/decor">Decor</a>
@@ -141,7 +171,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
       <a href="/contact">Contact</a>
       <a href="/reserve" class="nav-book">Reserve</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mob-menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'));"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div id="mob-menu">
@@ -156,17 +186,20 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
   <a href="/reserve">Reserve</a>
 </div>
 
+<main id="main-content">
+
 <section class="about-hero">
   <div class="wrap">
 <span class="eyebrow">About</span>
     <h1>Hi, I&rsquo;m Kylie.</h1>
     <div class="about-grid">
       <div class="about-img-wrap">
-        <img src="images/KylieHigherLoveEventCoWeddingPlanner.jpeg" alt="Kylie, Founder of Higher Love Event Co.">
-        <img src="images/Kylie_Coordination_1_1_optimized_300.jpg" alt="Kylie coordinating a wedding" style="width:100%;display:block;margin-top:1rem;">
+        <img src="images/KylieHigherLoveEventCoWeddingPlanner.jpeg" alt="Kylie, founder of Higher Love Event Co., a wedding planner in St. Johns, Portland, OR" width="875" height="1200" loading="lazy" decoding="async">
+        <span class="photo-credit">Photo: <a href="https://ellekendall.com/" target="_blank" rel="noopener">Elle Kendall Photography</a></span>
+        <img src="images/Kylie_Coordination_1_1_optimized_300.jpg" alt="Kylie coordinating a wedding reception setup" width="1000" height="1000" loading="lazy" decoding="async" style="width:100%;display:block;margin-top:1rem;">
       </div>
       <div class="about-text">
-        <h3>Founder &amp; Event Specialist</h3>
+        <h2 class="sec-h">Founder &amp; Event Specialist</h2>
         <span class="about-subtitle">Portland born &amp; raised &middot; St. Johns local</span>
 
         <p>I&rsquo;m Kylie, founder of Higher Love Event Co. A native Oregonian, mom, wife, and passionate event specialist. I&rsquo;ve spent nearly seven years working in the event industry, and I can&rsquo;t imagine doing anything else.</p>
@@ -177,11 +210,11 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 
         <p>I&rsquo;m highly detailed, deeply organized, with an eye for design. I&rsquo;ve channeled all of that into a planning formula built on years of firsthand knowledge of the Portland wedding scene, one that streamlines the process, narrows the options, and makes every decision easier to make.</p>
 
-        <blockquote style="font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.2vw,1.8rem);color:var(--gold-deep,#9A7020);line-height:1.55;margin:2.5rem 0;padding-left:1.5rem;border-left:2px solid var(--gold);max-width:520px;">Hiring a planner should reduce the decisions you&rsquo;re making, not just help you manage them.</blockquote>
+        <blockquote style="font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.2vw,1.8rem);color:var(--gold-deep);line-height:1.55;margin:2.5rem 0;padding-left:1.5rem;border-left:2px solid var(--gold);max-width:520px;">Hiring a planner should reduce the decisions you&rsquo;re making, not just help you manage them.</blockquote>
 
         <p>I&rsquo;m based in Portland, but I&rsquo;ve had the privilege of coordinating weddings everywhere from the jungles of Tulum to the Utah desert. My favorite weddings are the ones I plan here in the beautiful Pacific Northwest. I&rsquo;ve coordinated at more than 30 different venues across wine country, the Portland metro, and the Columbia River Gorge.</p>
 
-        <p>I&rsquo;m proud to call the St. Johns neighborhood home, and I believe it&rsquo;s one of Portland&rsquo;s best kept secrets for beautiful, soulful weddings. The neighborhood has everything: Cathedral Park, the Willamette River, the iconic St. Johns Bridge, and a robust vendor scene made up of incredibly talented and passionate people. With the Bridge&rsquo;s upcoming reopening and the forthcoming opportunity to reserve the Cathedral Park deck and staircase (tentatively reopening in 2027), St. Johns is primed to become the place to get married in the Portland metro, and I can&rsquo;t wait to play a role in making that happen.</p>
+        <p>I&rsquo;m proud to call the St. Johns neighborhood home, and I believe it&rsquo;s one of Portland&rsquo;s best kept secrets for beautiful, soulful weddings. The neighborhood has everything: Cathedral Park, the Willamette River, the iconic St. Johns Bridge, and a robust vendor scene made up of incredibly talented and passionate people. Portland Parks and Recreation is not issuing wedding permits for the Cathedral Park deck and staircase while construction on the bridge is underway, but that work is wrapping up and permits are expected to be available again in 2027. When they are, St. Johns is primed to become the place to get married in the Portland metro, and I can&rsquo;t wait to play a role in making that happen.</p>
 
         <p>Wherever your wedding takes place, the goal is the same: a planning process without overwhelm, and a wedding day you get to fully enjoy. That doesn&rsquo;t happen by accident. It happens because the right work was done long before the day arrived.</p>
 
@@ -195,7 +228,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 <div class="cred-strip">
   <div class="cred-grid">
     <div class="cred-item"><span class="cred-num">100%</span><span class="cred-label">Transparent pricing, always</span></div>
-    <div class="cred-item"><span class="cred-num">7+</span><span class="cred-label">Years of experience</span></div>
+    <div class="cred-item"><span class="cred-num">7</span><span class="cred-label">Years of experience</span></div>
     <div class="cred-item"><span class="cred-num">40+</span><span class="cred-label">Weddings coordinated</span></div>
     <div class="cred-item"><span class="cred-num">30+</span><span class="cred-label">Portland &amp; PNW venues worked</span></div>
   </div>
@@ -204,7 +237,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 <section class="venues-section">
   <div class="wrap">
     <span class="eyebrow">Venues I know well</span>
-    <h3>Chances are, I&rsquo;ve been there</h3>
+    <h2 class="sec-h">Chances are, I&rsquo;ve been there</h2>
     <p style="margin-top:0.8rem;max-width:580px">I&rsquo;ve worked at more than 30 venues across Portland, the Columbia River Gorge, and beyond. Familiar or brand new, every venue gets the same preparation: I learn the space thoroughly so your wedding day runs smoothly.</p>
     <div class="venues-grid">
       <span class="venue-tag">The Evergreen</span>
@@ -244,7 +277,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
 <section class="values-section">
   <div class="wrap">
     <span class="eyebrow">What I believe</span>
-    <h3>What you can count on.</h3>
+    <h2 class="sec-h">What you can count on.</h2>
     <div class="values-grid">
       <div class="value-item"><span class="value-num">01 / Transparency</span><h4>No hidden fees. No fine print.</h4><p>My pricing is published before you ever reach out, and the process is clear from day one. You always know exactly what you are getting, what it costs, and what happens next.</p></div>
       <div class="value-item"><span class="value-num">02 / Simplicity</span><h4>Less to decide. More to enjoy.</h4><p>Planning a wedding should not mean a hundred open tabs and an inbox full of vendor quotes. I narrow the field, surface the best options, and make every choice feel manageable.</p></div>
@@ -262,6 +295,8 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
   </div>
 </div>
 
+</main><!-- end #main-content -->
+
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -271,19 +306,19 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
         <span class="foot-sig">Hire love. Higher love.</span>
       </div>
       <div class="foot-col">
-        <h4>Navigate</h4>
+        <h2>Navigate</h2>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/reserve">Reserve</a></li>
-          <li><a href="/decor">Decor</a></li>
-          <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/" aria-label="Home — Higher Love Event Co.">Home</a></li>
+          <li><a href="/about" aria-label="About Kylie and Higher Love">About</a></li>
+          <li><a href="/reserve" aria-label="Reserve a wedding planning package">Reserve</a></li>
+          <li><a href="/decor" aria-label="View decor collections">Decor</a></li>
+          <li><a href="/reviews" aria-label="Read client reviews">Reviews</a></li>
+          <li><a href="/blog" aria-label="Read the Higher Love blog">Blog</a></li>
+          <li><a href="/contact" aria-label="Contact Kylie at Higher Love">Contact</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <address>
           <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a><br>
           <a href="tel:5032178500">503-217-8500</a><br>
@@ -306,6 +341,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:0.5p
     var h = document.getElementById("hamburger");
     if(m && m.classList.contains("open") && !m.contains(e.target) && !h.contains(e.target)){
       m.classList.remove("open"); h.classList.remove("open");
+      h.setAttribute("aria-expanded","false");
     }
   });
 </script>
