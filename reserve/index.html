@@ -329,9 +329,11 @@ ACUITY.source = SOURCES[new URLSearchParams(location.search).get("src")] || "";
 
 const PLANNING = {
   full:  { label:"Ceremony + Reception",
-    Petite:{price:4500, appt:"93492508"}, Signature:{price:5800, appt:"93492538"}, Grand:{price:7500, appt:"93492586"} },
+    Petite:{price:4500, appt:"93492508"}, Signature:{price:5800, appt:"93492538"}, Grand:{price:7500, appt:"93492586"},
+    GrandExtended:{appt:"97695359"} },
   recep: { label:"Reception Only",
-    Petite:{price:3800, appt:"93492310"}, Signature:{price:5000, appt:"93492410"}, Grand:{price:6500, appt:"93492442"} }
+    Petite:{price:3800, appt:"93492310"}, Signature:{price:5000, appt:"93492410"}, Grand:{price:6500, appt:"93492442"},
+    GrandExtended:{appt:"97695435"} }
 };
 
 const GUESTS_PER_TABLE = 8, DELIVERY_EST = 500;
@@ -473,7 +475,7 @@ function enterEstimate(){
 
 function buildBookingUrl(){
   const p=pkg(), tier=tierFor(state.guests);
-  const appt=PLANNING[state.scope][tier==="Custom"?"Grand":tier].appt;
+  const appt=PLANNING[state.scope][tier==="Custom"?"GrandExtended":tier].appt;
   const collectionValue = p.later ? "Not yet selected" : p.name;
   const parts=[
     "appointmentType="+encodeURIComponent(appt),
