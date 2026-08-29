@@ -166,16 +166,18 @@
         <button id="minus" aria-label="Fewer guests">&ndash;</button><div class="gnum" id="gnum">80</div><button id="plus" aria-label="More guests">+</button>
       </div>
       <div class="glabel">Guests</div>
-      <input class="range" id="range" type="range" min="8" max="300" step="2" value="80" aria-label="Guest count" />
+      <input class="range" id="range" type="range" min="8" max="200" step="2" value="80" aria-label="Guest count" />
       <div class="break">
         <div class="row"><span>Planning Package</span><span class="v" id="pkgName"></span></div>
         <div class="row"><span id="pkgGuests"></span><span class="v" id="pkgTables"></span></div>
       </div>
-      <div id="pkgTotalWrap" class="total"><span class="lab">Planning Package Total</span><span class="amt" id="pkgPrice"></span></div>
-      <div id="pkgCustomWrap" class="hide" style="text-align:center;margin-top:18px">
-        <div class="pill">Above 120 guests</div>
-        <p class="note">Larger celebrations get a custom quote so the planning and styling are right. Let&rsquo;s talk it through.</p>
+      <div id="pkgOverage" class="hide">
+        <div class="row" id="rowBase"><span>Grand package</span><span class="v" id="ovBase"></span></div>
+        <div class="row" id="rowTables"><span id="ovTablesLabel"></span><span class="v" id="ovTables"></span></div>
+        <div class="row"><span>Third onsite coordinator</span><span class="v" id="ovThird"></span></div>
       </div>
+      <div id="pkgTotalWrap" class="total"><span class="lab">Planning Package Total</span><span class="amt" id="pkgPrice"></span></div>
+      <p id="pkgLargeNote" class="note hide">Celebrations above 120 guests are priced from the Grand package, with a charge for each additional table and a third onsite coordinator. 200 guests is the largest celebration I take on.</p>
     </div>
     <!-- PACKAGE INCLUSIONS GRID — visible on step 1 only -->
     <div id="pkgSnapshot">
@@ -333,6 +335,9 @@ const PLANNING = {
 };
 
 const GUESTS_PER_TABLE = 8, DELIVERY_EST = 500;
+const GRAND_TABLES = 15, MAX_GUESTS = 200;
+const OVERAGE_PER_TABLE = { full:450, recep:400 };
+const THIRD_COORDINATOR = { full:800, recep:550 };
 const PACKAGES = [
   {id:"midnight",name:"Midnight Romance",cost:370,price:370,canva:"https://canva.link/w0ocoveub7fbfn7",tagline:"Black linen, aubergine, and gold. Candlelit and dramatic.",
    palette:["#1C1C1C","#4A2C3A","#C1903A"],highlights:["Black linen, black chiffon runner","Aubergine napkins, gold flatware","Gold lacquer chargers, noir plates","Gold-rim water goblets","Gold tapers, votives, and bud vase florals"]},
@@ -364,6 +369,19 @@ const tablesFor = g => Math.ceil(g/GUESTS_PER_TABLE);
 const tierFor = g => { for(const b of BANDS) if(g<=b.max) return b.name; return "Custom"; };
 const pkg = () => PACKAGES.find(p=>p.id===state.pkgId);
 const swHTML = arr => arr.map(c=>`<span style="background:${c}"></span>`).join("");
+const isLarge = g => g > 120;
+function planningPrice(){
+  const tier = tierFor(state.guests);
+  if(tier !== "Custom") return PLANNING[state.scope][tier].price;
+  const extra = tablesFor(state.guests) - GRAND_TABLES;
+  return PLANNING[state.scope].Grand.price
+       + OVERAGE_PER_TABLE[state.scope] * extra
+       + THIRD_COORDINATOR[state.scope];
+}
+function tierLabel(){
+  const tier = tierFor(state.guests);
+  return tier === "Custom" ? "Grand, extended" : tier;
+}
 
 function showStep(n){
   state.step=n;
@@ -375,17 +393,21 @@ function showStep(n){
 }
 
 function updatePackage(){
-  const tier=tierFor(state.guests), custom=tier==="Custom", tables=tablesFor(state.guests);
+  const large=isLarge(state.guests), tables=tablesFor(state.guests);
   $("#gnum").textContent=state.guests;
   $("#range").value=state.guests;
-  $("#pkgCustomWrap").classList.toggle("hide",!custom);
-  $("#pkgTotalWrap").classList.toggle("hide",custom);
-  $("#toCollection").textContent = custom ? "Request a quote" : "Continue";
-  if(!custom){
-    $("#pkgName").textContent=`${PLANNING[state.scope].label} / ${tier}`;
-    $("#pkgGuests").textContent=`${state.guests} guests at ${GUESTS_PER_TABLE} per table`;
-    $("#pkgTables").textContent=`${tables} tables`;
-    $("#pkgPrice").textContent=money(PLANNING[state.scope][tier].price);
+  $("#pkgName").textContent=`${PLANNING[state.scope].label} / ${tierLabel()}`;
+  $("#pkgGuests").textContent=`${state.guests} guests at ${GUESTS_PER_TABLE} per table`;
+  $("#pkgTables").textContent=`${tables} tables`;
+  $("#pkgPrice").textContent=money(planningPrice());
+  $("#pkgOverage").classList.toggle("hide",!large);
+  $("#pkgLargeNote").classList.toggle("hide",!large);
+  if(large){
+    const extra=tables-GRAND_TABLES;
+    $("#ovBase").textContent=money(PLANNING[state.scope].Grand.price);
+    $("#ovTablesLabel").textContent=`${extra} additional ${extra===1?"table":"tables"} at ${money(OVERAGE_PER_TABLE[state.scope])}`;
+    $("#ovTables").textContent=money(OVERAGE_PER_TABLE[state.scope]*extra);
+    $("#ovThird").textContent=money(THIRD_COORDINATOR[state.scope]);
   }
 }
 function setScope(s){
@@ -422,14 +444,14 @@ function renderCards(){
 
 function enterEstimate(){
   const p=pkg(), tier=tierFor(state.guests), tables=tablesFor(state.guests);
-  const planPrice=PLANNING[state.scope][tier].price;
+  const planPrice=planningPrice();
   const decorTotal = (p.custom||p.later) ? 0 : p.price*tables;
   const delivery = p.later ? 0 : DELIVERY_EST;
   const grand = planPrice + decorTotal + delivery;
 
   $("#estSw").innerHTML = p.palette.length ? swHTML(p.palette) : "";
   $("#estName").textContent = p.later ? "Decor collection to be chosen" : p.name;
-  $("#estMeta").textContent = `${PLANNING[state.scope].label} / ${tier} · ${state.guests} guests · ${tables} tables`;
+  $("#estMeta").textContent = `${PLANNING[state.scope].label} / ${tierLabel()} · ${state.guests} guests · ${tables} tables`;
   $("#estPlanning").textContent = money(planPrice);
   $("#deliveryRow").classList.toggle("hide", p.later);
 
@@ -451,7 +473,7 @@ function enterEstimate(){
 
 function buildBookingUrl(){
   const p=pkg(), tier=tierFor(state.guests);
-  const appt=PLANNING[state.scope][tier].appt;
+  const appt=PLANNING[state.scope][tier==="Custom"?"Grand":tier].appt;
   const collectionValue = p.later ? "Not yet selected" : p.name;
   const parts=[
     "appointmentType="+encodeURIComponent(appt),
@@ -464,8 +486,8 @@ function buildBookingUrl(){
 
 function enterReserve(){
   const p=pkg(), tier=tierFor(state.guests), tables=tablesFor(state.guests);
-  const planPrice=PLANNING[state.scope][tier].price;
-  $("#r4pkg").textContent=`${PLANNING[state.scope].label} / ${tier}`;
+  const planPrice=planningPrice();
+  $("#r4pkg").textContent=`${PLANNING[state.scope].label} / ${tierLabel()}`;
   $("#r4pkgmeta").textContent=`${state.guests} guests · ${money(planPrice)}`;
   $("#r4sw").innerHTML = p.palette.length ? swHTML(p.palette) : "";
   $("#r4name").textContent = p.later ? "Not yet selected" : p.name;
@@ -490,9 +512,9 @@ setScope("full");
 $("#scopeFull").addEventListener("click",()=>setScope("full"));
 $("#scopeRecep").addEventListener("click",()=>setScope("recep"));
 $("#minus").addEventListener("click",()=>{state.guests=Math.max(8,state.guests-8);updatePackage();});
-$("#plus").addEventListener("click",()=>{state.guests=Math.min(300,state.guests+8);updatePackage();});
+$("#plus").addEventListener("click",()=>{state.guests=Math.min(MAX_GUESTS,state.guests+8);updatePackage();});
 $("#range").addEventListener("input",e=>{state.guests=Number(e.target.value);updatePackage();});
-$("#toCollection").addEventListener("click",()=>{ if(tierFor(state.guests)==="Custom"){ location.href="/contact"; } else { showStep(2); } });
+$("#toCollection").addEventListener("click",()=>showStep(2));
 $("#backToPackage").addEventListener("click",()=>showStep(1));
 $("#toEstimate").addEventListener("click",enterEstimate);
 $("#backToCollection").addEventListener("click",()=>showStep(2));
