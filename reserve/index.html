@@ -4,24 +4,27 @@
 <meta charset="utf-8" />
 <link rel="canonical" href="https://www.higherloveeventco.com/reserve">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Reserve your wedding planning package from Higher Love Event Co. in Portland, OR. Choose your celebration type and guest count, see your estimated total, and book online. No inquiry required.">
 <title>Reserve Your Package | Higher Love Event Co. | Portland Wedding Planning</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"></noscript>
 <style>
   :root{
-    --cream:#F4EEE2; --cream2:#FBF7EF; --ink:#1C1C1C;
-    --gold:#C1903A; --linen:#E7E0D2; --muted:#8a7f6c;
+    --cream:#F5F0E8; --cream2:#FBF7EF; --ink:#1A1A18;
+    --gold:#B8892A; --gold-deep:#9A7020; --linen:#EDE9E1; --muted:#504E48;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'Montserrat',sans-serif;color:var(--ink);
-    background:radial-gradient(120% 80% at 80% 0%,rgba(193,144,58,.10),transparent 55%),var(--cream);
+    background:radial-gradient(120% 80% at 80% 0%,rgba(184,137,42,.10),transparent 55%),var(--cream);
     min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:40px 20px 80px}
   .serif{font-family:'Cormorant Garamond',serif}
   .wordmark{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.42em;font-size:13px;
     text-transform:uppercase;text-align:center;padding-left:.42em}
   .rule{width:40px;height:1px;background:var(--gold);margin:14px auto 0}
   .shell{width:100%;max-width:880px}
-  .hamburger{display:none;position:fixed;top:24px;right:22px;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;z-index:100;}
+  .hamburger{display:flex;position:fixed;top:24px;right:22px;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;z-index:100;}
   .hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all .3s;}
   .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px);}
   .hamburger.open span:nth-child(2){opacity:0;}
@@ -29,7 +32,6 @@
   #mob-menu{display:none;position:fixed;top:56px;left:0;right:0;background:var(--cream);border-bottom:0.5px solid var(--linen);padding:1.8rem 2.5rem 2.2rem;z-index:99;flex-direction:column;gap:1.4rem;}
   #mob-menu.open{display:flex;}
   #mob-menu a{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;}
-  @media(max-width:860px){.hamburger{display:flex;}}
   .steps{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:30px 0 34px;font-size:11px;
     letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
   .steps b{font-weight:400;color:var(--muted)} .steps b.on{color:var(--gold)} .steps i{opacity:.4;font-style:normal}
@@ -38,8 +40,10 @@
   .cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
   .card{background:var(--cream2);border:1px solid var(--linen);border-radius:16px;padding:22px 22px 20px;cursor:pointer;
     transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(28,28,28,.04)}
-  .card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(28,28,28,.10);border-color:rgba(193,144,58,.55)}
-  .card.sel{border-color:var(--gold);box-shadow:0 14px 34px rgba(193,144,58,.18);background:#fff}
+  .card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(28,28,28,.10);border-color:rgba(184,137,42,.55)}
+  .card:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  .card.sel{border-color:var(--gold);box-shadow:0 14px 34px rgba(184,137,42,.18);background:#fff}
+  .card.dashed{border-style:dashed}
   .swatches{display:flex;gap:7px;margin-bottom:14px}
   .swatches span{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
   .pn{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;line-height:1.1}
@@ -50,17 +54,18 @@
   .from{margin-top:14px;padding-top:12px;border-top:1px solid var(--linen);font-size:10px;
     letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
   .from b{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:0;color:var(--ink);font-weight:600}
+  .from.quote{color:var(--gold-deep);font-style:italic}
   .look{display:block;margin-top:12px;text-align:center;color:var(--ink);text-decoration:none;font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--linen);border-radius:30px;padding:9px;transition:all .2s}
-  .look:hover{border-color:var(--gold);color:var(--gold)}
+  .look:hover{border-color:var(--gold);color:var(--gold-deep)}
   .panel{background:var(--cream2);border:1px solid var(--linen);border-radius:16px;padding:30px 28px;max-width:560px;margin:0 auto}
   .toggle{display:flex;gap:10px;margin:0 0 24px}
   .toggle button{flex:1;padding:13px 10px;border-radius:10px;border:1px solid var(--linen);background:#fff;cursor:pointer;
     font-family:'Montserrat';font-size:11px;letter-spacing:.04em;color:var(--muted);transition:all .2s}
-  .toggle button.on{border-color:var(--gold);background:rgba(193,144,58,.08);color:var(--ink)}
+  .toggle button.on{border-color:var(--gold);background:rgba(184,137,42,.08);color:var(--ink)}
   .stepper{display:flex;align-items:center;justify-content:center;gap:22px;margin:6px 0 8px}
   .stepper button{width:46px;height:46px;border-radius:50%;border:1px solid var(--linen);background:#fff;font-size:22px;
     cursor:pointer;color:var(--ink);transition:all .2s;font-family:'Cormorant Garamond',serif}
-  .stepper button:hover{border-color:var(--gold);color:var(--gold)}
+  .stepper button:hover{border-color:var(--gold);color:var(--gold-deep)}
   .gnum{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:500;min-width:120px;text-align:center}
   .glabel{text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
   .range{width:100%;-webkit-appearance:none;appearance:none;height:2px;background:var(--linen);border-radius:2px;outline:none;margin:4px 0 26px}
@@ -76,7 +81,7 @@
   .subtotal{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;padding:9px 0}
   .subtotal .lab{font-weight:600;letter-spacing:.02em}
   .subtotal .v{font-weight:600}
-  .pill{display:inline-block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+  .pill{display:inline-block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);
     border:1px solid var(--gold);border-radius:40px;padding:4px 11px;margin-top:6px}
   .actions{display:flex;justify-content:space-between;align-items:center;margin-top:28px;gap:14px;max-width:560px;margin-left:auto;margin-right:auto}
   .btn{background:var(--ink);color:var(--cream);border:none;padding:15px 30px;border-radius:40px;font-family:'Montserrat';
@@ -94,7 +99,7 @@
   .includes summary:after{content:"+";color:var(--gold);font-size:17px;line-height:1}
   .includes[open] summary:after{content:"–"}
   .incl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 34px;padding:8px 26px 4px}
-  .incl-col h4{font-family:'Montserrat',sans-serif;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 12px;font-weight:600}
+  .incl-col h2{font-family:'Montserrat',sans-serif;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 12px;font-weight:600}
   .incl-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
   .incl-col li{position:relative;padding-left:15px;font-size:12.5px;font-weight:300;line-height:1.4;color:var(--ink)}
   .incl-col li:before{content:"";position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--gold)}
@@ -106,12 +111,16 @@
   .pkg-snapshot{max-width:560px;margin:20px auto 0;border:1px solid var(--linen);border-radius:14px;background:var(--cream2);overflow:hidden;}
   .pkg-snapshot-label{font-family:'Montserrat',sans-serif;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;padding:16px 24px 0;}
   .pkg-snapshot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:14px 24px 18px;}
-  .pkg-snapshot-col h4{font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px;}
+  .pkg-snapshot-col h2{font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px;}
   .pkg-snapshot-col ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
   .pkg-snapshot-col li{position:relative;padding-left:12px;font-size:11.5px;font-weight:300;line-height:1.4;color:var(--ink);}
   .pkg-snapshot-col li:before{content:"";position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--gold);}
   .pkg-snapshot-note{padding:0 24px 14px;font-size:10.5px;font-style:italic;font-weight:300;color:var(--muted);}
   @media(max-width:500px){.pkg-snapshot-grid{grid-template-columns:1fr;gap:16px;}}
+  @media(prefers-reduced-motion:reduce){
+    .fade{animation:none}
+    .card:hover{transform:none}
+  }
 </style>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.higherloveeventco.com/reserve">
@@ -125,7 +134,7 @@
 <meta name="twitter:image" content="https://www.higherloveeventco.com/images/NewlywedsStJohnsBridgeWeddingStJohnsInnPortlandOregon.jpg">
 </head>
 <body>
-<button class="hamburger" id="hamburger" aria-label="Menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');"><span></span><span></span><span></span></button>
+<button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mob-menu" onclick="document.getElementById('mob-menu').classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'));"><span></span><span></span><span></span></button>
 <div id="mob-menu">
   <a href="/">Home</a>
   <a href="/about">About</a>
@@ -137,11 +146,11 @@
   <a href="/contact">Contact</a>
   <a href="/reserve">Reserve</a>
 </div>
-<div class="shell">
+<main class="shell" id="main-content">
   <a href="/" class="wordmark" style="text-decoration:none;color:inherit;display:block;">Higher Love Event Co.</a>
   <div class="rule"></div>
   <div class="steps">
-    <b id="s1">Package</b><i>/</i><b id="s2">Collection</b><i>/</i><b id="s3">Estimated Total</b><i>/</i><b id="s4">Reserve</b>
+    <b id="s1">Package</b><i>/</i><b id="s2">Decor</b><i>/</i><b id="s3">Estimated Total</b><i>/</i><b id="s4">Reserve</b>
   </div>
 
   <!-- STEP 1 — PACKAGE -->
@@ -154,10 +163,10 @@
         <button id="scopeRecep">Reception Only</button>
       </div>
       <div class="stepper">
-        <button id="minus">&ndash;</button><div class="gnum" id="gnum">80</div><button id="plus">+</button>
+        <button id="minus" aria-label="Fewer guests">&ndash;</button><div class="gnum" id="gnum">80</div><button id="plus" aria-label="More guests">+</button>
       </div>
       <div class="glabel">Guests</div>
-      <input class="range" id="range" type="range" min="8" max="300" step="2" value="80" />
+      <input class="range" id="range" type="range" min="8" max="300" step="2" value="80" aria-label="Guest count" />
       <div class="break">
         <div class="row"><span>Planning Package</span><span class="v" id="pkgName"></span></div>
         <div class="row"><span id="pkgGuests"></span><span class="v" id="pkgTables"></span></div>
@@ -165,7 +174,7 @@
       <div id="pkgTotalWrap" class="total"><span class="lab">Planning Package Total</span><span class="amt" id="pkgPrice"></span></div>
       <div id="pkgCustomWrap" class="hide" style="text-align:center;margin-top:18px">
         <div class="pill">Above 120 guests</div>
-        <p class="note">Larger celebrations get a custom quote so the planning and styling are right. Let's talk it through.</p>
+        <p class="note">Larger celebrations get a custom quote so the planning and styling are right. Let&rsquo;s talk it through.</p>
       </div>
     </div>
     <!-- PACKAGE INCLUSIONS GRID — visible on step 1 only -->
@@ -174,7 +183,7 @@
         <span class="pkg-snapshot-label">Every package includes</span>
         <div class="pkg-snapshot-grid">
           <div class="pkg-snapshot-col">
-            <h4>Venue &amp; vendors</h4>
+            <h2>Venue &amp; vendors</h2>
             <ul>
               <li>Venue research &amp; sourcing</li>
               <li>Vendor vetting &amp; booking</li>
@@ -182,7 +191,7 @@
             </ul>
           </div>
           <div class="pkg-snapshot-col">
-            <h4>Planning</h4>
+            <h2>Planning</h2>
             <ul>
               <li>Logistics planning</li>
               <li>Master timeline</li>
@@ -190,7 +199,7 @@
             </ul>
           </div>
           <div class="pkg-snapshot-col">
-            <h4>On the day</h4>
+            <h2>On the day</h2>
             <ul>
               <li>Two onsite coordinators</li>
               <li>Decor styling &amp; clearing</li>
@@ -207,16 +216,16 @@
     </div>
   </section>
 
-  <!-- STEP 2 — COLLECTION -->
+  <!-- STEP 2 — DECOR COLLECTION -->
   <section id="step2" class="fade hide">
-    <h1 class="head serif">Choose your tablescape.</h1>
-    <p class="sub">A tablescape is everything that dresses each dinner table: linen, place setting, glassware, candles, and florals. Eight complete looks, sourced, delivered, styled, and cleared.</p>
+    <h1 class="head serif">Choose your decor collection.</h1>
+    <p class="sub">A decor collection is everything that dresses each dinner table: linen, place setting, glassware, candles, and florals. Eight complete looks, sourced, delivered, styled, and cleared. Choose one now if you already know the look you want, or decide later in planning once your venue and vendor team are set.</p>
     <p class="soon">Coordinating ceremony decor is coming soon, so your whole day feels cohesive.</p>
     <details class="includes" open>
       <summary>What every table includes</summary>
       <div class="incl-grid">
         <div class="incl-col">
-          <h4>The table</h4>
+          <h2>The table</h2>
           <ul>
             <li>Full-length table linen</li>
             <li>Coordinating runner</li>
@@ -225,7 +234,7 @@
           </ul>
         </div>
         <div class="incl-col">
-          <h4>Each place setting</h4>
+          <h2>Each place setting</h2>
           <ul>
             <li>Charger plate</li>
             <li>Dinner plate</li>
@@ -234,7 +243,7 @@
           </ul>
         </div>
         <div class="incl-col">
-          <h4>The centerpiece</h4>
+          <h2>The centerpiece</h2>
           <ul>
             <li>6 bud vases with florals</li>
             <li>6 votive candles</li>
@@ -247,28 +256,28 @@
     <div class="cards" id="cards"></div>
     <div class="actions">
       <button class="back" id="backToPackage">&larr; Package</button>
-      <button class="btn" id="toEstimate" disabled>Continue</button>
+      <button class="btn" id="toEstimate">Continue</button>
     </div>
   </section>
 
   <!-- STEP 3 — ESTIMATED TOTAL -->
   <section id="step3" class="fade hide">
     <h1 class="head serif">Estimated Total.</h1>
-    <p class="sub">A $1,500 deposit reserves your planning package. Your tablescape collection will be invoiced separately by our rental partner once your wedding date is confirmed. Final planning balances are based on your actual guest count and invoiced one month before your wedding date.</p>
+    <p class="sub">A $1,500 deposit reserves your planning package. Your decor collection is invoiced separately by our rental partner once your wedding date is confirmed. Final planning balances are based on your actual guest count and invoiced one month before your wedding date.</p>
     <div class="panel">
       <div class="swatches" id="estSw" style="justify-content:center"></div>
       <p id="estName" style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:4px"></p>
       <p id="estMeta" style="text-align:center;font-size:11px;letter-spacing:.04em;color:var(--muted);margin-bottom:18px"></p>
       <div class="break">
-        <div class="subtotal"><span class="lab">Tablescape Total</span><span class="v" id="estTablescape"></span></div>
+        <div class="subtotal"><span class="lab">Decor Collection</span><span class="v" id="estDecor"></span></div>
         <div class="subtotal"><span class="lab">Planning Package Total</span><span class="v" id="estPlanning"></span></div>
-        <div class="row"><span>Delivery estimate</span><span class="v">$500</span></div>
+        <div class="row" id="deliveryRow"><span>Delivery estimate</span><span class="v">$500</span></div>
       </div>
       <div class="total"><span class="lab">Estimated Total</span><span class="amt" id="estGrand"></span></div>
-      <p style="font-size:10px;color:var(--muted);font-weight:300;margin-top:12px;line-height:1.6;font-style:italic;">Delivery is an estimate and will be finalized once your delivery location is confirmed.</p>
+      <p id="estFootnote" style="font-size:10px;color:var(--muted);font-weight:300;margin-top:12px;line-height:1.6;font-style:italic;"></p>
     </div>
     <div class="actions">
-      <button class="back" id="backToCollection">&larr; Collection</button>
+      <button class="back" id="backToCollection">&larr; Decor</button>
       <button class="btn" id="toReserve">Continue</button>
     </div>
   </section>
@@ -286,15 +295,15 @@
         <p id="r4pkgmeta" style="font-size:.72rem;letter-spacing:.04em;color:var(--muted);margin-bottom:.6rem;"></p>
         <p style="font-size:.72rem;color:var(--muted);line-height:1.6;">Full-service planning from venue research to the final song. We source your venue, book and manage every vendor, build your timeline, take care of all logistics and staff two professional coordinators on-site for the full day. You show up. We take care of everything else.</p>
       </div>
-      <!-- Tablescape collection — secondary -->
+      <!-- Decor collection — secondary -->
       <div style="padding:1.4rem 1.8rem;">
-        <span style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem;">Tablescape Collection</span>
+        <span style="font-family:'Montserrat',sans-serif;font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem;">Decor Collection</span>
         <div style="display:flex;align-items:center;gap:.8rem;">
           <div class="swatches" id="r4sw" style="justify-content:flex-start;margin:0;"></div>
           <p id="r4name" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin:0;"></p>
         </div>
         <p id="r4meta" style="font-size:.72rem;letter-spacing:.04em;color:var(--muted);margin-top:.3rem;margin-bottom:.6rem;"></p>
-        <p style="font-size:.72rem;color:var(--muted);line-height:1.6;">Professionally designed tablescape collection. Sourced, delivered, styled, and cleared. Priced per table based on your final guest count.</p>
+        <p id="r4desc" style="font-size:.72rem;color:var(--muted);line-height:1.6;"></p>
       </div>
     </div>
 
@@ -303,7 +312,7 @@
       <a class="btn" id="reserveBtn" href="#">Continue to booking</a>
     </div>
   </section>
-</div>
+</main>
 
 <script>
 const ACUITY = {
@@ -315,7 +324,6 @@ const ACUITY = {
 };
 const SOURCES = { weddinglandia: "Weddinglandia" };
 ACUITY.source = SOURCES[new URLSearchParams(location.search).get("src")] || "";
-const INQUIRY_EMAIL = "hello@higherloveeventco.com";
 
 const PLANNING = {
   full:  { label:"Ceremony + Reception",
@@ -324,7 +332,7 @@ const PLANNING = {
     Petite:{price:3800, appt:"93492310"}, Signature:{price:5000, appt:"93492410"}, Grand:{price:6500, appt:"93492442"} }
 };
 
-const GUESTS_PER_TABLE = 8, RESERVE_FEE = 500, DELIVERY_EST = 500;
+const GUESTS_PER_TABLE = 8, DELIVERY_EST = 500;
 const PACKAGES = [
   {id:"midnight",name:"Midnight Romance",cost:370,price:370,canva:"https://canva.link/w0ocoveub7fbfn7",tagline:"Black linen, aubergine, and gold. Candlelit and dramatic.",
    palette:["#1C1C1C","#4A2C3A","#C1903A"],highlights:["Black linen, black chiffon runner","Aubergine napkins, gold flatware","Gold lacquer chargers, noir plates","Gold-rim water goblets","Gold tapers, votives, and bud vase florals"]},
@@ -342,25 +350,25 @@ const PACKAGES = [
    palette:["#5E6B4A","#9C6B43","#A63D6A","#F7F4EC"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","Dark rattan placemats, pearl plates","Prism water goblets","Magenta tapers, votives, and bud vase florals"]},
   {id:"fresh",name:"Fresh & Minimal",cost:329.85,price:330,canva:"https://canva.link/8ek7ct6n8bbciu8",tagline:"White, silver, and a touch of green. Crisp and clean.",
    palette:["#F7F4EC","#CFCABE","#6E7A57"],highlights:["White linen, white chiffon runner","Leaf velvet napkins, silver flatware","White and silver chargers and plates","Prism water goblets","Floating candles, votives, and bud vase florals"]},
-  {id:"custom",name:"Custom Tablescape",cost:0,price:0,custom:true,canva:"",tagline:"A custom design built around your vision, aesthetic, and budget.",
-   palette:["#C1903A","#E7E0D2","#F4EEE2"],highlights:["Fully custom concept designed for your wedding","Sourced to match your aesthetic and budget","Includes design consultation and styling","Pricing quoted after initial consultation"]}
+  {id:"custom",name:"Custom Decor Design",cost:0,price:0,custom:true,canva:"",tagline:"A custom design built around your vision, aesthetic, and budget.",
+   palette:["#B8892A","#EDE9E1","#F5F0E8"],highlights:["Fully custom concept designed for your wedding","Sourced to match your aesthetic and budget","Includes design consultation and styling","Pricing quoted after initial consultation"]},
+  {id:"later",name:"Decide later",cost:0,price:0,later:true,canva:"",tagline:"Reserve your planning package now and choose your decor once the rest of the day takes shape.",
+   palette:[],highlights:["Choose from the same eight collections at any point","Most couples decide once the venue and vendor team are set","Your collection is invoiced separately by our rental partner","Nothing changes about your planning package"]}
 ];
-const CUSTOM_ID = "custom";
 const BANDS = [{name:"Petite",max:50},{name:"Signature",max:90},{name:"Grand",max:120}];
 
-const state = {step:1, scope:"full", pkgId:null, guests:80};
+const state = {step:1, scope:"full", pkgId:"later", guests:80};
 const $ = s => document.querySelector(s);
 const money = n => n.toLocaleString("en-US",{style:"currency",currency:"USD",minimumFractionDigits:2});
 const tablesFor = g => Math.ceil(g/GUESTS_PER_TABLE);
 const tierFor = g => { for(const b of BANDS) if(g<=b.max) return b.name; return "Custom"; };
 const pkg = () => PACKAGES.find(p=>p.id===state.pkgId);
 const swHTML = arr => arr.map(c=>`<span style="background:${c}"></span>`).join("");
-const planning = () => { const t=tierFor(state.guests); return t==="Custom"?null:PLANNING[state.scope][t]; };
 
 function showStep(n){
   state.step=n;
   for(let i=1;i<=4;i++) $("#step"+i).classList.toggle("hide",i!==n);
-  for(let i=1;i<=4;i++) $("#s"+i).className = (i===n || (i<n)) ? "on" : "";
+  for(let i=1;i<=4;i++) $("#s"+i).className = (i<=n) ? "on" : "";
   // Show inclusions grid only on step 1
   $("#pkgSnapshot").style.display = n===1 ? "block" : "none";
   window.scrollTo({top:0,behavior:"smooth"});
@@ -386,67 +394,94 @@ function setScope(s){
   $("#scopeRecep").classList.toggle("on",s==="recep");
   updatePackage();
 }
-function quoteMailto(){
-  const tables=tablesFor(state.guests);
-  const body=`Celebration: ${PLANNING[state.scope].label}\nGuests: ${state.guests}\nTables: ${tables}\n\nMy wedding date and venue are: `;
-  return "mailto:"+INQUIRY_EMAIL+"?subject="+encodeURIComponent("Wedding planning quote request")+"&body="+encodeURIComponent(body);
-}
 
 function renderCards(){
-  $("#cards").innerHTML = PACKAGES.map(p=>`
-    <div class="card${state.pkgId===p.id?' sel':''}${p.custom?' custom-card':''}" data-id="${p.id}" style="${p.custom?'border-style:dashed;':''}">
-      <div class="swatches">${p.custom ? '<span style="display:block;height:22px;"></span>' : swHTML(p.palette)}</div>
+  $("#cards").innerHTML = PACKAGES.map(p=>{
+    const dashed = (p.custom || p.later) ? " dashed" : "";
+    let footer;
+    if(p.later)      footer = `<div class="from quote">No decision needed today</div>`;
+    else if(p.custom) footer = `<div class="from quote">Pricing by quote</div>`;
+    else             footer = `<div class="from">From <b>${money(p.price)}</b> / table</div><a class="look" href="${p.canva}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View the full look &#8599;</a>`;
+    return `
+    <div class="card${state.pkgId===p.id?' sel':''}${dashed}" data-id="${p.id}" role="button" tabindex="0" aria-pressed="${state.pkgId===p.id}">
+      <div class="swatches">${p.palette.length ? swHTML(p.palette) : '<span style="display:block;height:22px;box-shadow:none;"></span>'}</div>
       <div class="pn">${p.name}</div>
       <div class="tg">${p.tagline}</div>
       <ul>${p.highlights.map(h=>`<li>${h}</li>`).join("")}</ul>
-      ${p.custom ? `<div class="from" style="color:var(--gold);font-style:italic;">Pricing by quote</div>` : `<div class="from">From <b>${money(p.price)}</b> / table</div><a class="look" href="${p.canva}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View the full look &#8599;</a>`}
-    </div>`).join("");
-  document.querySelectorAll(".card").forEach(c=>c.addEventListener("click",()=>{
-    state.pkgId=c.dataset.id; renderCards(); $("#toEstimate").disabled=false;
-  }));
+      ${footer}
+    </div>`;
+  }).join("");
+  document.querySelectorAll(".card").forEach(c=>{
+    const choose = () => { state.pkgId=c.dataset.id; renderCards(); };
+    c.addEventListener("click",choose);
+    c.addEventListener("keydown",e=>{
+      if(e.key==="Enter"||e.key===" "){ e.preventDefault(); choose(); }
+    });
+  });
 }
 
 function enterEstimate(){
   const p=pkg(), tier=tierFor(state.guests), tables=tablesFor(state.guests);
-  const isCustom=p.custom===true;
-  const tablescape=isCustom?0:p.price*tables;
   const planPrice=PLANNING[state.scope][tier].price;
-  const grand=isCustom?planPrice+DELIVERY_EST:tablescape+planPrice+DELIVERY_EST;
-  $("#estSw").innerHTML=swHTML(p.palette);
-  $("#estName").textContent=p.name;
-  $("#estMeta").textContent=`${PLANNING[state.scope].label} / ${tier} · ${state.guests} guests · ${tables} tables`;
-  $("#estTablescape").textContent=isCustom?"Custom (to be quoted)":money(tablescape);
-  $("#estPlanning").textContent=money(planPrice);
-  $("#estGrand").textContent=isCustom?money(grand)+" + custom decor":money(grand);
+  const decorTotal = (p.custom||p.later) ? 0 : p.price*tables;
+  const delivery = p.later ? 0 : DELIVERY_EST;
+  const grand = planPrice + decorTotal + delivery;
+
+  $("#estSw").innerHTML = p.palette.length ? swHTML(p.palette) : "";
+  $("#estName").textContent = p.later ? "Decor collection to be chosen" : p.name;
+  $("#estMeta").textContent = `${PLANNING[state.scope].label} / ${tier} · ${state.guests} guests · ${tables} tables`;
+  $("#estPlanning").textContent = money(planPrice);
+  $("#deliveryRow").classList.toggle("hide", p.later);
+
+  if(p.later){
+    $("#estDecor").textContent = "Added when you choose";
+    $("#estGrand").textContent = money(grand);
+    $("#estFootnote").textContent = "This total covers your planning package only. Your decor collection and delivery are added once you choose a collection, and are invoiced separately by our rental partner.";
+  } else if(p.custom){
+    $("#estDecor").textContent = "Custom (to be quoted)";
+    $("#estGrand").textContent = money(grand) + " + custom decor";
+    $("#estFootnote").textContent = "Your custom decor design is quoted after an initial consultation. Delivery is an estimate and will be finalized once your delivery location is confirmed.";
+  } else {
+    $("#estDecor").textContent = money(decorTotal);
+    $("#estGrand").textContent = money(grand);
+    $("#estFootnote").textContent = "Delivery is an estimate and will be finalized once your delivery location is confirmed.";
+  }
   showStep(3);
 }
 
 function buildBookingUrl(){
   const p=pkg(), tier=tierFor(state.guests);
   const appt=PLANNING[state.scope][tier].appt;
+  const collectionValue = p.later ? "Not yet selected" : p.name;
   const parts=[
     "appointmentType="+encodeURIComponent(appt),
-    "field:"+ACUITY.collectionFieldId+"="+encodeURIComponent(p.name),
+    "field:"+ACUITY.collectionFieldId+"="+encodeURIComponent(collectionValue),
     "field:"+ACUITY.guestFieldId+"="+encodeURIComponent(state.guests)
   ];
   if(ACUITY.sourceFieldId && ACUITY.source) parts.push("field:"+ACUITY.sourceFieldId+"="+encodeURIComponent(ACUITY.source));
   return ACUITY.base+"&"+parts.join("&");
 }
+
 function enterReserve(){
   const p=pkg(), tier=tierFor(state.guests), tables=tablesFor(state.guests);
   const planPrice=PLANNING[state.scope][tier].price;
   $("#r4pkg").textContent=`${PLANNING[state.scope].label} / ${tier}`;
   $("#r4pkgmeta").textContent=`${state.guests} guests · ${money(planPrice)}`;
-  $("#r4sw").innerHTML=swHTML(p.palette);
-  $("#r4name").textContent=p.name;
-  $("#r4meta").textContent=`${tables} tables`;
-  $("#p4sub").textContent=`You will now be forwarded to complete your booking and pay your deposits. Final balances are invoiced one month before your wedding date.`;
-  if(p.custom){
-    $("#reserveBtn").href=buildBookingUrl();
-    document.querySelector("#p4sub").textContent += " A member of the team will follow up separately to discuss your custom decor design.";
+  $("#r4sw").innerHTML = p.palette.length ? swHTML(p.palette) : "";
+  $("#r4name").textContent = p.later ? "Not yet selected" : p.name;
+  $("#r4meta").textContent = p.later ? "" : `${tables} tables`;
+
+  let sub = "You will now be forwarded to complete your booking and pay your $1,500 planning deposit. The date you choose there is your one-hour planning call, when we start working together. It is not your wedding date. Final balances are invoiced one month before your wedding date.";
+  if(p.later){
+    $("#r4desc").textContent = "You can choose your collection at any point during planning. Most couples decide once the venue and vendor team are set. Your collection is invoiced separately by our rental partner, based on your final guest count.";
+  } else if(p.custom){
+    $("#r4desc").textContent = "A custom decor design built around your vision, aesthetic, and budget. Quoted after an initial consultation, and invoiced separately by our rental partner.";
+    sub += " I will follow up separately to discuss your custom decor design.";
   } else {
-    $("#reserveBtn").href=buildBookingUrl();
+    $("#r4desc").textContent = "Professionally designed decor collection. Sourced, delivered, styled, and cleared. Priced per table based on your final guest count.";
   }
+  $("#p4sub").textContent = sub;
+  $("#reserveBtn").href = buildBookingUrl();
   showStep(4);
 }
 
@@ -463,15 +498,15 @@ $("#toEstimate").addEventListener("click",enterEstimate);
 $("#backToCollection").addEventListener("click",()=>showStep(2));
 $("#toReserve").addEventListener("click",enterReserve);
 $("#backToEstimate").addEventListener("click",()=>showStep(3));
-</script>
-<script>
-  document.addEventListener("click", function(e){
-    var m = document.getElementById("mob-menu");
-    var h = document.getElementById("hamburger");
-    if(m && m.classList.contains("open") && !m.contains(e.target) && !h.contains(e.target)){
-      m.classList.remove("open"); h.classList.remove("open");
-    }
-  });
+
+document.addEventListener("click", function(e){
+  var m = document.getElementById("mob-menu");
+  var h = document.getElementById("hamburger");
+  if(m && m.classList.contains("open") && !m.contains(e.target) && !h.contains(e.target)){
+    m.classList.remove("open"); h.classList.remove("open");
+    h.setAttribute("aria-expanded","false");
+  }
+});
 </script>
 </body>
 </html>
