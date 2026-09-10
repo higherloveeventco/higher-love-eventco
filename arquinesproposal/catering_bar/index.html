@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catering &amp; Bar &middot; Michelle &amp; Daniel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F5F0E8;
+  --linen:#EDE9E1;
+  --gold:#B8892A;
+  --ink:#1A1A18;
+  --rule:rgba(26,26,24,.14);
+  --hair:rgba(26,26,24,.09);
+  --muted:rgba(26,26,24,.62);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:'Montserrat',system-ui,sans-serif;
+  font-weight:300;font-size:16px;line-height:1.7;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 28px}
+
+/* masthead */
+.mast{padding:56px 0 0;text-align:center}
+.mast .brand{font-size:11px;letter-spacing:.28em;font-weight:400;color:var(--muted);text-transform:uppercase}
+h1{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;
+  font-size:clamp(44px,8vw,76px);line-height:1.04;margin:22px 0 14px;
+}
+h1 em{font-style:italic;color:var(--gold)}
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.rule{height:1px;background:var(--rule);margin:44px 0}
+
+.lede{font-size:17px;line-height:1.8;max-width:66ch;margin:0 auto}
+.lede p{margin:0 0 18px}
+.lede p:last-child{margin-bottom:0}
+
+h2{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;
+  font-size:clamp(30px,4.6vw,42px);line-height:1.15;margin:64px 0 6px;
+}
+h2 + .sub{color:var(--muted);font-size:15px;margin:0 0 26px;max-width:64ch}
+p{margin:0 0 16px;max-width:70ch}
+
+/* tables */
+table{width:100%;border-collapse:collapse;margin:22px 0 8px;font-size:15px}
+th{
+  text-align:right;font-weight:500;font-size:12px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+  padding:0 0 10px;border-bottom:1px solid var(--rule);
+}
+th:first-child{text-align:left}
+td{padding:11px 0;border-bottom:1px solid var(--rule);text-align:right;vertical-align:top}
+td:first-child{text-align:left;padding-right:20px}
+tr.total td{font-weight:500;border-bottom:none;border-top:2px solid var(--ink);padding-top:14px;font-size:16px}
+.note{display:block;font-size:13px;color:var(--muted);line-height:1.5;margin-top:2px}
+
+/* caterer panels */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:26px 0 10px}
+.panel{background:var(--linen);padding:26px 24px 22px}
+.panel.pick{box-shadow:inset 3px 0 0 var(--gold)}
+.panel h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;margin:0 0 2px;font-size:26px}
+.panel .pg{font-size:13px;color:var(--muted);margin:0 0 18px}
+.panel table{margin:0;font-size:14.5px}
+.panel td{padding:9px 0;border-bottom:1px solid var(--hair)}
+.panel tr.total td{border-bottom:none;border-top:1px solid var(--ink)}
+.panel p{font-size:14px;line-height:1.65;margin:16px 0 0;color:var(--muted)}
+
+/* menus */
+.menu{margin:38px 0 0;padding-top:26px;border-top:1px solid var(--rule)}
+.menu > h3{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;
+  font-size:30px;margin:0 0 24px;
+}
+.course{margin:0 0 26px}
+.course:last-of-type{margin-bottom:0}
+.course-label{
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;font-weight:400;
+}
+.dish{padding:9px 0;border-bottom:1px solid var(--hair)}
+.dish:last-child{border-bottom:none}
+.dn{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:500;line-height:1.3}
+.dd{display:block;font-size:13.5px;color:var(--muted);line-height:1.55;margin-top:3px}
+.flag{font-size:14px;color:var(--muted);line-height:1.65;margin:22px 0 0;max-width:66ch;padding-left:16px;border-left:1px solid var(--gold)}
+
+/* the difference */
+.diff p{max-width:68ch}
+
+/* closing take */
+.take{background:var(--linen);padding:34px 32px;margin:44px 0 0}
+.take h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:26px;margin:0 0 12px}
+.take p{font-size:16px;line-height:1.75;margin:0;max-width:64ch}
+
+ul{margin:14px 0 22px;padding-left:0;list-style:none;max-width:70ch}
+ul li{padding:9px 0 9px 22px;border-bottom:1px solid var(--rule);position:relative;font-size:15px}
+ul li:before{content:"";position:absolute;left:0;top:19px;width:8px;height:1px;background:var(--gold)}
+
+footer{text-align:center;padding:60px 0 70px;color:var(--muted);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+
+@media(max-width:680px){
+  .pair{grid-template-columns:1fr}
+  table{font-size:14px}
+  .wrap{padding:0 20px}
+  h2{margin-top:52px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="mast">
+    <div class="brand">Higher Love Event Co.</div>
+    <h1>Catering &amp; <em>Bar</em></h1>
+    <div class="kicker">Michelle &amp; Daniel &middot; July 17, 2027</div>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="lede">
+    <p>I reached out to eighteen caterers. Seven were unavailable or out of range. The rest narrowed down to three, and then to two once Pearl told me they will not work alongside an outside bartender, which rules them out if you decide to book Goldie's.</p>
+    <p>What follows is the two that are left, what the bar costs, and where the money moves if you want the number lower. Everything is priced at <strong>140 guests</strong>, family style.</p>
+  </div>
+
+  <h2>The two caterers</h2>
+  <p class="sub">Both numbers cover food, staff, and their service charge. Neither includes bar service or rentals, which are priced separately further down, so you are comparing the same thing on both sides.</p>
+
+  <div class="pair">
+
+    <div class="panel pick">
+      <h3>Devil's Food</h3>
+      <p class="pg">$138.47 per guest &middot; my recommendation</p>
+      <table>
+        <tr><td>Passed appetizers</td><td>$1,540</td></tr>
+        <tr><td>Dinner</td><td>$8,400</td></tr>
+        <tr><td>Late night</td><td>$1,680</td></tr>
+        <tr><td>Staff, fifteen on site</td><td>$5,100</td></tr>
+        <tr><td>Gratuity</td><td>$2,556</td></tr>
+        <tr><td>State tax</td><td>$110</td></tr>
+        <tr class="total"><td>Total</td><td>$19,386</td></tr>
+      </table>
+      <p>A salad, two proteins, a vegan entree, two sides, and bread. They offer a Filipino adobo pork that I think would be great as one of your proteins. Late night is passed by servers.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Cheryl's on 12th</h3>
+      <p class="pg">$95.85 per guest &middot; the budget option</p>
+      <table>
+        <tr><td>Passed appetizers</td><td>$1,260</td></tr>
+        <tr><td>Dinner</td><td>$6,159</td></tr>
+        <tr><td>Late night</td><td>$910</td></tr>
+        <tr><td>Staff, eleven on site</td><td>$3,340</td></tr>
+        <tr><td>Service fee</td><td>$1,650</td></tr>
+        <tr><td>Delivery</td><td>$100</td></tr>
+        <tr class="total"><td>Total</td><td>$13,419</td></tr>
+      </table>
+      <p>A salad, two proteins, two sides, and bread. Late night is a self serve station with disposable plates. A conventional menu, cooked well, with nothing Filipino outside the late night station. They are a solid, reliable choice and roughly $6,000 cheaper.</p>
+    </div>
+
+  </div>
+
+  <h2>What you would actually be eating</h2>
+  <p class="sub">Neither of these is a final menu. Devil's Food calls theirs a suggested menu and Cheryl's calls theirs a sample built from their best sellers. Both will change anything you want, and I can send you their full catering menus so you can take a look for yourself.</p>
+
+  <div class="menu">
+    <h3>Devil's Food</h3>
+
+    <div class="course">
+      <div class="course-label">Passed at cocktail hour</div>
+      <div class="dish"><span class="dn">Corn pizzettas</span><span class="dd">Two bite flatbreads with sweet corn relish, heirloom tomato, jalapeno, cotija, and queso de Oaxaca</span></div>
+      <div class="dish"><span class="dn">Ahi tuna crudo</span><span class="dd">With salsa japonesa, jicama, cucumber, cilantro, and serrano</span></div>
+      <div class="dish"><span class="dn">Beef albondigas</span><span class="dd">With tomato adobo, cilantro crema, and quicos</span></div>
+    </div>
+
+    <div class="course">
+      <div class="course-label">Dinner, served family style</div>
+      <div class="dish"><span class="dn">Grilled peach salad</span><span class="dd">With farm greens, puffed red quinoa, shaved manchego, pickled red onions, and mint vinaigrette</span></div>
+      <div class="dish"><span class="dn">Peruvian style char grilled chicken</span><span class="dd">With aji verde</span></div>
+      <div class="dish"><span class="dn">Pinot braised beef short ribs</span><span class="dd">With herb salad and truffle vinaigrette</span></div>
+      <div class="dish"><span class="dn">Panisse, for the vegans</span><span class="dd">Chickpea fritter with summer squash, sauteed onions, romesco, vegan aioli, and fresh herbs</span></div>
+      <div class="dish"><span class="dn">Roasted heirloom marble potatoes</span><span class="dd">With lemon and herbs</span></div>
+      <div class="dish"><span class="dn">Sauteed green beans</span><span class="dd">With savory tomato confiture</span></div>
+      <div class="dish"><span class="dn">Soft rolls and cultured butter</span></div>
+    </div>
+
+    <div class="course">
+      <div class="course-label">Late night, passed by servers</div>
+      <div class="dish"><span class="dn">Pork lumpia</span><span class="dd">With sweet chili dipping sauce</span></div>
+      <div class="dish"><span class="dn">Little spam musubi</span></div>
+      <div class="dish"><span class="dn">Scallop kinilaw</span><span class="dd">With lime, cilantro, coconut milk, pickled chilis, and crispy shallots</span></div>
+    </div>
+  </div>
+
+  <div class="menu">
+    <h3>Cheryl's on 12th</h3>
+
+    <div class="course">
+      <div class="course-label">Passed at cocktail hour</div>
+      <div class="dish"><span class="dn">Smoked salmon crostini</span><span class="dd">Alaskan line caught salmon with lemon creme fraiche</span></div>
+      <div class="dish"><span class="dn">Stuffed date rumaki</span><span class="dd">Bacon wrapped date stuffed with goat cheese</span></div>
+      <div class="dish"><span class="dn">Caprese skewers</span><span class="dd">Tomato, basil, and mozzarella with balsamic reduction</span></div>
+    </div>
+
+    <div class="course">
+      <div class="course-label">Dinner, served family style</div>
+      <div class="dish"><span class="dn">Walnut and pear salad</span><span class="dd">Mixed greens, candied walnuts, thinly sliced pears, parmesan, and white balsamic vinaigrette</span></div>
+      <div class="dish"><span class="dn">Oven roasted rosemary maple chicken</span><span class="dd">Marinated in maple syrup and walnut glaze</span></div>
+      <div class="dish"><span class="dn">Chimichurri filet medallions</span><span class="dd">Cooked medium rare with house made chimichurri</span></div>
+      <div class="dish"><span class="dn">Latin ranchero plate, for the vegans</span><span class="dd">Rice, black beans, roasted vegetables, ranchero sauce, and roasted jalapenos. Plated separately rather than served family style</span></div>
+      <div class="dish"><span class="dn">Parmesan garlic green beans</span><span class="dd">Butter and garlic</span></div>
+      <div class="dish"><span class="dn">Caramelized shallot and mushroom risotto</span><span class="dd">Cremini mushrooms, parmesan, and chicken stock</span></div>
+      <div class="dish"><span class="dn">Rolls and butter</span></div>
+    </div>
+
+    <div class="course">
+      <div class="course-label">Late night, self serve station</div>
+      <div class="dish"><span class="dn">Lumpia</span><span class="dd">Filling not yet chosen</span></div>
+      <div class="dish"><span class="dn">Spam musubi</span></div>
+    </div>
+
+    <p class="flag">This is their sample menu, so none of it is fixed. There are walnuts in both the salad and the chicken glaze, and the vegetarian options need some work, but Cheryl's is great at handling dietary restrictions. We will make sure everyone gets what they need and nothing they cannot have.</p>
+  </div>
+
+  <h2>The difference</h2>
+  <div class="diff">
+    <p>The gap is <strong>$5,967</strong>, about $43 a guest.</p>
+    <p>Devil's Food is the better caterer. Better food, better service, and a menu built for you instead of pulled from a list of best sellers. Only half the gap is food. The rest is staff and gratuity, and Devil's Food puts fifteen people on site to Cheryl's eleven.</p>
+    <p>Cheryl's is good. They are reliable, they have cooked hundreds of weddings, and no one is going to leave hungry or unhappy. They are a step below Devil's Food, and that step is what the $5,967 buys.</p>
+  </div>
+
+  <h2>The bar</h2>
+  <p class="sub">Identical either way. You are buying everything that goes in the glass, and Goldie's pours it. You are saving a ton of money here.</p>
+
+  <p>I had a great call with Tony and I feel very good about going with his bar service. He quoted extremely fairly, and both catering companies included fees (corkage) for serving your alcohol where Goldie's will not. His $1,100 covers setup and teardown, serving from 4:30 to midnight, and the use of his bar tools. Gratuity is not included and will be 20% on top, so another $220. He is planning on two bartenders, himself and one other, and I told him a third is fine if he wants the extra hands. That would raise the base cost slightly.</p>
+
+  <p>You are responsible for buying the spirits, beer, wine, and any other beverages you want served, plus garnishes. Tony will make a shopping list. Buy at the Costco in Camas, Washington, since they are the best deal and you can return anything unopened after the event. Let me know if you do not have a Costco card and I am happy to go with you guys.</p>
+
+  <p>A few things about how the bar should run. With only two bartenders you want signature cocktails only, because giving guests too many options slows the line down significantly. Signature cocktails let one bartender prep a row of drinks that the other hands over, like an efficient assembly line. I would also put wine on the tables for guests to serve themselves, and have Tony pre pour flutes for the champagne toast so the catering staff can pass them on trays. Roughly 17 bottles covers 100 pours.</p>
+
+  <p>Wine glasses and champagne flutes are real glass. Plastic cups stay at the bar for the cocktails, and beer and cider can go in a cup or straight from the can.</p>
+
+  <table>
+    <tr><th>Item</th><th>Low</th><th>High</th></tr>
+    <tr><td>Beer, wine, and sparkling<span class="note">Roughly 60 to 70 bottles of wine, ten cases of beer and cider, and 17 bottles of sparkling</span></td><td>$1,100</td><td>$2,400</td></tr>
+    <tr><td>Spirits, mixers, and garnish<span class="note">Two signature cocktails plus the basics</span></td><td>$800</td><td>$1,200</td></tr>
+    <tr><td>Ice</td><td>$60</td><td>$120</td></tr>
+    <tr><td>Goldie's Bar Co.<span class="note">$1,100 flat plus 20% gratuity</span></td><td>$1,320</td><td>$1,320</td></tr>
+    <tr><td>Drinkware<span class="note">Real wine glasses on the tables, 100 champagne flutes for the toast, plastic cups at the bar</span></td><td>$290</td><td>$400</td></tr>
+    <tr class="total"><td>Bar</td><td>$3,570</td><td>$5,440</td></tr>
+  </table>
+
+  <p>For comparison, a hotel or country club bar for 140 people over an evening runs $7,000 to $11,000. Supplying your own is saving you real money here.</p>
+
+  <h2>What it comes to</h2>
+
+  <table>
+    <tr><th>Item</th><th>Devil's Food</th><th>Cheryl's</th></tr>
+    <tr><td>Catering</td><td>$19,386</td><td>$13,419</td></tr>
+    <tr><td>Bar</td><td>$3,570 to $5,440</td><td>$3,570 to $5,440</td></tr>
+    <tr class="total"><td>Catering and bar</td><td>$22,956 to $24,826</td><td>$16,989 to $18,859</td></tr>
+  </table>
+
+  <h2>Against your original estimate</h2>
+  <p class="sub">Your proposal put catering at $12,500 to $21,875 and bar service plus alcohol at $2,500 to $5,000. Here is how the real quotes land.</p>
+
+  <table>
+    <tr><th>Item</th><th>Original estimate</th><th>Devil's Food</th><th>Cheryl's</th></tr>
+    <tr><td>Catering</td><td>$12,500 to $21,875</td><td>$19,386</td><td>$13,419</td></tr>
+    <tr><td>Bar</td><td>$2,500 to $5,000</td><td>$3,570 to $5,440</td><td>$3,570 to $5,440</td></tr>
+    <tr class="total"><td>Together</td><td>$15,000 to $26,875</td><td>$22,956 to $24,826</td><td>$16,989 to $18,859</td></tr>
+  </table>
+
+  <p>Both caterers land inside the range I gave you. Devil's Food sits about $2,000 below the ceiling and Cheryl's sits near the floor.</p>
+
+  <p>One thing to keep an eye on. Devil's Food works out to $138 a guest, which is above the $100 to $125 I originally quoted. The total still fits because we are at 140 rather than the 175 the range was built to cover. That headroom is what is absorbing the higher rate, so if the guest count climbs back toward 160, Devil's Food stops fitting. Worth remembering once RSVPs start coming in.</p>
+
+  <h2>Room to bring it down</h2>
+  <p class="sub">If you want to go with Devil's Food but bring the cost down a bit, I think there is room to do that. These are all Devil's Food numbers except the glassware, which applies either way. Nothing here is a decision you have to make today.</p>
+
+  <table>
+    <tr><th>Change</th><th>Saves</th></tr>
+    <tr><td>Two late night bites instead of three<span class="note">Keeps the lumpia and the spam musubi. Drops a scallop dish</span></td><td>$683</td></tr>
+    <tr><td>Cut late night entirely<span class="note">The biggest single cut available, and the one I would take last. This is where your Filipino food lives. If you go this route, we should bring more Filipino flavor onto the dinner menu instead</span></td><td>$2,050</td></tr>
+  </table>
+
+  <p>Dropping the third late night bite brings Devil's Food to <strong>$18,703</strong>, and catering and bar together to roughly <strong>$22,300 to $24,100</strong>.</p>
+
+  <h2>What I need from you</h2>
+  <p>Pick a caterer. Once you make a selection I will get the booking process started and schedule your tasting.</p>
+
+  <div class="take">
+    <h3>Kylie's take</h3>
+    <p>I would go with Devil's Food. Their flavors are far beyond Cheryl's more traditional menu, which is food everyone has had at a wedding before. They are also professional, communicative, and on top of it. I have never had a complaint with them.</p>
+  </div>
+
+  <footer>Higher Love Event Co. &middot; higherloveeventco.com</footer>
+
+</div>
+</body>
+</html>
