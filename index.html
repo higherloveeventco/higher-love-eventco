@@ -20,7 +20,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 <style>
   :root{
     --cream:#F5F0E8;--linen:#EDE9E1;
-    --gold:#B8892A;--gold-deep:#9A7020;--gold-pale:#F0E4C4;--gold-text:#52512A;
+    --gold:#B8892A;--gold-deep:#9A7020;--gold-ink:#7A5A16;--gold-pale:#F0E4C4;--gold-text:#52512A;
     --black:#1A1A18;--charcoal:#2C2C29;--muted:#504E48;
     --border:rgba(26,26,24,0.10);--border-light:rgba(245,240,232,0.10);
     --serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',sans-serif;
@@ -31,7 +31,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   body{background:var(--cream);color:var(--black);font-family:var(--sans);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 2.5rem;}
   h1,h2,h3,h4{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;}
-.eyebrow{font-family:var(--sans);font-size:.65rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);}
+.eyebrow{font-family:var(--sans);font-size:.65rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-ink);}
 .rise{opacity:0;transform:translateY(20px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1);}
 .rise.in{opacity:1;transform:none;}
   /* ===== NAV ===== */
@@ -87,8 +87,8 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   @keyframes scrollpulse{0%,100%{opacity:.3;transform:scaleY(1);}50%{opacity:.8;transform:scaleY(1.15);}}
   /* ===== HOW IT WORKS ===== */
 .calm{background:var(--linen);}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:12px;max-width:860px;margin-left:auto;margin-right:auto;}
-.step{padding:2.2rem 2rem 2.2rem 0;border-top:1px solid var(--border);position:relative;text-align:center;}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0 2.4rem;margin-top:12px;}
+.step{padding:2.2rem 0;border-top:1px solid var(--border);position:relative;text-align:left;}
 .step .num{font-family:var(--serif);font-size:3.6rem;color:var(--gold);line-height:1;}
 .step h3{font-size:1.15rem;margin:14px 0 8px;font-family:var(--serif);}
 .step p{font-size:.84rem;color:var(--charcoal);line-height:1.75;}
@@ -111,8 +111,8 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   /* ===== MEET KYLIE ===== */
 .meet{background:var(--cream);padding:72px 0;}
 .meet-inner{display:grid;grid-template-columns:380px 1fr;gap:72px;align-items:start;}
-.meet-img-wrap{position:relative;align-self:stretch;}
-.meet-img-wrap img{width:100%;height:100%;display:block;filter:grayscale(12%);object-fit:cover;object-position:top;}
+.meet-img-wrap{position:relative;align-self:stretch;display:flex;flex-direction:column;}
+.meet-img-wrap img{width:100%;flex:1;min-height:0;height:auto;display:block;filter:grayscale(12%);object-fit:cover;object-position:top;}
 .meet-img-tag{position:absolute;bottom:0;left:0;background:var(--gold);color:var(--black);padding:.9rem 1.4rem;font-family:var(--serif);font-style:italic;font-size:.95rem;line-height:1.3;}
 .meet-text .eyebrow{display:block;margin-bottom:1rem;}
 .meet-text .eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:.75rem;}
@@ -141,11 +141,19 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .tier.popular .btn:hover{background:var(--gold);color:var(--black);}
 .tier .flag{display:inline-block;background:var(--gold);color:var(--black);font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;margin-bottom:16px;}
 .tier h3{font-size:1.6rem;font-family:var(--serif);}
-.tier .count{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin-top:6px;}
+.tier .count{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);margin-top:6px;}
 .tier .price{font-family:var(--serif);font-size:2.8rem;margin:24px 0 6px;letter-spacing:-.02em;}
 .tier .price .from{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-family:var(--sans);}
 .tier .btn{margin-top:auto;text-align:center;}
   @media(max-width:820px){.tiers{grid-template-columns:1fr;border:0.5px solid var(--border);}.tier{border-right:none;border-bottom:0.5px solid var(--border);}.tier:last-child{border-bottom:none;}}
+.fine-print{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem;margin-top:2.6rem;text-align:left;}
+.fine-print>div{border-top:1px solid var(--border);padding-top:1.1rem;}
+.fine-print h3{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:.6rem;}
+.fine-print p{font-size:.82rem;color:var(--charcoal);line-height:1.75;}
+.fine-print a{color:var(--gold-ink);font-weight:600;}
+  @media(max-width:760px){.fine-print{grid-template-columns:1fr;gap:1.4rem;}}
+.loc-short{display:none;}
+  @media(max-width:600px){.loc-full{display:none;}.loc-short{display:inline;}}
 .safety-net{text-align:center;margin-top:36px;font-size:.88rem;color:var(--muted);}
 .safety-net a{color:var(--gold-deep);font-weight:600;}
 .incl-strip{margin-top:3rem;border-top:0.5px solid var(--border);padding-top:2.5rem;text-align:center;}
@@ -162,7 +170,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   /* ===== TIMELINE ===== */
 .timeline{background:var(--linen);padding:72px 0;}
 .timeline-prep{margin-top:8px;margin-bottom:3.5rem;}
-.timeline-prep-label{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.2rem;}
+.timeline-prep-label{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);display:block;margin-bottom:1.2rem;}
 .prep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
 .prep-cell{background:var(--cream);padding:1.6rem 1.8rem;}
 .prep-cell h3{font-family:var(--serif);font-size:1.15rem;line-height:1.2;margin-bottom:.6rem;}
@@ -173,7 +181,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .timeline-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3.2rem 2.6rem;position:relative;}
 .tstep{position:relative;padding-top:1.7rem;border-top:1px solid var(--border);}
 .tstep-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);position:absolute;top:-5px;left:0;}
-.tstep-when{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.5rem;}
+.tstep-when{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-ink);display:block;margin-bottom:.5rem;}
 .tstep h3{font-family:var(--serif);font-size:1.15rem;color:var(--black);margin-bottom:.55rem;line-height:1.2;}
 .tstep p{font-size:.78rem;color:var(--muted);line-height:1.8;}
   @media(max-width:860px){.timeline-steps{grid-template-columns:1fr 1fr;gap:2.6rem 2rem;}}
@@ -196,7 +204,9 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .decor-table td:first-child{font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.1em;color:rgba(245,240,232,.5);text-align:left;border-left:2px solid var(--gold);padding-left:1.1rem;}
 .decor-link{margin-top:1.4rem;display:inline-block;font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:2px;}
 .decor-link:hover{border-color:var(--gold);}
-.decor-footnote{font-size:.7rem;color:rgba(245,240,232,.55);margin-top:1rem;line-height:1.6;}
+.decor-footnote{font-size:.75rem;color:rgba(245,240,232,.65);margin-top:.6rem;line-height:1.7;}
+.decor-footnote:first-of-type{margin-top:1.2rem;}
+.decor-footnote a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;}
   /* ===== TESTIMONIALS ===== */
 .proof{background:var(--cream);padding-top:0;}
 .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);margin-top:8px;}
@@ -225,7 +235,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   @media(max-width:860px){.sustain-inner{grid-template-columns:1fr 1fr;}}
   @media(max-width:480px){.sustain-inner{grid-template-columns:1fr;}}
   /* ===== RULES ===== */
-.rules{background:var(--cream);text-align:center;padding:72px 0;}
+.rules{background:var(--cream);text-align:center;padding:0 0 72px;}
 .rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:40px;}
 .rule{background:var(--linen);padding:3rem 2rem;}
 .rule .big{font-family:var(--serif);font-size:3.5rem;color:var(--black);line-height:1;display:block;margin-bottom:.6rem;}
@@ -237,7 +247,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   /* ===== CLOSING CTA ===== */
 .closing{background:var(--linen);text-align:center;padding:88px 24px;position:relative;overflow:hidden;}
 .closing::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:800px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
-.closing .eyebrow{display:block;margin-bottom:18px;color:var(--gold);}
+.closing .eyebrow{display:block;margin-bottom:18px;color:var(--gold-ink);}
 .closing .eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin:0 auto .75rem;opacity:.6;}
 .closing h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.02;max-width:680px;margin:0 auto;color:var(--black);}
 .closing h2 em{font-style:italic;color:var(--gold);}
@@ -256,7 +266,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .foot-col a:hover{color:var(--gold);}
 .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.55);line-height:2;}
 .foot-col address a{color:rgba(245,240,232,.55);}
-.foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
+.foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.5);letter-spacing:.04em;}
   @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
   @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
   /* ===== RESPONSIVE ===== */
@@ -377,7 +387,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 <!-- HERO — full bleed dark -->
 <header class="hero">
   <div class="hero-inner">
-    <span class="hero-location rise">Full service planning studio &middot; Portland, Hood River &amp; the Columbia River Gorge</span>
+    <span class="hero-location rise"><span class="loc-full">Full service planning studio &middot; Portland, Hood River &amp; the Columbia River Gorge</span><span class="loc-short">Full service planning studio &middot; Portland &amp; the Gorge</span></span>
     <h1 class="rise">Portland wedding planning <em>without the overwhelm.</em></h1>
     <div class="hero-rule rise"></div>
     <p class="lead rise">For couples who want a beautiful wedding without spending a year buried in spreadsheets and vendor emails. Higher Love was built for you. You make a few simple choices, and I take it from there.</p>
@@ -400,7 +410,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
       <!-- FIX 3: Added explicit width/height and loading="lazy" to Kylie portrait -->
       <div class="meet-img-wrap rise">
         <img src="images/KylieHigherLoveEventCoWeddingPlanner.jpeg" alt="Kylie, Portland wedding planner and founder of Higher Love Event Co. in St. Johns, Portland, OR" width="380" height="500" loading="lazy" decoding="async">
-        <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photo: <a href="https://ellekendall.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Elle Kendall Photography</a></span>
+        <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 0 0;display:block;opacity:.7;">Photo: <a href="https://ellekendall.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Elle Kendall Photography</a></span>
       </div>
       <div class="meet-text rise">
         <span class="eyebrow">About The Founder</span>
@@ -432,7 +442,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
       <div class="step rise"><div class="num">02</div><h3>Pick your venue</h3><p>Once your package is confirmed, I&rsquo;ll present up to five fully vetted venue options for your date range, each ranked with honest pros and cons. We tour your top three together.</p></div>
       <div class="step rise"><div class="num">03</div><h3>Build your team</h3><p>A curated and ranked shortlist of up to three vendors per category: catering, photography, music, and more, matched to your vision and budget.</p></div>
     </div>
-    <p class="rise" style="text-align:center;margin-top:2.4rem;"><a href="/timeline" class="decor-link" style="color:var(--gold-deep);border-bottom-color:rgba(154,112,32,.4);">See the full planning timeline &rarr;</a></p>
+    <p class="rise" style="margin-top:1.6rem;"><a href="/timeline" class="decor-link" style="color:var(--gold-deep);border-bottom-color:rgba(154,112,32,.4);">See the full planning timeline &rarr;</a></p>
   </div>
 </section>
 <!-- TAKEOVER -->
@@ -493,15 +503,6 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
     </div>
   </div>
 </section>
-<!-- EDITORIAL PHOTO -->
-<div style="background:var(--cream);line-height:0;">
-  <img src="images/StJohnsInnCeremonyWeddingPortlandOregonBridge.jpg" alt="Wedding ceremony at St. Johns Inn, Portland, OR, Higher Love Event Co." width="1080" height="520" loading="lazy" decoding="async" style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 40%;">
-  <div class="editorial-caption" style="display:grid;padding:1.2rem 2.5rem;">
-    <span></span>
-    <p style="font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--muted);text-align:center;">St. Johns Inn, Portland. One of my favorite venues in the neighborhood.</p>
-    <span class="ec-credit" style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);opacity:.7;text-align:right;">Photo: <a href="https://www.lindsayblairphotography.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Lindsay Blair Photography</a></span>
-  </div>
-</div>
 <!-- PACKAGES -->
 <section id="packages" class="pkg-section">
   <div class="wrap">
@@ -517,11 +518,22 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
       </div>
     </div>
     <div class="tiers" id="tiers"></div>
-    <p class="rise" style="text-align:center;margin-top:1.6rem;font-size:.85rem;color:var(--charcoal);line-height:1.75;max-width:640px;margin-left:auto;margin-right:auto;">Your planning package includes decor coordination, styling, and clearing. The decor itself is priced separately: choose one of my eight pre-designed collections or a custom design quoted just for you. For 75 guests, collections run about $3,000 to $3,950. <a href="#decor" style="color:var(--gold-deep);font-weight:600;">See decor pricing by guest count.</a></p>
-    <p class="rise" style="text-align:center;margin-top:1rem;font-size:.8rem;color:var(--muted);line-height:1.75;max-width:620px;margin-left:auto;margin-right:auto;">Your tier is based on your estimated guest count at booking. If your count grows, you only move up a tier once you are 15 or more guests past it. Above 120 guests, pricing continues from the Grand package with a charge for each additional table and a third onsite coordinator. 200 guests is the largest celebration I plan. <a href="/reserve" style="color:var(--gold-deep);font-weight:600;">See your total before you book.</a></p>
-    <p class="rise" style="text-align:center;margin-top:1rem;font-size:.8rem;color:var(--muted);line-height:1.75;max-width:620px;margin-left:auto;margin-right:auto;">A $1,500 deposit reserves your planning package and is credited toward your total. The remaining balance is invoiced one month before your wedding. I plan weddings across the Portland metro, Hood River, and the Columbia River Gorge. Weddings outside that area include a travel and accommodations fee.</p>
+    <div class="fine-print rise">
+      <div>
+        <h3>Decor</h3>
+        <p>Your planning package includes decor coordination, styling, and clearing. The decor itself is priced separately: choose one of my eight pre-designed collections or a custom design quoted just for you. For 75 guests, collections run about $3,000 to $3,950. <a href="#decor">See decor pricing.</a></p>
+      </div>
+      <div>
+        <h3>Guest count</h3>
+        <p>Your tier is based on your estimated guest count at booking. If your count grows, you only move up a tier once you are more than 15 guests past it. Above 120 guests, pricing continues from the Grand package with a charge for each additional table and a third onsite coordinator. 200 guests is the largest celebration I plan. <a href="/reserve">See your total before you book.</a></p>
+      </div>
+      <div>
+        <h3>Deposit &amp; travel</h3>
+        <p>A $1,500 deposit reserves your planning package and is credited toward your total. The remaining balance is invoiced one month before your wedding. I plan weddings across the Portland metro, Hood River, and the Columbia River Gorge. Weddings outside that area include a travel and accommodations fee.</p>
+      </div>
+    </div>
     <div class="incl-strip">
-      <p style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;">What&rsquo;s included</p>
+      <p style="font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:1.4rem;">What&rsquo;s included</p>
       <div class="incl-chips" id="inclChips">
         <span class="incl-chip">Venue research &amp; sourcing</span>
         <span class="incl-chip">Vendor vetting &amp; booking</span>
@@ -548,7 +560,6 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
       <h2>Curated decor. No design fee. A cohesive aesthetic.</h2>
       <p>Because every collection is pre-designed, there is no design fee and no endless decisions to make. Simply choose the look that fits your wedding and I take it from there. Sourcing, delivery, setup, styling, and teardown all included.</p>
     </div>
-    <a href="/decor" class="decor-link" style="display:block;margin-bottom:.6rem;">Explore all 8 decor collections &rarr;</a>
     <div class="decor-table-wrap rise">
       <table class="decor-table">
         <thead>
@@ -571,10 +582,20 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
       </table>
     </div>
     <p class="decor-footnote">Three of eight collections shown. Estimated costs for the decor collection only. Final invoice is based on your confirmed guest count.</p>
-    <p style="font-size:.72rem;color:rgba(245,240,232,.35);margin-top:.6rem;line-height:1.7;">Current collections cover reception decor. Ceremony decor coming soon.</p>
-    <p style="font-size:.82rem;color:rgba(245,240,232,.35);margin-top:.6rem;line-height:1.7;">Custom decor designs are available for couples whose aesthetic falls outside the eight collections. <a href="/contact" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;">Please inquire &rarr;</a></p>
+    <p class="decor-footnote">Current collections cover reception decor. Ceremony decor coming soon.</p>
+    <p class="decor-footnote">Custom decor designs are available for couples whose aesthetic falls outside the eight collections. <a href="/contact">Please inquire</a></p>
+    <a href="/decor" class="decor-link">Explore all 8 decor collections &rarr;</a>
   </div>
 </section>
+<!-- EDITORIAL PHOTO -->
+<div style="background:var(--cream);line-height:0;">
+  <img src="images/StJohnsInnCeremonyWeddingPortlandOregonBridge.jpg" alt="Wedding ceremony at St. Johns Inn, Portland, OR, Higher Love Event Co." width="1080" height="520" loading="lazy" decoding="async" style="width:100%;display:block;max-height:520px;object-fit:cover;object-position:center 40%;">
+  <div class="editorial-caption" style="display:grid;padding:1.2rem 2.5rem;">
+    <span></span>
+    <p style="font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--muted);text-align:center;">St. Johns Inn, Portland. One of my favorite venues in the neighborhood.</p>
+    <span class="ec-credit" style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);opacity:.7;text-align:right;">Photo: <a href="https://www.lindsayblairphotography.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Lindsay Blair Photography</a></span>
+  </div>
+</div>
 <!-- SUSTAINABILITY — dark -->
 <section class="sustain">
   <div class="wrap">
@@ -634,10 +655,13 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
           <li><a href="/" aria-label="Home — Higher Love Event Co.">Home</a></li>
           <li><a href="/about" aria-label="About Kylie and Higher Love">About</a></li>
           <li><a href="/timeline" aria-label="See the full planning timeline">Planning Timeline</a></li>
+          <li><a href="/wedding-budget-guide" aria-label="Portland wedding budget guide">Budget Guide</a></li>
           <li><a href="/reserve" aria-label="Reserve a wedding planning package">Reserve</a></li>
           <li><a href="/decor" aria-label="View decor collections">Decor</a></li>
           <li><a href="/reviews" aria-label="Read client reviews">Reviews</a></li>
           <li><a href="/blog" aria-label="Read the Higher Love blog">Blog</a></li>
+          <li><a href="https://marriedunderthebridge.com/" aria-label="Elopements with Married Under the Bridge">Elopements</a></li>
+          <li><a href="/faq" aria-label="Frequently asked questions">FAQ</a></li>
           <li><a href="/contact" aria-label="Contact Kylie at Higher Love">Contact</a></li>
         </ul>
       </div>
