@@ -23,7 +23,7 @@
 <style>
   :root{
     --cream:#F5F0E8;--linen:#EDE9E1;
-    --gold:#B8892A;--gold-deep:#9A7020;--gold-pale:#F0E4C4;
+    --gold:#B8892A;--gold-deep:#9A7020;--gold-ink:#7A5A16;--gold-pale:#F0E4C4;
     --black:#1A1A18;--charcoal:#2C2C29;--muted:#504E48;
     --border:rgba(26,26,24,0.10);
     --serif:'Cormorant Garamond',Georgia,serif;
@@ -62,7 +62,7 @@
 
   /* HERO */
   .faq-hero{background:var(--cream);padding:5rem 0 4rem;border-bottom:0.5px solid var(--border);}
-  .faq-hero .eyebrow{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.2rem;}
+  .faq-hero .eyebrow{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-ink);display:block;margin-bottom:1.2rem;}
   .eyebrow::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:.75rem;}
   .faq-hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.8rem,6vw,4.8rem);line-height:1.02;color:var(--black);max-width:700px;}
   .faq-hero h1 em{font-style:italic;color:var(--gold);}
@@ -75,14 +75,14 @@
   /* SIDEBAR NAV */
   .faq-nav{position:sticky;top:calc(var(--nav-h) + 2rem);display:flex;flex-direction:column;min-width:0;}
   .faq-nav a{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:.5rem 0 .5rem 1rem;border-left:2px solid transparent;transition:all .2s;line-height:1.4;white-space:nowrap;}
-  .faq-nav a:hover,.faq-nav a.active{color:var(--gold);border-left-color:var(--gold);}
+  .faq-nav a:hover,.faq-nav a.active{color:var(--gold-ink);border-left-color:var(--gold);}
   .faq-nav-label{font-family:var(--sans);font-size:.55rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);opacity:.6;display:block;margin-bottom:.8rem;padding-left:1rem;}
   @media(max-width:760px){.faq-nav{display:none;}}
 
   /* FAQ SECTIONS */
   .faq-section{margin-bottom:4rem;}
   .faq-section:last-child{margin-bottom:0;}
-  .faq-section-label{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.8rem;padding-bottom:1rem;border-bottom:0.5px solid var(--border);line-height:1.4;}
+  .faq-section-label{font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-ink);display:block;margin-bottom:1.8rem;padding-bottom:1rem;border-bottom:0.5px solid var(--border);line-height:1.4;}
 
   /* ACCORDION */
   .faq-item{border-bottom:0.5px solid var(--border);}
@@ -100,6 +100,7 @@
   .faq-a-inner{padding:0 2rem 1.6rem 0;color:var(--charcoal);font-size:.9rem;line-height:1.9;}
   .faq-a-inner p{margin-bottom:1rem;}
   .faq-a-inner p:last-child{margin-bottom:0;}
+  .faq-a-inner a{color:var(--gold-ink);font-weight:600;border-bottom:1px solid rgba(122,90,22,.35);}
   .faq-callout{border-left:2px solid var(--gold);padding:.8rem 1.2rem;margin:.8rem 0;background:rgba(184,137,42,.04);}
   .faq-callout p{margin:0;}
 
@@ -128,7 +129,7 @@
   .foot-col a:hover{color:var(--gold);}
   .foot-col address{font-style:normal;font-size:.82rem;color:rgba(245,240,232,.55);line-height:2;}
   .foot-col address a{color:rgba(245,240,232,.55);}
-  .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.15);letter-spacing:.04em;}
+  .foot-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(245,240,232,.5);letter-spacing:.04em;}
   @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
   @media(max-width:480px){.foot-grid{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;gap:.4rem;}}
 
@@ -151,47 +152,31 @@
       "name": "How is Higher Love different from a typical wedding planner?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Traditional planning models (day-of, partial, full-service) are built for couples who want to be closely involved in every decision. Higher Love fills the gap for couples who are overwhelmed, short on time, or simply do not want wedding planning to be their part-time job. It is a fixed planning formula with published pricing and pre-curated options at every turn, including eight complete decor collections available to every planning client, with linens, place settings, glassware, candles, florals, and a matching signage suite. No design fee. No starting from scratch."
+        "text": "Traditional planning models (day-of, partial, and full-service) are built for couples who want to be closely involved in every decision. There’s nothing wrong with that. Higher Love was designed specifically for the couple who is overwhelmed, short on time, or simply doesn’t want wedding planning to be their part-time job. It’s a fixed planning formula with published pricing and pre-curated options at every turn, including eight complete decor collections available to every planning client, with linens, place settings, glassware, candles, florals, and a matching signage suite. Design is included in every package, and the collections mean you never have to start from scratch. The goal is to minimize decision fatigue and help you feel as calm during planning as you will on your wedding day."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I need to schedule a call before booking?",
+      "name": "How involved do I need to be?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Technically, no. Pricing is published, the process is clear, and you can reserve directly from the website. But a discovery call is always a good idea, because hiring a planner is a real commitment and you should feel confident in the fit before you sign anything."
+        "text": "As much or as little as you’d like. If there’s a part of the planning process you’re excited about (florals, music, the aesthetic), let’s collaborate on it. If you’d rather hand it off entirely, I’ll take it from there and only check in when a decision actually needs to be made. The goal is to meet you where you are, not force you into a mold."
       }
     },
     {
       "@type": "Question",
-      "name": "How far in advance do I need to book a wedding planner?",
+      "name": "How many weddings do you plan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A minimum of three months before your desired wedding date. That is the minimum lead time needed to source a venue, build your vendor team, and plan the logistics properly. Popular venues and vendors fill up fast, especially in summer and fall."
+        "text": "No more than two a month, with at least two weeks between wedding dates, so every couple gets my full attention. I don’t pack the calendar, and my rates reflect the level of service, time, and attention you get because of it."
       }
     },
     {
       "@type": "Question",
-      "name": "How does my wedding date get chosen?",
+      "name": "Do you plan elopements or very small weddings?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You start with a season or a window rather than a single date, and it helps just as much to say which dates will not work. From there two things narrow it: venue availability in that window, and Higher Love's availability. Because Higher Love aims for at least two weeks between weddings, the planner's calendar is part of the equation. Your date is set when you sign your venue contract."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you only work in St. Johns?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "St. Johns is home, but Higher Love plans weddings across Portland and the Pacific Northwest. Wherever your wedding takes place, the process is the same: a fixed formula, a curated team, and someone who knows how to make a day run beautifully no matter the venue."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many weddings do you take on?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Higher Love limits how many clients it takes on so every couple gets full attention. In practice that means aiming for at least two weeks between wedding dates. The calendar is not packed, and the rates reflect the level of service, time, and attention that allows."
+        "text": "Yes. Petite packages cover celebrations of up to 50 guests. For an elopement of up to 20 guests, I co-created Married Under the Bridge with Weddinglandia: an intimate elopement package at Cathedral Park in St. Johns, right under the bridge."
       }
     },
     {
@@ -199,7 +184,7 @@
       "name": "How much does a wedding cost in the Pacific Northwest?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A realistic starting budget for a Portland wedding with 50 to 75 guests is $20,000, and that is a lean, well-planned event with mid-range vendors and minimal florals. The average Portland wedding runs $28,000 to $35,000. A wedding with magazine-worthy tablescapes, lush florals, a live band, and a stunning venue runs $40,000 to $60,000 or more. For Hood River and Gorge weddings the equivalent floor is $24,000, with line items running 15 to 20 percent higher. Typical ranges: venue from $4,500 to $7,000 in the Portland metro and $7,000 or more in the Gorge; catering from $75 per guest minimum, or $100 to $150 per guest for a seated dinner; photography from $2,400; DJ and MC from $1,500; hair and makeup $200 to $400 per person and up; florals from $2,500; officiant $300 to $600; videography $2,500 to $6,000."
+        "text": "A realistic starting budget for a Portland wedding with 50–75 guests is $20,000, and that’s a lean, well-planned event with mid-range vendors and minimal florals. The average Portland wedding runs $28,000–$35,000. Magazine-worthy tablescapes, lush florals, a live band, and a stunning venue put you at $40,000–$60,000+. For Hood River and Gorge weddings, the floor is closer to $24,000. For vendor-by-vendor ranges, from venue and catering to bar service, photography, and gratuity, see my Portland wedding budget guide. For how bar service and bartender pricing work, see the bar section of the guide."
       }
     },
     {
@@ -207,15 +192,15 @@
       "name": "Is Higher Love right for my budget?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Higher Love works exclusively with licensed, insured, and experienced vendors. The minimums reflect the real cost of that standard in the Portland and Hood River markets. If those numbers feel out of reach right now, the timing may not be right yet. If you are close but have questions, reach out."
+        "text": "Higher Love works exclusively with licensed, insured, and experienced vendors, because your wedding day deserves nothing less. The minimums in my budget guide reflect the real cost of that standard in the Portland and Hood River markets. Think of your wedding like a symphony. Your coordinator is the conductor, but the musicians still have to show up and know what they’re doing for the show to go on. No amount of coordination can compensate for a vendor who is underqualified, understaffed, or unreliable. If those numbers feel out of reach right now, that’s okay. It just means the timing might not be right yet, and I’d rather you know that now than after you’ve booked. If you’re close but have questions, reach out. I’m happy to talk it through."
       }
     },
     {
       "@type": "Question",
-      "name": "How much does wedding planning with Higher Love cost?",
+      "name": "How much does Higher Love cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Planning packages start at $3,800 for a Reception Only celebration and $4,500 for Ceremony + Reception. Pricing is published on the website by celebration type and guest count, with no inquiry required. Decor collections are priced separately, scale by guest count, and are invoiced directly by our rental partner."
+        "text": "Planning packages start at $3,800 for a Reception Only celebration and $4,500 for Ceremony + Reception. Pricing is published on the website by celebration type and guest count. No inquiry required to see what it costs. Decor design is included in every package. The decor itself is priced separately, scales by guest count, and is invoiced directly by our rental partner."
       }
     },
     {
@@ -223,87 +208,15 @@
       "name": "What does the $1,500 deposit cover?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The $1,500 deposit reserves your planning package and locks in your spot on the calendar. Your decor collection is invoiced separately by our rental partner once your wedding date is confirmed."
+        "text": "The $1,500 deposit reserves your planning package, locks in your spot on my calendar, and is credited toward your planning package total. Your decor is invoiced separately by our rental partner."
       }
     },
     {
       "@type": "Question",
-      "name": "When is my balance due?",
+      "name": "How does the payment plan work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Planning package balances are invoiced one month before your wedding date, based on your confirmed guest count. Your decor collection balance is invoiced directly by our rental partner on their own timeline, usually about two weeks before your wedding date."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are there any hidden fees or vendor kickbacks?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, on both counts. Pricing is published before you reach out, and Higher Love never accepts commissions or kickbacks from vendors. Every recommendation is based on what is right for your wedding."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What happens after I book?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The date you select at checkout is the date we start working together and have your one-hour planning call, not your wedding date. Your intake form covers the basics: date range, guest count, budget, and where you want to get married. Venue style, catering, and aesthetic preferences are worked through together on the call. From there you receive your venue menu: up to five researched and ranked options, each with honest pros and cons. You tour your top three, and once your date is locked in the same process repeats for vendors."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How involved do I need to be in planning?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "As much or as little as you would like. If there is a part of the planning process you are excited about, we collaborate on it. If you would rather hand it off entirely, Higher Love takes it from there and checks in only when a decision actually needs to be made."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you choose my venue and vendors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A wide net is cast across the region, then narrowed to the five strongest venue options for your logistical needs, aesthetic vision, guest count, and date range. Each comes researched, ranked, and presented with honest pros and cons, and you tour your top three. Once your venue is confirmed, the same process repeats for vendors with a curated shortlist of up to three per category, and you interview up to three per category before choosing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if I already have vendors booked?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "That is no problem. Higher Love works with whatever team you have already assembled and fills in the gaps. Just note who is confirmed at the time of booking."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is included in a decor collection?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Every table includes a full-length table linen, coordinating runner, coordinating napkins, table number frame, charger plate, dinner plate, water goblet, dinner fork and knife, six bud vases with florals, six votive candles, and taper or pillar candles matched to the collection. A signage template suite is also included: welcome sign, seating chart, table numbers, and bar and catering menus. Matching templates for your wedding website and digital save the dates and invitations are also available."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is a decor collection required?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. A pre-designed decor collection or custom decor design is required with every planning package. Each collection is a professionally designed tablescape with linens, place settings, glassware, candles, and florals, and no design fee, because the creative work is already done."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who delivers and sets up the decor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our rental partner delivers and picks up all rental items. Our team styles and clears the tables on the day. You do not need to coordinate any of it."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I customize my decor collection?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The eight collections are pre-designed and complete as is, which keeps the process efficient and the pricing clear. If your aesthetic falls outside the eight collections, a custom decor design is available and quoted separately after an initial consultation."
+        "text": "Your planning fee is paid in three installments: the $1,500 deposit at booking, a second payment at the midpoint of your planning, and the final payment one week before your wedding date. The remaining balance after your deposit is split evenly between the second and final payments, and the final payment reflects your confirmed guest count. Your decor is billed directly by our rental partner in two parts: a deposit when your initial rental order is placed, and the final balance about two weeks before your wedding, once the order is finalized. Planning payments are processed through Square; cash and checks aren’t accepted."
       }
     },
     {
@@ -311,15 +224,127 @@
       "name": "What if my guest count changes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Guest counts can fluctuate within your booked tier at no additional charge. If your final count exceeds the Petite or Signature maximum by more than 15 guests, your planning package upgrades to the next tier. If your count falls more than 15 below your tier minimum, you can move down one tier up until you sign your venue contract. Above 120 guests, pricing continues from the Grand package with a charge for each table beyond 15 plus a third onsite coordinator, and the total is shown on the reserve page. 200 guests is the largest celebration Higher Love takes on. Decor collections are always invoiced based on your final confirmed guest count."
+        "text": "Guest counts can fluctuate within your booked tier at no additional charge. If your final count exceeds the Petite or Signature maximum by more than 15 guests, your planning package upgrades to the next tier and the price adjusts accordingly. If your count falls more than 15 below your tier minimum, you can move down one tier, up until you sign your venue contract. Above 120 guests, pricing continues from the Grand package rather than stopping. You add a charge for each table beyond 15, plus a third onsite coordinator, and you can see the total on the reserve page before you book. 200 guests is the largest celebration I plan. Decor collections are always invoiced based on your final confirmed guest count, so you only pay for the tables you actually need."
       }
     },
     {
       "@type": "Question",
-      "name": "How many coordinators will be at my wedding?",
+      "name": "Are there any hidden fees or vendor kickbacks?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Two, or three for celebrations above 120 guests. All are onsite for the full event, up to 8 hours for Reception Only packages and up to 12 hours for Ceremony + Reception packages, from the start of setup through the end of teardown."
+        "text": "No, on both counts. Pricing is published before you reach out, and I never accept commissions or kickbacks from vendors. Every recommendation I make is based on what’s right for your wedding, not what benefits me financially."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if we need to cancel or reschedule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cancellations are submitted in writing to hello@higherloveeventco.com. The $1,500 deposit is non-refundable. Beyond that, what you owe depends on timing: more than 90 days before your wedding, the remaining balance isn’t charged; within 90 days, 50% of the remaining balance is due; within 30 days, the full remaining balance is due. If you need to move your date, send the request in writing and I’ll check my availability. If I’m available, planning work already completed (venue research, vendor outreach, contract management, and timeline work) is invoiced before work on the new date begins. If I’m not available for the new date, the deposit is forfeited and the agreement ends."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to schedule a call before booking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically, no. Pricing is published, the process is clear, and you can reserve directly from the website. But a discovery call is always a good idea, not because you need to be sold on anything, but because hiring a planner is a real commitment and you should feel confident in the fit before you sign anything. It’s a chance to ask questions, get a sense of how I communicate, and make sure this model is genuinely right for you. I’d rather you make the right choice than the fast one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance do I need to book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A minimum of three months before your desired wedding date. That’s the minimum lead time needed to source a venue, build your vendor team, and plan the logistics properly. The earlier you book, the more options I have to work with. Popular venues and vendors fill up fast, especially in summer and fall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does my wedding date get chosen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You start with a season or a window rather than a single date. It helps just as much to tell me which dates won’t work, whether that’s a holiday, a family conflict, or a month you’d rather avoid. From there, two things narrow it: venue availability in that window, and mine. Because I plan no more than two weddings a month, with at least two weeks between them, my calendar is part of the equation rather than an afterthought. Your date is set when you sign your venue contract."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do you plan weddings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "St. Johns is home. It’s where I’m based, where I have the deepest vendor relationships, and where a lot of my couples end up celebrating. I plan weddings across the Portland metro, Hood River, and the Columbia River Gorge, and I love working in new spaces. Weddings outside that area include travel costs for my team, billed at cost: lodging, airfare or other transportation, and a daily meal allowance. You’ll get a written estimate before you book. Wherever your wedding takes place, the process is exactly the same: a fixed formula, a curated team, and someone who knows how to make a day run beautifully no matter the venue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after I book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One thing worth knowing before you book: the date you select at checkout is the date of your one-hour planning call. It is not your wedding date. Your intake form covers the basics, and we work through everything else together on that call. From there, the venue search begins, followed by your vendor team. Depending on your timeline, we can hire vendors in waves to keep decision fatigue to a minimum. The full planning timeline shows every step from booking to wedding day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you choose my venue and vendors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You’ll get up to five researched and ranked venue options, each with honest pros and cons. My top pick is always listed first, with clear reasoning so you can agree or push back. We tour your top three together. Vendors follow the same approach: a curated shortlist of up to three per category, matched to your vision, budget, and aesthetic. Already vetted, already narrowed. You choose; I take it from there. See the planning timeline for how each step fits together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I already have vendors booked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No problem at all. I work with whatever team you’ve already assembled and fill in the gaps. Just let me know who’s confirmed at the time of booking and I’ll take it from there."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What’s included in a decor collection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every table includes a full-length table linen, coordinating runner, coordinating napkins, table number frame, charger plate, dinner plate, water goblet, dinner fork and knife, 6 bud vases with florals, 6 votive candles, and taper or pillar candles matched to the collection. A signage templates suite is also included: welcome sign, seating chart, table numbers, and bar and catering menus. Matching templates for your wedding website and digital save the dates and invites are also available if you’d like to use them. Specific items can occasionally be unavailable. When that happens, I source a comparable replacement at a similar cost that keeps the look and quality of your collection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to choose a decor collection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Design is included in every planning package, so you can choose one of the eight collections or create a custom design with me. Every celebration does include a decor plan, since decor design, coordination, styling, and clearing are all part of your package. All reception decor design, rentals, and sourcing go through me and my rental partner, which keeps quality consistent and the setup seamless. Personal touches like your guest book, card box, or family photos are always welcome, and I’ll place them for you. Just unwrap them from their packaging, assemble them as much as you reasonably can (photos in frames, for example), and pack them in up to two medium-sized labeled tubs. The collections exist for convenience. Design can be one of the most overwhelming parts of planning, with endless options and decisions. Each collection is a complete, professionally designed tablescape (linens, place settings, glassware, candles, and florals), so you can choose a cohesive look in a single decision. They also make the day run smoothly. I have a close working relationship with our rental partner. I know their inventory, I know their process, and I trust the quality of what they deliver, so there’s no back-and-forth about who is providing what and the setup goes exactly as planned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who delivers and sets up the decor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our rental partner delivers and picks up all rental items. On the day, our team styles and clears the tables, and because we work with the same collections and the same partner every time, we know exactly what to expect when we walk in the door. You don’t need to coordinate any of it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize a collection or go fully custom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The eight collections are complete as-is, which keeps them quick to choose and their pricing clear. If your aesthetic falls outside them, we’ll create a custom design together. Design is included in your planning package either way. The decor itself for a custom design is quoted once your design is set."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ceremony decor available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The current decor collections cover reception decor, and ceremony decor collections are coming soon. In the meantime, ceremony florals and decor come through your florist and design vendors, which I source and coordinate as part of your planning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many coordinators will be there?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two, or three for celebrations above 120 guests. All are on-site for the full event, up to 8 hours for Reception Only packages and up to 12 hours for Ceremony + Reception packages, from the start of setup through the end of teardown. If the day runs past your coverage window, additional hours are billed at $65/hour, and whenever possible I’ll let you know before any extra time is added."
       }
     },
     {
@@ -327,7 +352,7 @@
       "name": "Will you set up my entire wedding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We oversee setup from start to finish: directing vendors, managing the production timeline, and making sure everything is executed according to plan. We style your decor and coordinate the placement of personal items like signage, guest books, and escort cards. The physical labor of setup, including furniture, AV, catering equipment, and bar setup, is done by your individual vendors."
+        "text": "We oversee setup from start to finish: directing vendors, managing the production timeline, and making sure everything is executed according to plan. We style your tables and coordinate the placement of personal items like signage, guest books, and escort cards. The physical labor of setup (furniture, AV, catering equipment, and bar setup with alcohol you’ve purchased) is done by your individual vendors. Our job is to make sure every vendor knows exactly what to do and when, so the day comes together seamlessly."
       }
     },
     {
@@ -335,15 +360,23 @@
       "name": "What does day-of coordination look like?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We arrive before your guests, oversee vendor setup, run the ceremony and reception timeline, manage any issues behind the scenes, and stay until the last vendor is out. You will not be fielding questions or watching the clock, and neither will your family."
+        "text": "We arrive before your guests, oversee vendor setup, run the ceremony and reception timeline, manage any issues that come up behind the scenes, and stay until the last vendor is out. You won’t be fielding questions or watching the clock, and neither will your family. Everyone who loves you gets to show up and celebrate you, not work your wedding."
       }
     },
     {
       "@type": "Question",
-      "name": "What if something goes wrong on the wedding day?",
+      "name": "What if something goes wrong on the day?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is our job to anticipate problems before they happen and solve them before you know they exist. Between two coordinators onsite and a detailed production plan built well in advance, most issues are resolved without the couple ever knowing."
+        "text": "It’s our job to anticipate problems before they happen and solve them before you know they exist. Between two coordinators on-site and a detailed production plan built well in advance, most issues are resolved without the couple ever knowing. If something truly unexpected happens, we take care of it. That’s what we’re there for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we need to provide anything for your team on the wedding day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two things. For events longer than five hours, please include vendor meals for me and my coordinators, served at the same time as your guests, so we can stay sharp through the last dance. And if your venue charges for parking, those fees are covered by you for the rehearsal and wedding day."
       }
     }
   ]
@@ -407,7 +440,7 @@
       <a href="#the-model">The Model</a>
       <a href="#budget-fit">Budget &amp; Fit</a>
       <a href="#pricing">Pricing &amp; Deposits</a>
-      <a href="#process">The Planning Process</a>
+      <a href="#booking">Booking &amp; Planning</a>
       <a href="#decor">Decor Collections</a>
       <a href="#wedding-day">The Wedding Day</a>
     </nav>
@@ -415,7 +448,6 @@
     <!-- QUESTIONS -->
     <div class="faq-content">
 
-      <!-- THE MODEL -->
       <section class="faq-section" id="the-model">
         <h2 class="faq-section-label">The Model</h2>
 
@@ -426,11 +458,162 @@
           </button>
           <div class="faq-a" id="a1" role="region" aria-labelledby="q1">
             <div class="faq-a-inner">
-              <p>Traditional planning models, day-of, partial, full-service, are built for couples who want to be closely involved in every decision. There&rsquo;s nothing wrong with that. But until now, there hasn&rsquo;t been a model designed specifically for the couple who is overwhelmed, short on time, or simply doesn&rsquo;t want wedding planning to be their part-time job.</p>
-              <p>Higher Love fills that gap. A fixed planning formula with published pricing and pre-curated options at every turn, including eight complete decor collections available to every planning client, with linens, place settings, glassware, candles, florals, and a matching signage suite. No design fee. No starting from scratch. The goal is to minimize decision fatigue and help you feel as calm during planning as you will on your wedding day.</p>
+              <p>Traditional planning models (day-of, partial, and full-service) are built for couples who want to be closely involved in every decision. There&rsquo;s nothing wrong with that. Higher Love was designed specifically for the couple who is overwhelmed, short on time, or simply doesn&rsquo;t want wedding planning to be their part-time job.</p>
+              <p>It&rsquo;s a fixed planning formula with published pricing and pre-curated options at every turn, including eight complete decor collections available to every planning client, with linens, place settings, glassware, candles, florals, and a matching signage suite. Design is included in every package, and the collections mean you never have to start from scratch. The goal is to minimize decision fatigue and help you feel as calm during planning as you will on your wedding day.</p>
             </div>
           </div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q13" aria-expanded="false" aria-controls="a13">
+            <span class="faq-q-text">How involved do I need to be?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a13" role="region" aria-labelledby="q13">
+            <div class="faq-a-inner">
+              <p>As much or as little as you&rsquo;d like. If there&rsquo;s a part of the planning process you&rsquo;re excited about (florals, music, the aesthetic), let&rsquo;s collaborate on it. If you&rsquo;d rather hand it off entirely, I&rsquo;ll take it from there and only check in when a decision actually needs to be made. The goal is to meet you where you are, not force you into a mold.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q5" aria-expanded="false" aria-controls="a5">
+            <span class="faq-q-text">How many weddings do you plan?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a5" role="region" aria-labelledby="q5">
+            <div class="faq-a-inner">
+              <p>No more than two a month, with at least two weeks between wedding dates, so every couple gets my full attention. I don&rsquo;t pack the calendar, and my rates reflect the level of service, time, and attention you get because of it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q27" aria-expanded="false" aria-controls="a27">
+            <span class="faq-q-text">Do you plan elopements or very small weddings?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a27" role="region" aria-labelledby="q27">
+            <div class="faq-a-inner">
+              <p>Yes. Petite packages cover celebrations of up to 50 guests. For an elopement of up to 20 guests, I co-created <a href="https://marriedunderthebridge.com/">Married Under the Bridge</a> with Weddinglandia: an intimate elopement package at Cathedral Park in St. Johns, right under the bridge.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section" id="budget-fit">
+        <h2 class="faq-section-label">Budget &amp; Fit</h2>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q6" aria-expanded="false" aria-controls="a6">
+            <span class="faq-q-text">How much does a wedding cost in the Pacific Northwest?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a6" role="region" aria-labelledby="q6">
+            <div class="faq-a-inner">
+              <p>A realistic starting budget for a Portland wedding with 50&ndash;75 guests is $20,000, and that&rsquo;s a lean, well-planned event with mid-range vendors and minimal florals. The average Portland wedding runs $28,000&ndash;$35,000. Magazine-worthy tablescapes, lush florals, a live band, and a stunning venue put you at $40,000&ndash;$60,000+. For Hood River and Gorge weddings, the floor is closer to $24,000.</p>
+              <p>For vendor-by-vendor ranges, from venue and catering to bar service, photography, and gratuity, see my <a href="/wedding-budget-guide">Portland wedding budget guide</a>. For how bar service and bartender pricing work, see the <a href="/wedding-budget-guide#bar">bar section of the guide</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q7" aria-expanded="false" aria-controls="a7">
+            <span class="faq-q-text">Is Higher Love right for my budget?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a7" role="region" aria-labelledby="q7">
+            <div class="faq-a-inner">
+              <p>Higher Love works exclusively with licensed, insured, and experienced vendors, because your wedding day deserves nothing less. The minimums in my <a href="/wedding-budget-guide">budget guide</a> reflect the real cost of that standard in the Portland and Hood River markets.</p>
+              <p>Think of your wedding like a symphony. Your coordinator is the conductor, but the musicians still have to show up and know what they&rsquo;re doing for the show to go on. No amount of coordination can compensate for a vendor who is underqualified, understaffed, or unreliable.</p>
+              <p>If those numbers feel out of reach right now, that&rsquo;s okay. It just means the timing might not be right yet, and I&rsquo;d rather you know that now than after you&rsquo;ve booked. If you&rsquo;re close but have questions, reach out. I&rsquo;m happy to talk it through.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section" id="pricing">
+        <h2 class="faq-section-label">Pricing &amp; Deposits</h2>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q8" aria-expanded="false" aria-controls="a8">
+            <span class="faq-q-text">How much does Higher Love cost?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a8" role="region" aria-labelledby="q8">
+            <div class="faq-a-inner">
+              <p>Planning packages start at $3,800 for a Reception Only celebration and $4,500 for Ceremony + Reception. Pricing is <a href="/#packages">published on the website</a> by celebration type and guest count. No inquiry required to see what it costs. Decor design is included in every package. The decor itself is priced separately, scales by guest count, and is invoiced directly by our rental partner.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q9" aria-expanded="false" aria-controls="a9">
+            <span class="faq-q-text">What does the $1,500 deposit cover?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a9" role="region" aria-labelledby="q9">
+            <div class="faq-a-inner">
+              <p>The $1,500 deposit reserves your planning package, locks in your spot on my calendar, and is credited toward your planning package total. Your decor is invoiced separately by our rental partner.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q10" aria-expanded="false" aria-controls="a10">
+            <span class="faq-q-text">How does the payment plan work?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a10" role="region" aria-labelledby="q10">
+            <div class="faq-a-inner">
+              <p>Your planning fee is paid in three installments: the $1,500 deposit at booking, a second payment at the midpoint of your planning, and the final payment one week before your wedding date. The remaining balance after your deposit is split evenly between the second and final payments, and the final payment reflects your confirmed guest count.</p>
+              <p>Your decor is billed directly by our rental partner in two parts: a deposit when your initial rental order is placed, and the final balance about two weeks before your wedding, once the order is finalized. Planning payments are processed through Square; cash and checks aren&rsquo;t accepted.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q20" aria-expanded="false" aria-controls="a20">
+            <span class="faq-q-text">What if my guest count changes?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a20" role="region" aria-labelledby="q20">
+            <div class="faq-a-inner">
+              <p>Guest counts can fluctuate within your booked tier at no additional charge. If your final count exceeds the Petite or Signature maximum by more than 15 guests, your planning package upgrades to the next tier and the price adjusts accordingly. If your count falls more than 15 below your tier minimum, you can move down one tier, up until you sign your venue contract.</p>
+              <p>Above 120 guests, pricing continues from the Grand package rather than stopping. You add a charge for each table beyond 15, plus a third onsite coordinator, and you can see the total on the <a href="/reserve">reserve page</a> before you book. 200 guests is the largest celebration I plan.</p>
+              <p>Decor collections are always invoiced based on your final confirmed guest count, so you only pay for the tables you actually need.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" id="q11" aria-expanded="false" aria-controls="a11">
+            <span class="faq-q-text">Are there any hidden fees or vendor kickbacks?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a11" role="region" aria-labelledby="q11">
+            <div class="faq-a-inner">
+              <p>No, on both counts. Pricing is published before you reach out, and I never accept commissions or kickbacks from vendors. Every recommendation I make is based on what&rsquo;s right for your wedding, not what benefits me financially.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" id="q29" aria-expanded="false" aria-controls="a29">
+            <span class="faq-q-text">What if we need to cancel or reschedule?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a29" role="region" aria-labelledby="q29">
+            <div class="faq-a-inner">
+              <p>Cancellations are submitted in writing to <a href="mailto:hello@higherloveeventco.com">hello@higherloveeventco.com</a>. The $1,500 deposit is non-refundable. Beyond that, what you owe depends on timing: more than 90 days before your wedding, the remaining balance isn&rsquo;t charged; within 90 days, 50% of the remaining balance is due; within 30 days, the full remaining balance is due.</p>
+              <p>If you need to move your date, send the request in writing and I&rsquo;ll check my availability. If I&rsquo;m available, planning work already completed (venue research, vendor outreach, contract management, and timeline work) is invoiced before work on the new date begins. If I&rsquo;m not available for the new date, the deposit is forfeited and the agreement ends.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="faq-section" id="booking">
+        <h2 class="faq-section-label">Booking &amp; Planning</h2>
 
         <div class="faq-item">
           <button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2">
@@ -464,146 +647,23 @@
           <div class="faq-a" id="a25" role="region" aria-labelledby="q25">
             <div class="faq-a-inner">
               <p>You start with a season or a window rather than a single date. It helps just as much to tell me which dates won&rsquo;t work, whether that&rsquo;s a holiday, a family conflict, or a month you&rsquo;d rather avoid.</p>
-              <p>From there, two things narrow it: venue availability in that window, and mine. Because I aim for at least two weeks between weddings, my calendar is part of the equation rather than an afterthought. Your date is set when you sign your venue contract.</p>
+              <p>From there, two things narrow it: venue availability in that window, and mine. Because I plan no more than two weddings a month, with at least two weeks between them, my calendar is part of the equation rather than an afterthought. Your date is set when you sign your venue contract.</p>
             </div>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" id="q4" aria-expanded="false" aria-controls="a4">
-            <span class="faq-q-text">Do you only work in St. Johns?</span>
+            <span class="faq-q-text">Where do you plan weddings?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a" id="a4" role="region" aria-labelledby="q4">
             <div class="faq-a-inner">
-              <p>St. Johns is home. It&rsquo;s where I&rsquo;m based, where I have the deepest vendor relationships, and where a lot of my couples end up celebrating. But I plan weddings across Portland and the Pacific Northwest, and I love working in new spaces. Wherever your wedding takes place, the process is exactly the same: a fixed formula, a curated team, and someone who knows how to make a day run beautifully no matter the venue.</p>
+              <p>St. Johns is home. It&rsquo;s where I&rsquo;m based, where I have the deepest vendor relationships, and where a lot of my couples end up celebrating. I plan weddings across the Portland metro, Hood River, and the Columbia River Gorge, and I love working in new spaces. Weddings outside that area include travel costs for my team, billed at cost: lodging, airfare or other transportation, and a daily meal allowance. You&rsquo;ll get a written estimate before you book.</p>
+              <p>Wherever your wedding takes place, the process is exactly the same: a fixed formula, a curated team, and someone who knows how to make a day run beautifully no matter the venue.</p>
             </div>
           </div>
         </div>
-
-        <div class="faq-item">
-          <button class="faq-q" id="q5" aria-expanded="false" aria-controls="a5">
-            <span class="faq-q-text">How many weddings do you take on?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="a5" role="region" aria-labelledby="q5">
-            <div class="faq-a-inner">
-              <p>I limit how many clients I take on so every couple gets my full attention. In practice that means aiming for at least two weeks between wedding dates. I don&rsquo;t pack the calendar, and my rates reflect the level of service, time, and attention you get because of it.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- BUDGET & FIT -->
-      <section class="faq-section" id="budget-fit">
-        <h2 class="faq-section-label">Budget &amp; Fit</h2>
-
-        <div class="faq-item">
-          <button class="faq-q" id="q6" aria-expanded="false" aria-controls="a6">
-            <span class="faq-q-text">How much does a wedding cost in the Pacific Northwest?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="a6" role="region" aria-labelledby="q6">
-            <div class="faq-a-inner">
-              <p>The honest answer is: it depends on a lot of factors. The numbers below reflect a full, traditional wedding: a dedicated venue, outside catering and bar, photographer, DJ/MC, hair and makeup, and a dance party reception. They do not apply to full restaurant buyouts, elopements at Cathedral Park, or other non-traditional formats where the cost structure looks very different. For those, reach out and we&rsquo;ll talk through what makes sense for your situation.</p>
-              <p><strong>Venue:</strong> Starting at $4,500&ndash;$7,000 for Portland Metro; $7,000+ for Hood River/Gorge venues. Popular or in-demand venues can run $10,000&ndash;$15,000 or more.</p>
-              <p><strong>Catering:</strong> $75 per guest is the minimum for a licensed, insured, and properly staffed caterer. For a seated dinner with full service, budget $100&ndash;$150 per guest. For 75 guests, that&rsquo;s $7,500&ndash;$11,250 for food alone before bar.</p>
-              <p><strong>Bar:</strong> There are two types of bartending service and it&rsquo;s important to know the difference before you start getting quotes. In Oregon, anyone mixing, pouring, or serving alcohol must hold a valid OLCC service permit, and self-service stations are generally not allowed at open events. A designated server is what keeps over-serving in check and liability off you as the host. Separately, the state does not require liquor liability insurance for a private, non-licensed event, but most venues do, and many require you to hire an insured bartending or catering company regardless of what state law strictly mandates. Ask your venue for their bar requirements in writing before you book anyone.</p>
-              <div class="faq-callout">
-                <p><em>Option 1: You buy the alcohol, they serve it</em><br>You purchase all the alcohol yourself and the bartending company provides the staff, equipment, and service. A good bartending company will send you a detailed shopping list based on your guest count and drink preferences, some will even shop with you. This is often the more budget-friendly option and gives you full control over what&rsquo;s being served. Budget $1,000+ for the bartending service itself, then separately budget $1,500&ndash;$4,000+ for alcohol depending on guest count and drink selection.</p>
-              </div>
-              <div class="faq-callout">
-                <p><em>Option 2: They bring everything</em><br>The bartending company supplies both the staff and the alcohol. In this case there will be a bar minimum, a dollar amount you are on the hook for regardless of how much your guests actually drink. If your guests consume less than the minimum, you still pay the minimum. If they drink more, you pay more. Bar minimums are also standard at most venues that include bar service. If you&rsquo;re getting married at a venue with an in-house bar, expect a minimum.</p>
-              </div>
-              <p>Tableside wine or champagne service during dinner is almost always an upgrade with an additional cost, typically requiring dedicated attendants. If this is important to you, ask about it specifically when getting quotes.</p>
-              <p><strong>Photography:</strong> Starting at $2,400&ndash;$2,500 for 6&ndash;8 hours from a licensed, insured Portland-area photographer with documented experience and full gallery delivery. Mid-range photographers run $3,500&ndash;$5,000. In-demand and editorial photographers start at $6,000&ndash;$6,500+ for 8 hours. Most packages do not include retouching, budget an additional $100/hour if requested. The photographer you fall in love with on Instagram will almost certainly be at the higher end of this range.</p>
-              <p><strong>DJ/MC:</strong> $1,500 minimum for ceremony, MC, and reception coverage, though some companies start at $1,250 for a 4-hour package. Additional hours are typically billed at $200&ndash;$250/hour. A full evening reception of 5&ndash;6 hours runs $1,500&ndash;$2,000 for a mid-range DJ. Experienced, in-demand DJs run $2,500&ndash;$3,500. Party lighting is almost always a separate add-on: uplights, moving heads, lasers, and dance floor lighting packages typically run $350&ndash;$900+ depending on the setup. If you want your venue to feel like a real dance party, budget for lighting separately.</p>
-              <p><strong>Hair &amp; Makeup:</strong> $200&ndash;$400 per person is the starting range for a licensed, experienced artist, but in-demand and highly sought-after hair and makeup artists in the Portland market run $500&ndash;$700+ per person. Trials (a separate appointment at full price), travel fees, and early morning fees add to the total. A real-world example: a party of five at a recent Higher Love wedding came to $2,925, before the trial. For a couple plus a wedding party of four, budget $2,500&ndash;$5,000+ depending on the artist. If you have your heart set on a specific aesthetic or a particular artist whose work you&rsquo;ve seen on Instagram, book early and budget accordingly. The best ones fill up a year or more in advance.</p>
-              <p><strong>Florals:</strong> Starting at $2,500 for a simple, minimal look. A full floral installation with ceremony arch, centerpieces, and personal flowers runs $5,000&ndash;$10,000+.</p>
-              <p><strong>Officiant:</strong> $300&ndash;$600 for a licensed, experienced officiant who will meet with you in advance, help craft your ceremony, and file your marriage license. Many couples choose to have a friend or family member officiate instead. Oregon makes this easy, as anyone can become ordained online through organizations like Universal Life Church at no cost. Either way works beautifully. What matters is that whoever is standing up there knows you, means it, and has a valid Oregon officiant registration on file before the ceremony.</p>
-              <p><strong>Videography:</strong> $2,500&ndash;$6,000+ for a professional wedding videographer with full-day coverage and edited highlight film delivery. Videography is one of the most commonly regretted skips. Photos capture the look of your wedding, but video captures the sound, the movement, and the feeling. In-demand videographers in Portland book just as far in advance as photographers.</p>
-              <p><strong>Transportation:</strong> $500&ndash;$2,500+ depending on distance, vehicle type, and number of runs. If your ceremony and reception are at different locations, or if you&rsquo;re hosting out-of-town guests, budget for shuttle service. Guest transportation is both a hospitality gesture and a safety measure when alcohol is being served.</p>
-              <p><strong>Cake &amp; Desserts:</strong> $500&ndash;$1,500+ for a custom wedding cake from a Portland bakery. Price varies by tier count, design complexity, and flavor. If you&rsquo;re doing a dessert table or alternative to cake, budget similarly.</p>
-              <p><strong>Stationery:</strong> Printed save the dates, invitations, envelopes, and day-of signage can run $300&ndash;$1,500+ depending on paper stock, printing method, and design complexity. But digital is worth considering seriously. E-save the dates and e-invitations are more sustainable than paper goods, reduce paper waste, and eliminate the carbon footprint of mailing hundreds of envelopes across the country. They also cost significantly less. Your Higher Love planning package includes digital save the date and invitation templates designed to match your decor collection, plus matching day-of signage templates. All templates are edited in Canva and can be ordered and printed directly through Canva, no third-party print shop required. If you love the look of paper goods, budget $500&ndash;$1,500 for a print run. If you go digital, your stationery cost drops to near zero.</p>
-              <p><strong>Attire &amp; Alterations:</strong> Easy to underestimate. Dress alterations alone run $300&ndash;$800. Budget separately for attire, accessories, and alterations for both partners.</p>
-              <p><strong>Gratuity &amp; incidentals:</strong> Budget at least $1,200 for tips, unexpected costs, and day-of incidentals. Tipping vendors is standard practice and is not included in most vendor contracts.</p>
-              <p>A realistic starting budget for a Portland wedding with 50&ndash;75 guests is $20,000, and that&rsquo;s a lean, well-planned event with mid-range vendors and minimal florals. The average Portland wedding runs $28,000&ndash;$35,000. If you&rsquo;re seeing magazine-worthy tablescapes, lush florals, a live band, and a stunning venue, that&rsquo;s a $40,000&ndash;$60,000+ wedding. For Hood River/Gorge weddings, the equivalent floor is $24,000, and the line items above run 15 to 20% higher. These are floors, not ceilings.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" id="q7" aria-expanded="false" aria-controls="a7">
-            <span class="faq-q-text">Is Higher Love right for my budget?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="a7" role="region" aria-labelledby="q7">
-            <div class="faq-a-inner">
-              <p>Higher Love works exclusively with licensed, insured, and experienced vendors, because your wedding day deserves nothing less. The minimums above reflect the real cost of that standard in the Portland and Hood River markets.</p>
-              <p>Think of your wedding like a symphony. Your coordinator is the conductor, but the musicians still have to show up and know what they&rsquo;re doing for the show to go on. No amount of coordination can compensate for a vendor who is underqualified, understaffed, or unreliable.</p>
-              <p>If the numbers above feel out of reach right now, that&rsquo;s okay. It just means the timing might not be right yet, and I&rsquo;d rather you know that now than after you&rsquo;ve booked. If you&rsquo;re close but have questions, reach out. I&rsquo;m happy to talk it through.</p>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <!-- PRICING -->
-      <section class="faq-section" id="pricing">
-        <h2 class="faq-section-label">Pricing &amp; Deposits</h2>
-
-        <div class="faq-item">
-          <button class="faq-q" id="q8" aria-expanded="false" aria-controls="a8">
-            <span class="faq-q-text">How much does it cost?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="a8" role="region" aria-labelledby="q8">
-            <div class="faq-a-inner">
-              <p>Planning packages start at $3,800 for a Reception Only celebration and $4,500 for Ceremony + Reception. Pricing is published on the website by celebration type and guest count. No inquiry required to see what it costs. Decor collections are priced separately, scale by guest count, and are invoiced directly by our rental partner.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" id="q9" aria-expanded="false" aria-controls="a9">
-            <span class="faq-q-text">What does the $1,500 deposit cover?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="a9" role="region" aria-labelledby="q9">
-            <div class="faq-a-inner">
-              <p>The $1,500 deposit reserves your planning package and locks in your spot on my calendar. Your decor collection is invoiced separately by our rental partner once your wedding date is confirmed.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" id="q10" aria-expanded="false" aria-controls="a10">
-            <span class="faq-q-text">When is my balance due?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="a10" role="region" aria-labelledby="q10">
-            <div class="faq-a-inner">
-              <p>Planning package balances are invoiced one month before your wedding date, based on your confirmed guest count. Your decor collection balance is invoiced directly by our rental partner on their own timeline, usually about two weeks before your wedding date.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" id="q11" aria-expanded="false" aria-controls="a11">
-            <span class="faq-q-text">Are there any hidden fees or vendor kickbacks?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="a11" role="region" aria-labelledby="q11">
-            <div class="faq-a-inner">
-              <p>No, on both counts. Pricing is published before you reach out, and I never accept commissions or kickbacks from vendors. Every recommendation I make is based on what&rsquo;s right for your wedding, not what benefits me financially.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PLANNING PROCESS -->
-      <section class="faq-section" id="process">
-        <h2 class="faq-section-label">The Planning Process</h2>
 
         <div class="faq-item">
           <button class="faq-q" id="q12" aria-expanded="false" aria-controls="a12">
@@ -612,21 +672,8 @@
           </button>
           <div class="faq-a" id="a12" role="region" aria-labelledby="q12">
             <div class="faq-a-inner">
-              <p>One thing worth knowing before you book: the date you select at checkout is the date we start working together and have your one-hour planning call. It is not your wedding date.</p>
-              <p>Your intake form already covers the basics: your date range, guest count, budget, and where you want to get married. Everything else, venue style, catering, aesthetic preferences, we work through together on the call. The venue search starts from there.</p>
-              <p>From there, I&rsquo;ll present your venue menu: up to five researched and ranked options tailored to your wedding vision, each with honest pros and cons to help you decide. We tour your top three together. Once your date is locked in, the same process repeats for vendors. Depending on your timeline, we can hire vendors in waves to keep decision fatigue to a minimum.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" id="q13" aria-expanded="false" aria-controls="a13">
-            <span class="faq-q-text">How involved do I need to be?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="a13" role="region" aria-labelledby="q13">
-            <div class="faq-a-inner">
-              <p>As much or as little as you&rsquo;d like. If there&rsquo;s a part of the planning process you&rsquo;re excited about, florals, music, the aesthetic, let&rsquo;s collaborate on it. If you&rsquo;d rather hand it off entirely, I&rsquo;ll take it from there and only check in when a decision actually needs to be made. The goal is to meet you where you are, not force you into a mold.</p>
+              <p>One thing worth knowing before you book: the date you select at checkout is the date of your one-hour planning call. It is not your wedding date.</p>
+              <p>Your intake form covers the basics, and we work through everything else together on that call. From there, the venue search begins, followed by your vendor team. Depending on your timeline, we can hire vendors in waves to keep decision fatigue to a minimum. The <a href="/timeline">full planning timeline</a> shows every step from booking to wedding day.</p>
             </div>
           </div>
         </div>
@@ -638,8 +685,8 @@
           </button>
           <div class="faq-a" id="a14" role="region" aria-labelledby="q14">
             <div class="faq-a-inner">
-              <p>I cast a wide net across the region, then narrow it to the five strongest options for your logistical needs, aesthetic vision, guest count, and date range. Each one comes researched, ranked, and presented with honest pros and cons. My top pick is always listed first, with clear reasoning so you can agree or push back. We tour your top three together.</p>
-              <p>Once your venue is confirmed, the same process repeats for vendors: a curated shortlist of up to three per category, matched to your vision, budget, and aesthetic. We interview up to three per category. Already vetted, already narrowed. You choose; I take it from there.</p>
+              <p>You&rsquo;ll get up to five researched and ranked venue options, each with honest pros and cons. My top pick is always listed first, with clear reasoning so you can agree or push back. We tour your top three together.</p>
+              <p>Vendors follow the same approach: a curated shortlist of up to three per category, matched to your vision, budget, and aesthetic. Already vetted, already narrowed. You choose; I take it from there. See the <a href="/timeline">planning timeline</a> for how each step fits together.</p>
             </div>
           </div>
         </div>
@@ -657,7 +704,6 @@
         </div>
       </section>
 
-      <!-- DECOR -->
       <section class="faq-section" id="decor">
         <h2 class="faq-section-label">Decor Collections</h2>
 
@@ -669,20 +715,21 @@
           <div class="faq-a" id="a16" role="region" aria-labelledby="q16">
             <div class="faq-a-inner">
               <p>Every table includes a full-length table linen, coordinating runner, coordinating napkins, table number frame, charger plate, dinner plate, water goblet, dinner fork and knife, 6 bud vases with florals, 6 votive candles, and taper or pillar candles matched to the collection. A signage templates suite is also included: welcome sign, seating chart, table numbers, and bar and catering menus. Matching templates for your wedding website and digital save the dates and invites are also available if you&rsquo;d like to use them.</p>
+              <p>Specific items can occasionally be unavailable. When that happens, I source a comparable replacement at a similar cost that keeps the look and quality of your collection.</p>
             </div>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" id="q17" aria-expanded="false" aria-controls="a17">
-            <span class="faq-q-text">Is a decor collection required?</span>
+            <span class="faq-q-text">Do I have to choose a decor collection?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a" id="a17" role="region" aria-labelledby="q17">
             <div class="faq-a-inner">
-              <p>Yes. A pre-designed decor collection or custom decor design is required with every planning package, and here&rsquo;s why it&rsquo;s a feature, not a limitation.</p>
-              <p>I have a close working relationship with our rental partner. I know their inventory, I know their process, and I trust the quality of what they deliver. That means no back-and-forth about who is providing what, no endless decision-making around details, and a setup team that knows exactly what to expect.</p>
-              <p>It&rsquo;s also one of the best value propositions in the package. Each collection is a professionally designed tablescape: linens, place settings, glassware, candles, and florals, with no design fee. Because the design is used across multiple weddings, the creative work is already done. You get a beautiful, cohesive table without paying a designer to build it from scratch for you.</p>
+              <p>No. Design is included in every planning package, so you can choose one of the eight collections or create a custom design with me. Every celebration does include a decor plan, since decor design, coordination, styling, and clearing are all part of your package. All reception decor design, rentals, and sourcing go through me and my rental partner, which keeps quality consistent and the setup seamless. Personal touches like your guest book, card box, or family photos are always welcome, and I&rsquo;ll place them for you. Just unwrap them from their packaging, assemble them as much as you reasonably can (photos in frames, for example), and pack them in up to two medium-sized labeled tubs.</p>
+              <p>The collections exist for convenience. Design can be one of the most overwhelming parts of planning, with endless options and decisions. Each collection is a complete, professionally designed tablescape (linens, place settings, glassware, candles, and florals), so you can choose a cohesive look in a single decision.</p>
+              <p>They also make the day run smoothly. I have a close working relationship with our rental partner. I know their inventory, I know their process, and I trust the quality of what they deliver, so there&rsquo;s no back-and-forth about who is providing what and the setup goes exactly as planned.</p>
             </div>
           </div>
         </div>
@@ -694,39 +741,36 @@
           </button>
           <div class="faq-a" id="a18" role="region" aria-labelledby="q18">
             <div class="faq-a-inner">
-              <p>Our rental partner delivers and picks up all rental items. Our team styles and clears the tables on the day, a setup team that knows exactly what to expect when they walk in the door. You don&rsquo;t need to coordinate any of it.</p>
+              <p>Our rental partner delivers and picks up all rental items. On the day, our team styles and clears the tables, and because we work with the same collections and the same partner every time, we know exactly what to expect when we walk in the door. You don&rsquo;t need to coordinate any of it.</p>
             </div>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" id="q19" aria-expanded="false" aria-controls="a19">
-            <span class="faq-q-text">Can I customize my collection?</span>
+            <span class="faq-q-text">Can I customize a collection or go fully custom?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a" id="a19" role="region" aria-labelledby="q19">
             <div class="faq-a-inner">
-              <p>The eight collections are pre-designed and complete as-is. That&rsquo;s what keeps the process efficient and the pricing clear. If your aesthetic falls outside the eight collections, a custom decor design is available. Custom options are quoted separately after an initial consultation.</p>
+              <p>Yes. The eight collections are complete as-is, which keeps them quick to choose and their pricing clear. If your aesthetic falls outside them, we&rsquo;ll create a custom design together. Design is included in your planning package either way. The decor itself for a custom design is quoted once your design is set.</p>
             </div>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" id="q20" aria-expanded="false" aria-controls="a20">
-            <span class="faq-q-text">What if my guest count changes?</span>
+          <button class="faq-q" id="q28" aria-expanded="false" aria-controls="a28">
+            <span class="faq-q-text">Is ceremony decor available?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
-          <div class="faq-a" id="a20" role="region" aria-labelledby="q20">
+          <div class="faq-a" id="a28" role="region" aria-labelledby="q28">
             <div class="faq-a-inner">
-              <p>Guest counts can fluctuate within your booked tier at no additional charge. If your final count exceeds the Petite or Signature maximum by more than 15 guests, your planning package upgrades to the next tier and the price adjusts accordingly. If your count falls more than 15 below your tier minimum, you can move down one tier, up until you sign your venue contract.</p>
-              <p>Above 120 guests, pricing continues from the Grand package rather than stopping. You add a charge for each table beyond 15, plus a third onsite coordinator, and you can see the total on the <a href="/reserve">reserve page</a> before you book. 200 guests is the largest celebration I take on.</p>
-              <p>Decor collections are always invoiced based on your final confirmed guest count, so you only pay for the tables you actually need.</p>
+              <p>The current decor collections cover reception decor, and ceremony decor collections are coming soon. In the meantime, ceremony florals and decor come through your florist and design vendors, which I source and coordinate as part of your planning.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- WEDDING DAY -->
       <section class="faq-section" id="wedding-day">
         <h2 class="faq-section-label">The Wedding Day</h2>
 
@@ -737,7 +781,7 @@
           </button>
           <div class="faq-a" id="a21" role="region" aria-labelledby="q21">
             <div class="faq-a-inner">
-              <p>Two, or three for celebrations above 120 guests. All are on-site for the full event, up to 8 hours for Reception Only packages and up to 12 hours for Ceremony + Reception packages, from the start of setup through the end of teardown. We oversee setup and direct vendors according to the production plan, style your tables, and manage the day from start to finish. The physical setup work is done by your vendors. We make sure everyone knows where to be, what to do, and when.</p>
+              <p>Two, or three for celebrations above 120 guests. All are on-site for the full event, up to 8 hours for Reception Only packages and up to 12 hours for Ceremony + Reception packages, from the start of setup through the end of teardown. If the day runs past your coverage window, additional hours are billed at $65/hour, and whenever possible I&rsquo;ll let you know before any extra time is added.</p>
             </div>
           </div>
         </div>
@@ -749,7 +793,7 @@
           </button>
           <div class="faq-a" id="a22" role="region" aria-labelledby="q22">
             <div class="faq-a-inner">
-              <p>We oversee setup from start to finish: directing vendors, managing the production timeline, and making sure everything is executed according to plan. We style your tables and coordinate the placement of personal items like signage, guest books, and escort cards. The physical labor of setup, furniture, AV, catering equipment, and bar setup with alcohol you&rsquo;ve purchased, is done by your individual vendors. Our job is to make sure every vendor knows exactly what to do and when, so the day comes together seamlessly.</p>
+              <p>We oversee setup from start to finish: directing vendors, managing the production timeline, and making sure everything is executed according to plan. We style your tables and coordinate the placement of personal items like signage, guest books, and escort cards. The physical labor of setup (furniture, AV, catering equipment, and bar setup with alcohol you&rsquo;ve purchased) is done by your individual vendors. Our job is to make sure every vendor knows exactly what to do and when, so the day comes together seamlessly.</p>
             </div>
           </div>
         </div>
@@ -777,8 +821,20 @@
             </div>
           </div>
         </div>
+        <div class="faq-item">
+          <button class="faq-q" id="q30" aria-expanded="false" aria-controls="a30">
+            <span class="faq-q-text">Do we need to provide anything for your team on the wedding day?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="a30" role="region" aria-labelledby="q30">
+            <div class="faq-a-inner">
+              <p>Two things. For events longer than five hours, please include vendor meals for me and my coordinators, served at the same time as your guests, so we can stay sharp through the last dance. And if your venue charges for parking, those fees are covered by you for the rehearsal and wedding day.</p>
+            </div>
+          </div>
+        </div>
 
       </section>
+
     </div>
   </div>
 </div>
@@ -817,11 +873,14 @@
         <ul>
           <li><a href="/" aria-label="Home — Higher Love Event Co.">Home</a></li>
           <li><a href="/about" aria-label="About Kylie and Higher Love">About</a></li>
+          <li><a href="/timeline" aria-label="See the full planning timeline">Planning Timeline</a></li>
+          <li><a href="/wedding-budget-guide" aria-label="Portland wedding budget guide">Budget Guide</a></li>
           <li><a href="/reserve" aria-label="Reserve a wedding planning package">Reserve</a></li>
           <li><a href="/decor" aria-label="View decor collections">Decor</a></li>
           <li><a href="/reviews" aria-label="Read client reviews">Reviews</a></li>
-          <li><a href="/faq" aria-label="Frequently asked questions">FAQ</a></li>
           <li><a href="/blog" aria-label="Read the Higher Love blog">Blog</a></li>
+          <li><a href="https://marriedunderthebridge.com/" aria-label="Elopements with Married Under the Bridge">Elopements</a></li>
+          <li><a href="/faq" aria-label="Frequently asked questions">FAQ</a></li>
           <li><a href="/contact" aria-label="Contact Kylie at Higher Love">Contact</a></li>
         </ul>
       </div>
