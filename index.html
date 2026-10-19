@@ -521,15 +521,15 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
     <div class="fine-print rise">
       <div>
         <h3>Decor</h3>
-        <p>Your planning package includes decor coordination, styling, and clearing. The decor itself is priced separately: choose one of my eight pre-designed collections or a custom design quoted just for you. For 75 guests, collections run about $3,000 to $3,950. <a href="#decor">See decor pricing.</a></p>
+        <p>Your planning package includes decor design, coordination, styling, and clearing. Choose one of my eight pre-designed collections or create a custom design together; either way, design is included. The decor itself is priced separately. For 75 guests, collections run about $3,000 to $3,950. <a href="#decor">See decor pricing.</a></p>
       </div>
       <div>
         <h3>Guest count</h3>
         <p>Your tier is based on your estimated guest count at booking. If your count grows, you only move up a tier once you are more than 15 guests past it. Above 120 guests, pricing continues from the Grand package with a charge for each additional table and a third onsite coordinator. 200 guests is the largest celebration I plan. <a href="/reserve">See your total before you book.</a></p>
       </div>
       <div>
-        <h3>Deposit &amp; travel</h3>
-        <p>A $1,500 deposit reserves your planning package and is credited toward your total. The remaining balance is invoiced one month before your wedding. I plan weddings across the Portland metro, Hood River, and the Columbia River Gorge. Weddings outside that area include a travel and accommodations fee.</p>
+        <h3>Payments &amp; travel</h3>
+        <p>A $1,500 deposit reserves your planning package and is credited toward your total. The remaining balance is split into two equal payments: one at the midpoint of your planning and the final one week before your wedding. I plan weddings across the Portland metro, Hood River, and the Columbia River Gorge. Weddings outside that area include travel costs for my team, billed at cost: lodging, airfare or other transportation, and a daily meal allowance.</p>
       </div>
     </div>
     <div class="incl-strip">
@@ -542,6 +542,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
         <span class="incl-chip">Master timeline</span>
         <span class="incl-chip">Vendor communication</span>
         <span class="incl-chip" id="coordChip">Two onsite coordinators, up to 12 hours</span>
+        <span class="incl-chip">Decor design</span>
         <span class="incl-chip">Decor coordination</span>
         <span class="incl-chip">Decor styling &amp; clearing</span>
         <span class="incl-chip" id="rehearsalChip" style="display:none;">Rehearsal direction</span>
@@ -557,8 +558,8 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   <div class="wrap">
     <div class="sec-head rise">
       <span class="eyebrow">Decor Collections</span>
-      <h2>Curated decor. No design fee. A cohesive aesthetic.</h2>
-      <p>Because every collection is pre-designed, there is no design fee and no endless decisions to make. Simply choose the look that fits your wedding and I take it from there. Sourcing, delivery, setup, styling, and teardown all included.</p>
+      <h2>Design is included. The collections make it easy.</h2>
+      <p>Every planning package includes decor design. Design can be one of the most overwhelming parts of planning, so I created eight pre-designed collections that let you choose a complete, cohesive look in a single decision. Prefer something of your own? We&rsquo;ll design it together. Either way, I take care of sourcing, delivery, setup, styling, and teardown.</p>
     </div>
     <div class="decor-table-wrap rise">
       <table class="decor-table">
@@ -581,9 +582,9 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
         </tbody>
       </table>
     </div>
-    <p class="decor-footnote">Three of eight collections shown. Estimated costs for the decor collection only. Final invoice is based on your confirmed guest count.</p>
+    <p class="decor-footnote">Three of eight collections shown. Estimated costs for the decor itself; design is included in your planning package. Final invoice is based on your confirmed guest count.</p>
     <p class="decor-footnote">Current collections cover reception decor. Ceremony decor coming soon.</p>
-    <p class="decor-footnote">Custom decor designs are available for couples whose aesthetic falls outside the eight collections. <a href="/contact">Please inquire</a></p>
+    <p class="decor-footnote">Custom designs are included in your planning package too. Decor costs for a custom design are quoted once your design is set. <a href="/contact">Get in touch</a></p>
     <a href="/decor" class="decor-link">Explore all 8 decor collections &rarr;</a>
   </div>
 </section>
@@ -689,7 +690,7 @@ SINGLE SOURCE OF TRUTH — edit only PRICING + COLLECTIONS below.
   const PRICING = {
     tiers: ["Petite","Signature","Grand"],
     guestBands: ["Up to 50 guests","51 to 90 guests","91 to 120 guests"],
-    popular: 1,
+    popular: -1,
     types: {
       full: {
         prices: [4500,5800,7500],
