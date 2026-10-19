@@ -72,7 +72,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .sec-head p{margin-top:18px;color:var(--charcoal);font-size:.97rem;line-height:1.8;}
 .divider{height:0.5px;background:var(--border);max-width:var(--maxw);margin:0 auto;}
   /* ===== HERO — light cream ===== */
-.hero{background:var(--cream);padding:0;padding-top:var(--nav-h);min-height:92vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.hero{background:var(--cream);padding:0;padding-top:var(--nav-h);min-height:80vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 60% 50%,rgba(184,137,42,0.06) 0%,transparent 70%);pointer-events:none;}
 .hero-inner{max-width:var(--maxw);margin:0 auto;padding:5rem 2.5rem 4rem;position:relative;z-index:1;}
 .hero-location{font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2.2rem;}
@@ -86,7 +86,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .hero-scroll-line{width:1px;height:40px;background:var(--black);animation:scrollpulse 2s ease-in-out infinite;}
   @keyframes scrollpulse{0%,100%{opacity:.3;transform:scaleY(1);}50%{opacity:.8;transform:scaleY(1.15);}}
   /* ===== HOW IT WORKS ===== */
-.calm{background:var(--linen);}
+.calm{background:var(--cream);}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0 2.4rem;margin-top:12px;}
 .step{padding:2.2rem 0;border-top:1px solid var(--border);position:relative;text-align:left;}
 .step .num{font-family:var(--serif);font-size:3.6rem;color:var(--gold);line-height:1;}
@@ -109,7 +109,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .takeover-card a:hover{border-color:var(--gold);}
   @media(max-width:600px){.takeover-cards{grid-template-columns:1fr;}}
   /* ===== MEET KYLIE ===== */
-.meet{background:var(--cream);padding:72px 0;}
+.meet{background:var(--linen);padding:72px 0;}
 .meet-inner{display:grid;grid-template-columns:380px 1fr;gap:72px;align-items:start;}
 .meet-img-wrap{position:relative;align-self:stretch;display:flex;flex-direction:column;}
 .meet-img-wrap img{width:100%;flex:1;min-height:0;height:auto;display:block;filter:grayscale(12%);object-fit:cover;object-position:top;}
@@ -128,10 +128,8 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .toggle button{font-family:var(--sans);font-weight:600;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:12px 28px;border:none;background:var(--linen);color:var(--muted);cursor:pointer;transition:.2s;}
 .toggle button.active{background:var(--black);color:var(--cream);}
 .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:0.5px solid var(--border);}
-.tier{background:var(--cream);padding:3rem 2.4rem;display:flex;flex-direction:column;position:relative;border-right:0.5px solid var(--border);}
+.tier{background:var(--cream);border-top:3px solid var(--gold);padding:3rem 2.4rem;display:flex;flex-direction:column;position:relative;border-right:0.5px solid var(--border);}
 .tier:last-child{border-right:none;}
-.tier:first-child{background:var(--linen);border-top:3px solid var(--gold);}
-.tier:last-child{background:var(--linen);border-top:3px solid var(--gold);}
 .tier.popular{background:var(--black);border-top:3px solid var(--gold);}
 .tier.popular h3{color:var(--cream);}
 .tier.popular .count{color:var(--gold);}
@@ -208,9 +206,9 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .decor-footnote:first-of-type{margin-top:1.2rem;}
 .decor-footnote a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,137,42,.4);padding-bottom:1px;}
   /* ===== TESTIMONIALS ===== */
-.proof{background:var(--cream);padding-top:0;}
+.proof{background:var(--linen);padding-top:0;}
 .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);margin-top:8px;}
-.quote{background:var(--linen);padding:2.8rem;display:flex;flex-direction:column;border-top:2px solid var(--gold);}
+.quote{background:var(--cream);padding:2.8rem;display:flex;flex-direction:column;border-top:2px solid var(--gold);}
 .quote .stars{color:var(--gold);letter-spacing:4px;font-size:.8rem;margin-bottom:16px;}
 .quote p{font-family:var(--serif);font-size:1.08rem;line-height:1.6;color:var(--charcoal);font-style:italic;flex:1;}
 .quote .who{margin-top:1.6rem;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--black);}
@@ -235,7 +233,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   @media(max-width:860px){.sustain-inner{grid-template-columns:1fr 1fr;}}
   @media(max-width:480px){.sustain-inner{grid-template-columns:1fr;}}
   /* ===== RULES ===== */
-.rules{background:var(--cream);text-align:center;padding:0 0 72px;}
+.rules{background:var(--cream);text-align:center;padding:72px 0;}
 .rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:40px;}
 .rule{background:var(--linen);padding:3rem 2rem;}
 .rule .big{font-family:var(--serif);font-size:3.5rem;color:var(--black);line-height:1;display:block;margin-bottom:.6rem;}
@@ -285,6 +283,7 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 .closing .cta-row{flex-direction:column;align-items:stretch;}
 .closing .btn{text-align:center;}
 }
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px;}
   /* FIX 8: Respect reduced-motion preferences */
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;}
@@ -408,14 +407,12 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
   <div class="wrap">
     <div class="meet-inner">
       <!-- FIX 3: Added explicit width/height and loading="lazy" to Kylie portrait -->
-      <div class="meet-img-wrap rise">
+      <div class="meet-img-wrap">
         <img src="images/KylieHigherLoveEventCoWeddingPlanner.jpeg" alt="Kylie, Portland wedding planner and founder of Higher Love Event Co. in St. Johns, Portland, OR" width="380" height="500" loading="lazy" decoding="async">
         <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 0 0;display:block;opacity:.7;">Photo: <a href="https://ellekendall.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Elle Kendall Photography</a></span>
       </div>
-      <div class="meet-text rise">
-        <span class="eyebrow">About The Founder</span>
-        <!-- FIX 4: Heading order — was h2 inside section after h1 in hero, fine; keeping as-is -->
-        <h2>Hi, I&rsquo;m Kylie.</h2>
+      <div class="meet-text">
+                <h2>Hi, I&rsquo;m Kylie.</h2>
         <span class="meet-subtitle">Founder &middot; Portland born &amp; raised &middot; St. Johns local</span>
         <p>I&rsquo;ve spent nearly seven years working in the wedding industry, across venue management, catering sales, luxury coordination, and large-scale event production. That includes 40+ weddings at 30+ Pacific Northwest venues, and I&rsquo;m a preferred planner for St. Johns Inn and Weddinglandia. I know how venues operate, how vendors think, and how to make a wedding day feel completely effortless for the people getting married.</p>
         <blockquote class="meet-pull">Hiring a planner should reduce the decisions you&rsquo;re making, not just help you manage them.</blockquote>
@@ -432,21 +429,21 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 <!-- HOW IT WORKS -->
 <section class="calm">
   <div class="wrap">
-    <div class="sec-head rise">
+    <div class="sec-head">
       <span class="eyebrow">How it works</span>
       <h2>The big decisions made simple, one step at a time.</h2>
       <p>No research. No rabbit holes. No decision fatigue. Just a clear sequence of simple choices, and someone ready to guide you through each one.</p>
     </div>
     <div class="steps">
-      <div class="step rise"><div class="num">01</div><h3>Pick your package</h3><p>Choose your celebration type and guest count. A $1,500 deposit reserves your planning package at booking. Add a decor collection now if you already know the look you want, or choose one later.</p></div>
-      <div class="step rise"><div class="num">02</div><h3>Pick your venue</h3><p>Once your package is confirmed, I&rsquo;ll present up to five fully vetted venue options for your date range, each ranked with honest pros and cons. We tour your top three together.</p></div>
-      <div class="step rise"><div class="num">03</div><h3>Build your team</h3><p>A curated and ranked shortlist of up to three vendors per category: catering, photography, music, and more, matched to your vision and budget.</p></div>
+      <div class="step"><div class="num">01</div><h3>Pick your package</h3><p>Choose your celebration type and guest count. A $1,500 deposit reserves your planning package at booking. Add a decor collection now if you already know the look you want, or choose one later.</p></div>
+      <div class="step"><div class="num">02</div><h3>Pick your venue</h3><p>Once your package is confirmed, I&rsquo;ll present up to five fully vetted venue options for your date range, each ranked with honest pros and cons. We tour your top three together.</p></div>
+      <div class="step"><div class="num">03</div><h3>Build your team</h3><p>A curated and ranked shortlist of up to three vendors per category: catering, photography, music, and more, matched to your vision and budget.</p></div>
     </div>
-    <p class="rise" style="margin-top:1.6rem;"><a href="/timeline" class="decor-link" style="color:var(--gold-deep);border-bottom-color:rgba(154,112,32,.4);">See the full planning timeline &rarr;</a></p>
+    <p  style="margin-top:1.6rem;"><a href="/timeline" class="decor-link" style="color:var(--gold-deep);border-bottom-color:rgba(154,112,32,.4);">See the full planning timeline &rarr;</a></p>
   </div>
 </section>
 <!-- TAKEOVER -->
-<div class="takeover rise">
+<div class="takeover">
       <span class="takeover-eyebrow">And then</span>
       <p class="takeover-headline">I take it from there.</p>
       <div class="takeover-rule"></div>
@@ -454,33 +451,32 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 </div>
 <!-- TESTIMONIALS -->
 <section class="proof">
-  <div style="background:var(--cream);padding-bottom:3.5rem;line-height:0;">
+  <div style="background:var(--linen);padding-bottom:3.5rem;line-height:0;">
     <!-- FIX 6: Added explicit width/height to testimonial photo -->
     <img src="/images/StJohnsInnCeremonyPortlandWeddingVenue.jpg" alt="Wedding ceremony at St. Johns Inn, Portland Oregon, Higher Love Event Co." width="1080" height="580" loading="lazy" decoding="async" style="width:100%;display:block;max-height:580px;object-fit:cover;object-position:center 50%;">
     <span style="font-family:var(--sans);font-size:.62rem;letter-spacing:.1em;color:var(--charcoal);text-align:right;padding:.5rem 2.5rem;display:block;opacity:.7;">Photo: <a href="https://www.lindsayblairphotography.com/" target="_blank" rel="noopener" style="color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--charcoal);">Lindsay Blair Photography</a></span>
   </div>
   <div class="wrap">
-    <div class="sec-head rise">
-      <span class="eyebrow">Reviews</span>
+    <div class="sec-head">
       <h2>From the couples and venues who have worked with me.</h2>
     </div>
     <div class="quotes">
-      <div class="quote rise">
+      <div class="quote">
         <div class="stars">★★★★★</div>
         <p>&ldquo;Neither of us were contacted by anyone once for clarification during the wedding. Kylie was running logistics and making sure everything was taken care of without us having to lift a thumb. We walked away thinking the gale force winds were a special treat &mdash; which never would have been the case had she not jumped into action in advance. She acts with professionalism, is great at her job, and is so much fun to work with. A triple threat.&rdquo;</p>
         <div class="who">Sage T.<span>Wedding client &middot; Google Review</span></div>
       </div>
-      <div class="quote rise">
+      <div class="quote">
         <div class="stars">★★★★★</div>
         <p>&ldquo;We had less than 3 months to pull together a formal wedding. Kylie was able to make that happen. She put together schedules, planned layouts, and updated us regularly on progress. She was the first one on site, and we didn&rsquo;t have to worry about anything after we left. If you are even considering a planner, give her a call.&rdquo;</p>
         <div class="who">Amanda R.<span>Wedding client &middot; Google Review</span></div>
       </div>
-      <div class="quote rise">
+      <div class="quote">
         <div class="stars">★★★★★</div>
         <p>&ldquo;She&rsquo;s warm, professional, with an excellent eye for detail. She stepped in to coordinate a wedding I&rsquo;d planned but couldn&rsquo;t work &mdash; even on short notice and at a difficult venue, she really crushed it. The clients were so relieved and happy. I&rsquo;d love to work with her again and highly recommend her to any nearlyweds planning their weddings.&rdquo;</p>
         <div class="who">Andy A.<span>Fellow wedding planner &middot; Google Review</span></div>
       </div>
-      <div class="quote rise">
+      <div class="quote">
         <div class="stars">★★★★★</div>
         <p>&ldquo;Kylie is always a pleasure to work with. She&rsquo;s organized, professional, and makes every event run smoothly. Our team loves when she&rsquo;s at the venue &mdash; everything goes off without a hitch.&rdquo;</p>
         <div class="who">Crag Rat Hut<span>Venue partner &middot; Google Review</span></div>
@@ -492,33 +488,32 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 <!-- GROUND RULES — linen -->
 <section class="rules">
   <div class="wrap">
-    <div class="sec-head rise">
-      <span class="eyebrow">My commitments</span>
+    <div class="sec-head">
       <h2>The ground rules.</h2>
     </div>
     <div class="rules-grid">
-      <div class="rule rise"><span class="big">2</span><p>weddings a month, max. Every wedding gets my full focus, from the first decision to the last dance.</p></div>
-      <div class="rule rise"><span class="big">3<em>+</em></span><p>months&rsquo; notice required. The minimum planning lead time for a quality wedding day.</p></div>
-      <div class="rule rise"><span class="big">Zero</span><p>vendor kickbacks. Every recommendation is made for you, not for me.</p></div>
+      <div class="rule"><span class="big">2</span><p>weddings a month, max. Every wedding gets my full focus, from the first decision to the last dance.</p></div>
+      <div class="rule"><span class="big">3<em>+</em></span><p>months&rsquo; notice required. The minimum planning lead time for a quality wedding day.</p></div>
+      <div class="rule"><span class="big">Zero</span><p>vendor kickbacks. Every recommendation is made for you, not for me.</p></div>
     </div>
   </div>
 </section>
 <!-- PACKAGES -->
 <section id="packages" class="pkg-section">
   <div class="wrap">
-    <div class="sec-head rise">
+    <div class="sec-head">
       <span class="eyebrow">Pricing</span>
       <h2>My pricing is published. No inquiry required.</h2>
       <p>Higher Love runs on a tried and true formula, with published pricing and pre-curated options at every turn. Decision fatigue is real, and so is the mental load. My job is to take as much off your plate as possible, keep you in the loop when it matters, and get you to your wedding day feeling calm and ready.</p>
     </div>
-    <div class="rise">
+    <div>
       <div class="toggle" role="tablist" aria-label="Package type">
         <button id="t-full" class="active" role="tab" aria-selected="true" aria-controls="tiers" onclick="setType('full')">Ceremony + Reception</button>
         <button id="t-recep" role="tab" aria-selected="false" aria-controls="tiers" onclick="setType('recep')">Reception Only</button>
       </div>
     </div>
     <div class="tiers" id="tiers"></div>
-    <div class="fine-print rise">
+    <div class="fine-print">
       <div>
         <h3>Decor</h3>
         <p>Your planning package includes decor design, coordination, styling, and clearing. Choose one of my eight pre-designed collections or create a custom design together; either way, design is included. The decor itself is priced separately. For 75 guests, collections run about $3,000 to $3,950. <a href="#decor">See decor pricing.</a></p>
@@ -550,18 +545,18 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
         <span class="incl-chip" id="ceremonyChip2" style="display:none;">Ceremony site coordination</span>
       </div>
     </div>
-    <p class="safety-net rise">Not sure which package fits? <a href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Schedule a discovery call.</a></p>
+    <p class="safety-net">Not sure which package fits? <a href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773">Schedule a discovery call.</a></p>
   </div>
 </section>
 <!-- DECOR TABLE — dark treatment -->
 <section class="decor-section" id="decor">
   <div class="wrap">
-    <div class="sec-head rise">
+    <div class="sec-head">
       <span class="eyebrow">Decor Collections</span>
       <h2>Design is included. The collections make it easy.</h2>
       <p>Every planning package includes decor design. Design can be one of the most overwhelming parts of planning, so I created eight pre-designed collections that let you choose a complete, cohesive look in a single decision. Prefer something of your own? We&rsquo;ll design it together. Either way, I take care of sourcing, delivery, setup, styling, and teardown.</p>
     </div>
-    <div class="decor-table-wrap rise">
+    <div class="decor-table-wrap">
       <table class="decor-table">
         <thead>
           <tr>
@@ -600,28 +595,27 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 <!-- SUSTAINABILITY — dark -->
 <section class="sustain">
   <div class="wrap">
-    <div class="sec-head rise">
-      <span class="eyebrow">Sustainability</span>
+    <div class="sec-head">
       <h2>Sustainability is part of the formula.</h2>
       <p>Your wedding should feel good. So should everything it leaves behind.</p>
     </div>
     <div class="sustain-inner">
-      <div class="sustain-card rise">
+      <div class="sustain-card">
         <span class="sustain-card-label">Rentals over disposables</span>
         <h3>Nothing single-use if I can help it.</h3>
         <p>Every decor collection is sourced through a rental partner. Linens, flatware, glassware, and centerpieces are returned, cleaned, and used again. No landfill contribution from your table settings.</p>
       </div>
-      <div class="sustain-card rise">
+      <div class="sustain-card">
         <span class="sustain-card-label">Food waste</span>
         <h3>Leftovers go to people who need them.</h3>
         <p>When possible, food remaining at the end of the night is donated to St. Johns Village Transitional Housing Complex, right here in the neighborhood.</p>
       </div>
-      <div class="sustain-card rise">
+      <div class="sustain-card">
         <span class="sustain-card-label">Florals</span>
         <h3>Your flowers have a life after the reception.</h3>
         <p>Unless you&rsquo;d like to keep them, floral arrangements are donated to Assumption Village Assisted Living in St. Johns after the wedding. A centerpiece that spent 6 hours on a reception table can spend another week brightening a room for someone who needs it.</p>
       </div>
-      <div class="sustain-card rise">
+      <div class="sustain-card">
         <span class="sustain-card-label">Sourcing locally</span>
         <h3>Food and flowers, grown close to home.</h3>
         <p>I work with caterers who source ingredients locally and florists committed to locally grown flowers. If a bloom can be substituted for a locally grown alternative without compromising the look, I'll do it.</p>
@@ -631,14 +625,13 @@ SINGLE SOURCE OF TRUTH: Edit only PRICING + COLLECTIONS in <script>.
 </section>
 <!-- CLOSING CTA -->
 <section class="closing">
-  <span class="eyebrow rise">Ready when you are</span>
-  <h2 class="rise">Let&rsquo;s plan your <em>wedding.</em></h2>
-  <p class="rise">Clear scope. Published pricing. A formula that works.</p>
-  <div class="cta-row rise">
+  <h2>Let&rsquo;s plan your <em>wedding.</em></h2>
+  <p>Clear scope. Published pricing. A formula that works.</p>
+  <div class="cta-row">
     <a class="btn btn-gold" href="/reserve" aria-label="Reserve your wedding package now">Reserve Your Package</a>
     <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=39373577&appointmentType=93790773" aria-label="Book a free discovery call with Kylie">Schedule a discovery call</a>
   </div>
-  <p class="rise" style="margin-top:2.2rem;font-size:.82rem;color:var(--muted);max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;">Before you reach out, the only things you need: a rough guest count, a general budget, and a sense of when you&rsquo;d like to get married.</p>
+  <p  style="margin-top:2.2rem;font-size:.82rem;color:var(--muted);max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;">Before you reach out, the only things you need: a rough guest count, a general budget, and a sense of when you&rsquo;d like to get married.</p>
 </section>
 </main><!-- end #main-content -->
 <!-- FOOTER -->
@@ -718,8 +711,8 @@ Nothing below here needs editing.
   function renderTiers(){
     const cfg = PRICING.types[activeType];
     document.getElementById("tiers").innerHTML = PRICING.tiers.map((name,i)=>`
-<div class="tier${i===PRICING.popular?" popular":""} rise in">
-        ${i===PRICING.popular?'<span class="flag">Most popular</span>':'<span style="display:block;height:21px;margin-bottom:16px;"></span>'}
+<div class="tier${i===PRICING.popular?" popular":""}">
+        ${i===PRICING.popular?'<span class="flag">Most popular</span>':(PRICING.popular>=0?'<span style="display:block;height:21px;margin-bottom:16px;"></span>':'')}
 <h3>${name}</h3>
 <div class="count">${PRICING.guestBands[i]}</div>
 <div class="price">${money(cfg.prices[i])}</div>
