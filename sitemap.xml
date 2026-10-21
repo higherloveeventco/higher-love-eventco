@@ -2,73 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.higherloveeventco.com/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.higherloveeventco.com/about</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.higherloveeventco.com/decor</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.higherloveeventco.com/reserve</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.higherloveeventco.com/timeline</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.higherloveeventco.com/wedding-budget-guide</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.higherloveeventco.com/reviews</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.higherloveeventco.com/contact</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.higherloveeventco.com/faq</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.higherloveeventco.com/blog</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.higherloveeventco.com/blog/what-does-a-wedding-coordinator-actually-do</loc>
-    <lastmod>2026-06-24</lastmod>
+    <loc>https://www.higherloveeventco.com/blog/portland_parks_wedding_reservation</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.higherloveeventco.com/blog/cathedral-park-wedding</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.higherloveeventco.com/blog/what-does-a-wedding-coordinator-do-portland</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.higherloveeventco.com/blog/getting-married-in-st-johns-portland</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.higherloveeventco.com/blog/how-much-does-it-cost-to-get-married-at-the-st-johns-inn</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://www.higherloveeventco.com/blog/food-cart-pod-wedding-portland</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
